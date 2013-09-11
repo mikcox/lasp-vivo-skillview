@@ -1,0 +1,38 @@
+[
+    {
+        "text": "c++", "done":false
+    },
+    {
+        "text": "java", "done":false
+    },
+    {
+        "text": "ruby", "done":false
+    },
+    {
+        "text": "c#", "done":false
+    },
+    {
+        "text": "javascript", "done":false
+    },
+    {
+        "text": "angularjs", "done":false
+    },
+    {
+        "text": "sparql", "done":false
+    },
+    {
+        "text": "rdf", "done":false
+    },
+    {
+        "text": "Skillz", "done":false
+    },
+    {
+        "text": "eating", "done":false
+    },
+    {
+        "text": "drinking", "done":false
+    },
+    {
+        "text": "fighting", "done":false
+    }
+]

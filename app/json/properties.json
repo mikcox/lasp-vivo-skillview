@@ -1,0 +1,69 @@
+{
+  "head": {
+    "vars": [ "property" , "object" ]
+  } ,
+  "results": {
+    "bindings": [
+      {
+        "property": { "type": "uri" , "value": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" } ,
+        "object": { "type": "uri" , "value": "http://xmlns.com/foaf/0.1/Organization" }
+      } ,
+      {
+        "property": { "type": "uri" , "value": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" } ,
+        "object": { "type": "uri" , "value": "http://www.w3.org/2002/07/owl#Thing" }
+      } ,
+      {
+        "property": { "type": "uri" , "value": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" } ,
+        "object": { "type": "uri" , "value": "http://vivoweb.org/ontology/core#Laboratory" }
+      } ,
+      {
+        "property": { "type": "uri" , "value": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" } ,
+        "object": { "type": "uri" , "value": "http://xmlns.com/foaf/0.1/Agent" }
+      } ,
+      {
+        "property": { "type": "uri" , "value": "http://vitro.mannlib.cornell.edu/ns/vitro/0.7#mostSpecificType" } ,
+        "object": { "type": "uri" , "value": "http://vivoweb.org/ontology/core#Laboratory" }
+      } ,
+      {
+        "property": { "type": "uri" , "value": "http://vivoweb.org/ontology/core#currentlyHeadedBy" } ,
+        "object": { "type": "uri" , "value": "http://webdev1.lasp.colorado.edu:57529/vivo/individual/n205444746" }
+      } ,
+      {
+        "property": { "type": "uri" , "value": "http://vivoweb.org/ontology/core#hasSubOrganization" } ,
+        "object": { "type": "uri" , "value": "http://webdev1.lasp.colorado.edu:57529/vivo/individual/n1508432675" }
+      } ,
+      {
+        "property": { "type": "uri" , "value": "http://vivoweb.org/ontology/core#hasSubOrganization" } ,
+        "object": { "type": "uri" , "value": "http://webdev1.lasp.colorado.edu:57529/vivo/individual/n1741487448" }
+      } ,
+      {
+        "property": { "type": "uri" , "value": "http://vivoweb.org/ontology/core#hasSubOrganization" } ,
+        "object": { "type": "uri" , "value": "http://webdev1.lasp.colorado.edu:57529/vivo/individual/n1995053195" }
+      } ,
+      {
+        "property": { "type": "uri" , "value": "http://vivoweb.org/ontology/core#hasSubOrganization" } ,
+        "object": { "type": "uri" , "value": "http://webdev1.lasp.colorado.edu:57529/vivo/individual/n1126402418" }
+      } ,
+      {
+        "property": { "type": "uri" , "value": "http://vivoweb.org/ontology/core#hasFacility" } ,
+        "object": { "type": "uri" , "value": "http://webdev1.lasp.colorado.edu:57529/vivo/individual/n3192" }
+      } ,
+      {
+        "property": { "type": "uri" , "value": "http://vivoweb.org/ontology/core#contributingRole" } ,
+        "object": { "type": "uri" , "value": "http://webdev1.lasp.colorado.edu:57529/vivo/individual/n527" }
+      } ,
+      {
+        "property": { "type": "uri" , "value": "http://vivoweb.org/ontology/core#contributingRole" } ,
+        "object": { "type": "uri" , "value": "http://webdev1.lasp.colorado.edu:57529/vivo/individual/n2434" }
+      } ,
+      {
+        "property": { "type": "uri" , "value": "http://vivoweb.org/ontology/core#contributingRole" } ,
+        "object": { "type": "uri" , "value": "http://webdev1.lasp.colorado.edu:57529/vivo/individual/n8004" }
+      } ,
+      {
+        "property": { "type": "uri" , "value": "http://www.w3.org/2000/01/rdf-schema#label" } ,
+        "object": { "datatype": "http://www.w3.org/2001/XMLSchema#string" , "type": "typed-literal" , "value": "Laboratory for Atmospheric and Space Physics (LASP)" }
+      }
+    ]
+  }
+}

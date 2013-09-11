@@ -1,0 +1,45 @@
+{
+  "head": {
+    "vars": [ "object" , "property" ]
+  } ,
+  "results": {
+    "bindings": [
+      {
+        "object": { "type": "uri" , "value": "http://webdev1.lasp.colorado.edu:57529/vivo/individual/n1508432675" } ,
+        "property": { "type": "uri" , "value": "http://vivoweb.org/ontology/core#subOrganizationWithin" }
+      } ,
+      {
+        "object": { "type": "uri" , "value": "http://webdev1.lasp.colorado.edu:57529/vivo/individual/n527" } ,
+        "property": { "type": "uri" , "value": "http://vivoweb.org/ontology/core#roleContributesTo" }
+      } ,
+      {
+        "object": { "type": "uri" , "value": "http://webdev1.lasp.colorado.edu:57529/vivo/individual/n205444746" } ,
+        "property": { "type": "uri" , "value": "http://vivoweb.org/ontology/core#currentlyHeadOf" }
+      } ,
+      {
+        "object": { "type": "uri" , "value": "http://webdev1.lasp.colorado.edu:57529/vivo/individual/n2434" } ,
+        "property": { "type": "uri" , "value": "http://vivoweb.org/ontology/core#roleContributesTo" }
+      } ,
+      {
+        "object": { "type": "uri" , "value": "http://webdev1.lasp.colorado.edu:57529/vivo/individual/n1741487448" } ,
+        "property": { "type": "uri" , "value": "http://vivoweb.org/ontology/core#subOrganizationWithin" }
+      } ,
+      {
+        "object": { "type": "uri" , "value": "http://webdev1.lasp.colorado.edu:57529/vivo/individual/n1995053195" } ,
+        "property": { "type": "uri" , "value": "http://vivoweb.org/ontology/core#subOrganizationWithin" }
+      } ,
+      {
+        "object": { "type": "uri" , "value": "http://webdev1.lasp.colorado.edu:57529/vivo/individual/n1126402418" } ,
+        "property": { "type": "uri" , "value": "http://vivoweb.org/ontology/core#subOrganizationWithin" }
+      } ,
+      {
+        "object": { "type": "uri" , "value": "http://webdev1.lasp.colorado.edu:57529/vivo/individual/n8004" } ,
+        "property": { "type": "uri" , "value": "http://vivoweb.org/ontology/core#roleContributesTo" }
+      } ,
+      {
+        "object": { "type": "uri" , "value": "http://webdev1.lasp.colorado.edu:57529/vivo/individual/n3192" } ,
+        "property": { "type": "uri" , "value": "http://vivoweb.org/ontology/core#facilityFor" }
+      }
+    ]
+  }
+}
