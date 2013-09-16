@@ -60,6 +60,74 @@ function SkillsCtrl($scope, $http){
 		data: queryPart,
 		headers: {"Accept": "application/sparql-results+json", 'Content-type': 'application/x-www-form-urlencoded'}
 	}).success(function(data) {
+		//Create a list in which to combine duplicate entries from SPARQL query into one cell
+		var fixedList = [];
+		var tmpPerson = '';
+		var tmpSkill = '';
+		var tmpOffice = '';
+		var tmpPhone = '';
+		var tmpPosition = '';
+		var tmpDivision = '';
+		var tmpGroup = '';
+		//search for duplicates in person name and skill columns and combine where both match
+		for (var i=0; i < data.results.bindings.length; i++){
+			if((data.results.bindings[i].Person.value == data.results.bindings[i+1].Person.value) && (data.results.bindings[i].SkillLevel.value == data.results.bindings[i+1].SkillLevel.value) && i < data.results.bindings.length-1){
+				tmpPerson = data.results.bindings[i].Person.value;
+				tmpSkill = data.results.bindings[i].SkillLevel.value;
+				if(data.results.bindings[i].Office.value != data.results.bindings[i+1].Office.value){
+					tmpOffice = data.results.bindings[i].Office.value + ', ' + data.results.bindings[i+1].Office.value
+				}
+				else{
+					tmpOffice = data.results.bindings[i].Office.value;
+				}
+				if(data.results.bindings[i].PhoneNumber.value != data.results.bindings[i+1].PhoneNumber.value){
+					tmpPhone = data.results.bindings[i].PhoneNumber.value + ', ' + data.results.bindings[i+1].PhoneNumber.value
+				}
+				else{
+					tmpPhone = data.results.bindings[i].PhoneNumber.value;
+				}
+				if(data.results.bindings[i].Position.value != data.results.bindings[i+1].Position.value){
+					tmpPosition = data.results.bindings[i].Position.value + ', ' + ata.results.bindings[i+1].Position.value
+				}
+				else{
+					tmpPosition = data.results.bindings[i].Position.value;
+				}
+				if(data.results.bindings[i].Division.value != data.results.bindings[i+1].Division.value){
+					tmpDivision = data.results.bindings[i].Division.value + ', ' + data.results.bindings[i+1].Division.value
+				}
+				else{
+					tmpDivision = data.results.bindings[i].Division.value;
+				}
+				if(data.results.bindings[i].Group.value != data.results.bindings[i+1].Group.value){
+					tmpGroup = data.results.bindings[i].Group.value + ', ' + data.results.bindings[i+1].Group.value
+				}
+				else{
+					tmpGroup = data.results.bindings[i].Group.value;
+				}
+			i++;
+			}
+			else{
+				tmpPerson = data.results.bindings[i].Person.value;
+				tmpSkill = data.results.bindings[i].SkillLevel.value;
+				if(data.results.bindings[i].hasOwnProperty("Office")){
+					tmpOffice = data.results.bindings[i].Office.value;
+				}
+				else{
+					tmpOffice = '';
+				}
+				if(data.results.bindings[i].hasOwnProperty("PhoneNumber")){
+					tmpPhone = data.results.bindings[i].PhoneNumber.value;
+				}
+				else{
+					tmpPhone = '';
+				}
+				tmpPosition = data.results.bindings[i].Position.value;
+				tmpDivision = data.results.bindings[i].Division.value;
+				tmpGroup = data.results.bindings[i].Group.value;
+			}
+			fixedList.push({"Person": {"type":"literal", "value": tmpPerson}, "Skill": {"type":"literal", "value": tmpSkill}, Office: {"type":"literal", "value": tmpOffice}, "PhoneNumber": {"type":"literal", "value": tmpPhone}, "Position": {"type":"literal", "value": tmpPosition}, "Division": {"type":"literal", "value": tmpDivision}, "Group": {"type":"literal", "value":tmpGroup}});
+		}
+		data.results.bindings = fixedList;
 		$scope.skills = data;
 	}).error(function(data,status) {
 		$scope.error = "Fuseki returned: " + status;
