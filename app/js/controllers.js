@@ -70,45 +70,16 @@ function SkillsCtrl($scope, $http){
 		var tmpDivision = '';
 		var tmpGroup = '';
 		//search for duplicates in person name and skill columns and combine where both match
+		//an array to store indexes of any duplicate rows
+		var duplicateRows = [];
+		var cursor = 0;
 		for (var i=0; i < data.results.bindings.length; i++){
-			if((data.results.bindings[i].Person.value == data.results.bindings[i+1].Person.value) && (data.results.bindings[i].SkillLevel.value == data.results.bindings[i+1].SkillLevel.value) && i < data.results.bindings.length-1){
+			//ignore the rows that have already been marked as duplicates.
+			if(duplicateRows.indexOf(i) == -1){ 
+				//set the temp variables to the results from each row
 				tmpPerson = data.results.bindings[i].Person.value;
 				tmpSkill = data.results.bindings[i].SkillLevel.value;
-				if(data.results.bindings[i].Office.value != data.results.bindings[i+1].Office.value){
-					tmpOffice = data.results.bindings[i].Office.value + ', ' + data.results.bindings[i+1].Office.value
-				}
-				else{
-					tmpOffice = data.results.bindings[i].Office.value;
-				}
-				if(data.results.bindings[i].PhoneNumber.value != data.results.bindings[i+1].PhoneNumber.value){
-					tmpPhone = data.results.bindings[i].PhoneNumber.value + ', ' + data.results.bindings[i+1].PhoneNumber.value
-				}
-				else{
-					tmpPhone = data.results.bindings[i].PhoneNumber.value;
-				}
-				if(data.results.bindings[i].Position.value != data.results.bindings[i+1].Position.value){
-					tmpPosition = data.results.bindings[i].Position.value + ', ' + ata.results.bindings[i+1].Position.value
-				}
-				else{
-					tmpPosition = data.results.bindings[i].Position.value;
-				}
-				if(data.results.bindings[i].Division.value != data.results.bindings[i+1].Division.value){
-					tmpDivision = data.results.bindings[i].Division.value + ', ' + data.results.bindings[i+1].Division.value
-				}
-				else{
-					tmpDivision = data.results.bindings[i].Division.value;
-				}
-				if(data.results.bindings[i].Group.value != data.results.bindings[i+1].Group.value){
-					tmpGroup = data.results.bindings[i].Group.value + ', ' + data.results.bindings[i+1].Group.value
-				}
-				else{
-					tmpGroup = data.results.bindings[i].Group.value;
-				}
-			i++;
-			}
-			else{
-				tmpPerson = data.results.bindings[i].Person.value;
-				tmpSkill = data.results.bindings[i].SkillLevel.value;
+				//if a person doesn't have an office or phone, that does not show up in the results JSON, so we must be careful and watch for that.
 				if(data.results.bindings[i].hasOwnProperty("Office")){
 					tmpOffice = data.results.bindings[i].Office.value;
 				}
@@ -124,9 +95,35 @@ function SkillsCtrl($scope, $http){
 				tmpPosition = data.results.bindings[i].Position.value;
 				tmpDivision = data.results.bindings[i].Division.value;
 				tmpGroup = data.results.bindings[i].Group.value;
+				//send a cursor looking through the rest of the list for duplicates
+				for(cursor = i+1; cursor < data.results.bindings.length; cursor++){
+					//if we find a match between the current person/skill and the cursor's person/skill...
+					if((data.results.bindings[i].Person.value == data.results.bindings[cursor].Person.value) && (data.results.bindings[i].SkillLevel.value == data.results.bindings[cursor].SkillLevel.value)){
+						//add the cursor's row to the list of duplicate indexes
+						duplicateRows.push(cursor);
+						//concatenate the results from the duplicate row with the temp variable
+						if(data.results.bindings[i].Office.value != data.results.bindings[cursor].Office.value){
+							tmpOffice = tmpOffice + ', ' + data.results.bindings[cursor].Office.value
+						}
+						if(data.results.bindings[i].PhoneNumber.value != data.results.bindings[cursor].PhoneNumber.value){
+							tmpPhone = tmpPhone + ', ' + data.results.bindings[cursor].PhoneNumber.value
+						}
+						if(data.results.bindings[i].Position.value != data.results.bindings[cursor].Position.value){
+							tmpPosition = tmpPosition + ', ' + ata.results.bindings[cursor].Position.value
+						}
+						if(data.results.bindings[i].Division.value != data.results.bindings[cursor].Division.value){
+							tmpDivision = tmpDivision + ', ' + data.results.bindings[cursor].Division.value
+						}
+						if(data.results.bindings[i].Group.value != data.results.bindings[cursor].Group.value){
+							tmpGroup = tmpGroup + ', ' + data.results.bindings[cursor].Group.value
+						}
+					}
+				}
+				//push the temp variables into our fixed list in pretty JSON format
+				fixedList.push({"Person": {"type":"literal", "value": tmpPerson}, "Skill": {"type":"literal", "value": tmpSkill}, Office: {"type":"literal", "value": tmpOffice}, "PhoneNumber": {"type":"literal", "value": tmpPhone}, "Position": {"type":"literal", "value": tmpPosition}, "Division": {"type":"literal", "value": tmpDivision}, "Group": {"type":"literal", "value":tmpGroup}});
 			}
-			fixedList.push({"Person": {"type":"literal", "value": tmpPerson}, "Skill": {"type":"literal", "value": tmpSkill}, Office: {"type":"literal", "value": tmpOffice}, "PhoneNumber": {"type":"literal", "value": tmpPhone}, "Position": {"type":"literal", "value": tmpPosition}, "Division": {"type":"literal", "value": tmpDivision}, "Group": {"type":"literal", "value":tmpGroup}});
 		}
+		//set the results to be our entire fixed list rather than the raw SPARQL results
 		data.results.bindings = fixedList;
 		$scope.skills = data;
 	}).error(function(data,status) {
