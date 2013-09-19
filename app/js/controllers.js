@@ -133,7 +133,34 @@ function SkillsCtrl($scope, $http){
 	$scope.orderProp = "Person.value";
 
 }
-
+function AddSkillCtrl($scope, $http){
+	var queryStr = "PREFIX rdfs:  <http://www.w3.org/2000/01/rdf-schema#> PREFIX foaf: <http://xmlns.com/foaf/0.1/> SELECT ?person ?personuri WHERE{ ?personuri a foaf:Person . ?personuri rdfs:label ?person}";
+	var queryPart = "query=" + escape(queryStr);	
+	
+	$http({
+		method: 'POST',
+		url: 'http://lasp-db-dev:3030/VIVO/query',
+		data: queryPart,
+		headers: {"Accept": "application/sparql-results+json", 'Content-type': 'application/x-www-form-urlencoded'}
+	}).success(function(data) {
+		$scope.peoplelist = data;
+	}).error(function(data,status) {
+		$scope.error = "Fuseki person query returned: " + status;
+	});
+	
+	queryStr = "PREFIX rdfs:  <http://www.w3.org/2000/01/rdf-schema#> PREFIX laspskills: <http://webdev1.lasp.colorado.edu:57529/laspskills#> SELECT ?skill ?skilluri WHERE{?skilluri a laspskills:SkillLevel . ?skilluri rdfs:label ?skill} ORDER BY desc(?skill)";
+	queryPart = "query=" + escape(queryStr);
+	$http({
+		method: 'POST',
+		url: 'http://lasp-db-dev:3030/VIVO/query',
+		data: queryPart,
+		headers: {"Accept": "application/sparql-results+json", 'Content-type': 'application/x-www-form-urlencoded'}
+	}).success(function(data) {
+		$scope.skilllist = data;
+	}).error(function(data,status) {
+		$scope.error = "Fuseki skill query returned: " + status;
+	});
+}
 //space to get and parse sparql json for use with lodlive functions
 function SparqlCtrl($scope, $http){
 	var properties;

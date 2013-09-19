@@ -1,0 +1,53 @@
+<div class="container-fluid">
+    <h2>Add a Skill</h2>
+        <div id="circle">&nbsp;</div>
+			<div class="row-fluid" style="width:100%;">
+				<div id="table1 container" style="width:35%; float:left;">
+					<div>
+						<p > Begin Typing a Name:</p>
+						<input type="text" data-ng-model="name.person"/>
+						<br/>
+					</div>
+					<div>
+						<p class="error">{{error}}</p>
+						<table ng-table class="table" ng-show="(filteredpeopleData = (peoplelist.results.bindings | filter:name)) ">
+						<!--<table ng-table class="table" ng-show="(filteredpeopleData = (peoplelist.results.bindings | filter:name)) && name.person.length > 1">-->
+						<th> People </th>
+						<tr ng-repeat="row in filteredpeopleData">
+							<td>
+								{{row.person.value}} -- <a href="{{row.personuri.value}}"> webpage </a>
+							</td>
+						</tr>
+						</table>
+						<p>
+						Results Found: {{(filteredpeopleData).length}}
+						</p>
+					</div>
+				</div>
+				<div id="spacer container" style="width:30%; padding:200px 0px; float:left; text-align:center; vertical-align:middle;">
+					has skill...
+				</div>
+				<div id="table2 container" style="width:35%; float:left;">
+					<div>
+						<p> Begin Typing a Skill:</p>
+						<input type="text" data-ng-model="skill.skill"/>
+						<br/>
+					</div>
+					<div>
+						<p class="error">{{error}}</p>
+						<table ng-table class="table" ng-show="(filteredskillData = (skilllist.results.bindings | filter:skill))">
+						<th> Skills </th>
+						<tr ng-repeat="row in filteredskillData">
+							<td>
+								{{row.skill.value}} -- <a href="{{row.skilluri.value}}"> webpage </a>
+							</td>
+						</tr>
+						</table>
+						<p>
+						Results Found: {{(filteredskillData).length}}
+						</p>
+					</div>
+				</div>
+			</div>
+		</div>
+</div>

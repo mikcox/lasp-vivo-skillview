@@ -5,6 +5,7 @@ var vivoviz = angular.module("vivoviz", []) //dependencies go inside the square 
 .config(function ($routeProvider, $httpProvider) {
 $routeProvider. //this controls navigation within our app
 when('/', { controller: SkillsCtrl, templateUrl: 'partials/all-skills.html' }).
+when('/addskill', { controller: AddSkillCtrl, templateUrl: 'partials/add_skill.html' }).
 otherwise({ redirectTo: '/' });
 
 //enable crossdomain requests
