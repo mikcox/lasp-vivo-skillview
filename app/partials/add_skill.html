@@ -15,7 +15,7 @@
 						<th> People </th>
 						<tr ng-repeat="row in filteredpeopleData">
 							<td>
-								{{row.person.value}} -- <a href="{{row.personuri.value}}"> webpage </a>
+								<a href="{{row.personuri.value}}"> {{row.person.value}} </a>
 							</td>
 						</tr>
 						</table>
@@ -39,7 +39,7 @@
 						<th> Skills </th>
 						<tr ng-repeat="row in filteredskillData">
 							<td>
-								{{row.skill.value}} -- <a href="{{row.skilluri.value}}"> webpage </a>
+								<a href="{{row.skilluri.value}}"> {{row.skill.value}} </a>
 							</td>
 						</tr>
 						</table>
