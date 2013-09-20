@@ -10,11 +10,17 @@
 					</div>
 					<div>
 						<p class="error">{{error}}</p>
-						<table ng-table class="table" ng-show="(filteredpeopleData = (peoplelist.results.bindings | filter:name)) ">
+						<table ng-table class="table" ng-show="(filteredpeopleData = (peoplelist | filter:name)) ">
 						<th> People </th>
 						<tr ng-repeat="row in filteredpeopleData">
 							<td>
-								<div class="btn btn-primary" data-drag="true" data-jqyoui-options="{revert: 'invalid'}" ng-model="filteredpeopleData" jqyoui-draggable="{animate:true}" >{{row.person.value}}</div>
+								<div class="btn btn-primary btn-draggable"
+								data-drag="true"
+								data-jqyoui-options="{revert: 'invalid'}"
+								ng-model="filteredpeopleData"
+								jqyoui-draggable="{animate:true}"
+								>
+									<a href="{{row.personuri.value}}" style="color:white;"> {{row.person.value}} </a></div>
 								</div>
 							</td>
 						</tr>
@@ -24,8 +30,42 @@
 						</p>
 					</div>
 				</div>
-				<div id="spacer container" style="width:30%; padding:200px 0px; float:left; text-align:center; vertical-align:middle;">
+				<div id="spacer container" style="width:25%; padding:200px 5px; float:left; text-align:center; vertical-align:middle;">
+					<div class="thumbnail"
+					data-drop="true"
+					data-jqyoui-options="{accept:'.btn-draggable:not([ng-model=filteredskillData])'}"
+					ng-model="addPersonList"
+					jqyoui-droppable="{multiple:true}"
+					style='height:100px; width:30%; float:left;'>
+						<div class="btn btn-success btn-draggable"
+						data-drag="true"
+						ng-repeat="item in addPersonList"
+						data-jqyoui-options="{revert: 'invalid'}"
+						ng-model="addPersonList"
+						jqyoui-draggable="{animate:true}"
+						style='height:50px; width:50%; align:center;'
+						>
+							{{item.person.value}}
+						</div>
+					</div>
 					has skill...
+					<div class="thumbnail"
+					data-drop="true"
+					data-jqyoui-options="{accept:'.btn-draggable:not([ng-model=filteredpeopleData])'}"
+					ng-model="addSkillList"
+					jqyoui-droppable="{multiple:true}"
+					style='height:100px; width:30%; float:right;'>
+						<div class="btn btn-success btn-draggable"
+						data-drag="true"
+						ng-repeat="item in addSkillList"
+						data-jqyoui-options="{revert: 'invalid'}"
+						ng-model="addSkillList"
+						jqyoui-draggable="{animate:true}"
+						style='height:50px; width:50%; align:center;'
+						>
+							{{item.skill.value}}
+						</div>
+					</div>
 
 				</div>
 				<div id="table2 container" style="width:35%; float:left;">
@@ -36,15 +76,18 @@
 					</div>
 					<div>
 						<p class="error">{{error}}</p>
-						<table ng-table class="table" ng-show="(filteredskillData = (skilllist.results.bindings | filter:skill))">
+						<table ng-table class="table" ng-show="(filteredskillData = (skilllist | filter:skill))">
 						<th> Skills </th>
 						<tr ng-repeat="row in filteredskillData">
 							<td>
-								<div class="btn btn-primary" data-drag="true" data-jqyoui-options="{revert: 'invalid'}" ng-model="filteredskillData" jqyoui-draggable="{animate:true}" >{{row.skill.value}}</div>
-									
-									
-									
-									<!--<a href="{{row.skilluri.value}}"> {{row.skill.value}} </a>-->
+								<div class="btn btn-info btn-draggable"
+								data-drag="true"
+								data-jqyoui-options="{revert: 'invalid'}"
+								ng-model="filteredskillData"
+								jqyoui-draggable="{animate:true}"
+								>
+									{{row.skill.value}}
+								</div>
 							</td>
 						</tr>
 						</table>
@@ -52,6 +95,10 @@
 						Results Found: {{(filteredskillData).length}}
 						</p>
 					</div>
+				</div>
+				<div>
+				addPersonList: {{addPersonList}}<br>
+				addSkillList: {{addSkillList}}
 				</div>
 			</div>
 		</div>

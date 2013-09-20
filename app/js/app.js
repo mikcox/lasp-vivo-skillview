@@ -1,8 +1,9 @@
 'use strict';
 
 /* App Module */
-var vivoviz = angular.module('vivoviz', ['ngDragDrop']) //dependencies go inside the square brackets
-.config(function ($routeProvider, $httpProvider) {
+var vivoviz = angular.module('vivoviz', ['ngDragDrop']); //dependencies go inside the square brackets
+
+vivoviz.config(function ($routeProvider, $httpProvider) {
 $routeProvider. //this controls navigation within our app
 when('/', { controller: SkillsCtrl, templateUrl: 'partials/all-skills.html' }).
 when('/addskill', { controller: AddSkillCtrl, templateUrl: 'partials/add_skill.html' }).

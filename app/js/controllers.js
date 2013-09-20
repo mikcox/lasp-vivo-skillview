@@ -143,7 +143,7 @@ function AddSkillCtrl($scope, $http){
 		data: queryPart,
 		headers: {"Accept": "application/sparql-results+json", 'Content-type': 'application/x-www-form-urlencoded'}
 	}).success(function(data) {
-		$scope.peoplelist = data;
+		$scope.peoplelist = data.results.bindings;
 	}).error(function(data,status) {
 		$scope.error = "Fuseki person query returned: " + status;
 	});
@@ -156,13 +156,13 @@ function AddSkillCtrl($scope, $http){
 		data: queryPart,
 		headers: {"Accept": "application/sparql-results+json", 'Content-type': 'application/x-www-form-urlencoded'}
 	}).success(function(data) {
-		$scope.skilllist = data;
+		$scope.skilllist = data.results.bindings;
 	}).error(function(data,status) {
 		$scope.error = "Fuseki skill query returned: " + status;
 	});
-	$scope.addSkillList = {};
-	$scope.list1 = {title: 'AngularJS - Drag Me'};
-	$scope.list2 = {};
+	$scope.addPersonList = [];
+	$scope.addSkillList = [];
+
 }
 //space to get and parse sparql json for use with lodlive functions
 function SparqlCtrl($scope, $http){

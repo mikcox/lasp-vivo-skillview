@@ -7,4 +7,3 @@ vivoviz.factory('sparqlJsonNormalizer', function() {
 	return serviceInstance;
 })
     
-    
