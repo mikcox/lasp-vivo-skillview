@@ -160,6 +160,9 @@ function AddSkillCtrl($scope, $http){
 	}).error(function(data,status) {
 		$scope.error = "Fuseki skill query returned: " + status;
 	});
+	$scope.addSkillList = {};
+	$scope.list1 = {title: 'AngularJS - Drag Me'};
+	$scope.list2 = {};
 }
 //space to get and parse sparql json for use with lodlive functions
 function SparqlCtrl($scope, $http){

@@ -11,11 +11,11 @@
 					<div>
 						<p class="error">{{error}}</p>
 						<table ng-table class="table" ng-show="(filteredpeopleData = (peoplelist.results.bindings | filter:name)) ">
-						<!--<table ng-table class="table" ng-show="(filteredpeopleData = (peoplelist.results.bindings | filter:name)) && name.person.length > 1">-->
 						<th> People </th>
 						<tr ng-repeat="row in filteredpeopleData">
 							<td>
-								<a href="{{row.personuri.value}}"> {{row.person.value}} </a>
+								<div class="btn btn-primary" data-drag="true" data-jqyoui-options="{revert: 'invalid'}" ng-model="filteredpeopleData" jqyoui-draggable="{animate:true}" >{{row.person.value}}</div>
+								</div>
 							</td>
 						</tr>
 						</table>
@@ -26,6 +26,7 @@
 				</div>
 				<div id="spacer container" style="width:30%; padding:200px 0px; float:left; text-align:center; vertical-align:middle;">
 					has skill...
+
 				</div>
 				<div id="table2 container" style="width:35%; float:left;">
 					<div>
@@ -39,7 +40,11 @@
 						<th> Skills </th>
 						<tr ng-repeat="row in filteredskillData">
 							<td>
-								<a href="{{row.skilluri.value}}"> {{row.skill.value}} </a>
+								<div class="btn btn-primary" data-drag="true" data-jqyoui-options="{revert: 'invalid'}" ng-model="filteredskillData" jqyoui-draggable="{animate:true}" >{{row.skill.value}}</div>
+									
+									
+									
+									<!--<a href="{{row.skilluri.value}}"> {{row.skill.value}} </a>-->
 							</td>
 						</tr>
 						</table>
