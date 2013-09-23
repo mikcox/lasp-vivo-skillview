@@ -4,8 +4,7 @@
 			<div class="row-fluid" style="width:100%;">
 				<div id="table1 container" style="width:35%; float:left;">
 					<div>
-						<p > Begin Typing a Name:</p>
-						<input type="text" data-ng-model="name.person"/>
+						<input type="text" data-ng-model="name.person" placeholder="Search for a person"/>
 						<br/>
 					</div>
 					<div>
@@ -33,10 +32,10 @@
 				<div id="spacer container" style="width:25%; padding:200px 5px; float:left; text-align:center; vertical-align:middle;">
 					<div class="thumbnail"
 					data-drop="true"
-					data-jqyoui-options="{accept:'.btn-draggable:not([ng-model=filteredskillData])'}"
+					data-jqyoui-options="{accept:'.btn-draggable:not([ng-model!=filteredpeopleData])'}"
 					ng-model="addPersonList"
 					jqyoui-droppable="{multiple:true}"
-					style='height:100px; width:30%; float:left;'>
+					style='padding:25px; width:30%; float:left;'>
 						<div class="btn btn-success btn-draggable"
 						data-drag="true"
 						ng-repeat="item in addPersonList"
@@ -48,13 +47,13 @@
 							{{item.person.value}}
 						</div>
 					</div>
-					has skill...
+					has skill
 					<div class="thumbnail"
 					data-drop="true"
-					data-jqyoui-options="{accept:'.btn-draggable:not([ng-model=filteredpeopleData])'}"
+					data-jqyoui-options="{accept:'.btn-draggable:not([ng-model!=filteredskillData])'}"
 					ng-model="addSkillList"
 					jqyoui-droppable="{multiple:true}"
-					style='height:100px; width:30%; float:right;'>
+					style='padding: 25px; width:30%; float:right;'>
 						<div class="btn btn-success btn-draggable"
 						data-drag="true"
 						ng-repeat="item in addSkillList"
@@ -70,13 +69,12 @@
 				</div>
 				<div id="table2 container" style="width:35%; float:left;">
 					<div>
-						<p> Begin Typing a Skill:</p>
-						<input type="text" data-ng-model="skill.skill"/>
+						<input type="text" ng-model="skill.skill" placeholder="Search for a skill"/>
 						<br/>
 					</div>
 					<div>
 						<p class="error">{{error}}</p>
-						<table ng-table class="table" ng-show="(filteredskillData = (skilllist | filter:skill))">
+						<table ng-table class="table" ng-show="(filteredskillData = (skilllist | filter:skill))" >
 						<th> Skills </th>
 						<tr ng-repeat="row in filteredskillData">
 							<td>

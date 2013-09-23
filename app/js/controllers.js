@@ -120,7 +120,13 @@ function SkillsCtrl($scope, $http){
 					}
 				}
 				//push the temp variables into our fixed list in pretty JSON format
-				fixedList.push({"Person": {"type":"literal", "value": tmpPerson}, "Skill": {"type":"literal", "value": tmpSkill}, Office: {"type":"literal", "value": tmpOffice}, "PhoneNumber": {"type":"literal", "value": tmpPhone}, "Position": {"type":"literal", "value": tmpPosition}, "Division": {"type":"literal", "value": tmpDivision}, "Group": {"type":"literal", "value":tmpGroup}});
+				fixedList.push({"Person": {"type":"literal", "value": tmpPerson},
+								"Skill": {"type":"literal", "value": tmpSkill}, 
+								"Office": {"type":"literal", "value": tmpOffice},
+								"PhoneNumber": {"type":"literal", "value": tmpPhone},
+								"Position": {"type":"literal", "value": tmpPosition},
+								"Division": {"type":"literal", "value": tmpDivision},
+								"Group": {"type":"literal", "value":tmpGroup}});
 			}
 		}
 		//set the results to be our entire fixed list rather than the raw SPARQL results
@@ -134,6 +140,8 @@ function SkillsCtrl($scope, $http){
 
 }
 function AddSkillCtrl($scope, $http){
+	$scope.itemsPerPage = 10;
+	$scope.currentPage = 0;
 	var queryStr = "PREFIX rdfs:  <http://www.w3.org/2000/01/rdf-schema#> PREFIX foaf: <http://xmlns.com/foaf/0.1/> SELECT ?person ?personuri WHERE{ ?personuri a foaf:Person . ?personuri rdfs:label ?person}";
 	var queryPart = "query=" + escape(queryStr);	
 	
@@ -157,11 +165,11 @@ function AddSkillCtrl($scope, $http){
 		headers: {"Accept": "application/sparql-results+json", 'Content-type': 'application/x-www-form-urlencoded'}
 	}).success(function(data) {
 		$scope.skilllist = data.results.bindings;
+		$scope.addPersonList = [];
+		$scope.addSkillList = [];
 	}).error(function(data,status) {
 		$scope.error = "Fuseki skill query returned: " + status;
 	});
-	$scope.addPersonList = [];
-	$scope.addSkillList = [];
 
 }
 //space to get and parse sparql json for use with lodlive functions
