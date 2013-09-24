@@ -19,7 +19,7 @@
 								data-drag="true"
 								data-jqyoui-options="{revert: 'invalid'}"
 								ng-model="person"
-								jqyoui-draggable="{animate:true}"
+								jqyoui-draggable
 								>
 									<a href="{{person.personuri.value}}" style="color:white;"> {{person.person.value}} </a></div>
 								</div>
@@ -29,21 +29,21 @@
 					</div>
 				</div>		
 				<div id="spacer container" style="width:25%; padding:200px 5px; float:left; text-align:center; vertical-align:middle;">
-					<h4 style="width:50%; float:left">Person</h4>
-					<h4 style="width:50%; float:right">Has Skills</h4>
+					<h4 style="padding:25px; width:30%; float:left; text-align:center;">Person</h4>
+					<h4 style="padding:25px; width:30%; float:right">Has Skills</h4>
 					<div class="thumbnail" 
 						data-drop="true" 
 						data-jqyoui-options="{accept:'.btn-draggable:not([ng-model!=person])'}" 
 						ng-model="addPersonList" 
 						jqyoui-droppable="{multiple:false}" 
 						style='padding:25px; width:30%; float:left;'>
-						<div class="btn btn-success btn-draggable" 
+						<div class="btn btn-primary btn-draggable" 
 							data-drag="true" 
 							ng-repeat="item in addPersonList" 
 							data-jqyoui-options="{revert: 'invalid'}" 
 							ng-model="addPersonList" 
-							jqyoui-draggable="{animate:true}" 
-							style='height:50px; width:75%; align:center;'>
+							jqyoui-draggable
+							style='width:75%; align:center;'>
 							{{item.person.value}}
 						</div>
 					</div>
@@ -53,15 +53,20 @@
 					ng-model="addSkillList"
 					jqyoui-droppable="{multiple:true}"
 					style='padding: 25px; width:30%; float:right;'>
-						<div class="btn btn-success btn-draggable"
+						<div class="btn btn-info btn-draggable"
 						data-drag="true"
 						data-jqyoui-options="{revert: 'invalid'}"
 						ng-repeat="item in addSkillList"
 						ng-model="addSkillList"
-						jqyoui-draggable="{animate:true}"
-						style='height:50px; width:75%; align:center;'
+						jqyoui-draggable
+						style='width:75%; align:center;'
 						>
 							{{item.skill.value}}
+						</div>
+					</div>
+					<div  style="padding: 25px 0px; width: 100%; float:left;">
+						<div class = "btn btn-success" style="padding: 10px; width: 30%; font-size:20px;">
+							Submit!
 						</div>
 					</div>
 
@@ -84,7 +89,7 @@
 								data-drag="true"
 								data-jqyoui-options="{revert: 'invalid'}"
 								ng-model="skill"
-								jqyoui-draggable="{animate:true}"
+								jqyoui-draggable
 								>{{skill.skill.value}}</div>
 							</td>
 						</tr>
