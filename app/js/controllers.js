@@ -104,6 +104,7 @@ function AddSkillCtrl($scope, $http){
 		headers: {"Accept": "application/sparql-results+json", 'Content-type': 'application/x-www-form-urlencoded'}
 	}).success(function(data) {
 		$scope.peoplelist = data.results.bindings;
+		$scope.addPersonList = [];
 	}).error(function(data,status) {
 		$scope.error = "Fuseki person query returned: " + status;
 	});
@@ -117,7 +118,6 @@ function AddSkillCtrl($scope, $http){
 		headers: {"Accept": "application/sparql-results+json", 'Content-type': 'application/x-www-form-urlencoded'}
 	}).success(function(data) {
 		$scope.skilllist = data.results.bindings;
-		$scope.addPersonList = [];
 		$scope.addSkillList = [];
 	}).error(function(data,status) {
 		$scope.error = "Fuseki skill query returned: " + status;
