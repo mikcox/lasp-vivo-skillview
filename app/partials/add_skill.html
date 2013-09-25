@@ -37,14 +37,14 @@
 						data-drop="true" 
 						ng-model="addPersonList"
 						data-jqyoui-options="{accept:'.btn-draggable:not([ng-model!=peoplelist])'}" 
-						jqyoui-droppable="{multiple:false}" 
+						jqyoui-droppable="{multiple: true}" 
 						style='padding:25px; width:30%; float:left;'>
 						<div class="btn btn-primary btn-draggable" 
 							data-drag="true" 
 							ng-repeat="item in addPersonList" 
 							data-jqyoui-options="{revert: 'invalid'}" 
 							ng-model="addPersonList" 
-							jqyoui-draggable
+							jqyoui-draggable="{index: {{$index}}, animate:true, applyFilter: 'name'}"
 							style='width:75%; align:center;'>
 							{{item.person.value}}
 						</div>
@@ -53,14 +53,14 @@
 					data-drop="true"
 					ng-model="addSkillList"
 					data-jqyoui-options="{accept:'.btn-draggable:not([ng-model!=skilllist])'}" 
-					jqyoui-droppable="{multiple:true}"
+					jqyoui-droppable
 					style='padding: 25px; width:30%; float:right;'>
 						<div class="btn btn-info btn-draggable"
 						data-drag="true"
 						data-jqyoui-options="{revert: 'invalid'}"
 						ng-repeat="item in addSkillList"
 						ng-model="addSkillList"
-						jqyoui-draggable
+						jqyoui-draggable="{index: {{$index}}, animate:true, applyFilter: 'skill'}"
 						style='width:75%; align:center;'
 						>
 							{{item.skill.value}}
@@ -79,13 +79,13 @@
 						<br/>
 					</div>
 					<p>
-						Results Found: {{(skilllist|filter:name).length}}
+						Results Found: {{(skilllist|filter:skill).length}}
 					</p>
 					<div>
 						<p class="error">{{error}}</p>
 						<table ng-table class="table">
 						<th> Skills </th>
-						<tr ng-repeat="skill in skilllist|filter:name">
+						<tr ng-repeat="skill in skilllist|filter:skill">
 							<td>
 								<div class="btn btn-info btn-draggable"
 								data-drag="true"
