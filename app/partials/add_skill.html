@@ -13,7 +13,7 @@
 						<p class="error">{{error}}</p>
 						<table ng-table class="table">
 						<th> People </th>
-						<tr ng-repeat="person in filteredpeopleData">
+						<tr ng-repeat="person in peoplelist|filter:name">
 							<td>
 								<div class="btn btn-primary btn-draggable"
 								data-drag="true"
