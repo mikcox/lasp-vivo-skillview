@@ -19,7 +19,7 @@
 								data-drag="true"
 								data-jqyoui-options="{revert: 'invalid'}"
 								ng-model="peoplelist"
-								jqyoui-draggable="{index: {{$index}}, animate: true}"
+								jqyoui-draggable="{index: {{$index}}, animate: false}"
 								>
 									<a href="{{person.personuri.value}}" style="color:white;"> {{person.person.value}} </a></div>
 								</div>
@@ -48,9 +48,9 @@
 							{{item.person.value}}
 						</div>
 					</div>
+					//data-jqyoui-options="{accept:'.btn-draggable:not([ng-model!=skill])'}" 
 					<div class="thumbnail"
 					data-drop="true"
-					data-jqyoui-options="{accept:'.btn-draggable:not([ng-model!=skill])'}" 
 					ng-model="addSkillList"
 					jqyoui-droppable="{multiple:true}"
 					style='padding: 25px; width:30%; float:right;'>
@@ -78,19 +78,19 @@
 						<br/>
 					</div>
 					<p>
-						Results Found: {{(filteredskillData).length}}
+						Results Found: {{(skilllist|filter:name).length}}
 					</p>
 					<div>
 						<p class="error">{{error}}</p>
-						<table ng-table class="table" ng-show="(filteredskillData = (skilllist | filter:skill))" >
+						<table ng-table class="table">
 						<th> Skills </th>
-						<tr ng-repeat="skill in filteredskillData">
+						<tr ng-repeat="skill in skilllist|filter:name">
 							<td>
 								<div class="btn btn-info btn-draggable"
 								data-drag="true"
 								data-jqyoui-options="{revert: 'invalid'}"
-								ng-model="skill"
-								jqyoui-draggable
+								ng-model="skilllist"
+								jqyoui-draggable="{index: {{$index}}, animate: false}"
 								>{{skill.skill.value}}</div>
 							</td>
 						</tr>
