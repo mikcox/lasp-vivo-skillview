@@ -35,7 +35,8 @@
 					</div>
 					<div class="thumbnail" 
 						data-drop="true" 
-						ng-model="addPersonList" 
+						ng-model="addPersonList"
+						data-jqyoui-options="{accept:'.btn-draggable:not([ng-model!=peoplelist])'}" 
 						jqyoui-droppable="{multiple:false}" 
 						style='padding:25px; width:30%; float:left;'>
 						<div class="btn btn-primary btn-draggable" 
@@ -48,10 +49,10 @@
 							{{item.person.value}}
 						</div>
 					</div>
-					//data-jqyoui-options="{accept:'.btn-draggable:not([ng-model!=skill])'}" 
 					<div class="thumbnail"
 					data-drop="true"
 					ng-model="addSkillList"
+					data-jqyoui-options="{accept:'.btn-draggable:not([ng-model!=skilllist])'}" 
 					jqyoui-droppable="{multiple:true}"
 					style='padding: 25px; width:30%; float:right;'>
 						<div class="btn btn-info btn-draggable"
