@@ -6,7 +6,7 @@ var vivoviz = angular.module('vivoviz', ['ngDragDrop']); //dependencies go insid
 vivoviz.config(function ($routeProvider, $httpProvider) {
 $routeProvider. //this controls navigation within our app
 when('/', { controller: SkillsCtrl, templateUrl: 'partials/all-skills.html' }).
-when('/addskill', { controller: AddSkillCtrl, templateUrl: 'partials/add_skill.html' }).
+when('/mapaskill', { controller: AddSkillCtrl, templateUrl: 'partials/map-a-skill.html' }).
 otherwise({ redirectTo: '/' });
 
 //enable crossdomain requests
