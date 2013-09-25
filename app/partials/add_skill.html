@@ -7,25 +7,25 @@
 						<br/>
 					</div>
 					<p>
-						Results Found: {{(filteredpeopleData).length}}
+						Results Found: {{(peoplelist|filter:name).length}}
 					</p>
 					<div>
-						<p class="error">{{error}}</p>
-						<table ng-table class="table" ng-show="(filteredpeopleData = (peoplelist | filter:name)) ">
-						<th> People </th>
-						<tr ng-repeat="person in filteredpeopleData">
-							<td>
-								<div class="btn btn-primary btn-draggable"
-								data-drag="true"
-								data-jqyoui-options="{revert: 'invalid'}"
-								ng-model="person"
-								jqyoui-draggable="{animate:true}"
-								>
-									<a href="{{person.personuri.value}}" style="color:white;"> {{person.person.value}} </a></div>
-								</div>
-							</td>
-						</tr>
-						</table>
+					    <p class="error">{{error}}</p>
+					    <table class="table">
+					        <th> LASP People </th>
+					        <tr class="thumbnail" ng-repeat="person in peoplelist|filter:name">
+					           <td>
+					               <div class="div btn btn-info btn-draggable" 
+    					               ng-show"person.person.value" 
+    					               data-drag="true" 
+    					               data-jqyoui-options="{revert: 'invalid'}" 
+    					               ng-model="peoplelist" 
+    					               jqyoui-draggable="{index: {{$index}}, animate: true}">
+    					               {{person.person.value}}
+					               </div>
+				               </td>
+					       </tr>
+					    </table>
 					</div>
 				</div>		
 				<div id="spacer container" style="width:25%; padding:200px 5px; float:left; text-align:center; vertical-align:middle;">
@@ -33,7 +33,6 @@
 					<h4 style="width:50%; float:right">Has Skills</h4>
 					<div class="thumbnail" 
 						data-drop="true" 
-						data-jqyoui-options="{accept:'.btn-draggable:not([ng-model!=person])'}" 
 						ng-model="addPersonList" 
 						jqyoui-droppable="{multiple:false}" 
 						style='padding:25px; width:30%; float:left;'>
