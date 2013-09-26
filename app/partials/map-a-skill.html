@@ -6,8 +6,8 @@
 					<p>Results Found: {{(peoplelist|filter:name).length}}</p>
 					<p class="error">{{error}}</p>
 					<ul class="people">
-						<h2> People </h2>
-						<li class="thumbnail" ng-repeat="person in peoplelist|filter:name"> 
+						<h2>People</h2>
+						<li class="thumbnail" ng-repeat="person in peoplelist|filter:name" data-drop="true" ng-model="peoplelist" jqyoui-droppable="{multiple: true}"> 
 							<div class="btn btn-primary btn-draggable" data-drag="true" data-jqyoui-options="{revert: 'invalid'}" ng-model="peoplelist" jqyoui-draggable="{index: {{$index}}, animate: true, applyFilter: 'filterPeople'}" ng-hide="!person.person">{{person.person}}</div>
 						</li>
 					</ul>
@@ -29,9 +29,7 @@
 						</div>
 					</div>
 					<div  style="padding: 25px 0px; width: 100%; float:left;">
-						<div class = "btn btn-success" style="padding: 10px; width: 30%; font-size:20px;">
-							Submit!
-						</div>
+						<div class = "btn btn-success" style="padding: 10px; width: 30%; font-size:20px;">Submit</div>
 					</div>
 				</div>
 				
@@ -40,8 +38,8 @@
 					<p>Results Found: {{(skilllist|filter:skillname).length}}</p>
 					<p class="error">{{error}}</p>
 					<ul class="skills">
-						<h2> Skills </h2>
-						<li class="thumbnail" ng-repeat="skill in skilllist|filter:skillname"> 
+						<h2>Skills</h2>
+						<li class="thumbnail" ng-repeat="skill in skilllist|filter:skillname" data-drop="true" ng-model="skilllist" jqyoui-droppable="{multiple: true}"> 
                             <div class="btn btn-info btn-draggable" data-drag="true" data-jqyoui-options="{revert: 'invalid'}" ng-model="skilllist" jqyoui-draggable="{index: {{$index}}, animate: true, applyFilter: 'filterSkills'}" ng-hide="!skill.skill">{{skill.skill}}</div>
                         </li>
 					</ul>
