@@ -12,26 +12,24 @@
 		<link rel="apple-touch-icon" href="/apple-touch-icon.png" />
 		<!-- Date: 2013-09-11 -->
 		
-		<link rel="stylesheet" href="css/wilma.css">
 		<link rel="stylesheet" href="css/bootstrap.css">
 		<link rel="stylesheet" href="css/app.css">
 		<link rel="stylesheet" href="css/jquery-ui.css">
-		<script src="lib/d3/d3.v3.js"></script>
-		<script src="lib/jQuery/jquery-1.10.2.js"></script>
+		<script src="lib/jQuery/jquery-1.10.2.min.js"></script>
 		<script src="lib/jQuery/jquery-ui.min.js"></script>
-		<script src="lib/angular/angular.js"></script>
-		<script src="lib/angular/angular-dragdrop.js"></script>
+		<script src="lib/angular/angular.min.js"></script>
+		<script src="lib/angular/angular-dragdrop.min.js"></script>
 		<script src="js/app.js"></script>
 		<script src="js/controllers.js"></script>
 		<script src="js/directives.js"></script>
 	</head>
 
 	<body class="no-logo fae">
-		<header id="branding" role="banner" style="width:271px; height:59px; padding:20px 10px;border-radius: 10px; align:left;">
-			<a href="#/"><img src="images/cu-lasp-logo.png"/></a>
+		<header id="branding" role="banner" style="width:271px; height:59px; padding:20px 10px;border-radius: 10px; align:left; margin:0 auto">
+			<a href="#/" ><img src="images/cu-lasp-logo.png"/></a>
 		</header>
-		<div style="width:100%; text-align=center;">
-			<a href="#/">View All Skills</a> | <a href="#/addskill">Add a Skill</a>
+		<div style="width:100%; text-align:center;">
+			<p style="margin-bottom: 0; font-size: 30px; line-height: 1; letter-spacing: -1px; color:white;"><a href="#/" style="color: #004C80;">View All Skills</a> | <a href="#/mapaskill" style="color: #004C80;">Map New Skill</a></p>
 		</div>
 		<div ng-view>
 		</div>
