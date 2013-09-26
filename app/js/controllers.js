@@ -99,11 +99,13 @@ function SkillsCtrl($scope, $http){
 	$scope.orderProp = "Person.value";
 
 }
-function AddSkillCtrl($scope, $http){
+function AddSkillCtrl($scope, $http, $timeout, $filter){
 	$scope.itemsPerPage = 10;
 	$scope.currentPage = 0;
 	var queryStr = "PREFIX rdfs:  <http://www.w3.org/2000/01/rdf-schema#> PREFIX foaf: <http://xmlns.com/foaf/0.1/> SELECT ?person ?personuri WHERE{ ?personuri a foaf:Person . ?personuri rdfs:label ?person}";
 	var queryPart = "query=" + escape(queryStr);	
+	var list1 = [];
+	var list2 = [];
 	
 	$http({
 		method: 'POST',
@@ -111,12 +113,17 @@ function AddSkillCtrl($scope, $http){
 		data: queryPart,
 		headers: {"Accept": "application/sparql-results+json", 'Content-type': 'application/x-www-form-urlencoded'}
 	}).success(function(data) {
-		$scope.peoplelist = data.results.bindings;
+	    //this greatly simplifies our json structure
+	    for(var i=0;i<data.results.bindings.length;i++){
+	        list1.push({"person": data.results.bindings[i].person.value,
+	                   "uri": data.results.bindings[i].personuri.value});
+	    }
+	    $scope.peoplelist = list1;
 		$scope.addPersonList = [];
 	}).error(function(data,status) {
 		$scope.error = "Fuseki person query returned: " + status;
 	});
-	
+
 	queryStr = "PREFIX rdfs:  <http://www.w3.org/2000/01/rdf-schema#> PREFIX laspskills: <http://webdev1.lasp.colorado.edu:57529/laspskills#> SELECT ?skill ?skilluri WHERE{?skilluri a laspskills:SkillLevel . ?skilluri rdfs:label ?skill} ORDER BY desc(?skill)";
 	queryPart = "query=" + escape(queryStr);
 	$http({
@@ -125,10 +132,22 @@ function AddSkillCtrl($scope, $http){
 		data: queryPart,
 		headers: {"Accept": "application/sparql-results+json", 'Content-type': 'application/x-www-form-urlencoded'}
 	}).success(function(data) {
-		$scope.skilllist = data.results.bindings;
+	    //this greatly simplifies our json structure
+	    for(var i=0;i<data.results.bindings.length;i++){
+            list2.push({"skill": data.results.bindings[i].skill.value,
+                       "uri": data.results.bindings[i].skilluri.value});
+        }
+		$scope.skilllist = list2;
 		$scope.addSkillList = [];
 	}).error(function(data,status) {
 		$scope.error = "Fuseki skill query returned: " + status;
 	});
-
+	
+	//Necessary for dragable objects to return the correct index
+	$scope.filterSkills = function(){
+	    return $filter('filter')($scope.skilllist,$scope.skillname);
+	}
+	$scope.filterPeople = function(){
+        return $filter('filter')($scope.peoplelist,$scope.name);
+    }
 }

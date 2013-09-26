@@ -38,23 +38,23 @@ describe('LEMR App', function() {
     });
 
     it('should filter the personel list as user types into the search box', function() {
-      expect(repeater('#table1 tr').count()).toBe(550);
+      expect(repeater('#table1 li').count()).toBe(549);
 
       input('name.person').enter('Ty');
-      expect(repeater('#table1 tr').count()).toBe(10);
+      expect(repeater('#table1 li').count()).toBe(9);
 
       input('name.person').enter('Cox');
-      expect(repeater('#table1 tr').count()).toBe(2);
+      expect(repeater('#table1 li').count()).toBe(1);
     });
     
     it('should filter the skill list as user types into the search box', function() {
-      expect(repeater('#table2 tr').count()).toBe(36);
+      expect(repeater('#table2 li').count()).toBe(35);
 
-      input('skill.skill').enter('UNIX');
-      expect(repeater('#table2 tr').count()).toBe(6);
+      input('skillname.skill').enter('UNIX');
+      expect(repeater('#table2 li').count()).toBe(5);
 
-      input('skill.skill').enter('intermediate');
-      expect(repeater('#table2 tr').count()).toBe(8);
+      input('skillname.skill').enter('intermediate');
+      expect(repeater('#table2 li').count()).toBe(7);
     });
 
   });
