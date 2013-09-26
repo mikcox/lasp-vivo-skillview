@@ -3,7 +3,7 @@
 /* Controllers */
 //read in a local json file
 function SkillsCtrl($scope, $http){
-	var queryStr = "PREFIX rdfs:<http://www.w3.org/2000/01/rdf-schema#> PREFIX foaf: <http://xmlns.com/foaf/0.1/> PREFIX vivo: <http://vivoweb.org/ontology/core#> PREFIX laspskills: <http://webdev1.lasp.colorado.edu:57529/laspskills#>  SELECT ?Person ?Skill ?SkillLevel ?Office ?PhoneNumber ?Position ?Division ?Group WHERE { ?personuri a foaf:Person . ?personuri rdfs:label ?Person . ?personuri laspskills:hasSkill ?skillleveluri . ?skillleveluri rdfs:label ?SkillLevel . ?skillleveluri laspskills:levelForSkill ?skilluri . ?skilluri rdfs:label ?Skill . OPTIONAL{?personuri vivo:hasFacility ?roomuri . ?roomuri rdfs:label ?Office} . OPTIONAL{?personuri vivo:phoneNumber ?PhoneNumber} . OPTIONAL{?personuri vivo:personInPosition ?positionuri . ?positionuri rdfs:label ?Position . ?positionuri vivo:positionInOrganization ?groupuri . ?groupuri rdfs:label ?Group . ?groupuri vivo:subOrganizationWithin ?divisionuri . ?divisionuri rdfs:label ?Division }}"
+	var queryStr = "PREFIX rdfs:<http://www.w3.org/2000/01/rdf-schema#> PREFIX foaf: <http://xmlns.com/foaf/0.1/> PREFIX vivo: <http://vivoweb.org/ontology/core#> PREFIX laspskills: <http://webdev1.lasp.colorado.edu:57529/laspskills#>  SELECT ?Person ?Skill ?SkillLevel ?Office ?Email ?PhoneNumber ?Position ?Division ?Group WHERE { ?personuri a foaf:Person . ?personuri rdfs:label ?Person . ?personuri laspskills:hasSkill ?skillleveluri . ?skillleveluri rdfs:label ?SkillLevel . ?skillleveluri laspskills:levelForSkill ?skilluri . ?skilluri rdfs:label ?Skill . OPTIONAL{?personuri vivo:primaryEmail ?Email}. OPTIONAL{?personuri vivo:hasFacility ?roomuri . ?roomuri rdfs:label ?Office} . OPTIONAL{?personuri vivo:phoneNumber ?PhoneNumber} . OPTIONAL{?personuri vivo:personInPosition ?positionuri . ?positionuri rdfs:label ?Position . ?positionuri vivo:positionInOrganization ?groupuri . ?groupuri rdfs:label ?Group . ?groupuri vivo:subOrganizationWithin ?divisionuri . ?divisionuri rdfs:label ?Division }}"
 	var queryPart = "query=" + escape(queryStr);	
 	
 	$http({
@@ -17,6 +17,7 @@ function SkillsCtrl($scope, $http){
 		var tmpPerson = '';
 		var tmpSkill = '';
 		var tmpOffice = '';
+		var tmpEmail = '';
 		var tmpPhone = '';
 		var tmpPosition = '';
 		var tmpDivision = '';
@@ -37,6 +38,12 @@ function SkillsCtrl($scope, $http){
 				}
 				else{
 					tmpOffice = '';
+				}
+				if(data.results.bindings[i].hasOwnProperty("Email")){
+					tmpEmail = data.results.bindings[i].Email.value;
+				}
+				else{
+					tmpEmail = '';
 				}
 				if(data.results.bindings[i].hasOwnProperty("PhoneNumber")){
 					tmpPhone = data.results.bindings[i].PhoneNumber.value;
@@ -75,6 +82,7 @@ function SkillsCtrl($scope, $http){
 				fixedList.push({"Person": {"type":"literal", "value": tmpPerson},
 								"Skill": {"type":"literal", "value": tmpSkill}, 
 								"Office": {"type":"literal", "value": tmpOffice},
+								"Email": {"type":"literal", "value": tmpEmail},
 								"PhoneNumber": {"type":"literal", "value": tmpPhone},
 								"Position": {"type":"literal", "value": tmpPosition},
 								"Division": {"type":"literal", "value": tmpDivision},
