@@ -46,6 +46,16 @@ describe('LEMR App', function() {
       input('name.person').enter('Cox');
       expect(repeater('#table1 tr').count()).toBe(2);
     });
+    
+    it('should filter the skill list as user types into the search box', function() {
+      expect(repeater('#table2 tr').count()).toBe(36);
+
+      input('skill.skill').enter('UNIX');
+      expect(repeater('#table2 tr').count()).toBe(6);
+
+      input('skill.skill').enter('intermediate');
+      expect(repeater('#table2 tr').count()).toBe(8);
+    });
 
   });
 });
