@@ -13,11 +13,12 @@
 				<th> Name </th>
 				<th> Skill </th>
 				<th> Office </th>
+				<th> Email </th>
 				<th> Phone Number </th>
 				<th> Position </th>
 				<th> Division </th>
 				<th> Group </th>
-				<tr ng-repeat="row in skills.results.bindings | filter:query | orderBy:orderProp">
+				<tr ng-repeat="row in skills.results.bindings | ViewAllSearch:query | orderBy:orderProp">
 					<td>
 						{{row.Person.value}}
 					</td>
@@ -26,6 +27,9 @@
 					</td>
 					<td data-title="'Office'">
 						{{row.Office.value}}
+					</td>
+					<td data-title="'Email'">
+						{{row.Email.value}}
 					</td>
 					<td data-title="'Phone Number'">
 						{{row.PhoneNumber.value}}
@@ -42,7 +46,7 @@
 				</tr>
 				</table>
 				<p>
-				Number of Results: {{(skills.results.bindings|filter:query).length}}
+				Number of Results: {{(skills.results.bindings|ViewAllSearch:query).length}}
 				</p>
 				<br><br>
 			</div>
