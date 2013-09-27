@@ -3,7 +3,7 @@
 /* Controllers */
 //read in a local json file
 function SkillsCtrl($scope, $http){
-	var queryStr = "PREFIX rdfs:<http://www.w3.org/2000/01/rdf-schema#> PREFIX foaf: <http://xmlns.com/foaf/0.1/> PREFIX vivo: <http://vivoweb.org/ontology/core#> PREFIX laspskills: <http://webdev1.lasp.colorado.edu:57529/laspskills#>  SELECT ?Person ?Skill ?SkillLevel ?Office ?PhoneNumber ?Position ?Division ?Group WHERE { ?personuri a foaf:Person . ?personuri rdfs:label ?Person . ?personuri laspskills:hasSkill ?skillleveluri . ?skillleveluri rdfs:label ?SkillLevel . ?skillleveluri laspskills:levelForSkill ?skilluri . ?skilluri rdfs:label ?Skill . OPTIONAL{?personuri vivo:hasFacility ?roomuri . ?roomuri rdfs:label ?Office} . OPTIONAL{?personuri vivo:phoneNumber ?PhoneNumber} . OPTIONAL{?personuri vivo:personInPosition ?positionuri . ?positionuri rdfs:label ?Position . ?positionuri vivo:positionInOrganization ?groupuri . ?groupuri rdfs:label ?Group . ?groupuri vivo:subOrganizationWithin ?divisionuri . ?divisionuri rdfs:label ?Division }}"
+	var queryStr = "PREFIX rdfs:<http://www.w3.org/2000/01/rdf-schema#> PREFIX foaf: <http://xmlns.com/foaf/0.1/> PREFIX vivo: <http://vivoweb.org/ontology/core#> PREFIX laspskills: <http://webdev1.lasp.colorado.edu:57529/laspskills#>  SELECT ?Person ?Skill ?SkillLevel ?Office ?Email ?PhoneNumber ?Position ?Division ?Group WHERE { ?personuri a foaf:Person . ?personuri rdfs:label ?Person . ?personuri laspskills:hasSkill ?skillleveluri . ?skillleveluri rdfs:label ?SkillLevel . ?skillleveluri laspskills:levelForSkill ?skilluri . ?skilluri rdfs:label ?Skill . OPTIONAL{?personuri vivo:primaryEmail ?Email}. OPTIONAL{?personuri vivo:hasFacility ?roomuri . ?roomuri rdfs:label ?Office} . OPTIONAL{?personuri vivo:phoneNumber ?PhoneNumber} . OPTIONAL{?personuri vivo:personInPosition ?positionuri . ?positionuri rdfs:label ?Position . ?positionuri vivo:positionInOrganization ?groupuri . ?groupuri rdfs:label ?Group . ?groupuri vivo:subOrganizationWithin ?divisionuri . ?divisionuri rdfs:label ?Division }}"
 	var queryPart = "query=" + escape(queryStr);	
 	
 	$http({
@@ -17,6 +17,7 @@ function SkillsCtrl($scope, $http){
 		var tmpPerson = '';
 		var tmpSkill = '';
 		var tmpOffice = '';
+		var tmpEmail = '';
 		var tmpPhone = '';
 		var tmpPosition = '';
 		var tmpDivision = '';
@@ -37,6 +38,12 @@ function SkillsCtrl($scope, $http){
 				}
 				else{
 					tmpOffice = '';
+				}
+				if(data.results.bindings[i].hasOwnProperty("Email")){
+					tmpEmail = data.results.bindings[i].Email.value;
+				}
+				else{
+					tmpEmail = '';
 				}
 				if(data.results.bindings[i].hasOwnProperty("PhoneNumber")){
 					tmpPhone = data.results.bindings[i].PhoneNumber.value;
@@ -75,6 +82,7 @@ function SkillsCtrl($scope, $http){
 				fixedList.push({"Person": {"type":"literal", "value": tmpPerson},
 								"Skill": {"type":"literal", "value": tmpSkill}, 
 								"Office": {"type":"literal", "value": tmpOffice},
+								"Email": {"type":"literal", "value": tmpEmail},
 								"PhoneNumber": {"type":"literal", "value": tmpPhone},
 								"Position": {"type":"literal", "value": tmpPosition},
 								"Division": {"type":"literal", "value": tmpDivision},
@@ -91,11 +99,13 @@ function SkillsCtrl($scope, $http){
 	$scope.orderProp = "Person.value";
 
 }
-function AddSkillCtrl($scope, $http){
+function AddSkillCtrl($scope, $http, $timeout, $filter){
 	$scope.itemsPerPage = 10;
 	$scope.currentPage = 0;
 	var queryStr = "PREFIX rdfs:  <http://www.w3.org/2000/01/rdf-schema#> PREFIX foaf: <http://xmlns.com/foaf/0.1/> SELECT ?person ?personuri WHERE{ ?personuri a foaf:Person . ?personuri rdfs:label ?person}";
 	var queryPart = "query=" + escape(queryStr);	
+	var list1 = [];
+	var list2 = [];
 	
 	$http({
 		method: 'POST',
@@ -103,12 +113,17 @@ function AddSkillCtrl($scope, $http){
 		data: queryPart,
 		headers: {"Accept": "application/sparql-results+json", 'Content-type': 'application/x-www-form-urlencoded'}
 	}).success(function(data) {
-		$scope.peoplelist = data.results.bindings;
+	    //this greatly simplifies our json structure
+	    for(var i=0;i<data.results.bindings.length;i++){
+	        list1.push({"person": data.results.bindings[i].person.value,
+	                   "uri": data.results.bindings[i].personuri.value});
+	    }
+	    $scope.peoplelist = list1;
 		$scope.addPersonList = [];
 	}).error(function(data,status) {
 		$scope.error = "Fuseki person query returned: " + status;
 	});
-	
+
 	queryStr = "PREFIX rdfs:  <http://www.w3.org/2000/01/rdf-schema#> PREFIX laspskills: <http://webdev1.lasp.colorado.edu:57529/laspskills#> SELECT ?skill ?skilluri WHERE{?skilluri a laspskills:SkillLevel . ?skilluri rdfs:label ?skill} ORDER BY desc(?skill)";
 	queryPart = "query=" + escape(queryStr);
 	$http({
@@ -117,10 +132,22 @@ function AddSkillCtrl($scope, $http){
 		data: queryPart,
 		headers: {"Accept": "application/sparql-results+json", 'Content-type': 'application/x-www-form-urlencoded'}
 	}).success(function(data) {
-		$scope.skilllist = data.results.bindings;
+	    //this greatly simplifies our json structure
+	    for(var i=0;i<data.results.bindings.length;i++){
+            list2.push({"skill": data.results.bindings[i].skill.value,
+                       "uri": data.results.bindings[i].skilluri.value});
+        }
+		$scope.skilllist = list2;
 		$scope.addSkillList = [];
 	}).error(function(data,status) {
 		$scope.error = "Fuseki skill query returned: " + status;
 	});
-
+	
+	//Necessary for draggable objects to return the correct index
+	$scope.filterSkills = function(){
+	    return $filter('QuickSearch')($scope.skilllist,$scope.skillquery,"skill");
+	}
+	$scope.filterPeople = function(){
+        return $filter('QuickSearch')($scope.peoplelist,$scope.personquery, "person");
+    }
 }
