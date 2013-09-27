@@ -18,7 +18,7 @@
 				<th> Position </th>
 				<th> Division </th>
 				<th> Group </th>
-				<tr ng-repeat="row in skills.results.bindings | filter:query | orderBy:orderProp">
+				<tr ng-repeat="row in skills.results.bindings | ViewAllSearch:query | orderBy:orderProp">
 					<td>
 						{{row.Person.value}}
 					</td>
@@ -46,7 +46,7 @@
 				</tr>
 				</table>
 				<p>
-				Number of Results: {{(skills.results.bindings|filter:query).length}}
+				Number of Results: {{(skills.results.bindings|ViewAllSearch:query).length}}
 				</p>
 				<br><br>
 			</div>

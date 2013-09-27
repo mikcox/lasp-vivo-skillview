@@ -143,11 +143,11 @@ function AddSkillCtrl($scope, $http, $timeout, $filter){
 		$scope.error = "Fuseki skill query returned: " + status;
 	});
 	
-	//Necessary for dragable objects to return the correct index
+	//Necessary for draggable objects to return the correct index
 	$scope.filterSkills = function(){
-	    return $filter('filter')($scope.skilllist,$scope.skillname);
+	    return $filter('QuickSearch')($scope.skilllist,$scope.skillquery,"skill");
 	}
 	$scope.filterPeople = function(){
-        return $filter('filter')($scope.peoplelist,$scope.name);
+        return $filter('QuickSearch')($scope.peoplelist,$scope.personquery, "person");
     }
 }

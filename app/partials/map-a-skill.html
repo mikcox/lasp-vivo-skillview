@@ -2,12 +2,12 @@
     <h1>Add a Skill</h1>
 			<div class="row-fluid" style="width:100%;">
 				<div id="table1" style="width:35%; float:left;">
-					<input type="text" data-ng-model="name.person" placeholder="Search for a person"/><br/>
-					<p>Results Found: {{(peoplelist|filter:name).length}}</p>
+					<input type="text" data-ng-model="personquery" placeholder="Search for a person"/><br/>
+					<p>Results Found: {{(peoplelist|QuickSearch: personquery:'person').length}}</p>
 					<p class="error">{{error}}</p>
 					<ul class="people">
 						<h2>People</h2>
-						<li class="thumbnail" ng-repeat="person in peoplelist|filter:name" data-drop="true" ng-model="peoplelist" jqyoui-droppable="{multiple: true}" data-jqyoui-options="{accept:'.btn-draggable:not([ng-model!=addPersonList])'}"> 
+						<li class="thumbnail" ng-repeat="person in peoplelist|QuickSearch: personquery:'person'" data-drop="true" ng-model="peoplelist" jqyoui-droppable="{multiple: true}" data-jqyoui-options="{accept:'.btn-draggable:not([ng-model!=addPersonList])'}"> 
 							<div class="btn btn-primary btn-draggable" data-drag="true" data-jqyoui-options="{revert: 'invalid'}" ng-model="peoplelist" jqyoui-draggable="{index: {{$index}}, animate: true, applyFilter: 'filterPeople'}" ng-hide="!person.person">{{person.person}}</div>
 						</li>
 					</ul>
@@ -34,12 +34,12 @@
 				</div>
 				
 				<div id="table2" style="width:35%; float:left;">
-				    <input type="text" ng-model="skillname.skill" placeholder="Search for a skill"/><br/>
-					<p>Results Found: {{(skilllist|filter:skillname).length}}</p>
+				    <input type="text" ng-model="skillquery" placeholder="Search for a skill"/><br/>
+					<p>Results Found: {{(skilllist|QuickSearch: skillquery:'skill').length}}</p>
 					<p class="error">{{error}}</p>
 					<ul class="skills">
 						<h2>Skills</h2>
-						<li class="thumbnail" ng-repeat="skill in skilllist|filter:skillname" data-drop="true" ng-model="skilllist" jqyoui-droppable="{multiple: true}" data-jqyoui-options="{accept:'.btn-draggable:not([ng-model!=addSkillList])'}"> 
+						<li class="thumbnail" ng-repeat="skill in skilllist|QuickSearch:skillquery:'skill'" data-drop="true" ng-model="skilllist" jqyoui-droppable="{multiple: true}" data-jqyoui-options="{accept:'.btn-draggable:not([ng-model!=addSkillList])'}"> 
                             <div class="btn btn-info btn-draggable" data-drag="true" data-jqyoui-options="{revert: 'invalid'}" ng-model="skilllist" jqyoui-draggable="{index: {{$index}}, animate: true, applyFilter: 'filterSkills'}" ng-hide="!skill.skill">{{skill.skill}}</div>
                         </li>
 					</ul>
