@@ -150,4 +150,22 @@ function AddSkillCtrl($scope, $http, $timeout, $filter){
 	$scope.filterPeople = function(){
         return $filter('QuickSearch')($scope.peoplelist,$scope.personquery, "person");
     }
+	$scope.SubmitButtonPressed = function(){
+		if($scope.addPersonList.length < 1){
+			alert("Please select at least one person.");
+			return;
+		}
+		if($scope.addSkillList.length < 1){
+			alert("Please select at least one skill.");
+			return;
+		}
+		$scope.SubmitText = "";
+		
+		for(var i=0; i < $scope.addPersonList.length; i++){
+			for(var j=0; j < $scope.addSkillList.length; j++){
+				$scope.SubmitText += $scope.addPersonList[i].person + ", " + $scope.addSkillList[j].skill + "\n";
+			}
+		}
+		alert($scope.SubmitText);
+	}
 }
