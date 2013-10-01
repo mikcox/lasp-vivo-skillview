@@ -173,16 +173,18 @@ function AddSkillCtrl($scope, $http, $timeout, $filter){
 	    $scope.peoplelist.push($scope.addPersonList[index]);
 	    $scope.addPersonList.splice(index,1);
 	};
-	$scope.addToPeople = function(index){
-	    $scope.addPersonList.push($scope.peoplelist[index]);
-        $scope.peoplelist.splice(index,1);
+	$scope.addToPeople = function(person){
+	    var actualIndex = $scope.peoplelist.indexOf(person);
+	    $scope.addPersonList.push($scope.peoplelist[actualIndex]);
+        $scope.peoplelist.splice(actualIndex,1);
 	};
 	$scope.removeFromAddSkill = function(index){
         $scope.skilllist.push($scope.addSkillList[index]);
         $scope.addSkillList.splice(index,1);
     };
-    $scope.addToSkills = function(index){
-        $scope.addSkillList.push($scope.skilllist[index]);
-        $scope.skilllist.splice(index,1);
+    $scope.addToSkills = function(skill){
+        var actualIndex = $scope.skilllist.indexOf(skill);
+        $scope.addSkillList.push($scope.skilllist[actualIndex]);
+        $scope.skilllist.splice(actualIndex,1);
     };
 }
