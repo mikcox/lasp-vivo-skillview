@@ -146,10 +146,10 @@ function AddSkillCtrl($scope, $http, $timeout, $filter){
 	//Necessary for draggable objects to return the correct index
 	$scope.filterSkills = function(){
 	    return $filter('QuickSearch')($scope.skilllist,$scope.skillquery,"skill");
-	}
+	};
 	$scope.filterPeople = function(){
         return $filter('QuickSearch')($scope.peoplelist,$scope.personquery, "person");
-    }
+    };
 	$scope.SubmitButtonPressed = function(){
 		if($scope.addPersonList.length < 1){
 			alert("Please select at least one person.");
@@ -167,5 +167,22 @@ function AddSkillCtrl($scope, $http, $timeout, $filter){
 			}
 		}
 		alert($scope.SubmitText);
-	}
+	};
+	
+	$scope.removeFromAddPerson = function(index){
+	    $scope.peoplelist.push($scope.addPersonList[index]);
+	    $scope.addPersonList.splice(index,1);
+	};
+	$scope.addToPeople = function(index){
+	    $scope.addPersonList.push($scope.peoplelist[index]);
+        $scope.peoplelist.splice(index,1);
+	};
+	$scope.removeFromAddSkill = function(index){
+        $scope.skilllist.push($scope.addSkillList[index]);
+        $scope.addSkillList.splice(index,1);
+    };
+    $scope.addToSkills = function(index){
+        $scope.addSkillList.push($scope.skilllist[index]);
+        $scope.skilllist.splice(index,1);
+    };
 }

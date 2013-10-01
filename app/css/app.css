@@ -92,3 +92,22 @@ color: white;
   text-decoration: line-through;
   color: grey;
 }
+
+.addButton {
+	float: right;
+	background: transparent;
+	border: none;
+	height: 6%;
+	width: 6%;
+	padding: 0px;
+}
+
+
+.removeButton {
+	float: right;
+	background: transparent;
+	border: none;
+	height: 13%;
+	width: 13%;
+	padding: 0px;
+}
