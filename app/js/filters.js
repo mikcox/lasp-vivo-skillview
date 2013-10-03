@@ -50,7 +50,7 @@ filterMod.filter('QuickSearch', function() {
 					});
 				return returnList;
 			}
-		}
+		};
 	});
 	
 filterMod.filter('ViewAllSearch', function() {
@@ -82,5 +82,5 @@ filterMod.filter('ViewAllSearch', function() {
 				}
 				return returnList;
 			}
-		}
+		};
 	});

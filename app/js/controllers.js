@@ -100,8 +100,6 @@ function SkillsCtrl($scope, $http){
 
 }
 function AddSkillCtrl($scope, $http, $timeout, $filter){
-	$scope.itemsPerPage = 10;
-	$scope.currentPage = 0;
 	var queryStr = "PREFIX rdfs:  <http://www.w3.org/2000/01/rdf-schema#> PREFIX foaf: <http://xmlns.com/foaf/0.1/> SELECT ?person ?personuri WHERE{ ?personuri a foaf:Person . ?personuri rdfs:label ?person}";
 	var queryPart = "query=" + escape(queryStr);	
 	var list1 = [];
@@ -120,6 +118,7 @@ function AddSkillCtrl($scope, $http, $timeout, $filter){
 	    }
 	    $scope.peoplelist = list1;
 		$scope.addPersonList = [];
+        $scope.filterPeople();
 	}).error(function(data,status) {
 		$scope.error = "Fuseki person query returned: " + status;
 	});
@@ -139,17 +138,30 @@ function AddSkillCtrl($scope, $http, $timeout, $filter){
         }
 		$scope.skilllist = list2;
 		$scope.addSkillList = [];
+		$scope.filterSkills();
 	}).error(function(data,status) {
 		$scope.error = "Fuseki skill query returned: " + status;
 	});
 	
 	//Necessary for draggable objects to return the correct index
+	$scope.filteredPeople = []; 
+	$scope.filteredSkills = [];
+	$scope.currentPagePeople = 0;
+    $scope.currentPageSkills = 0; 
+	
 	$scope.filterSkills = function(){
-	    return $filter('QuickSearch')($scope.skilllist,$scope.skillquery,"skill");
+	    $scope.filteredSkills = $filter('QuickSearch')($scope.skilllist,$scope.skillquery,"skill");
+	    $scope.currentPageSkills = 0;
+	    $scope.groupToPagesSkills();
+	    return $scope.filteredSkills;
 	};
 	$scope.filterPeople = function(){
-        return $filter('QuickSearch')($scope.peoplelist,$scope.personquery, "person");
+	    $scope.filteredPeople = $filter('QuickSearch')($scope.peoplelist,$scope.personquery, "person");
+        $scope.currentPagePeople = 0;
+        $scope.groupToPagesPeople();
+        return $scope.filteredPeople;
     };
+    
 	$scope.SubmitButtonPressed = function(){
 		if($scope.addPersonList.length < 1){
 			alert("Please select at least one person.");
@@ -169,22 +181,111 @@ function AddSkillCtrl($scope, $http, $timeout, $filter){
 		alert($scope.SubmitText);
 	};
 	
+	//Add and Remove Button Functions
 	$scope.removeFromAddPerson = function(index){
 	    $scope.peoplelist.push($scope.addPersonList[index]);
 	    $scope.addPersonList.splice(index,1);
+	    $scope.filterPeople();
 	};
 	$scope.addToPeople = function(person){
 	    var actualIndex = $scope.peoplelist.indexOf(person);
 	    $scope.addPersonList.push($scope.peoplelist[actualIndex]);
         $scope.peoplelist.splice(actualIndex,1);
+        $scope.filterPeople();
 	};
 	$scope.removeFromAddSkill = function(index){
         $scope.skilllist.push($scope.addSkillList[index]);
         $scope.addSkillList.splice(index,1);
+        $scope.filterSkills();
     };
     $scope.addToSkills = function(skill){
         var actualIndex = $scope.skilllist.indexOf(skill);
         $scope.addSkillList.push($scope.skilllist[actualIndex]);
         $scope.skilllist.splice(actualIndex,1);
+        $scope.filterSkills();
+    };
+
+    //Pagination Functions 
+    var itemsPerPage = 15;
+    $scope.pagedPeople = [];
+    
+    $scope.groupToPagesPeople = function () {
+        $scope.pagedPeople = [];
+        
+        for (var i = 0; i < $scope.filteredPeople.length; i++) {
+          if (i % itemsPerPage === 0) {
+              $scope.pagedPeople[Math.floor(i/itemsPerPage)] = [ $scope.filteredPeople[i] ];
+          }  else {
+              $scope.pagedPeople[Math.floor(i/itemsPerPage)].push($scope.filteredPeople[i]);
+          }
+        }
+    };
+    $scope.prevPeoplePage = function () {
+        if ($scope.currentPagePeople > 0) {
+          $scope.currentPagePeople--;
+        }
+    };
+
+    $scope.nextPeoplePage = function () {
+        if ($scope.currentPagePeople < $scope.pagedPeople.length - 1) {
+          $scope.currentPagePeople++;
+        }
+    };
+ 
+    $scope.setPeoplePage = function () {
+        $scope.currentPagePeople = this.n;
+    };
+    
+    $scope.pagedSkills = [];
+    $scope.groupToPagesSkills = function () {
+        $scope.pagedSkills = [];
+        
+        for (var i = 0; i < $scope.filteredSkills.length; i++) {
+          if (i % itemsPerPage === 0) {
+              $scope.pagedSkills[Math.floor(i/itemsPerPage)] = [ $scope.filteredSkills[i] ];
+          }  else {
+              $scope.pagedSkills[Math.floor(i/itemsPerPage)].push($scope.filteredSkills[i]);
+          }
+        }
+    };
+    $scope.prevSkillsPage = function () {
+        if ($scope.currentPageSkills > 0) {
+          $scope.currentPageSkills--;
+        }
+    };
+
+    $scope.nextSkillsPage = function () {
+        if ($scope.currentPageSkills < $scope.pagedSkills.length - 1) {
+          $scope.currentPageSkills++;
+        }
+    };
+ 
+    $scope.setSkillsPage = function () {
+        $scope.currentPageSkills = this.n;
+    };
+    
+    // Controls the numbers on the pagination bars
+    $scope.range = function (pos, length) {
+        var ret = [];
+        var max = 10;
+        var end = 0;
+        var start = 0;
+        if (length < max) {
+            end = length;
+        }
+        else if (pos <= 5) {
+            end = max;
+        } else {
+            end = pos + max - 3;
+        }
+        if (pos > 5){
+            start = pos - 3;
+        } else {
+            start = 0;
+        }
+        for (var i = start; i < end; i++) {
+          ret.push(i);
+        }
+        return ret;
     };
 }
