@@ -3,7 +3,7 @@
 /* Controllers */
 //read in a local json file
 function SkillsCtrl($scope, $http){
-	var queryStr = "PREFIX rdfs:<http://www.w3.org/2000/01/rdf-schema#> PREFIX foaf: <http://xmlns.com/foaf/0.1/> PREFIX vivo: <http://vivoweb.org/ontology/core#> PREFIX laspskills: <http://webdev1.lasp.colorado.edu:57529/laspskills#>  SELECT ?Person ?Skill ?SkillLevel ?Office ?Email ?PhoneNumber ?Position ?Division ?Group WHERE { ?personuri a foaf:Person . ?personuri rdfs:label ?Person . ?personuri laspskills:hasSkill ?skillleveluri . ?skillleveluri rdfs:label ?SkillLevel . ?skillleveluri laspskills:levelForSkill ?skilluri . ?skilluri rdfs:label ?Skill . OPTIONAL{?personuri vivo:primaryEmail ?Email}. OPTIONAL{?personuri vivo:hasFacility ?roomuri . ?roomuri rdfs:label ?Office} . OPTIONAL{?personuri vivo:phoneNumber ?PhoneNumber} . OPTIONAL{?personuri vivo:personInPosition ?positionuri . ?positionuri rdfs:label ?Position . ?positionuri vivo:positionInOrganization ?groupuri . ?groupuri rdfs:label ?Group . ?groupuri vivo:subOrganizationWithin ?divisionuri . ?divisionuri rdfs:label ?Division }}"
+	var queryStr = "PREFIX rdfs:<http://www.w3.org/2000/01/rdf-schema#> PREFIX foaf: <http://xmlns.com/foaf/0.1/> PREFIX vivo: <http://vivoweb.org/ontology/core#> PREFIX laspskills: <http://webdev1.lasp.colorado.edu:57529/laspskills#>  SELECT ?Person ?Skill ?SkillLevel ?Office ?Email ?PhoneNumber ?Position ?Division ?Group WHERE { ?personuri a foaf:Person . ?personuri rdfs:label ?Person . ?personuri laspskills:hasSkill ?skillleveluri . ?skillleveluri rdfs:label ?SkillLevel . ?skillleveluri laspskills:levelForSkill ?skilluri . ?skilluri rdfs:label ?Skill . OPTIONAL{?personuri vivo:primaryEmail ?Email}. OPTIONAL{?personuri vivo:hasFacility ?roomuri . ?roomuri rdfs:label ?Office} . OPTIONAL{?personuri vivo:phoneNumber ?PhoneNumber} . OPTIONAL{?personuri vivo:personInPosition ?positionuri . ?positionuri rdfs:label ?Position . ?positionuri vivo:positionInOrganization ?groupuri . ?groupuri rdfs:label ?Group . ?groupuri vivo:subOrganizationWithin ?divisionuri . ?divisionuri rdfs:label ?Division }}";
 	var queryPart = "query=" + escape(queryStr);	
 	
 	$http({
@@ -62,19 +62,19 @@ function SkillsCtrl($scope, $http){
 						duplicateRows.push(cursor);
 						//concatenate the results from the duplicate row with the temp variable
 						if(data.results.bindings[i].Office.value != data.results.bindings[cursor].Office.value){
-							tmpOffice = tmpOffice + ', ' + data.results.bindings[cursor].Office.value
+							tmpOffice = tmpOffice + ', ' + data.results.bindings[cursor].Office.value;
 						}
 						if(data.results.bindings[i].PhoneNumber.value != data.results.bindings[cursor].PhoneNumber.value){
-							tmpPhone = tmpPhone + ', ' + data.results.bindings[cursor].PhoneNumber.value
+							tmpPhone = tmpPhone + ', ' + data.results.bindings[cursor].PhoneNumber.value;
 						}
 						if(data.results.bindings[i].Position.value != data.results.bindings[cursor].Position.value){
-							tmpPosition = tmpPosition + ', ' + ata.results.bindings[cursor].Position.value
+							tmpPosition = tmpPosition + ', ' + ata.results.bindings[cursor].Position.value;
 						}
 						if(data.results.bindings[i].Division.value != data.results.bindings[cursor].Division.value){
-							tmpDivision = tmpDivision + ', ' + data.results.bindings[cursor].Division.value
+							tmpDivision = tmpDivision + ', ' + data.results.bindings[cursor].Division.value;
 						}
 						if(data.results.bindings[i].Group.value != data.results.bindings[cursor].Group.value){
-							tmpGroup = tmpGroup + ', ' + data.results.bindings[cursor].Group.value
+							tmpGroup = tmpGroup + ', ' + data.results.bindings[cursor].Group.value;
 						}
 					}
 				}
@@ -97,8 +97,8 @@ function SkillsCtrl($scope, $http){
 	});
 	
 	$scope.orderProp = "Person.value";
-
 }
+
 function AddSkillCtrl($scope, $http, $timeout, $filter){
 	var queryStr = "PREFIX rdfs:  <http://www.w3.org/2000/01/rdf-schema#> PREFIX foaf: <http://xmlns.com/foaf/0.1/> SELECT ?person ?personuri WHERE{ ?personuri a foaf:Person . ?personuri rdfs:label ?person}";
 	var queryPart = "query=" + escape(queryStr);	
@@ -173,7 +173,7 @@ function AddSkillCtrl($scope, $http, $timeout, $filter){
 		
 		for(var i=0; i < $scope.addPersonList.length; i++){
 			for(var j=0; j < $scope.addSkillList.length; j++){
-			    $scope.SubmitText += $scope.addPersonList[i].uri + ","
+			    $scope.SubmitText += $scope.addPersonList[i].uri + ",";
 				$scope.SubmitText += $scope.addSkillList[j].uri + "\n";
 			}
 		}
@@ -189,7 +189,7 @@ function AddSkillCtrl($scope, $http, $timeout, $filter){
 			url: "lib/submitbuttonaction.php",
 			data: {SubmitText : $scope.SubmitText}, 
 			success: function(response)
-			{ alert("CSV created successfully.")}
+			{ alert("CSV created successfully.");}
         });
 	};
 	
@@ -217,9 +217,23 @@ function AddSkillCtrl($scope, $http, $timeout, $filter){
         $scope.filterSkills();
     };
 
+    //search functions
+    $scope.searchPeople = function(person){
+        if(person.length > 2){
+            $scope.currentPagePeople = 0;
+        }
+        return $scope.filterPeople();
+    };
+
+    $scope.searchSkills = function(skill){
+        if(skill.length > 2){
+            $scope.currentPageSkills = 0;
+        }
+        return $scope.filterSkills();
+    };
+
     //Pagination Functions 
     var itemsPerPage = 15;
-    $scope.pagedPeople = [];
     
     $scope.groupToPagesPeople = function () {
         $scope.pagedPeople = [];
@@ -248,7 +262,6 @@ function AddSkillCtrl($scope, $http, $timeout, $filter){
         $scope.currentPagePeople = this.n;
     };
     
-    $scope.pagedSkills = [];
     $scope.groupToPagesSkills = function () {
         $scope.pagedSkills = [];
         
@@ -302,5 +315,20 @@ function AddSkillCtrl($scope, $http, $timeout, $filter){
           ret.push(i);
         }
         return ret;
+    };
+    
+    $scope.countPeople = function(){
+        var count = 0;
+        for (var i = 0; i < $scope.pagedPeople.length; i++) {
+            count += $scope.pagedPeople[i].length;
+        }
+        return count;
+    };
+    $scope.countSkills = function(){
+        var count = 0;
+        for (var i = 0; i < $scope.pagedSkills.length; i++) {
+            count += $scope.pagedSkills[i].length;
+        }
+        return count;
     };
 }
