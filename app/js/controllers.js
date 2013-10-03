@@ -174,11 +174,26 @@ function AddSkillCtrl($scope, $http, $timeout, $filter){
 		$scope.SubmitText = "";
 		
 		for(var i=0; i < $scope.addPersonList.length; i++){
+			$scope.SubmitText += $scope.addPersonList[i].uri + ","
 			for(var j=0; j < $scope.addSkillList.length; j++){
-				$scope.SubmitText += $scope.addPersonList[i].person + ", " + $scope.addSkillList[j].skill + "\n";
+				$scope.SubmitText += $scope.addSkillList[j].uri + ";";
 			}
+			$scope.SubmitText += "\n";
 		}
-		alert($scope.SubmitText);
+		ajaxSubmitNewSkillMap();
+		//alert($scope.SubmitText);
+	};
+	
+	function ajaxSubmitNewSkillMap() {
+		//alert("To AJAX: the submitted string is: "+$scope.SubmitText);
+        $.ajax
+        ({
+			type: "POST",
+			url: "lib/submitbuttonaction.php",
+			data: {SubmitText : $scope.SubmitText}, 
+			success: function(response)
+			{ alert("CSV created successfully.")}
+        });
 	};
 	
 	//Add and Remove Button Functions
