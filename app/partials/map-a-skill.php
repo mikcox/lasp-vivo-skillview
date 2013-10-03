@@ -6,9 +6,10 @@
 				<p class="error">{{error}}</p>
 				<ul class="people">
 					<h2>People</h2>
+					<p ng-show="peoplelist">Total People: {{peoplelist.length|filter:filterPeople}}</p>
 					<p ng-hide="pagedPeople"> Loading...</p>
-					<li class="thumbnail" ng-repeat="person in pagedPeople[currentPagePeople]" data-drop="true" ng-model="pagedPeople" jqyoui-droppable="{multiple: true}" data-jqyoui-options="{accept:'.btn-draggable:not([ng-model!=addPersonList])'}"> 
-						<div class="btn btn-primary btn-draggable" data-drag="true" data-jqyoui-options="{revert: 'invalid'}" ng-model="peoplelist" jqyoui-draggable="{index: {{$index}}, animate: true, applyFilter: 'filterPeople'}" ng-hide="!person.person">{{person.person}}</div>
+					<li class="thumbnail" ng-repeat="person in pagedPeople[currentPagePeople]" data-drop="true" ng-model="peoplelist" jqyoui-droppable="{multiple: true}" data-jqyoui-options="{accept:'.btn-draggable:not([ng-model!=addPersonList])'}"> 
+						<div class="btn btn-primary btn-draggable" data-drag="true" data-jqyoui-options="{revert: 'invalid'}" ng-model="peoplelist" jqyoui-draggable="{index: {{$index+currentPagePeople*15}}, animate: true, applyFilter: 'filterPeople'}" ng-hide="!person.person">{{person.person}}</div>
 					    <button class="addButton" ng-click="addToPeople(person)" style="padding:2px"><img src="images/add-button.png" height="25px" width="25px"/></button>
 					</li>
 				</ul>
@@ -21,7 +22,7 @@
                       <li ng-repeat="n in range(currentPagePeople,pagedPeople.length)"
                         ng-class="{active: n == currentPagePeople}"
                         ng-click="setPeoplePage()">
-                        <a href ng-bind="n + 1">1</a>
+                        <a href ng-bind="n + 1" style="width:15px">1</a>
                       </li>
                       <li ng-class="{disabled: currentPagePeople == pagedPeople.length - 1}">
                         <a href ng-click="nextPeoplePage()">Next »</a>
@@ -63,9 +64,10 @@
 				<p class="error">{{error}}</p>
 				<ul class="skills">
 					<h2>Skills</h2>
+					<p ng-show="skilllist">Total Skills: {{skilllist.length|filter:filterSkills}}</p>
 					<p ng-hide="pagedSkills"> Loading...</p>
-					<li class="thumbnail" ng-repeat="skill in pagedSkills[currentPageSkills]" data-drop="true" ng-model="pagedSkills" jqyoui-droppable="{multiple: true}" data-jqyoui-options="{accept:'.btn-draggable:not([ng-model!=addSkillList])'}"> 
-						<div class="btn btn-info btn-draggable" data-drag="true" data-jqyoui-options="{revert: 'invalid'}" ng-model="skilllist" jqyoui-draggable="{index: {{$index}}, animate: true, applyFilter: 'filterSkills'}" ng-hide="!skill.skill">{{skill.skill}}</div>
+					<li class="thumbnail" ng-repeat="skill in pagedSkills[currentPageSkills]" data-drop="true" ng-model="skilllist" jqyoui-droppable="{multiple: true}" data-jqyoui-options="{accept:'.btn-draggable:not([ng-model!=addSkillList])'}"> 
+						<div class="btn btn-info btn-draggable" data-drag="true" data-jqyoui-options="{revert: 'invalid'}" ng-model="skilllist" jqyoui-draggable="{index: {{$index+currentPageSkills*15}}, animate: true, applyFilter: 'filterSkills'}" ng-hide="!skill.skill">{{skill.skill}}</div>
 					    <button class="addButton" ng-click="addToSkills(skill)" style="padding:2px"><img src="images/add-button.png" height="25px" width="25px"/></button>
 					</li>
 				</ul>
@@ -78,7 +80,7 @@
                       <li ng-repeat="n in range(currentPageSkills,pagedSkills.length)"
                         ng-class="{active: n == currentPageSkills}"
                         ng-click="setSkillsPage()">
-                        <a href ng-bind="n + 1">1</a>
+                        <a href ng-bind="n + 1" style="width:15px">1</a>
                       </li>
                       <li ng-class="{disabled: currentPageSkills == pagedSkills.length - 1}">
                         <a href ng-click="nextSkillsPage()">Next »</a>

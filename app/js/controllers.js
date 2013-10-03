@@ -151,13 +151,11 @@ function AddSkillCtrl($scope, $http, $timeout, $filter){
 	
 	$scope.filterSkills = function(){
 	    $scope.filteredSkills = $filter('QuickSearch')($scope.skilllist,$scope.skillquery,"skill");
-	    $scope.currentPageSkills = 0;
 	    $scope.groupToPagesSkills();
 	    return $scope.filteredSkills;
 	};
 	$scope.filterPeople = function(){
 	    $scope.filteredPeople = $filter('QuickSearch')($scope.peoplelist,$scope.personquery, "person");
-        $scope.currentPagePeople = 0;
         $scope.groupToPagesPeople();
         return $scope.filteredPeople;
     };
@@ -171,14 +169,13 @@ function AddSkillCtrl($scope, $http, $timeout, $filter){
 			alert("Please select at least one skill.");
 			return;
 		}
-		$scope.SubmitText = "";
+		$scope.SubmitText = "personuri,leveluri\n";
 		
 		for(var i=0; i < $scope.addPersonList.length; i++){
-			$scope.SubmitText += $scope.addPersonList[i].uri + ","
 			for(var j=0; j < $scope.addSkillList.length; j++){
-				$scope.SubmitText += $scope.addSkillList[j].uri + ";";
+			    $scope.SubmitText += $scope.addPersonList[i].uri + ","
+				$scope.SubmitText += $scope.addSkillList[j].uri + "\n";
 			}
-			$scope.SubmitText += "\n";
 		}
 		ajaxSubmitNewSkillMap();
 		//alert($scope.SubmitText);
@@ -297,6 +294,9 @@ function AddSkillCtrl($scope, $http, $timeout, $filter){
             start = pos - 3;
         } else {
             start = 0;
+        }
+        if (end > length){
+            end = length;
         }
         for (var i = start; i < end; i++) {
           ret.push(i);
