@@ -182,14 +182,12 @@ function AddSkillCtrl($scope, $http, $timeout, $filter){
 	};
 	
 	function ajaxSubmitNewSkillMap() {
-		//alert("To AJAX: the submitted string is: "+$scope.SubmitText);
+		alert("New skill mapping added.  Please allow a minute or two for the new skill to appear in the main list.");
         $.ajax
         ({
 			type: "POST",
 			url: "lib/submitbuttonaction.php",
 			data: {SubmitText : $scope.SubmitText}, 
-			success: function(response)
-			{ alert("New skill mapped successfully!");}
         });
 	};
 	
