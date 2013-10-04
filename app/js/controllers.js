@@ -189,7 +189,7 @@ function AddSkillCtrl($scope, $http, $timeout, $filter){
 			url: "lib/submitbuttonaction.php",
 			data: {SubmitText : $scope.SubmitText}, 
 			success: function(response)
-			{ alert("CSV created successfully.");}
+			{ alert("New skill mapped successfully!");}
         });
 	};
 	
