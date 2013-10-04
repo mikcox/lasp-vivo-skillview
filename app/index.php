@@ -6,11 +6,6 @@
 		<meta name="description" content="" />
 		<meta name="author" content="Mik" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-		<link rel="shortcut icon" type="image/png" href="/favicon.png">
-		<!-- Replace favicon.ico & apple-touch-icon.png in the root of your domain and delete these references -->
-		<link rel="apple-touch-icon" href="/apple-touch-icon.png" />
-		<!-- Date: 2013-09-11 -->
 		
 		<link rel="stylesheet" href="css/bootstrap.css">
 		<link rel="stylesheet" href="css/app.css">
