@@ -40,22 +40,20 @@
 						<h4 style="width:45%; display:inline-block;">Person</h4>
 						<h4 style="width:45%; display:inline-block;">Has Skills</h4>
 					</div>
-					<div style="width:90%; padding:0% 5%;">
-						<div class="thumbnail" data-drop="true" ng-model="addPersonList" data-jqyoui-options="{accept:'.btn-draggable:not([ng-model!=peoplelist])'}" jqyoui-droppable="{multiple: true, onDrop: 'filterPeople'}" style='padding:5% 3%; width:40%; float:left;'>
+					<div style="width:90%; height:50%; padding:0% 5%;">
+						<div class="thumbnail" data-drop="true" ng-model="addPersonList" data-jqyoui-options="{accept:'.btn-draggable:not([ng-model!=peoplelist])'}" jqyoui-droppable="{multiple: true, onDrop: 'filterPeople'}" style='margin: 0% 2% 0% 0%; padding:5% 3%; width:40%; display:inline-block; align:center; vertical-align:middle;'>
 							<div class="btn btn-primary btn-draggable" data-drag="true" ng-repeat="item in addPersonList" data-jqyoui-options="{revert: 'invalid'}" ng-model="addPersonList" jqyoui-draggable="{index: {{$index}}}" style='width:75%;'>
 								{{item.person}}
 								<button class="removeButton" ng-click="removeFromAddPerson($index)"><img src="images/remove-button.png"/></button>
 							</div>
 						</div>
-						<div class="thumbnail" data-drop="true"	ng-model="addSkillList"	data-jqyoui-options="{accept:'.btn-draggable:not([ng-model!=skilllist])'}" jqyoui-droppable="{multiple: true, onDrop: 'filterSkills'}" style='padding: 5% 3%; width:40%; float:right;'>
+						<div class="thumbnail" data-drop="true"	ng-model="addSkillList"	data-jqyoui-options="{accept:'.btn-draggable:not([ng-model!=skilllist])'}" jqyoui-droppable="{multiple: true, onDrop: 'filterSkills'}" style='margin: 0% 2% 0% 0%; padding: 5% 3%; width:40%; display:inline-block; align:center; vertical-align:middle;'>
 							<div class="btn btn-info btn-draggable"	data-drag="true" ng-repeat="item in addSkillList" data-jqyoui-options="{revert: 'invalid'}" ng-model="addSkillList"	jqyoui-draggable="{index: {{$index}}}" style='width:75%;'>
 								{{item.skill}}
 								<button class="removeButton" ng-click="removeFromAddSkill($index)"><img src="images/remove-button.png"/></button>
 							</div>
 						</div>
-					</div>
-					<div  style="padding: 15% 0%; width: 100%;">
-						<button class = "btn btn-success" ng-click="SubmitButtonPressed()" style="padding:3%; width: 30%; font-size:20px;">Submit</button>
+						<button class="btn btn-success" ng-click="SubmitButtonPressed()" style="padding:3% 0%; width: 30%; font-size:20px; margin: 3% 0% 0% 0%;">Submit</button>
 					</div>
 				</div>
 			</div>
