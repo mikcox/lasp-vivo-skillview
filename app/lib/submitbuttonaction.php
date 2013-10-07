@@ -10,6 +10,7 @@ if(isset($_POST['SubmitText']))
 	exec('cp ../outputcsv/'.$OutputFileName.' /tools/vivo-harvester/VIVOharvester/ingest_scripts/skills_csv');
 	exec('/tools/vivo-harvester/VIVOharvester/ingest_scripts/skills_csv/run-skills.sh '.$OutputFileName);
 	exec('/tools/vivo-harvester/VIVOharvester/ingest_scripts/skills_csv/upload_to_vivo.sh');
+	exec('rm -rf /tools/vivo-harvester/VIVOharvester/ingest_scripts/skills_csv/'.$OutputFileName);
 }
 
 ?>

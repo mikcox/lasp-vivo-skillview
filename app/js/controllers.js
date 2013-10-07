@@ -150,12 +150,12 @@ function AddSkillCtrl($scope, $http, $timeout, $filter){
     $scope.currentPageSkills = 0; 
 	
 	$scope.filterSkills = function(){
-	    $scope.filteredSkills = $filter('QuickSearch')($scope.skilllist,$scope.skillquery,"skill");
+	    $scope.filteredSkills = $filter('QuickSearch')($scope.skilllist, $scope.skillquery, "skill");
 	    $scope.groupToPagesSkills();
 	    return $scope.filteredSkills;
 	};
 	$scope.filterPeople = function(){
-	    $scope.filteredPeople = $filter('QuickSearch')($scope.peoplelist,$scope.personquery, "person");
+	    $scope.filteredPeople = $filter('QuickSearch')($scope.peoplelist, $scope.personquery, "person");
         $scope.groupToPagesPeople();
         return $scope.filteredPeople;
     };
@@ -182,7 +182,7 @@ function AddSkillCtrl($scope, $http, $timeout, $filter){
 	};
 	
 	function ajaxSubmitNewSkillMap() {
-		alert("New skill mapping added.  Please allow a minute or two for the new skill to appear in the main list.");
+		alert("New skill mapping added.");
         $.ajax
         ({
 			type: "POST",

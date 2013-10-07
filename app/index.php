@@ -30,7 +30,7 @@
 		<div ng-view>
 		</div>
 		<footer style="margin: 3% 0% 0% 0%">
-			<p>Created by the LASP VIVO Development Team</p>
+			<p>Created by the LEMR Development Team</p>
 			<h3>Powered By</h3>
 			<a href="http://webdev1.lasp.colorado.edu:57529/vivo/">LEMR (The LASP Extended Metadata Repository)</a> and <a href="http://angularjs.org/"><img src="images/AngularJS-small.png"/></a>
 		</footer>
