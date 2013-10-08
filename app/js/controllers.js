@@ -150,12 +150,12 @@ function AddSkillCtrl($scope, $http, $timeout, $filter){
     $scope.currentPageSkills = 0; 
 	
 	$scope.filterSkills = function(){
-	    $scope.filteredSkills = $filter('QuickSearch')($scope.skilllist,$scope.skillquery,"skill");
+	    $scope.filteredSkills = $filter('QuickSearch')($scope.skilllist, $scope.skillquery, "skill");
 	    $scope.groupToPagesSkills();
 	    return $scope.filteredSkills;
 	};
 	$scope.filterPeople = function(){
-	    $scope.filteredPeople = $filter('QuickSearch')($scope.peoplelist,$scope.personquery, "person");
+	    $scope.filteredPeople = $filter('QuickSearch')($scope.peoplelist, $scope.personquery, "person");
         $scope.groupToPagesPeople();
         return $scope.filteredPeople;
     };
@@ -182,7 +182,7 @@ function AddSkillCtrl($scope, $http, $timeout, $filter){
 	};
 	
 	function ajaxSubmitNewSkillMap() {
-		alert("New skill mapping added.  Please allow a minute or two for the new skill to appear in the main list.");
+		alert("New skill mapping added.");
         $.ajax
         ({
 			type: "POST",
@@ -317,6 +317,9 @@ function AddSkillCtrl($scope, $http, $timeout, $filter){
     
     $scope.countPeople = function(){
         var count = 0;
+        if(typeof $scope.pagedPeople === 'undefined'){
+            return count;
+        }
         for (var i = 0; i < $scope.pagedPeople.length; i++) {
             count += $scope.pagedPeople[i].length;
         }
@@ -324,6 +327,9 @@ function AddSkillCtrl($scope, $http, $timeout, $filter){
     };
     $scope.countSkills = function(){
         var count = 0;
+        if(typeof $scope.pagedSkills === 'undefined'){
+            return count;
+        }
         for (var i = 0; i < $scope.pagedSkills.length; i++) {
             count += $scope.pagedSkills[i].length;
         }
