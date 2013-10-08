@@ -9,7 +9,7 @@
 					<p ng-show="peoplelist">People Found: {{countPeople()}}</p>
 					<p ng-hide="pagedPeople"> Loading...</p>
 					<li class="thumbnail" ng-repeat="person in pagedPeople[currentPagePeople]" data-drop="true" ng-model="peoplelist" jqyoui-droppable="{multiple: true, onDrop: 'filterPeople'}" data-jqyoui-options="{accept:'.btn-draggable:not([ng-model!=addPersonList])'}"> 
-						<div class="btn btn-primary btn-draggable" data-drag="true" data-jqyoui-options="{revert: 'invalid'}" ng-model="peoplelist" jqyoui-draggable="{index: {{$index+currentPagePeople*15}}, animate: true, applyFilter: 'filterPeople'}" ng-hide="!person.person">{{person.person}}</div>
+						<div class="btn btn-primary btn-draggable" data-drag="true" data-jqyoui-options="{revert: 'invalid'}" ng-model="peoplelist" jqyoui-draggable="{index: {{$index+currentPagePeople*15}}, animate: false, applyFilter: 'filterPeople'}" ng-hide="!person.person">{{person.person}}</div>
 					    <button class="addButton" ng-click="addToPeople(person)" style="padding:2px"><img src="images/add-button.png" height="25px" width="25px"/></button>
 					</li>
 				</ul>
@@ -65,7 +65,7 @@
 					<p ng-show="skilllist">Skills Found: {{countSkills()}}</p>
 					<p ng-hide="pagedSkills"> Loading...</p>
 					<li class="thumbnail" ng-repeat="skill in pagedSkills[currentPageSkills]" data-drop="true" ng-model="skilllist" jqyoui-droppable="{multiple: true, onDrop: 'filterSkills'}" data-jqyoui-options="{accept:'.btn-draggable:not([ng-model!=addSkillList])'}"> 
-						<div class="btn btn-info btn-draggable" data-drag="true" data-jqyoui-options="{revert: 'invalid'}" ng-model="skilllist" jqyoui-draggable="{index: {{$index+currentPageSkills*15}}, animate: true, applyFilter: 'filterSkills'}" ng-hide="!skill.skill">{{skill.skill}}</div>
+						<div class="btn btn-info btn-draggable" data-drag="true" data-jqyoui-options="{revert: 'invalid'}" ng-model="skilllist" jqyoui-draggable="{index: {{$index+currentPageSkills*15}}, animate: false, applyFilter: 'filterSkills'}" ng-hide="!skill.skill">{{skill.skill}}</div>
 					    <button class="addButton" ng-click="addToSkills(skill)" style="padding:2px"><img src="images/add-button.png" height="25px" width="25px"/></button>
 					</li>
 				</ul>
