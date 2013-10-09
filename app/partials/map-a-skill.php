@@ -31,7 +31,6 @@
                 </div>
             </div>
 			</div>
-			//
 			<div id="spacer container" style="width:25%; display:inline-block; align:center; text-align:center;">
 				<div style="width: 24.7%; padding: 10% 0%; position:fixed;">
 					<div>
