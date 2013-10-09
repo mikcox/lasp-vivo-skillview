@@ -24,6 +24,7 @@
 					</td>
 					<td data-title="'Skill'">
 						{{row.Skill.value}}
+						<button class="removeButton" ng-click="DeleteButtonPressed(row.Person.value, row.PersonURI.value, row.Skill.value, row.SkillURI.value, $index)" title="Remove Skill"><img src="images/remove-button.png" width="20px" height="20px"/></button>
 					</td>
 					<td data-title="'Office'">
 						{{row.Office.value}}
