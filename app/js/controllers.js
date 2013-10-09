@@ -3,7 +3,7 @@
 /* Controllers */
 //read in a local json file
 function SkillsCtrl($scope, $http){
-	var queryStr = "PREFIX rdfs:<http://www.w3.org/2000/01/rdf-schema#> PREFIX foaf: <http://xmlns.com/foaf/0.1/> PREFIX vivo: <http://vivoweb.org/ontology/core#> PREFIX laspskills: <http://webdev1.lasp.colorado.edu:57529/laspskills#>  SELECT ?Person ?Skill ?SkillLevel ?Office ?Email ?PhoneNumber ?Position ?Division ?Group WHERE { ?personuri a foaf:Person . ?personuri rdfs:label ?Person . ?personuri laspskills:hasSkill ?skillleveluri . ?skillleveluri rdfs:label ?SkillLevel . ?skillleveluri laspskills:levelForSkill ?skilluri . ?skilluri rdfs:label ?Skill . OPTIONAL{?personuri vivo:primaryEmail ?Email}. OPTIONAL{?personuri vivo:hasFacility ?roomuri . ?roomuri rdfs:label ?Office} . OPTIONAL{?personuri vivo:phoneNumber ?PhoneNumber} . OPTIONAL{?personuri vivo:personInPosition ?positionuri . ?positionuri rdfs:label ?Position . ?positionuri vivo:positionInOrganization ?groupuri . ?groupuri rdfs:label ?Group . ?groupuri vivo:subOrganizationWithin ?divisionuri . ?divisionuri rdfs:label ?Division }}";
+	var queryStr = "PREFIX rdfs:<http://www.w3.org/2000/01/rdf-schema#> PREFIX foaf: <http://xmlns.com/foaf/0.1/> PREFIX vivo: <http://vivoweb.org/ontology/core#> PREFIX laspskills: <http://webdev1.lasp.colorado.edu:57529/laspskills#>  SELECT ?Person ?personuri ?Skill ?SkillLevel ?skillleveluri ?Office ?Email ?PhoneNumber ?Position ?Division ?Group WHERE { ?personuri a foaf:Person . ?personuri rdfs:label ?Person . ?personuri laspskills:hasSkill ?skillleveluri . ?skillleveluri rdfs:label ?SkillLevel . ?skillleveluri laspskills:levelForSkill ?skilluri . ?skilluri rdfs:label ?Skill . OPTIONAL{?personuri vivo:primaryEmail ?Email}. OPTIONAL{?personuri vivo:hasFacility ?roomuri . ?roomuri rdfs:label ?Office} . OPTIONAL{?personuri vivo:phoneNumber ?PhoneNumber} . OPTIONAL{?personuri vivo:personInPosition ?positionuri . ?positionuri rdfs:label ?Position . ?positionuri vivo:positionInOrganization ?groupuri . ?groupuri rdfs:label ?Group . ?groupuri vivo:subOrganizationWithin ?divisionuri . ?divisionuri rdfs:label ?Division }}";
 	var queryPart = "query=" + escape(queryStr);	
 	
 	$http({
@@ -22,6 +22,8 @@ function SkillsCtrl($scope, $http){
 		var tmpPosition = '';
 		var tmpDivision = '';
 		var tmpGroup = '';
+		var tmpPersonURI = '';
+		var tmpSkillURI = '';
 		//search for duplicates in person name and skill columns and combine where both match
 		//an array to store indexes of any duplicate rows
 		var duplicateRows = [];
@@ -31,7 +33,9 @@ function SkillsCtrl($scope, $http){
 			if(duplicateRows.indexOf(i) == -1){ 
 				//set the temp variables to the results from each row
 				tmpPerson = data.results.bindings[i].Person.value;
+				tmpPersonURI = data.results.bindings[i].personuri.value;
 				tmpSkill = data.results.bindings[i].SkillLevel.value;
+				tmpSkillURI = data.results.bindings[i].skillleveluri.value;
 				//if a person doesn't have an office or phone, that does not show up in the results JSON, so we must be careful and watch for that.
 				if(data.results.bindings[i].hasOwnProperty("Office")){
 					tmpOffice = data.results.bindings[i].Office.value;
@@ -80,7 +84,9 @@ function SkillsCtrl($scope, $http){
 				}
 				//push the temp variables into our fixed list in pretty JSON format
 				fixedList.push({"Person": {"type":"literal", "value": tmpPerson},
+								"PersonURI": {"type":"literal", "value": tmpPersonURI},
 								"Skill": {"type":"literal", "value": tmpSkill}, 
+								"SkillURI": {"type":"literal", "value": tmpSkillURI},
 								"Office": {"type":"literal", "value": tmpOffice},
 								"Email": {"type":"literal", "value": tmpEmail},
 								"PhoneNumber": {"type":"literal", "value": tmpPhone},
@@ -97,6 +103,31 @@ function SkillsCtrl($scope, $http){
 	});
 	
 	$scope.orderProp = "Person.value";
+	
+	$scope.DeleteButtonPressed = function(name, personuri, skill, skilluri, $index){
+		var moveon = confirm("Delete "+name+"'s "+skill+" skill?");
+		if (moveon)
+		  {
+			alert("Deleting "+name+"'s "+skill+" skill.  Wait a moment and refresh your page to see the change.");
+			ajaxSubmitDeletion(personuri, skilluri);
+		  }
+		else
+		  {
+		  return;
+		  } 
+	};
+	
+	function ajaxSubmitDeletion(personuri, skilluri) {
+		var deletionText = "personuri,leveluri\n";
+		deletionText += personuri+","+skilluri+"\n"
+		//alert(deletionText);
+        $.ajax
+        ({
+			type: "POST",
+			url: "lib/removebuttonaction.php",
+			data: {DeletionText : deletionText}, 
+        });
+	};
 }
 
 function AddSkillCtrl($scope, $http, $timeout, $filter){
@@ -317,9 +348,6 @@ function AddSkillCtrl($scope, $http, $timeout, $filter){
     
     $scope.countPeople = function(){
         var count = 0;
-        if(typeof $scope.pagedPeople === 'undefined'){
-            return count;
-        }
         for (var i = 0; i < $scope.pagedPeople.length; i++) {
             count += $scope.pagedPeople[i].length;
         }
@@ -327,9 +355,6 @@ function AddSkillCtrl($scope, $http, $timeout, $filter){
     };
     $scope.countSkills = function(){
         var count = 0;
-        if(typeof $scope.pagedSkills === 'undefined'){
-            return count;
-        }
         for (var i = 0; i < $scope.pagedSkills.length; i++) {
             count += $scope.pagedSkills[i].length;
         }
