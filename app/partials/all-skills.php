@@ -31,7 +31,7 @@
 						{{row.Office.value}}
 					</td>
 					<td data-title="'Email'">
-						{{row.Email.value}}
+						<a href="mailto:{{row.Email.value}}">{{row.Email.value}}</a>
 					</td>
 					<td data-title="'Phone Number'">
 						{{row.PhoneNumber.value}}
