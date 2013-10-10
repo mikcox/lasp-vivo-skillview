@@ -2,33 +2,19 @@
     <h1>Add a Skill</h1>
 		<div class="row-fluid" style="width:100%; align:center;">
 			<div id="table1" style="width:35%; display:inline-block; vertical-align:top;">
-				<input type="text" class="input-large search-query" data-ng-model="personquery" placeholder="Search for a Person" ng-change="searchPeople(personquery)"/><br/>
+				<input type="text" class="input-large search-query" data-ng-model="personquery" placeholder="Search for a Person" ng-change="searchPeople(personquery)" typeahead="p.person for p in peoplelist | filter:$viewValue | limitTo:8"/><br/>
 				<p class="error">{{error}}</p>
 				<ul class="people">
 					<h2>People</h2>
 					<p ng-show="peoplelist">People Found: {{countPeople()}}</p>
 					<p ng-hide="pagedPeople"> Loading...</p>
-					<li class="thumbnail" ng-repeat="person in pagedPeople[currentPagePeople]" data-drop="true" ng-model="peoplelist" jqyoui-droppable="{multiple: true, onDrop: 'filterPeople'}" data-jqyoui-options="{accept:'.btn-draggable:not([ng-model!=addPersonList])'}"> 
+					<li class="thumbnail" ng-repeat="person in pagedPeople[currentPagePeople-1]" data-drop="true" ng-model="peoplelist" jqyoui-droppable="{multiple: true, onDrop: 'filterPeople'}" data-jqyoui-options="{accept:'.btn-draggable:not([ng-model!=addPersonList])'}"> 
 						<div class="btn btn-primary btn-draggable" data-drag="true" data-jqyoui-options="{revert: 'invalid'}" ng-model="peoplelist" jqyoui-draggable="{index: {{$index+currentPagePeople*15}}, animate: false, applyFilter: 'filterPeople'}" ng-hide="!person.person">{{person.person}}</div>
 					    <button class="addButton" ng-click="addToPeople(person)" style="padding:2px"><img src="images/add-button.png" height="25px" width="25px"/></button>
 					</li>
 				</ul>
 				<div class="center">
-                <div class="pagination">
-                    <ul>
-                      <li ng-class="{disabled: currentPagePeople == 0}">
-                        <a href ng-click="prevPeoplePage()">« Prev</a>
-                      </li>
-                      <li ng-repeat="n in range(currentPagePeople,pagedPeople.length)"
-                        ng-class="{active: n == currentPagePeople}"
-                        ng-click="setPeoplePage()">
-                        <a href ng-bind="n + 1" style="width:15px">1</a>
-                      </li>
-                      <li ng-class="{disabled: currentPagePeople == pagedPeople.length - 1}">
-                        <a href ng-click="nextPeoplePage()">Next »</a>
-                      </li>
-                    </ul>
-                </div>
+                <pagination boundary-links="true" total-items="countPeople()" page="currentPagePeople" items-per-page="itemsPerPage" max-size="maxPages" class="pagination-small" previous-text="&lsaquo;" next-text="&rsaquo;" first-text="&laquo;" last-text="&raquo;"></pagination>
             </div>
 			</div>
 			<div id="spacer container" style="width:25%; display:inline-block; align:center; text-align:center;">
@@ -58,33 +44,18 @@
 				</div>
 			</div>
 			<div id="table2" style="width:35%; display:inline-block; vertical-align:top;">
-				<input type="text" class="input-large search-query" data-ng-model="skillquery" placeholder="Search for a Skill" ng-change="searchSkills(skillquery)"/><br/>
+				<input type="text" class="input-large search-query" data-ng-model="skillquery" placeholder="Search for a Skill" ng-change="searchSkills(skillquery)" typeahead="s.skill for s in skilllist | filter:$viewValue | limitTo:8"/><br/>
 				<p class="error">{{error}}</p>
 				<ul class="skills">
 					<h2>Skills</h2>
 					<p ng-show="skilllist">Skills Found: {{countSkills()}}</p>
 					<p ng-hide="pagedSkills"> Loading...</p>
-					<li class="thumbnail" ng-repeat="skill in pagedSkills[currentPageSkills]" data-drop="true" ng-model="skilllist" jqyoui-droppable="{multiple: true, onDrop: 'filterSkills'}" data-jqyoui-options="{accept:'.btn-draggable:not([ng-model!=addSkillList])'}"> 
+					<li class="thumbnail" ng-repeat="skill in pagedSkills[currentPageSkills-1]" data-drop="true" ng-model="skilllist" jqyoui-droppable="{multiple: true, onDrop: 'filterSkills'}" data-jqyoui-options="{accept:'.btn-draggable:not([ng-model!=addSkillList])'}"> 
 						<div class="btn btn-info btn-draggable" data-drag="true" data-jqyoui-options="{revert: 'invalid'}" ng-model="skilllist" jqyoui-draggable="{index: {{$index+currentPageSkills*15}}, animate: false, applyFilter: 'filterSkills'}" ng-hide="!skill.skill">{{skill.skill}}</div>
 					    <button class="addButton" ng-click="addToSkills(skill)" style="padding:2px"><img src="images/add-button.png" height="25px" width="25px"/></button>
 					</li>
 				</ul>
-				<div class="center">
-                <div class="pagination">
-                    <ul>
-                      <li ng-class="{disabled: currentPageSkills == 0}">
-                        <a href ng-click="prevSkillsPage()">« Prev</a>
-                      </li>
-                      <li ng-repeat="n in range(currentPageSkills,pagedSkills.length)"
-                        ng-class="{active: n == currentPageSkills}"
-                        ng-click="setSkillsPage()">
-                        <a href ng-bind="n + 1" style="width:15px">1</a>
-                      </li>
-                      <li ng-class="{disabled: currentPageSkills == pagedSkills.length - 1}">
-                        <a href ng-click="nextSkillsPage()">Next »</a>
-                      </li>
-                    </ul>
-                </div>
+				<pagination boundary-links="true" total-items="countSkills()" page="currentPageSkills" items-per-page="itemsPerPage" max-size="maxPages" class="pagination-small" previous-text="&lsaquo;" next-text="&rsaquo;" first-text="&laquo;" last-text="&raquo;"></pagination>
 			</div>
 		</div>
 </div>
