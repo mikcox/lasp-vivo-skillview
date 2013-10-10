@@ -348,9 +348,6 @@ function AddSkillCtrl($scope, $http, $timeout, $filter){
     
     $scope.countPeople = function(){
         var count = 0;
-        if (typeof $scope.pagedPeople === 'undefined'){
-            return count; 
-        }
         for (var i = 0; i < $scope.pagedPeople.length; i++) {
             count += $scope.pagedPeople[i].length;
         }
@@ -358,9 +355,6 @@ function AddSkillCtrl($scope, $http, $timeout, $filter){
     };
     $scope.countSkills = function(){
         var count = 0;
-        if (typeof $scope.pagedSkills === 'undefined'){
-            return count; 
-        }
         for (var i = 0; i < $scope.pagedSkills.length; i++) {
             count += $scope.pagedSkills[i].length;
         }

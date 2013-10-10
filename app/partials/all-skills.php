@@ -9,6 +9,7 @@
 			<div>
 				<!--Body content-->
 				<p class="error">{{error}}</p>
+				<p ng-hide="skills.results.bindings"> Loading...</p>
 				<table ng-table class="table">
 				<th> Name </th>
 				<th> Skill </th>
