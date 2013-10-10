@@ -10,7 +10,7 @@
 				<!--Body content-->
 				<p class="error">{{error}}</p>
 				<p ng-hide="skills.results.bindings"> Loading...</p>
-				<table ng-table class="table">
+				<table ng-table class="table" ng-show="skills.results.bindings">
 				<th> Name </th>
 				<th> Skill </th>
 				<th> Office </th>
@@ -47,7 +47,7 @@
 					</td>
 				</tr>
 				</table>
-				<p>
+				<p ng-show="skills.results.bindings">
 				Number of Results: {{(skills.results.bindings|ViewAllSearch:query).length}}
 				</p>
 				<br><br>
