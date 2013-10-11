@@ -245,19 +245,19 @@ function AddSkillCtrl($scope, $http, $timeout, $filter){
 				$scope.SubmitText += $scope.addSkillList[j].levels[levelSelected].skillleveluri + "\n";
 			}
 		}
-		ajaxSubmitNewSkillMap();
 		//alert($scope.SubmitText);
+		ajaxSubmitNewSkillMap();
 	};
 	
 	function ajaxSubmitNewSkillMap() {
-		alert("New skill mapping added.");
+		alert("New skill mapping added.  Please allow a moment for the new skill to appear in the 'View All Skills' list.");
         $.ajax
         ({
 			type: "POST",
 			url: "lib/submitbuttonaction.php",
 			data: {SubmitText : $scope.SubmitText}, 
         });
-		//location.reload();
+		//location.reload();  ////***NOTE:  this line causes the app to no longer write the .csv or add records... not sure why, refreshing "too fast"?***
 	};
 	
 	//Add and Remove Button Functions

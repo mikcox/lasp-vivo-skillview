@@ -40,18 +40,18 @@
 					<h4 style="width:45%; display:inline-block;">Has Skills</h4>
 				</div>
 				<div style="width:90%; height:50%; padding:0% 5%;">
-					<div class="thumbnail" data-drop="true" ng-model="addPersonList" data-jqyoui-options="{accept:'.btn-draggable:not([ng-model!=peoplelist])'}" jqyoui-droppable="{multiple: true, onDrop: 'filterPeople'}" style='margin: 0% 2% 0% 0%; padding:5% 3%; width:40%; display:inline-block; vertical-align:middle;'>
-						<p ng-hide="addPersonList.length > 0" style="color:#333333">Drag people here to add them.</p>
+					<div class="thumbnail" data-drop="true" ng-model="addPersonList" data-jqyoui-options="{accept:'.btn-draggable:not([ng-model!=peoplelist])'}" jqyoui-droppable="{multiple: true, onDrop: 'filterPeople'}" style='margin: 0% 2% 0% 0%; padding:3% 3%; width:40%; display:inline-block; vertical-align:middle;'>
+						<p ng-hide="addPersonList.length > 0" style="color:#333333">Drag people here or click the green '+' button next to a name to add them.</p>
 						<div class="btn btn-primary btn-draggable" data-drag="true" ng-repeat="item in addPersonList" data-jqyoui-options="{revert: 'invalid'}" ng-model="addPersonList" jqyoui-draggable="{index: {{$index}}}" style='width:75%;'>
 							{{item.person}}
 							<button class="removeButton" ng-click="removeFromAddPerson($index)" title="Remove"><img src="images/remove-button.png"/></button>
 						</div>
 					</div>
-					<div class="thumbnail" data-drop="true"	ng-model="addSkillList"	data-jqyoui-options="{accept:'.btn-draggable:not([ng-model!=skilllist])'}" jqyoui-droppable="{multiple: true, onDrop: 'filterSkills'}" style='margin: 0% 2% 0% 0%; padding: 5% 3%; width:40%; display:inline-block; vertical-align:middle;'>
-						<p ng-hide="addSkillList.length > 0" style="color:#333333">Drag skills here to add them.</p>
+					<div class="thumbnail" data-drop="true"	ng-model="addSkillList"	data-jqyoui-options="{accept:'.btn-draggable:not([ng-model!=skilllist])'}" jqyoui-droppable="{multiple: true, onDrop: 'filterSkills'}" style='margin: 0% 2% 0% 0%; padding: 3% 3%; width:40%; display:inline-block; vertical-align:middle;'>
+						<p ng-hide="addSkillList.length > 0" style="color:#333333">Drag skills here or click the green '+' button next to a skill to add it.</p>
 						<div class="btn btn-info btn-draggable"	data-drag="true" ng-repeat="item in addSkillList" data-jqyoui-options="{revert: 'invalid'}" ng-model="addSkillList"	jqyoui-draggable="{index: {{$index}}}" style='width:75%;'>
 							{{item.skill}}
-							<select style="width: 50%" id="{{item.skill}}">
+							<select style="width: 50%;" id="{{item.skill}}">
 								<option ng-repeat="level in item.levels" value="{{level.skillleveluri}}">{{skillLevelDisplay(item.skill, level.skilllevel)}}</option>
 							</select> 
 							<button class="removeButton" ng-click="removeFromAddSkill($index)" title="Remove"><img src="images/remove-button.png"/></button>
