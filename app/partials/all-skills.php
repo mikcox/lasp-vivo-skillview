@@ -9,7 +9,8 @@
 			<div>
 				<!--Body content-->
 				<p class="error">{{error}}</p>
-				<table ng-table class="table">
+				<p ng-hide="skills.results.bindings"> Loading...</p>
+				<table ng-table class="table" ng-show="skills.results.bindings">
 				<th> Name </th>
 				<th> Skill </th>
 				<th> Office </th>
@@ -30,7 +31,7 @@
 						{{row.Office.value}}
 					</td>
 					<td data-title="'Email'">
-						{{row.Email.value}}
+						<a href="mailto:{{row.Email.value}}">{{row.Email.value}}</a>
 					</td>
 					<td data-title="'Phone Number'">
 						{{row.PhoneNumber.value}}
@@ -46,7 +47,7 @@
 					</td>
 				</tr>
 				</table>
-				<p>
+				<p ng-show="skills.results.bindings">
 				Number of Results: {{(skills.results.bindings|ViewAllSearch:query).length}}
 				</p>
 				<br><br>

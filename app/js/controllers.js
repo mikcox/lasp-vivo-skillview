@@ -154,7 +154,7 @@ function AddSkillCtrl($scope, $http, $timeout, $filter){
 		$scope.error = "Fuseki person query returned: " + status;
 	});
 
-	queryStr = "PREFIX rdfs:  <http://www.w3.org/2000/01/rdf-schema#> PREFIX laspskills: <http://webdev1.lasp.colorado.edu:57529/laspskills#> SELECT ?skill ?skilluri WHERE{?skilluri a laspskills:SkillLevel . ?skilluri rdfs:label ?skill} ORDER BY desc(?skill)";
+	queryStr = "PREFIX rdfs:  <http://www.w3.org/2000/01/rdf-schema#> PREFIX laspskills: <http://webdev1.lasp.colorado.edu:57529/laspskills#> SELECT ?skill ?skilllevel ?skillleveluri WHERE{?skillleveluri a laspskills:SkillLevel . ?skillleveluri laspskills:levelForSkill ?skilluri . ?skilluri rdfs:label ?skill . ?skillleveluri rdfs:label ?skilllevel} ORDER BY asc(?skilllevel)";
 	queryPart = "query=" + escape(queryStr);
 	$http({
 		method: 'POST',
@@ -162,18 +162,54 @@ function AddSkillCtrl($scope, $http, $timeout, $filter){
 		data: queryPart,
 		headers: {"Accept": "application/sparql-results+json", 'Content-type': 'application/x-www-form-urlencoded'}
 	}).success(function(data) {
-	    //this greatly simplifies our json structure
-	    for(var i=0;i<data.results.bindings.length;i++){
-            list2.push({"skill": data.results.bindings[i].skill.value,
-                       "uri": data.results.bindings[i].skilluri.value});
+	    //create empty array to build representation of all skill levels
+		var levelList = [];
+		//alert(JSON.stringify(data.results.bindings));
+	    for(var i=0;i<data.results.bindings.length;){
+			//empty the level list and prepare a cursor...
+			levelList = [];
+			var cursor = i+1;
+			//add the first skill level
+			levelList.push({"skilllevel": data.results.bindings[i].skilllevel.value,
+							"skillleveluri": data.results.bindings[i].skillleveluri.value});
+			//iterate down through list of results while the skill name at the cursor is still the same as the skill name at i
+			while(data.results.bindings[i].skill.value == data.results.bindings[cursor].skill.value){
+				//add the skill level from the cursor row to the levelList
+				levelList.push({"skilllevel": data.results.bindings[cursor].skilllevel.value,
+								"skillleveluri": data.results.bindings[cursor].skillleveluri.value});
+				//check that another row exists
+				if(cursor+1 < data.results.bindings.length){
+					cursor++;
+				}
+				//otherwise, we're done
+				else{
+					break;
+				}
+			}
+
+			//add the skill and all its levels into a finalized JSON object and append it to our final skill list
+			list2.push({"skill": data.results.bindings[i].skill.value,
+						"levels": levelList});
+			//if there are more skills...
+			if(cursor+1 < data.results.bindings.length){
+				//move i to the cursor and continue
+				i = cursor;
+			}
+			//otherwise, we're done
+			else{
+				break;
+			}
         }
+		//alert(JSON.stringify(list2));
 		$scope.skilllist = list2;
 		$scope.addSkillList = [];
 		$scope.filterSkills();
 	}).error(function(data,status) {
 		$scope.error = "Fuseki skill query returned: " + status;
 	});
-	
+	$scope.skillLevelDisplay = function(skill, skilllevel){
+	    return skilllevel.replace(skill, "");
+	};
 	//Necessary for draggable objects to return the correct index
 	$scope.filteredPeople = []; 
 	$scope.filteredSkills = [];
@@ -201,25 +237,27 @@ function AddSkillCtrl($scope, $http, $timeout, $filter){
 			return;
 		}
 		$scope.SubmitText = "personuri,leveluri\n";
-		
+		var levelSelected = 0;
 		for(var i=0; i < $scope.addPersonList.length; i++){
 			for(var j=0; j < $scope.addSkillList.length; j++){
 			    $scope.SubmitText += $scope.addPersonList[i].uri + ",";
-				$scope.SubmitText += $scope.addSkillList[j].uri + "\n";
+				levelSelected = document.getElementById($scope.addSkillList[j].skill).selectedIndex;
+				$scope.SubmitText += $scope.addSkillList[j].levels[levelSelected].skillleveluri + "\n";
 			}
 		}
-		ajaxSubmitNewSkillMap();
 		//alert($scope.SubmitText);
+		ajaxSubmitNewSkillMap();
 	};
 	
 	function ajaxSubmitNewSkillMap() {
-		alert("New skill mapping added.");
+		alert("New skill mapping added.  Please allow a moment for the new skill to appear in the 'View All Skills' list.");
         $.ajax
         ({
 			type: "POST",
 			url: "lib/submitbuttonaction.php",
 			data: {SubmitText : $scope.SubmitText}, 
         });
+		//location.reload();  ////***NOTE:  this line causes the app to no longer write the .csv or add records... not sure why, refreshing "too fast"?***
 	};
 	
 	//Add and Remove Button Functions
@@ -263,7 +301,7 @@ function AddSkillCtrl($scope, $http, $timeout, $filter){
 
     //Pagination Functions 
     $scope.itemsPerPage = 15;
-    $scope.maxPages = 10;
+    $scope.maxPages = 5;
     
     $scope.groupToPagesPeople = function () {
         $scope.pagedPeople = [];
@@ -288,9 +326,9 @@ function AddSkillCtrl($scope, $http, $timeout, $filter){
     
     $scope.countPeople = function(){
         var count = 0;
-        if (typeof $scope.pagedPeople === 'undefined'){
-            return count; 
-        }
+		if (typeof $scope.pagedPeople === 'undefined'){
+           return count; 
+        } 
         for (var i = 0; i < $scope.pagedPeople.length; i++) {
             count += $scope.pagedPeople[i].length;
         }
@@ -298,9 +336,9 @@ function AddSkillCtrl($scope, $http, $timeout, $filter){
     };
     $scope.countSkills = function(){
         var count = 0;
-        if (typeof $scope.pagedSkills === 'undefined'){
-            return count; 
-        }
+		if (typeof $scope.pagedSkills === 'undefined'){
+			return count; 
+		} 
         for (var i = 0; i < $scope.pagedSkills.length; i++) {
             count += $scope.pagedSkills[i].length;
         }
