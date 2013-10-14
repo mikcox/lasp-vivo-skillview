@@ -36,7 +36,7 @@ function SkillsCtrl($scope, $http){
 				tmpPersonURI = data.results.bindings[i].personuri.value;
 				tmpSkill = data.results.bindings[i].SkillLevel.value;
 				tmpSkillURI = data.results.bindings[i].skillleveluri.value;
-				//if a person doesn't have an office or phone, that does not show up in the results JSON, so we must be careful and watch for that.
+				//if a person doesn't have an entry for a cell, that cell's key does not show up in the results JSON, so we must be careful and watch for that.
 				if(data.results.bindings[i].hasOwnProperty("Office")){
 					tmpOffice = data.results.bindings[i].Office.value;
 				}
@@ -73,9 +73,7 @@ function SkillsCtrl($scope, $http){
 				else{
 					tmpGroup = '';
 				}
-				//tmpPosition = data.results.bindings[i].Position.value;
-				//tmpDivision = data.results.bindings[i].Division.value;
-				//tmpGroup = data.results.bindings[i].Group.value;
+				
 				//send a cursor looking through the rest of the list for duplicates
 				for(cursor = i+1; cursor < data.results.bindings.length; cursor++){
 					//if we find a match between the current person/skill and the cursor's person/skill...
@@ -138,7 +136,6 @@ function SkillsCtrl($scope, $http){
 	function ajaxSubmitDeletion(personuri, skilluri) {
 		var deletionText = "personuri,leveluri\n";
 		deletionText += personuri+","+skilluri+"\n"
-		//alert(deletionText);
         $.ajax
         ({
 			type: "POST",
@@ -266,7 +263,6 @@ function AddSkillCtrl($scope, $http, $timeout, $filter){
 				$scope.SubmitText += $scope.addSkillList[j].levels[levelSelected].skillleveluri + "\n";
 			}
 		}
-		//alert($scope.SubmitText);
 		//display cute working gif even though it doesn't matter
 		document.getElementById("submitButtonDiv").innerHTML = '<img src="images/loading.gif"/><br>Working... ';
 		//actually post the new skill(s)
@@ -283,7 +279,6 @@ function AddSkillCtrl($scope, $http, $timeout, $filter){
 			url: "lib/submitbuttonaction.php",
 			data: {SubmitText : $scope.SubmitText}, 
         });
-		//location.reload();  ////***NOTE:  this line causes the app to no longer write the .csv or add records... not sure why, refreshing "too fast"?***
 	};
 	
 	//Add and Remove Button Functions
