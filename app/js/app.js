@@ -1,7 +1,7 @@
 'use strict';
 
 /* App Module */
-var vivoviz = angular.module('vivoviz', ['ngDragDrop', 'mapaskillFilters']); //dependencies go inside the square brackets
+var vivoviz = angular.module('vivoviz', ['ngDragDrop', 'mapaskillFilters', 'ui.bootstrap']); //dependencies go inside the square brackets
 
 vivoviz.config(function ($routeProvider, $httpProvider) {
 $routeProvider. //this controls navigation within our app

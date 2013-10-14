@@ -3998,7 +3998,7 @@ input[type="submit"].btn.btn-mini {
 
 .pagination {
   height: 36px;
-  margin: 10px 0;
+  margin: 10px 25px;
 }
 
 .pagination ul {
