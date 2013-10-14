@@ -44,7 +44,9 @@
 							<button class="removeButton" ng-click="removeFromAddSkill($index)" title="Remove"><img src="images/remove-button.png"/></button>
 						</div>
 					</div>
-					<button class="btn btn-success" ng-click="SubmitButtonPressed()" style="padding:3% 0%; width: 30%; font-size:20px; margin: 3% 0% 0% 0%;">Submit</button>
+					<div id="submitButtonDiv">
+						<button class="btn btn-success" ng-click="SubmitButtonPressed()" style="padding:3% 0%; width: 30%; font-size:20px; margin: 3% 0% 0% 0%;">Submit</button>
+					</div>
 				</div>
 			</div>
 		</div>

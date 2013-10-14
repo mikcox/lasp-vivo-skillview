@@ -207,6 +207,8 @@ function AddSkillCtrl($scope, $http, $timeout, $filter){
 	}).error(function(data,status) {
 		$scope.error = "Fuseki skill query returned: " + status;
 	});
+	
+	//function to remove the skill names from the skill level dropdown options
 	$scope.skillLevelDisplay = function(skill, skilllevel){
 	    return skilllevel.replace(skill, "");
 	};
@@ -227,6 +229,7 @@ function AddSkillCtrl($scope, $http, $timeout, $filter){
         return $scope.filteredPeople;
     };
     
+	//function to run when the submit button is pressed
 	$scope.SubmitButtonPressed = function(){
 		if($scope.addPersonList.length < 1){
 			alert("Please select at least one person.");
@@ -246,11 +249,16 @@ function AddSkillCtrl($scope, $http, $timeout, $filter){
 			}
 		}
 		//alert($scope.SubmitText);
+		//display cute working gif even though it doesn't matter
+		document.getElementById("submitButtonDiv").innerHTML = '<img src="images/loading.gif"/><br>Working... ';
+		//actually post the new skill(s)
 		ajaxSubmitNewSkillMap();
+		//wait 5 seconds and then display a success message (yes, this is a lie since the skill may or may not have been added by now)
+		setTimeout(function(){document.getElementById("submitButtonDiv").innerHTML = 'Done. ';}, 5000);
+		setTimeout(function(){alert("New skill mapping added!"); location.reload();},5000);
 	};
 	
 	function ajaxSubmitNewSkillMap() {
-		alert("New skill mapping added.  Please allow a moment for the new skill to appear in the 'View All Skills' list.");
         $.ajax
         ({
 			type: "POST",
