@@ -36,7 +36,7 @@ function SkillsCtrl($scope, $http){
 				tmpPersonURI = data.results.bindings[i].personuri.value;
 				tmpSkill = data.results.bindings[i].SkillLevel.value;
 				tmpSkillURI = data.results.bindings[i].skillleveluri.value;
-				//if a person doesn't have an office or phone, that does not show up in the results JSON, so we must be careful and watch for that.
+				//if a person doesn't have an entry for a cell, that cell's key does not show up in the results JSON, so we must be careful and watch for that.
 				if(data.results.bindings[i].hasOwnProperty("Office")){
 					tmpOffice = data.results.bindings[i].Office.value;
 				}
@@ -55,9 +55,25 @@ function SkillsCtrl($scope, $http){
 				else{
 					tmpPhone = '';
 				}
-				tmpPosition = data.results.bindings[i].Position.value;
-				tmpDivision = data.results.bindings[i].Division.value;
-				tmpGroup = data.results.bindings[i].Group.value;
+				if(data.results.bindings[i].hasOwnProperty("Position")){
+					tmpPosition = data.results.bindings[i].Position.value;
+				}
+				else{
+					tmpPosition = '';
+				}
+				if(data.results.bindings[i].hasOwnProperty("Division")){
+					tmpDivision = data.results.bindings[i].Division.value;
+				}
+				else{
+					tmpDivision = '';
+				}
+				if(data.results.bindings[i].hasOwnProperty("Group")){
+					tmpGroup = data.results.bindings[i].Group.value;
+				}
+				else{
+					tmpGroup = '';
+				}
+				
 				//send a cursor looking through the rest of the list for duplicates
 				for(cursor = i+1; cursor < data.results.bindings.length; cursor++){
 					//if we find a match between the current person/skill and the cursor's person/skill...
@@ -120,7 +136,6 @@ function SkillsCtrl($scope, $http){
 	function ajaxSubmitDeletion(personuri, skilluri) {
 		var deletionText = "personuri,leveluri\n";
 		deletionText += personuri+","+skilluri+"\n"
-		//alert(deletionText);
         $.ajax
         ({
 			type: "POST",
@@ -207,14 +222,16 @@ function AddSkillCtrl($scope, $http, $timeout, $filter){
 	}).error(function(data,status) {
 		$scope.error = "Fuseki skill query returned: " + status;
 	});
+	
+	//function to remove the skill names from the skill level dropdown options
 	$scope.skillLevelDisplay = function(skill, skilllevel){
 	    return skilllevel.replace(skill, "");
 	};
 	//Necessary for draggable objects to return the correct index
 	$scope.filteredPeople = []; 
 	$scope.filteredSkills = [];
-	$scope.currentPagePeople = 0;
-    $scope.currentPageSkills = 0; 
+	$scope.currentPagePeople = 1;
+    $scope.currentPageSkills = 1; 
 	
 	$scope.filterSkills = function(){
 	    $scope.filteredSkills = $filter('QuickSearch')($scope.skilllist, $scope.skillquery, "skill");
@@ -227,6 +244,7 @@ function AddSkillCtrl($scope, $http, $timeout, $filter){
         return $scope.filteredPeople;
     };
     
+	//function to run when the submit button is pressed
 	$scope.SubmitButtonPressed = function(){
 		if($scope.addPersonList.length < 1){
 			alert("Please select at least one person.");
@@ -245,19 +263,22 @@ function AddSkillCtrl($scope, $http, $timeout, $filter){
 				$scope.SubmitText += $scope.addSkillList[j].levels[levelSelected].skillleveluri + "\n";
 			}
 		}
-		//alert($scope.SubmitText);
+		//display cute working gif even though it doesn't matter
+		document.getElementById("submitButtonDiv").innerHTML = '<img src="images/loading.gif"/><br>Working... ';
+		//actually post the new skill(s)
 		ajaxSubmitNewSkillMap();
+		//wait 5 seconds and then display a success message (yes, this is a lie since the skill may or may not have been added by now)
+		setTimeout(function(){document.getElementById("submitButtonDiv").innerHTML = 'Done. ';}, 5000);
+		setTimeout(function(){alert("New skill mapping added!"); location.reload();},5000);
 	};
 	
 	function ajaxSubmitNewSkillMap() {
-		alert("New skill mapping added.  Please allow a moment for the new skill to appear in the 'View All Skills' list.");
         $.ajax
         ({
 			type: "POST",
 			url: "lib/submitbuttonaction.php",
 			data: {SubmitText : $scope.SubmitText}, 
         });
-		//location.reload();  ////***NOTE:  this line causes the app to no longer write the .csv or add records... not sure why, refreshing "too fast"?***
 	};
 	
 	//Add and Remove Button Functions
@@ -287,101 +308,41 @@ function AddSkillCtrl($scope, $http, $timeout, $filter){
     //search functions
     $scope.searchPeople = function(person){
         if(person.length > 2){
-            $scope.currentPagePeople = 0;
+            $scope.currentPagePeople = 1;
         }
         return $scope.filterPeople();
     };
 
     $scope.searchSkills = function(skill){
         if(skill.length > 2){
-            $scope.currentPageSkills = 0;
+            $scope.currentPageSkills = 1;
         }
         return $scope.filterSkills();
     };
 
     //Pagination Functions 
-    var itemsPerPage = 15;
+    $scope.itemsPerPage = 15;
+    $scope.maxPages = 5;
     
     $scope.groupToPagesPeople = function () {
         $scope.pagedPeople = [];
-        
         for (var i = 0; i < $scope.filteredPeople.length; i++) {
-          if (i % itemsPerPage === 0) {
-              $scope.pagedPeople[Math.floor(i/itemsPerPage)] = [ $scope.filteredPeople[i] ];
+          if (i % $scope.itemsPerPage === 0) {
+              $scope.pagedPeople[Math.floor(i/$scope.itemsPerPage)] = [ $scope.filteredPeople[i] ];
           }  else {
-              $scope.pagedPeople[Math.floor(i/itemsPerPage)].push($scope.filteredPeople[i]);
+              $scope.pagedPeople[Math.floor(i/$scope.itemsPerPage)].push($scope.filteredPeople[i]);
           }
         }
-    };
-    $scope.prevPeoplePage = function () {
-        if ($scope.currentPagePeople > 0) {
-          $scope.currentPagePeople--;
-        }
-    };
-
-    $scope.nextPeoplePage = function () {
-        if ($scope.currentPagePeople < $scope.pagedPeople.length - 1) {
-          $scope.currentPagePeople++;
-        }
-    };
- 
-    $scope.setPeoplePage = function () {
-        $scope.currentPagePeople = this.n;
-    };
-    
+    };    
     $scope.groupToPagesSkills = function () {
         $scope.pagedSkills = [];
-        
         for (var i = 0; i < $scope.filteredSkills.length; i++) {
-          if (i % itemsPerPage === 0) {
-              $scope.pagedSkills[Math.floor(i/itemsPerPage)] = [ $scope.filteredSkills[i] ];
+          if (i % $scope.itemsPerPage === 0) {
+              $scope.pagedSkills[Math.floor(i/$scope.itemsPerPage)] = [ $scope.filteredSkills[i] ];
           }  else {
-              $scope.pagedSkills[Math.floor(i/itemsPerPage)].push($scope.filteredSkills[i]);
+              $scope.pagedSkills[Math.floor(i/$scope.itemsPerPage)].push($scope.filteredSkills[i]);
           }
         }
-    };
-    $scope.prevSkillsPage = function () {
-        if ($scope.currentPageSkills > 0) {
-          $scope.currentPageSkills--;
-        }
-    };
-
-    $scope.nextSkillsPage = function () {
-        if ($scope.currentPageSkills < $scope.pagedSkills.length - 1) {
-          $scope.currentPageSkills++;
-        }
-    };
- 
-    $scope.setSkillsPage = function () {
-        $scope.currentPageSkills = this.n;
-    };
-    
-    // Controls the numbers on the pagination bars
-    $scope.range = function (pos, length) {
-        var ret = [];
-        var max = 10;
-        var end = 0;
-        var start = 0;
-        if (length < max) {
-            end = length;
-        }
-        else if (pos <= 5) {
-            end = max;
-        } else {
-            end = pos + max - 3;
-        }
-        if (pos > 5){
-            start = pos - 3;
-        } else {
-            start = 0;
-        }
-        if (end > length){
-            end = length;
-        }
-        for (var i = start; i < end; i++) {
-          ret.push(i);
-        }
-        return ret;
     };
     
     $scope.countPeople = function(){

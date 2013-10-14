@@ -14,6 +14,7 @@
 		<script src="lib/jQuery/jquery-ui.min.js"></script>
 		<script src="lib/angular/angular.min.js"></script>
 		<script src="lib/angular/angular-dragdrop.min.js"></script>
+		<script src="lib/angular/ui-bootstrap-tpls-0.6.0.js"></script>
 		<script src="js/app.js"></script>
 		<script src="js/controllers.js"></script>
 		<script src="js/directives.js"></script>
