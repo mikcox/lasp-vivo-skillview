@@ -55,9 +55,27 @@ function SkillsCtrl($scope, $http){
 				else{
 					tmpPhone = '';
 				}
-				tmpPosition = data.results.bindings[i].Position.value;
-				tmpDivision = data.results.bindings[i].Division.value;
-				tmpGroup = data.results.bindings[i].Group.value;
+				if(data.results.bindings[i].hasOwnProperty("Position")){
+					tmpPosition = data.results.bindings[i].Position.value;
+				}
+				else{
+					tmpPosition = '';
+				}
+				if(data.results.bindings[i].hasOwnProperty("Division")){
+					tmpDivision = data.results.bindings[i].Division.value;
+				}
+				else{
+					tmpDivision = '';
+				}
+				if(data.results.bindings[i].hasOwnProperty("Group")){
+					tmpGroup = data.results.bindings[i].Group.value;
+				}
+				else{
+					tmpGroup = '';
+				}
+				//tmpPosition = data.results.bindings[i].Position.value;
+				//tmpDivision = data.results.bindings[i].Division.value;
+				//tmpGroup = data.results.bindings[i].Group.value;
 				//send a cursor looking through the rest of the list for duplicates
 				for(cursor = i+1; cursor < data.results.bindings.length; cursor++){
 					//if we find a match between the current person/skill and the cursor's person/skill...
