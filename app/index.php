@@ -16,7 +16,8 @@
 		<script src="lib/angular/angular-dragdrop.min.js"></script>
 		<script src="lib/angular/ui-bootstrap-tpls-0.6.0.js"></script>
 		<script src="js/app.js"></script>
-		<script src="js/controllers.js"></script>
+		<script src="js/Controllers/allSkillsCtrl.js"></script>	
+		<script src="js/Controllers/mapASkillCtrl.js"></script>
 		<script src="js/directives.js"></script>
 		<script src="js/filters.js"></script>
 	</head>
