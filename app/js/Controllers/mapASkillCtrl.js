@@ -12,7 +12,8 @@ vivoviz.controller('mapASkillCtrl', ['$scope','$filter','dataFactory','formatFac
     getSkills();
     
     function getPersonnel(){
-        dataFactory.getPersonnelList()
+        var queryStr = "PREFIX rdfs:  <http://www.w3.org/2000/01/rdf-schema#> PREFIX foaf: <http://xmlns.com/foaf/0.1/> SELECT ?person ?personuri WHERE{ ?personuri a foaf:Person . ?personuri rdfs:label ?person}";
+        dataFactory.getSPARQLQuery(queryStr)
             .success(function(data){
                 $scope.peoplelist = formatFactory.formatPersonnelList(data);
                 $scope.filterPeople();
@@ -23,7 +24,8 @@ vivoviz.controller('mapASkillCtrl', ['$scope','$filter','dataFactory','formatFac
     }
     
     function getSkills(){
-        dataFactory.getSkillList()
+        var queryStr = "PREFIX rdfs:  <http://www.w3.org/2000/01/rdf-schema#> PREFIX laspskills: <http://webdev1.lasp.colorado.edu:57529/laspskills#> SELECT ?skill ?skilllevel ?skillleveluri WHERE{?skillleveluri a laspskills:SkillLevel . ?skillleveluri laspskills:levelForSkill ?skilluri . ?skilluri rdfs:label ?skill . ?skillleveluri rdfs:label ?skilllevel} ORDER BY asc(?skilllevel)";
+        dataFactory.getSPARQLQuery(queryStr)
             .success(function(data){
                 $scope.skilllist = formatFactory.formatSkillList(data);
                 $scope.filterSkills();

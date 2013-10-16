@@ -5,22 +5,8 @@ vivoviz.factory('dataFactory', function($http){
     var urlBase = 'http://lasp-db-dev:3030/VIVO/query';
     var dataFactory = {};
     
-    dataFactory.getMasterList = function() {
-        var queryStr = "PREFIX rdfs:<http://www.w3.org/2000/01/rdf-schema#> PREFIX foaf: <http://xmlns.com/foaf/0.1/> PREFIX vivo: <http://vivoweb.org/ontology/core#> PREFIX laspskills: <http://webdev1.lasp.colorado.edu:57529/laspskills#>  SELECT ?Person ?personuri ?Skill ?SkillLevel ?skillleveluri ?Office ?Email ?PhoneNumber ?Position ?Division ?Group WHERE { ?personuri a foaf:Person . ?personuri rdfs:label ?Person . ?personuri laspskills:hasSkill ?skillleveluri . ?skillleveluri rdfs:label ?SkillLevel . ?skillleveluri laspskills:levelForSkill ?skilluri . ?skilluri rdfs:label ?Skill . OPTIONAL{?personuri vivo:primaryEmail ?Email}. OPTIONAL{?personuri vivo:hasFacility ?roomuri . ?roomuri rdfs:label ?Office} . OPTIONAL{?personuri vivo:phoneNumber ?PhoneNumber} . OPTIONAL{?personuri vivo:personInPosition ?positionuri . ?positionuri rdfs:label ?Position . ?positionuri vivo:positionInOrganization ?groupuri . ?groupuri rdfs:label ?Group . ?groupuri vivo:subOrganizationWithin ?divisionuri . ?divisionuri rdfs:label ?Division }}";
+    dataFactory.getSPARQLQuery = function (queryStr) {
         var query = "query=" + escape(queryStr);
-        return $http.post(urlBase,query,{headers: {"Accept": "application/sparql-results+json", 'Content-type': 'application/x-www-form-urlencoded'}});
-    };
-    dataFactory.getSkillList = function(){
-        var queryStr = "PREFIX rdfs:  <http://www.w3.org/2000/01/rdf-schema#> PREFIX laspskills: <http://webdev1.lasp.colorado.edu:57529/laspskills#> SELECT ?skill ?skilllevel ?skillleveluri WHERE{?skillleveluri a laspskills:SkillLevel . ?skillleveluri laspskills:levelForSkill ?skilluri . ?skilluri rdfs:label ?skill . ?skillleveluri rdfs:label ?skilllevel} ORDER BY asc(?skilllevel)";
-        var query = "query=" + escape(queryStr);
-        return $http.post(urlBase,query,{headers: {"Accept": "application/sparql-results+json", 'Content-type': 'application/x-www-form-urlencoded'}});
-    };
-    dataFactory.getPersonnelList = function (){
-        var queryStr = "PREFIX rdfs:  <http://www.w3.org/2000/01/rdf-schema#> PREFIX foaf: <http://xmlns.com/foaf/0.1/> SELECT ?person ?personuri WHERE{ ?personuri a foaf:Person . ?personuri rdfs:label ?person}";
-        var query = "query=" + escape(queryStr);
-        return $http.post(urlBase,query,{headers: {"Accept": "application/sparql-results+json", 'Content-type': 'application/x-www-form-urlencoded'}});
-    };
-    dataFactory.getQuery = function (query) {
         return $http.post(urlBase,query,{headers: {"Accept": "application/sparql-results+json", 'Content-type': 'application/x-www-form-urlencoded'}});
     };
     
