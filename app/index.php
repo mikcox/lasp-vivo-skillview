@@ -20,6 +20,7 @@
 		<script src="js/Controllers/mapASkillCtrl.js"></script>
 		<script src="js/directives.js"></script>
 		<script src="js/filters.js"></script>
+		<script src="js/services.js"></script>
 	</head>
 
 	<body class="no-logo fae">

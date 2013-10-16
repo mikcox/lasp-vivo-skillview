@@ -1,92 +1,42 @@
 'use strict';
 
-function AddSkillCtrl($scope, $http, $timeout, $filter){
-    var queryStr = "PREFIX rdfs:  <http://www.w3.org/2000/01/rdf-schema#> PREFIX foaf: <http://xmlns.com/foaf/0.1/> SELECT ?person ?personuri WHERE{ ?personuri a foaf:Person . ?personuri rdfs:label ?person}";
-    var queryPart = "query=" + escape(queryStr);    
-    var list1 = [];
-    var list2 = [];
+vivoviz.controller('mapASkillCtrl', ['$scope','$filter','dataFactory','formatFactory',function ($scope, $filter,dataFactory, formatFactory){
+    $scope.filteredPeople = []; 
+    $scope.filteredSkills = [];
+    $scope.addPersonList = [];
+    $scope.addSkillList = [];
+    $scope.currentPagePeople = 1;
+    $scope.currentPageSkills = 1; 
     
-    $http({
-        method: 'POST',
-        url: 'http://lasp-db-dev:3030/VIVO/query',
-        data: queryPart,
-        headers: {"Accept": "application/sparql-results+json", 'Content-type': 'application/x-www-form-urlencoded'}
-    }).success(function(data) {
-        //this greatly simplifies our json structure
-        for(var i=0;i<data.results.bindings.length;i++){
-            list1.push({"person": data.results.bindings[i].person.value,
-                       "uri": data.results.bindings[i].personuri.value});
-        }
-        $scope.peoplelist = list1;
-        $scope.addPersonList = [];
-        $scope.filterPeople();
-    }).error(function(data,status) {
-        $scope.error = "Fuseki person query returned: " + status;
-    });
-
-    queryStr = "PREFIX rdfs:  <http://www.w3.org/2000/01/rdf-schema#> PREFIX laspskills: <http://webdev1.lasp.colorado.edu:57529/laspskills#> SELECT ?skill ?skilllevel ?skillleveluri WHERE{?skillleveluri a laspskills:SkillLevel . ?skillleveluri laspskills:levelForSkill ?skilluri . ?skilluri rdfs:label ?skill . ?skillleveluri rdfs:label ?skilllevel} ORDER BY asc(?skilllevel)";
-    queryPart = "query=" + escape(queryStr);
-    $http({
-        method: 'POST',
-        url: 'http://lasp-db-dev:3030/VIVO/query',
-        data: queryPart,
-        headers: {"Accept": "application/sparql-results+json", 'Content-type': 'application/x-www-form-urlencoded'}
-    }).success(function(data) {
-        //create empty array to build representation of all skill levels
-        var levelList = [];
-        //alert(JSON.stringify(data.results.bindings));
-        for(var i=0;i<data.results.bindings.length;){
-            //empty the level list and prepare a cursor...
-            levelList = [];
-            var cursor = i+1;
-            //add the first skill level
-            levelList.push({"skilllevel": data.results.bindings[i].skilllevel.value,
-                            "skillleveluri": data.results.bindings[i].skillleveluri.value});
-            //iterate down through list of results while the skill name at the cursor is still the same as the skill name at i
-            while(data.results.bindings[i].skill.value == data.results.bindings[cursor].skill.value){
-                //add the skill level from the cursor row to the levelList
-                levelList.push({"skilllevel": data.results.bindings[cursor].skilllevel.value,
-                                "skillleveluri": data.results.bindings[cursor].skillleveluri.value});
-                //check that another row exists
-                if(cursor+1 < data.results.bindings.length){
-                    cursor++;
-                }
-                //otherwise, we're done
-                else{
-                    break;
-                }
-            }
-
-            //add the skill and all its levels into a finalized JSON object and append it to our final skill list
-            list2.push({"skill": data.results.bindings[i].skill.value,
-                        "levels": levelList});
-            //if there are more skills...
-            if(cursor+1 < data.results.bindings.length){
-                //move i to the cursor and continue
-                i = cursor;
-            }
-            //otherwise, we're done
-            else{
-                break;
-            }
-        }
-        //alert(JSON.stringify(list2));
-        $scope.skilllist = list2;
-        $scope.addSkillList = [];
-        $scope.filterSkills();
-    }).error(function(data,status) {
-        $scope.error = "Fuseki skill query returned: " + status;
-    });
+    getPersonnel();
+    getSkills();
+    
+    function getPersonnel(){
+        dataFactory.getPersonnelList()
+            .success(function(data){
+                $scope.peoplelist = formatFactory.formatPersonnelList(data);
+                $scope.filterPeople();
+            })
+            .error(function(data,status) {
+                $scope.error = "Fuseki person query returned: " + status;
+        });
+    }
+    
+    function getSkills(){
+        dataFactory.getSkillList()
+            .success(function(data){
+                $scope.skilllist = formatFactory.formatSkillList(data);
+                $scope.filterSkills();
+            })
+            .error(function(data,status) {
+                $scope.error = "Fuseki person query returned: " + status;
+        });
+    }
     
     //function to remove the skill names from the skill level dropdown options
     $scope.skillLevelDisplay = function(skill, skilllevel){
         return skilllevel.replace(skill, "");
     };
-    //Necessary for draggable objects to return the correct index
-    $scope.filteredPeople = []; 
-    $scope.filteredSkills = [];
-    $scope.currentPagePeople = 1;
-    $scope.currentPageSkills = 1; 
     
     $scope.filterSkills = function(){
         $scope.filteredSkills = $filter('QuickSearch')($scope.skilllist, $scope.skillquery, "skill");
@@ -220,4 +170,4 @@ function AddSkillCtrl($scope, $http, $timeout, $filter){
         }
         return count;
     };
-}
+}]);
