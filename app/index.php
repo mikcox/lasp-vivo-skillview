@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" ng-app="vivoviz">
+<html lang="en" ng-app="skillsmodule">
 	<head>
 		<meta charset="utf-8" />
 		<title>LEMR : Skills</title>
@@ -20,7 +20,7 @@
 		<script src="js/Controllers/mapASkillCtrl.js"></script>
 		<script src="js/directives.js"></script>
 		<script src="js/filters.js"></script>
-		<script src="js/services.js"></script>
+		<script src="js/factories.js"></script>
 	</head>
 
 	<body class="no-logo fae">

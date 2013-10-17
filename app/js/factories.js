@@ -1,7 +1,7 @@
 'use strict';
 
 /* Services */
-vivoviz.factory('dataFactory', function($http){
+skillsmodule.factory('dataFactory', function($http){
     var urlBase = 'http://lasp-db-dev:3030/VIVO/query';
     var dataFactory = {};
     
@@ -13,7 +13,7 @@ vivoviz.factory('dataFactory', function($http){
     return dataFactory;
 });
 
-vivoviz.factory('formatFactory', function(){
+skillsmodule.factory('formatFactory', function(){
     var formatFactory = {};
     
     formatFactory.formatMasterList = function formatData(data){

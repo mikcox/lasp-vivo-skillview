@@ -1,9 +1,9 @@
 'use strict';
 
 /* App Module */
-var vivoviz = angular.module('vivoviz', ['ngDragDrop', 'mapaskillFilters', 'ui.bootstrap']); //dependencies go inside the square brackets
+var skillsmodule = angular.module('skillsmodule', ['ngDragDrop', 'mapaskillFilters', 'ui.bootstrap']); //dependencies go inside the square brackets
 
-vivoviz.config(function ($routeProvider, $httpProvider) {
+skillsmodule.config(function ($routeProvider, $httpProvider) {
 $routeProvider. //this controls navigation within our app
 when('/', { controller: 'allSkillsCtrl', templateUrl: 'partials/all-skills.php' }).
 when('/mapaskill', { controller: 'mapASkillCtrl', templateUrl: 'partials/map-a-skill.php' }).

@@ -1,6 +1,6 @@
 'use strict';
 
-vivoviz.controller('mapASkillCtrl', ['$scope','$filter','dataFactory','formatFactory',function ($scope, $filter,dataFactory, formatFactory){
+skillsmodule.controller('mapASkillCtrl', ['$scope','$filter','dataFactory','formatFactory',function ($scope, $filter,dataFactory, formatFactory){
     $scope.filteredPeople = []; 
     $scope.filteredSkills = [];
     $scope.addPersonList = [];

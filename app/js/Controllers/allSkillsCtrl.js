@@ -1,9 +1,8 @@
 'use strict';
 
 
-//testing
 /* Controllers */
-vivoviz.controller('allSkillsCtrl', ['$scope','dataFactory','formatFactory',function ($scope, dataFactory, formatFactory){      
+skillsmodule.controller('allSkillsCtrl', ['$scope','dataFactory','formatFactory',function ($scope, dataFactory, formatFactory){      
     
     getPersonnel();
     
@@ -15,9 +14,9 @@ vivoviz.controller('allSkillsCtrl', ['$scope','dataFactory','formatFactory',func
             })
             .error(function(data,status) {
                 $scope.error = "Fuseki returned: " + status;
-        });
-    }
-    
+        	});
+    };	
+    	
     $scope.orderProp = "Person.value";
     
     $scope.DeleteButtonPressed = function(name, personuri, skill, skilluri, $index){
