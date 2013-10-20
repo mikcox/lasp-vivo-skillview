@@ -5,8 +5,8 @@ var skillsmodule = angular.module('skillsmodule', ['ngDragDrop', 'mapaskillFilte
 
 skillsmodule.config(function ($routeProvider, $httpProvider) {
 $routeProvider. //this controls navigation within our app
-when('/', { controller: 'allSkillsCtrl', templateUrl: 'partials/all-skills.php' }).
-when('/mapaskill', { controller: 'mapASkillCtrl', templateUrl: 'partials/map-a-skill.php' }).
+when('/', { controller: 'allSkillsCtrl', templateUrl: 'partials/all-skills.html' }).
+when('/mapaskill', { controller: 'mapASkillCtrl', templateUrl: 'partials/map-a-skill.html' }).
 otherwise({ redirectTo: '/' });
 
 //enable crossdomain requests
