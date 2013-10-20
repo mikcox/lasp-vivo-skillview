@@ -9,7 +9,7 @@ skillsmodule.controller('mapASkillCtrl', ['$scope','$filter','dataFactory','form
     $scope.currentPageSkills = 1; 
     
     getPersonnel();
-    getSkills();
+    getSkills();  
     
     function getPersonnel(){
         var queryStr = "PREFIX rdfs:  <http://www.w3.org/2000/01/rdf-schema#> PREFIX foaf: <http://xmlns.com/foaf/0.1/> SELECT ?person ?personuri WHERE{ ?personuri a foaf:Person . ?personuri rdfs:label ?person}";
@@ -42,12 +42,12 @@ skillsmodule.controller('mapASkillCtrl', ['$scope','$filter','dataFactory','form
     
     $scope.filterSkills = function(){
         $scope.filteredSkills = $filter('QuickSearch')($scope.skilllist, $scope.skillquery, "skill");
-        $scope.groupToPagesSkills();
+        $scope.pagedSkills = groupToPages($scope.filteredSkills);
         return $scope.filteredSkills;
     };
     $scope.filterPeople = function(){
         $scope.filteredPeople = $filter('QuickSearch')($scope.peoplelist, $scope.personquery, "person");
-        $scope.groupToPagesPeople();
+        $scope.pagedPeople = groupToPages($scope.filteredPeople);
         return $scope.filteredPeople;
     };
     
@@ -131,44 +131,25 @@ skillsmodule.controller('mapASkillCtrl', ['$scope','$filter','dataFactory','form
     $scope.itemsPerPage = 15;
     $scope.maxPages = 5;
     
-    $scope.groupToPagesPeople = function () {
-        $scope.pagedPeople = [];
-        for (var i = 0; i < $scope.filteredPeople.length; i++) {
+    function groupToPages(list) {
+        var pagedList = [];
+        for (var i = 0; i < list.length; i++) {
           if (i % $scope.itemsPerPage === 0) {
-              $scope.pagedPeople[Math.floor(i/$scope.itemsPerPage)] = [ $scope.filteredPeople[i] ];
+              pagedList[Math.floor(i/$scope.itemsPerPage)] = [ list[i] ];
           }  else {
-              $scope.pagedPeople[Math.floor(i/$scope.itemsPerPage)].push($scope.filteredPeople[i]);
+              pagedList[Math.floor(i/$scope.itemsPerPage)].push(list[i]);
           }
         }
-    };    
-    $scope.groupToPagesSkills = function () {
-        $scope.pagedSkills = [];
-        for (var i = 0; i < $scope.filteredSkills.length; i++) {
-          if (i % $scope.itemsPerPage === 0) {
-              $scope.pagedSkills[Math.floor(i/$scope.itemsPerPage)] = [ $scope.filteredSkills[i] ];
-          }  else {
-              $scope.pagedSkills[Math.floor(i/$scope.itemsPerPage)].push($scope.filteredSkills[i]);
-          }
-        }
+        return pagedList;
     };
     
-    $scope.countPeople = function(){
+    $scope.countPagedList = function(list){
         var count = 0;
-        if (typeof $scope.pagedPeople === 'undefined'){
-           return count; 
-        } 
-        for (var i = 0; i < $scope.pagedPeople.length; i++) {
-            count += $scope.pagedPeople[i].length;
+        if (typeof list === 'undefined'){
+            return count;
         }
-        return count;
-    };
-    $scope.countSkills = function(){
-        var count = 0;
-        if (typeof $scope.pagedSkills === 'undefined'){
-            return count; 
-        } 
-        for (var i = 0; i < $scope.pagedSkills.length; i++) {
-            count += $scope.pagedSkills[i].length;
+        for (var i = 0; i < list.length; i++){
+            count += list[i].length;
         }
         return count;
     };

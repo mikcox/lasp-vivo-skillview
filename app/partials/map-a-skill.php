@@ -6,7 +6,7 @@
 			<p class="error">{{error}}</p>
 			<ul class="people">
 				<h2>People</h2>
-				<p ng-show="peoplelist">People Found: {{countPeople()}}</p>
+				<p ng-show="peoplelist">People Found: {{countPagedList(pagedPeople)}}</p>
 				<p ng-hide="peoplelist"> Loading...</p>
 				<li class="thumbnail" ng-repeat="person in pagedPeople[currentPagePeople-1]" data-drop="true" ng-model="peoplelist" jqyoui-droppable="{multiple: true, onDrop: 'filterPeople'}" data-jqyoui-options="{accept:'.btn-draggable:not([ng-model!=addPersonList])'}"> 
 					<div class="btn btn-primary btn-draggable" data-drag="true" data-jqyoui-options="{revert: 'invalid'}" ng-model="peoplelist" jqyoui-draggable="{index: {{$index+(currentPagePeople-1)*15}}, animate: false, applyFilter: 'filterPeople'}" ng-hide="!person.person">{{person.person}}</div>
@@ -14,7 +14,7 @@
 				</li>
 			</ul>
 			<div class="center">
-				<pagination boundary-links="true" total-items="countPeople()" page="currentPagePeople" items-per-page="itemsPerPage" max-size="maxPages" class="pagination-small" previous-text="&lsaquo;" next-text="&rsaquo;" first-text="&laquo;" last-text="&raquo;"></pagination>
+				<pagination boundary-links="true" total-items="countPagedList(pagedPeople)" page="currentPagePeople" items-per-page="itemsPerPage" max-size="maxPages" class="pagination-small" previous-text="&lsaquo;" next-text="&rsaquo;" first-text="&laquo;" last-text="&raquo;"></pagination>
 			</div>
 		</div>
 		<div id="spacer container" style="width:45%; display:inline-block; align:center; text-align:center;">
@@ -55,7 +55,7 @@
 			<p class="error">{{error}}</p>
 			<ul class="skills">
 				<h2>Skills</h2>
-				<p ng-show="skilllist">Skills Found: {{countSkills()}}</p>
+				<p ng-show="skilllist">Skills Found: {{countPagedList(pagedSkills)}}</p>
 				<p ng-hide="skilllist"> Loading...</p>
 				<li class="thumbnail" ng-repeat="skill in pagedSkills[currentPageSkills-1]" data-drop="true" ng-model="skilllist" jqyoui-droppable="{multiple: true, onDrop: 'filterSkills'}" data-jqyoui-options="{accept:'.btn-draggable:not([ng-model!=addSkillList])'}"> 
 					<div class="btn btn-info btn-draggable" data-drag="true" data-jqyoui-options="{revert: 'invalid'}" ng-model="skilllist" jqyoui-draggable="{index: {{$index+(currentPageSkills-1)*15}}, animate: false, applyFilter: 'filterSkills'}" ng-hide="!skill.skill">{{skill.skill}}</div>
@@ -63,7 +63,7 @@
 				</li>
 			</ul>
 			<div class="center">
-				<pagination boundary-links="true" total-items="countSkills()" page="currentPageSkills" items-per-page="itemsPerPage" max-size="maxPages" class="pagination-small" previous-text="&lsaquo;" next-text="&rsaquo;" first-text="&laquo;" last-text="&raquo;"></pagination>
+				<pagination boundary-links="true" total-items="countPagedList(pagedSkills)" page="currentPageSkills" items-per-page="itemsPerPage" max-size="maxPages" class="pagination-small" previous-text="&lsaquo;" next-text="&rsaquo;" first-text="&laquo;" last-text="&raquo;"></pagination>
 			</div>
 		</div>
 </div>

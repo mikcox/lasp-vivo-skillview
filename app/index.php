@@ -9,7 +9,6 @@
 		
 		<link rel="stylesheet" href="css/bootstrap.css">
 		<link rel="stylesheet" href="css/app.css">
-		<link rel="stylesheet" href="css/jquery-ui.css">
 		<script src="lib/jQuery/jquery-1.10.2.min.js"></script>
 		<script src="lib/jQuery/jquery-ui.min.js"></script>
 		<script src="lib/angular/angular.min.js"></script>
