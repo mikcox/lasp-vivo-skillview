@@ -1,7 +1,10 @@
 'use strict';
 
 /* App Module */
-var skillsmodule = angular.module('skillsmodule', ['ngDragDrop', 'mapaskillFilters', 'ui.bootstrap']); //dependencies go inside the square brackets
+var skillsmodule = angular.module('skillsmodule',
+	['ngDragDrop',
+	 'mapaskillFilters',
+	 'ui.bootstrap']); //dependencies go inside the square brackets
 
 skillsmodule.config(function ($routeProvider, $httpProvider) {
 $routeProvider. //this controls navigation within our app

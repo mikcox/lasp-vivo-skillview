@@ -294,7 +294,7 @@ module.exports = function (grunt) {
     karma: {
       unit: {
         configFile: 'test/config/karma.conf.js',
-        singleRun: true
+        singleRun: false
       }
     },
     cdnify: {
