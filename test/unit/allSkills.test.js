@@ -20,10 +20,18 @@ describe('controller: allSkillsCtrl', function(){
  	it("can get an instance of formatFactory", function(){
     	expect($formatFactory).toBeDefined();
     });
+    
+    it("can find dataFactory.getSPARQLQuery()", function(){
+    	expect($dataFactory.getSPARQLQuery).toBeDefined();
+    });
  
 	it("should send a POST to our SPARQL endpoint", function(){
-		//expect($rootScope.queryStr).toEqual("PREFIX rdfs:<http://www.w3.org/2000/01/rdf-schema#> PREFIX foaf: <http://xmlns.com/foaf/0.1/> PREFIX vivo: <http://vivoweb.org/ontology/core#> PREFIX laspskills: <http://webdev1.lasp.colorado.edu:57529/laspskills#>  SELECT ?Person ?personuri ?Skill ?SkillLevel ?skillleveluri ?Office ?Email ?PhoneNumber ?Position ?Division ?Group WHERE { ?personuri a foaf:Person . ?personuri rdfs:label ?Person . ?personuri laspskills:hasSkill ?skillleveluri . ?skillleveluri rdfs:label ?SkillLevel . ?skillleveluri laspskills:levelForSkill ?skilluri . ?skilluri rdfs:label ?Skill . OPTIONAL{?personuri vivo:primaryEmail ?Email}. OPTIONAL{?personuri vivo:hasFacility ?roomuri . ?roomuri rdfs:label ?Office} . OPTIONAL{?personuri vivo:phoneNumber ?PhoneNumber} . OPTIONAL{?personuri vivo:personInPosition ?positionuri . ?positionuri rdfs:label ?Position . ?positionuri vivo:positionInOrganization ?groupuri . ?groupuri rdfs:label ?Group . ?groupuri vivo:subOrganizationWithin ?divisionuri . ?divisionuri rdfs:label ?Division }}");
-		$httpBackend.expectPOST('http://lasp-db-dev:3030/VIVO/query',"query="+escape($rootScope.queryStr), {"Accept": "application/sparql-results+json", 'Content-type': 'application/x-www-form-urlencoded'}).respond(200);
+		//for testing against the real database (instead of below):
+		$httpBackend.expectPOST("http://lasp-db-dev:3030/VIVO/query","query="+escape($rootScope.queryStr), {"Accept": "application/sparql-results+json", 'Content-type': 'application/x-www-form-urlencoded'}).respond(200);
+		
+		//for testing against your local MySQL install (instead of above):
+		//$httpBackend.expectPOST("http://localhost:3030/VIVO/query","query="+escape($rootScope.queryStr), {"Accept": "application/sparql-results+json", 'Content-type': 'application/x-www-form-urlencoded'}).respond(200);
+
 		$dataFactory.getSPARQLQuery($rootScope.queryStr);
 		$httpBackend.flush();
 	});

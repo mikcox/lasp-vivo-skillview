@@ -2,7 +2,12 @@
 
 /* Services */
 skillsmodule.factory('dataFactory', function($http){
+	//use the lasp-db-dev endpoint (below) to test your webapp against the ACTUAL DATABASE ON LASP-DB-DEV  (be careful!).
     var urlBase = 'http://lasp-db-dev:3030/VIVO/query';
+    
+    //use your localhost endpoint (below) instead of the endpoint above to test your webapp with some static data stored in your local MySQL database
+    //var urlBase = 'http://localhost:3030/VIVO/query';
+    
     var dataFactory = {};
     
     dataFactory.getSPARQLQuery = function (queryStr) {

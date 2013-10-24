@@ -83,7 +83,7 @@ skillsmodule.controller('mapASkillCtrl', ['$scope','$filter','dataFactory','form
         $.ajax
         ({
             type: "POST",
-            url: "lib/submitbuttonaction.php",
+            url: "bower_components/submitbuttonaction.php",
             data: {SubmitText : $scope.SubmitText}, 
         });
     };

@@ -38,7 +38,7 @@ skillsmodule.controller('allSkillsCtrl', ['$scope','dataFactory','formatFactory'
 	        $.ajax
 	        ({
 	            type: "POST",
-	            url: "lib/removebuttonaction.php",
+	            url: "bower_components/removebuttonaction.php",
 	            data: {DeletionText : deletionText}, 
 	        });
 	    };
