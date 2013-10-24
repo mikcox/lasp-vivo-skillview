@@ -1,6 +1,6 @@
 describe('controller: allSkillsCtrl', function(){
     
-    var $httpBackend, $rootScope, $dataFactory, $controller;
+    var $httpBackend, $rootScope, $dataFactory, $formatFactory, $controller;
        
     beforeEach(angular.mock.module('skillsmodule'));
 
@@ -8,12 +8,17 @@ describe('controller: allSkillsCtrl', function(){
   		$httpBackend = $injector.get('$httpBackend');
     	$rootScope = $injector.get('$rootScope');
     	$dataFactory = $injector.get('dataFactory');
+    	$formatFactory = $injector.get('formatFactory');
     	$controller = $injector.get('$controller');
     	
     }));
     
     it("can get an instance of dataFactory", function(){
     	expect($dataFactory).toBeDefined();
+    });
+ 
+ 	it("can get an instance of formatFactory", function(){
+    	expect($formatFactory).toBeDefined();
     });
  
 	it("should send a POST to our SPARQL endpoint", function(){
