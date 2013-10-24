@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" ng-app="vivoviz">
+<html lang="en" ng-app="skillsmodule">
 	<head>
 		<meta charset="utf-8" />
 		<title>LEMR : Skills</title>
@@ -7,18 +7,19 @@
 		<meta name="author" content="Mik" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		
-		<link rel="stylesheet" href="css/bootstrap.css">
-		<link rel="stylesheet" href="css/app.css">
-		<link rel="stylesheet" href="css/jquery-ui.css">
-		<script src="lib/jQuery/jquery-1.10.2.min.js"></script>
-		<script src="lib/jQuery/jquery-ui.min.js"></script>
-		<script src="lib/angular/angular.min.js"></script>
-		<script src="lib/angular/angular-dragdrop.min.js"></script>
-		<script src="lib/angular/ui-bootstrap-tpls-0.6.0.js"></script>
-		<script src="js/app.js"></script>
-		<script src="js/controllers.js"></script>
-		<script src="js/directives.js"></script>
-		<script src="js/filters.js"></script>
+		<link rel="stylesheet" href="styles/bootstrap.css">
+		<link rel="stylesheet" href="styles/app.css">
+		<script src="bower_components/jquery/jquery.min.js"></script>
+		<script src="bower_components/jquery/jquery-ui.min.js"></script>
+		<script src="bower_components/angular/angular.min.js"></script>
+		<script src="bower_components/angular-dragdrop.min.js"></script>
+		<script src="bower_components/ui-bootstrap-tpls-0.6.0.js"></script>
+		<script src="scripts/app.js"></script>
+		<script src="scripts/Controllers/allSkillsCtrl.js"></script>	
+		<script src="scripts/Controllers/mapASkillCtrl.js"></script>
+		<script src="scripts/directives.js"></script>
+		<script src="scripts/filters.js"></script>
+		<script src="scripts/factories.js"></script>
 	</head>
 
 	<body class="no-logo fae">
