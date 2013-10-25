@@ -7,28 +7,36 @@ skillsmodule.controller('mapASkillCtrl', ['$scope','$filter','dataFactory','form
     $scope.addSkillList = [];
     $scope.currentPagePeople = 1;
     $scope.currentPageSkills = 1; 
+   
+   
+	$scope.urlBase = 'http://lasp-db-dev:3030/VIVO/query';
     
     getPersonnel();
     getSkills();  
     
-    function getPersonnel(){
-        var queryStr = "PREFIX rdfs:  <http://www.w3.org/2000/01/rdf-schema#> PREFIX foaf: <http://xmlns.com/foaf/0.1/> SELECT ?person ?personuri WHERE{ ?personuri a foaf:Person . ?personuri rdfs:label ?person}";
-        dataFactory.getSPARQLQuery(queryStr)
-            .success(function(data){
-                $scope.peoplelist = formatFactory.formatPersonnelList(data);
-                $scope.filterPeople();
+	function getPersonnel(){
+		$scope.queryStr = "PREFIX rdfs:  <http://www.w3.org/2000/01/rdf-schema#> PREFIX foaf: <http://xmlns.com/foaf/0.1/> SELECT ?person ?personuri WHERE{ ?personuri a foaf:Person . ?personuri rdfs:label ?person}";
+    
+		dataFactory.getSPARQLQuery($scope.urlBase, $scope.queryStr)
+			.success(function(data){
+				if(data){
+					$scope.peoplelist = formatFactory.formatPersonnelList(data);
+					$scope.filterPeople();
+				}
             })
             .error(function(data,status) {
                 $scope.error = "Fuseki person query returned: " + status;
-        });
-    }
+		});
+	}
     
     function getSkills(){
-        var queryStr = "PREFIX rdfs:  <http://www.w3.org/2000/01/rdf-schema#> PREFIX laspskills: <http://webdev1.lasp.colorado.edu:57529/laspskills#> SELECT ?skill ?skilllevel ?skillleveluri WHERE{?skillleveluri a laspskills:SkillLevel . ?skillleveluri laspskills:levelForSkill ?skilluri . ?skilluri rdfs:label ?skill . ?skillleveluri rdfs:label ?skilllevel} ORDER BY asc(?skilllevel)";
-        dataFactory.getSPARQLQuery(queryStr)
+        $scope.queryStr = "PREFIX rdfs:  <http://www.w3.org/2000/01/rdf-schema#> PREFIX laspskills: <http://webdev1.lasp.colorado.edu:57529/laspskills#> SELECT ?skill ?skilllevel ?skillleveluri WHERE{?skillleveluri a laspskills:SkillLevel . ?skillleveluri laspskills:levelForSkill ?skilluri . ?skilluri rdfs:label ?skill . ?skillleveluri rdfs:label ?skilllevel} ORDER BY asc(?skilllevel)";
+        dataFactory.getSPARQLQuery($scope.urlBase, $scope.queryStr)
             .success(function(data){
-                $scope.skilllist = formatFactory.formatSkillList(data);
-                $scope.filterSkills();
+            	if(data){
+	                $scope.skilllist = formatFactory.formatSkillList(data);
+	                $scope.filterSkills();
+               }
             })
             .error(function(data,status) {
                 $scope.error = "Fuseki person query returned: " + status;
