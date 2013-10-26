@@ -14,6 +14,13 @@ that instantiate our models and create scope variables `Ex: "SkillsCtrl"`
 - [awesome markdown guide] [3]
 - [all of angular js in 60 min, good for review] [4]
 
+## Grunt/Bower/Yo guideline ##
+---
+- the only global npm module should be the grunt cli, other wise use 
+`--save-dev` for example, `npm install grunt-contrib --save-dev`, that way it will be placed on the package.json list for easy deployment
+- the Gruntfile is essentially composed of registered tasks where we call them through grunt.
+- Bower should manage it's own libaries/updates, we shouldn't place any of our own libraries in bower components
+
 
 [1]: http://andyshora.com/unit-testing-best-practices-angularjs.html 
 [2]: http://weblogs.asp.net/dwahlin/archive/2013/08/16/using-an-angularjs-factory-to-interact-with-a-restful-service.aspx
