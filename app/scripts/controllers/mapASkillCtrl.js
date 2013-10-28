@@ -82,7 +82,7 @@ skillsmodule.controller('mapASkillCtrl', ['$scope','$filter','dataFactory','form
         document.getElementById("submitButtonDiv").innerHTML = '<img src="images/loading.gif"/><br>Working... ';
         //actually post the new skill(s)
         ajaxSubmitNewSkillMap();
-        //wait 5 seconds and then display a success message (yes, this is a lie since the skill may or may not have been added by now)
+        //wait 5 seconds and then display a success message (yes, this is a lie since the skill may or may not have actually been added by now)
         setTimeout(function(){document.getElementById("submitButtonDiv").innerHTML = 'Done. ';}, 5000);
         setTimeout(function(){alert("New skill mapping added!"); location.reload();},5000);
     };
@@ -91,7 +91,7 @@ skillsmodule.controller('mapASkillCtrl', ['$scope','$filter','dataFactory','form
         $.ajax
         ({
             type: "POST",
-            url: "bower_components/submitbuttonaction.php",
+            url: "scripts/button_actions/submitbuttonaction.php",
             data: {SubmitText : $scope.SubmitText}, 
         });
     };

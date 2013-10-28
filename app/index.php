@@ -12,11 +12,11 @@
 		<script src="bower_components/jquery/jquery.min.js"></script>
 		<script src="bower_components/jquery/jquery-ui.min.js"></script>
 		<script src="bower_components/angular/angular.min.js"></script>
-		<script src="bower_components/angular-dragdrop.min.js"></script>
-		<script src="bower_components/ui-bootstrap-tpls-0.6.0.js"></script>
+		<script src="scripts/lib/angular-dragdrop.min.js"></script>
+		<script src="scripts/lib/ui-bootstrap-tpls-0.6.0.js"></script>
 		<script src="scripts/app.js"></script>
-		<script src="scripts/Controllers/allSkillsCtrl.js"></script>	
-		<script src="scripts/Controllers/mapASkillCtrl.js"></script>
+		<script src="scripts/controllers/allSkillsCtrl.js"></script>	
+		<script src="scripts/controllers/mapASkillCtrl.js"></script>
 		<script src="scripts/directives.js"></script>
 		<script src="scripts/filters.js"></script>
 		<script src="scripts/factories.js"></script>

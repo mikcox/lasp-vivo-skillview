@@ -1,3 +1,10 @@
+## Important note for local development in VM ##
+---
+Note that a number of places in our code state to pull data from the SPARQL endpoint on lasp-db-dev.  You should run a global find and replace on the project after checking it out
+if you want to pull from your local SPARQL endpoint instead (changing https://lasp-db-dev:3030 to https://localhost:3030).  Note that the harvester code isn't currently included
+with the VM, so none of the submit or delete buttons will actually work, so for the time being it will always be safe to let the app pull from lasp-db-dev. 
+
+
 ## Naming Conventions ##
  ---
 - *Controllers* will be UpperCamelCase, as we can think of them as classes
