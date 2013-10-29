@@ -1,0 +1,113 @@
+/* app css stylesheet */
+
+body {
+  margin: 25px;
+  padding: 20px;
+}
+
+.node {
+  stroke: #fff;
+  stroke-width: 1.5px;
+}
+
+.link {
+  stroke: #999;
+  stroke-opacity: .6;
+}
+
+.error {
+  color: red;
+}
+
+html { 
+  background: url(../images/bg1.jpg) no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+svg {
+	background-color:rgba(124,124,124,0.75)
+}
+
+
+app{
+	padding:50px;
+}
+
+.topnav ul li {
+border-right: 1px solid #fff;
+display: inline;
+float: left;
+font-size: 22px;
+margin-bottom: 0;
+margin-left: 14px;
+padding-right: 14px;
+}
+
+.topnav ul li.last {
+border-right: 0 none;
+}
+
+.topnav .inside {
+background: none repeat scroll 0 0 rgba(0, 51, 102, 1);
+float: none;
+overflow: hidden;
+height: 30px;
+position: relative;
+top: -155px;
+}
+
+.lodlive {
+	height: 800px;
+	width:100%;
+}
+
+#blue-bar {
+background: #036;
+position: absolute;
+left: 0px;
+top: 0px;
+width: 100%;
+height: 60px;
+}
+
+#introduction {
+	background-color: rgba(125,125,125,0.9);
+	width: 300px;
+}
+
+footer {
+clear: both;
+width: 100%;
+height: 114px;
+margin: 0 auto;
+font-size: 1em;
+color: white;
+/*background-color: #FBFBF9;*/
+}
+
+.done-true {
+  text-decoration: line-through;
+  color: grey;
+}
+
+.addButton {
+	float: right;
+	background: transparent;
+	border: none;
+	height: 6%;
+	width: 6%;
+	padding: 0px;
+}
+
+
+.removeButton {
+	float: right;
+	background: transparent;
+	border: none;
+	height: 13%;
+	width: 13%;
+	padding: 0px;
+}
