@@ -1,4 +1,4 @@
-describe('Unit Tests - controller: allSkillsCtrl', function(){
+describe('Unit Tests - allSkillsCtrl', function(){
     
     var $httpBackend, $http, $scope, $rootScope, $dataFactory, $formatFactory, $controller;
     var ctrl = null;  
@@ -64,7 +64,7 @@ describe('Unit Tests - controller: allSkillsCtrl', function(){
     
     it("SPARQL query returned without errors", function(){
     	//all assertions since $scope was set up in our beforeEach above
-    	expect($scope.error).toBe('');
+    	expect($scope.error).toBe('No errors!');
     });
     
     it("formatFactory.formatMasterList returns what we expect", function(){
