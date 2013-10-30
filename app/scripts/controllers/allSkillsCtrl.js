@@ -7,7 +7,7 @@ skillsmodule.controller('allSkillsCtrl', ['$scope','dataFactory','formatFactory'
 	    $scope.getPersonnel = function(){
 	        dataFactory.getSPARQLQuery($scope.urlBase, $scope.queryStr)
 	            .success(function(data){
-	            	$scope.error = 'No errors!';
+	            	$scope.error = '';
 	            	if(data){
 	                	$scope.skills = formatFactory.formatMasterList(data);
 	               }
