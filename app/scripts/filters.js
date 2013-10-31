@@ -6,7 +6,7 @@ var filterMod = angular.module('mapaskillFilters', []);
 filterMod.filter('QuickSearch', function() {
 		return function(haystack, needle, searchkey) {
 			var returnList = [];
-			if(!needle || needle.length < 3){
+			if(!needle || needle.length < 1){
 				haystack.sort(function(a,b) { 
 					if(a[searchkey] < b[searchkey]){
 						return -1;
