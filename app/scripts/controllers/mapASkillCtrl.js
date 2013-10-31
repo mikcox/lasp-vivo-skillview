@@ -52,12 +52,12 @@ skillsmodule.controller('mapASkillCtrl', ['$scope','$filter','dataFactory','form
     
     $scope.filterSkills = function(){
         $scope.filteredSkills = $filter('QuickSearch')($scope.skilllist, $scope.skillquery, "skill");
-        $scope.pagedSkills = groupToPages($scope.filteredSkills);
+        $scope.pagedSkills = $scope.groupToPages($scope.filteredSkills);
         return $scope.filteredSkills;
     };
     $scope.filterPeople = function(){
         $scope.filteredPeople = $filter('QuickSearch')($scope.peoplelist, $scope.personquery, "person");
-        $scope.pagedPeople = groupToPages($scope.filteredPeople);
+        $scope.pagedPeople = $scope.groupToPages($scope.filteredPeople);
         return $scope.filteredPeople;
     };
     
@@ -141,7 +141,7 @@ skillsmodule.controller('mapASkillCtrl', ['$scope','$filter','dataFactory','form
     $scope.itemsPerPage = 15;
     $scope.maxPages = 5;
     
-    function groupToPages(list) {
+    $scope.groupToPages = function(list) {
         var pagedList = [];
         for (var i = 0; i < list.length; i++) {
           if (i % $scope.itemsPerPage === 0) {
