@@ -6,7 +6,6 @@
 			<p class="error">{{error}}</p>
 			<ul class="people">
 				<h2>People</h2>
-				{{filteredSkills}}
 				<p ng-show="peoplelist">People Found: {{countPagedList(pagedPeople)}}</p>
 				<p ng-hide="peoplelist"> Loading...</p>
 				<li class="thumbnail" ng-repeat="person in pagedPeople[currentPagePeople-1]" data-drop="true" ng-model="peoplelist" jqyoui-droppable="{multiple: true, onDrop: 'filterPeople'}" data-jqyoui-options="{accept:'.btn-draggable:not([ng-model!=addPersonList])'}"> 
