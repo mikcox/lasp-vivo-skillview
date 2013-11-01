@@ -21,7 +21,7 @@ describe('LEMR app navigation', function () {
         expect(browser().location().url()).toBe('/');
     });
     it('Add a skill click should redirect us to #/mapaskill page', function () {
-        element('#mapSkills').click();
+        element('#mapASkill').click();
         expect(browser().location().url()).toBe('/mapaskill');
     });
 

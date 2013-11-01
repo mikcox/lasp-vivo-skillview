@@ -24,10 +24,10 @@
 
     <body class="no-logo fae">
         <header id="branding" role="banner" style="width:271px; height:59px; padding:20px 10px;border-radius: 10px; align:left; margin:0 auto">
-            <a href="#/" ><img src="images/cu-lasp-logo.png"/></a>
+            <a id="logo" href="#/" ><img src="images/cu-lasp-logo.png"/></a>
         </header>
         <div style="width:100%; text-align:center;">
-            <p style="margin-bottom: 0; font-size: 30px; line-height: 1; letter-spacing: -1px; color:white;"><a href="#/" style="color: #004C80;">View All Skills</a> | <a href="#/mapaskill" style="color: #004C80;">Map New Skill</a></p>
+            <p style="margin-bottom: 0; font-size: 30px; line-height: 1; letter-spacing: -1px; color:white;"><a id="viewAllSkills" href="#/" style="color: #004C80;">View All Skills</a> | <a id="mapASkill" href="#/mapaskill" style="color: #004C80;">Map New Skill</a></p>
         </div>
         <div ng-view>
         </div>
