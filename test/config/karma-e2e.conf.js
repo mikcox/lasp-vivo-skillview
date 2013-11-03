@@ -11,7 +11,7 @@ module.exports = function(config) {
 
   // list of files / patterns to load in the browser
     files: [
-      'test/e2e/scenarios.js'
+      'test/e2e/*.js'
     ],
 
     // list of files / patterns to exclude
@@ -37,7 +37,7 @@ module.exports = function(config) {
     // - Safari (only Mac)
     // - PhantomJS
     // - IE (only Windows)
-    browsers: ['Chrome'],
+    browsers: ['PhantomJS'],
 
 
     // Continuous Integration mode
@@ -46,9 +46,9 @@ module.exports = function(config) {
 
     // Uncomment the following lines if you are using grunt's server to run the tests
      proxies: {
-       '/': 'http://localhost:9000/'
+       '/': 'http://localhost:8000/'
      },
     // URL root prevent conflicts with the site root
-     urlRoot: '_karma_'
+     urlRoot: '/_e2e/'
   });
 };

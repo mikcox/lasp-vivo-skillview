@@ -31,14 +31,6 @@ module.exports = function (grunt) {
     grunt.initConfig({
         yeoman: yeomanConfig,
         watch: {
-            coffee: {
-                files: ['<%= yeoman.app %>/scripts/{,*/}*.coffee'],
-                tasks: ['coffee:dist']
-            },
-            coffeeTest: {
-                files: ['test/spec/{,*/}*.coffee'],
-                tasks: ['coffee:test']
-            },
             compass: {
                 files: ['<%= yeoman.app %>/styles/{,*/}*.{scss,sass}'],
                 tasks: ['compass']
@@ -55,7 +47,7 @@ module.exports = function (grunt) {
             }
         },
         karma: {
-          e2e: {
+        e2e: {
             configFile: 'test/config/karma-e2e.conf.js',
             singleRun: true
         },
@@ -66,7 +58,7 @@ module.exports = function (grunt) {
     },
     connect: {
             options: {
-                port: 9000,
+                port: 8000,
                 // change this to '0.0.0.0' to access the server from outside
                 hostname: 'localhost'
             },
@@ -130,27 +122,19 @@ module.exports = function (grunt) {
                 }
             }
         },
-        coffee: {
-            dist: {
-                files: [{
+        files: [{
                     // rather than compiling multiple files here you should
-                    // require them into your main .coffee file
-                    expand: true,
                     cwd: '<%= yeoman.app %>/scripts',
-                    src: '*.coffee',
-                    dest: '.tmp/scripts',
                     ext: '.js'
-                }]
-            },
+                }],
+
             test: {
                 files: [{
                     expand: true,
-                    cwd: '.tmp/spec',
-                    src: '*.coffee',
-                    dest: 'test/spec'
+                    cwd: '.tmp/spec'
                 }]
-            }
-        },
+            },
+
         compass: {
             options: {
                 sassDir: '<%= yeoman.app %>/styles',
@@ -267,8 +251,6 @@ module.exports = function (grunt) {
 
         grunt.task.run([
             'clean:server',
-            'coffee:dist',
-            'compass:server',
             'livereload-start',
             'connect:livereload',
             'open',
@@ -276,18 +258,20 @@ module.exports = function (grunt) {
         ]);
     });
 
+    grunt.registerTask('test', [
+'test:unit',
+'test:e2e'
+
+]);
+
     grunt.registerTask('test:unit', [
     'clean:server',
-    'coffee',
-    'compass',
     'connect:test',
     'karma:unit'
   ]);
 
 grunt.registerTask('test:e2e', [
     'clean:server',
-    'coffee',
-    'compass',
     'livereload-start',
     'connect:livereload',
     'karma:e2e'
@@ -295,8 +279,6 @@ grunt.registerTask('test:e2e', [
 
     grunt.registerTask('build', [
         'clean:dist',
-        'coffee',
-        'compass:dist',
         'useminPrepare',
         'imagemin',
         'htmlmin',

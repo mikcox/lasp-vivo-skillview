@@ -6,10 +6,10 @@
 describe('LEMR app navigation', function () {
 
     beforeEach(function () {
-        browser().navigateTo('../../index.html#/');
+        browser().navigateTo('../../index.php#/');
     });
-    it('should redirect index.html to index.html#/', function () {
-        browser().navigateTo('../../index.html');
+    it('should redirect index.html to index.php#/', function () {
+        browser().navigateTo('../../index.php');
         expect(browser().location().url()).toBe('/');
     });
     it('Logo click redirect us to the home page', function () {
@@ -23,6 +23,10 @@ describe('LEMR app navigation', function () {
     it('Add a skill click should redirect us to #/mapaskill page', function () {
         element('#mapASkill').click();
         expect(browser().location().url()).toBe('/mapaskill');
+    });
+    it('this should fail', function () {
+        element('#fakeElement').click();
+        expect(browser().location().url()).toBe('/');
     });
 
 });
