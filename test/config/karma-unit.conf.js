@@ -13,7 +13,6 @@ module.exports = function(config) {
     files: [
     'app/components/angular/angular.js',
       'app/components/jquery/jquery.min.js',
-      'app/components/jquery/jquery-ui.min.js',
       'app/components/angular-mocks/angular-mocks.js',
       'app/scripts/lib/ui-bootstrap-tpls-0.6.0.js',
       'app/scripts/lib/angular-dragdrop.min.js',
@@ -34,7 +33,7 @@ module.exports = function(config) {
 
 
     // enable / disable watching file and executing tests whenever any file changes
-    autoWatch: true,
+    //autoWatch: true,
 
 
     // Start these browsers, currently available:
@@ -45,11 +44,11 @@ module.exports = function(config) {
     // - Safari (only Mac)
     // - PhantomJS
     // - IE (only Windows)
-    browsers: ['Chrome'],
+    browsers: ['PhantomJS']
 
 
     // Continuous Integration mode
     // if true, it capture browsers, run tests and exit
-    singleRun: false
+    //singleRun: false
   });
 };

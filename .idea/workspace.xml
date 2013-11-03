@@ -2,12 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1b95cc4e-cd1e-42fc-9caf-9f604c076071" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/test/config/karma-unit.config.js" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Gruntfile.js" afterPath="$PROJECT_DIR$/Gruntfile.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/config/karma-e2e.conf.js" afterPath="$PROJECT_DIR$/test/config/karma-e2e.conf.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/package.json" afterPath="$PROJECT_DIR$/package.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/e2e/scenarios.js" afterPath="$PROJECT_DIR$/test/e2e/scenarios.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/config/karma-unit.conf.js" afterPath="$PROJECT_DIR$/test/config/karma-unit.conf.js" />
     </list>
     <ignored path="lasp-vivo-skillview.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -30,10 +26,19 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="index.php" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="index.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/index.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="19" column="17" selection-start="962" selection-end="962" vertical-scroll-proportion="0.38409704" vertical-offset="0" max-vertical-offset="742">
+            <state line="40" column="0" selection-start="2128" selection-end="2128" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="690">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Gruntfile.js" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Gruntfile.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="43" column="21" selection-start="1341" selection-end="1341" vertical-scroll-proportion="0.47682118" vertical-offset="285" max-vertical-offset="4695">
               <folding />
             </state>
           </provider>
@@ -58,6 +63,7 @@
     <option name="changedFiles">
       <list>
         <option value="$PROJECT_DIR$/app/index.php" />
+        <option value="$PROJECT_DIR$/Gruntfile.js" />
       </list>
     </option>
   </component>
@@ -181,7 +187,14 @@
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/app/index.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="19" column="17" selection-start="962" selection-end="962" vertical-scroll-proportion="0.38409704" vertical-offset="0" max-vertical-offset="742">
+        <state line="40" column="0" selection-start="2128" selection-end="2128" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="690">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Gruntfile.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="43" column="21" selection-start="1341" selection-end="1341" vertical-scroll-proportion="0.47682118" vertical-offset="285" max-vertical-offset="4695">
           <folding />
         </state>
       </provider>

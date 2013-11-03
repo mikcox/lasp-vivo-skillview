@@ -6,7 +6,7 @@ var mountFolder = function (connect, dir) {
 };
 
 var gateway = require('gateway');
-var phpGateway = function (dir){
+var phpGateway = function (dir) {
     return gateway(require('path').resolve(dir), {
         '.php': 'php-cgi'
     });
@@ -47,16 +47,16 @@ module.exports = function (grunt) {
             }
         },
         karma: {
-        e2e: {
-            configFile: 'test/config/karma-e2e.conf.js',
-            singleRun: true
+            e2e: {
+                configFile: 'test/config/karma-e2e.conf.js',
+                singleRun: true
+            },
+            unit: {
+                configFile: 'test/config/karma-unit.conf.js',
+                singleRun: true
+            }
         },
-        unit: {
-            configFile: 'test/config/karma-unit.conf.js',
-            singleRun: true
-        }
-    },
-    connect: {
+        connect: {
             options: {
                 port: 8000,
                 // change this to '0.0.0.0' to access the server from outside
@@ -122,18 +122,22 @@ module.exports = function (grunt) {
                 }
             }
         },
-        files: [{
-                    // rather than compiling multiple files here you should
-                    cwd: '<%= yeoman.app %>/scripts',
-                    ext: '.js'
-                }],
+        files: [
+            {
+                // rather than compiling multiple files here you should
+                cwd: '<%= yeoman.app %>/scripts',
+                ext: '.js'
+            }
+        ],
 
-            test: {
-                files: [{
+        test: {
+            files: [
+                {
                     expand: true,
                     cwd: '.tmp/spec'
-                }]
-            },
+                }
+            ]
+        },
 
         compass: {
             options: {
@@ -155,8 +159,8 @@ module.exports = function (grunt) {
         // not used since Uglify task does concat,
         // but still available if needed
         /*concat: {
-            dist: {}
-        },*/
+         dist: {}
+         },*/
 
         uglify: {
             dist: {
@@ -182,12 +186,14 @@ module.exports = function (grunt) {
         },
         imagemin: {
             dist: {
-                files: [{
-                    expand: true,
-                    cwd: '<%= yeoman.app %>/images',
-                    src: '{,*/}*.{png,jpg,jpeg}',
-                    dest: '<%= yeoman.dist %>/images'
-                }]
+                files: [
+                    {
+                        expand: true,
+                        cwd: '<%= yeoman.app %>/images',
+                        src: '{,*/}*.{png,jpg,jpeg}',
+                        dest: '<%= yeoman.dist %>/images'
+                    }
+                ]
             }
         },
         cssmin: {
@@ -204,35 +210,39 @@ module.exports = function (grunt) {
             dist: {
                 options: {
                     /*removeCommentsFromCDATA: true,
-                    // https://github.com/yeoman/grunt-usemin/issues/44
-                    //collapseWhitespace: true,
-                    collapseBooleanAttributes: true,
-                    removeAttributeQuotes: true,
-                    removeRedundantAttributes: true,
-                    useShortDoctype: true,
-                    removeEmptyAttributes: true,
-                    removeOptionalTags: true*/
+                     // https://github.com/yeoman/grunt-usemin/issues/44
+                     //collapseWhitespace: true,
+                     collapseBooleanAttributes: true,
+                     removeAttributeQuotes: true,
+                     removeRedundantAttributes: true,
+                     useShortDoctype: true,
+                     removeEmptyAttributes: true,
+                     removeOptionalTags: true*/
                 },
-                files: [{
-                    expand: true,
-                    cwd: '<%= yeoman.app %>',
-                    src: '*.html',
-                    dest: '<%= yeoman.dist %>'
-                }]
+                files: [
+                    {
+                        expand: true,
+                        cwd: '<%= yeoman.app %>',
+                        src: '*.html',
+                        dest: '<%= yeoman.dist %>'
+                    }
+                ]
             }
         },
         copy: {
             dist: {
-                files: [{
-                    expand: true,
-                    dot: true,
-                    cwd: '<%= yeoman.app %>',
-                    dest: '<%= yeoman.dist %>',
-                    src: [
-                        '*.{ico,txt}',
-                        '.htaccess'
-                    ]
-                }]
+                files: [
+                    {
+                        expand: true,
+                        dot: true,
+                        cwd: '<%= yeoman.app %>',
+                        dest: '<%= yeoman.dist %>',
+                        src: [
+                            '*.{ico,txt}',
+                            '.htaccess'
+                        ]
+                    }
+                ]
             }
         },
         bower: {
@@ -259,23 +269,23 @@ module.exports = function (grunt) {
     });
 
     grunt.registerTask('test', [
-'test:unit',
-'test:e2e'
+        'test:unit',
+        'test:e2e'
 
-]);
+    ]);
 
     grunt.registerTask('test:unit', [
-    'clean:server',
-    'connect:test',
-    'karma:unit'
-  ]);
+        'clean:server',
+        'connect:test',
+        'karma:unit'
+    ]);
 
-grunt.registerTask('test:e2e', [
-    'clean:server',
-    'livereload-start',
-    'connect:livereload',
-    'karma:e2e'
-  ]);
+    grunt.registerTask('test:e2e', [
+        'clean:server',
+        'livereload-start',
+        'connect:livereload',
+        'karma:e2e'
+    ]);
 
     grunt.registerTask('build', [
         'clean:dist',
