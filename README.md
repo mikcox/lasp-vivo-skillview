@@ -10,7 +10,7 @@ To simplify and seperate our areas of testing concerns, and also keep us in a st
 
 * `unit = model/services` and anything that relates to formatting our model for delivery to the controller 
 
-* `midway = controller/filters` so that when we call the controller, we can test for achieving the proper scope variables. We can also test the filters here. 
+* `midway = controller/filters` so that when we call the controller, we can test for achieving the proper scope variables. We can also test the filters here with either real or mock data 
 
 * `e2e = html elements/user input`
 
