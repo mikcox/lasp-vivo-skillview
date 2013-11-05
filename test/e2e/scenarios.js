@@ -24,33 +24,60 @@ describe('LEMR app navigation', function () {
         element('#mapASkill').click();
         expect(browser().location().url()).toBe('/mapaskill');
     });
-    it('this should fail', function () {
-        element('#fakeElement').click();
-        expect(browser().location().url()).toBe('/');
+    /*
+    it('can't click on nonexistent elements', function () {
+    	var clickOnNonexistentElement = function(){
+    		element('#fakeElement').click();
+    	};
+        expect(clickOnNonexistentElement).toThrow();
     });
-
+*/
 });
 
-//describe('All skills filtering', function () {
-//
-//    beforeEach(function () {
-//        browser().navigateTo('../../index.html#/');
-//        //need to make my matcher here
-//    });
-//
-//
-//    it('should filter the personel list as user types into the search box', function () {
-//        expect(repeater('tr').count()).toBe(20);
-//
-//        input('query').enter('Ty');
-//        expect(repeater('tr').count()).toBe(2);
-//
-//        input('query').enter('Data');
-//        expect(repeater('tr').count()).toBe(18);
-//    });
-//
-//
-//});
+describe('All skills filtering', function () {
+
+    beforeEach(function () {
+        browser().navigateTo('../../index.php#/');
+    });
+
+
+    it('should build a list of at least 10 rows', function () {
+    	var totalRows;
+    	var tableRows;
+    	/*
+    	input('query').enter('');
+    	totalRowFuture.execute(function(){
+    	});
+    	var totalRows = totalRowFuture.value;
+        alert(totalRows);
+        expect(totalRows.value).toBeGreaterThan(10);
+       // expect(repeater('td').count()).toEqual(totalRows);
+        */
+        input('query').enter('');
+    	tableRows = repeater('tr').count();
+        expect(tableRows).toBeGreaterThan(10);
+
+    });
+    
+    /*
+    it('should filter the personel list as user types into the search box', function () {
+    	var totalRows;
+    	var tableRows;
+    	
+    	input('query').enter('');
+    	totalRows = repeater('tr').count();
+    	alert(totalRows);
+        expect(totalRows).toBeGreaterThan(10);
+        
+        input('query').enter('data');
+    	tableRows = repeater('tr').count();
+        expect(tableRows).toBeGreaterThan(10);
+
+    });
+     */
+
+
+});
 //
 //
 //    describe('Add Skill view', function () {
