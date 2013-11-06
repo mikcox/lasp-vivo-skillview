@@ -5,9 +5,10 @@
 
 describe('LEMR app navigation', function () {
 
-    beforeEach(function () {
-        browser().navigateTo('../../index.php#/');
-    });
+	//Navigating to /index.php before every single function is what was slowing the tests down so much... so let's not do it.
+    //beforeEach(function () {
+    //    browser().navigateTo('../../index.php#/');
+    //});
     it('should redirect index.html to index.php#/', function () {
         browser().navigateTo('../../index.php');
         expect(browser().location().url()).toBe('/');
@@ -24,87 +25,71 @@ describe('LEMR app navigation', function () {
         element('#mapASkill').click();
         expect(browser().location().url()).toBe('/mapaskill');
     });
-    /*
-    it('can't click on nonexistent elements', function () {
-    	var clickOnNonexistentElement = function(){
-    		element('#fakeElement').click();
-    	};
-        expect(clickOnNonexistentElement).toThrow();
-    });
-*/
+
 });
 
 describe('All skills filtering', function () {
 
-    beforeEach(function () {
-        browser().navigateTo('../../index.php#/');
-    });
+	it('navigate to all skills view', function(){
+		browser().navigateTo('../../index.php#/');
+		expect(browser().location().url()).toBe('/');
+	});
 
-
-    it('should build a list of at least 10 rows', function () {
-    	var totalRows;
-    	var tableRows;
-    	/*
+    it('should build a list of at least 10 rows and exactly 8 columns with an empty search query', function () {
+   
     	input('query').enter('');
-    	totalRowFuture.execute(function(){
-    	});
-    	var totalRows = totalRowFuture.value;
-        alert(totalRows);
-        expect(totalRows.value).toBeGreaterThan(10);
-       // expect(repeater('td').count()).toEqual(totalRows);
-        */
-        input('query').enter('');
-    	tableRows = repeater('tr').count();
-        expect(tableRows).toBeGreaterThan(10);
+        expect(repeater('tr').count()).toBeGreaterThan(10);
+        expect(repeater('th').count()).toBe(8);
 
     });
     
-    /*
-    it('should filter the personel list as user types into the search box', function () {
-    	var totalRows;
-    	var tableRows;
-    	
-    	input('query').enter('');
-    	totalRows = repeater('tr').count();
-    	alert(totalRows);
-        expect(totalRows).toBeGreaterThan(10);
+    it('builds results properly when a search input is entered', function () {
+   
+    	input('query').enter('Michael');
+        expect(repeater('tr').count()).toBeGreaterThan(1);
+        expect(repeater('th').count()).toBe(8);
         
-        input('query').enter('data');
-    	tableRows = repeater('tr').count();
-        expect(tableRows).toBeGreaterThan(10);
+        input('query').enter('ty trav');
+        expect(repeater('tr').count()).toBeGreaterThan(1);
+        expect(repeater('th').count()).toBe(8);
+        
+        input('query').enter('SEAR%%ch stR1ng th@t doesn"t exi$t');
+        expect(repeater('tr').count()).toBe(1);
+        expect(repeater('th').count()).toBe(8);
 
     });
-     */
-
 
 });
-//
-//
-//    describe('Add Skill view', function () {
-//
-//        beforeEach(function () {
-//            browser().navigateTo('../../index.html#/mapaskill');
-//        });
-//
-//        it('should filter the personel list as user types into the search box', function () {
-//            expect(repeater('#table1 li').count()).toBe(549);
-//
-//            input('name.person').enter('Ty');
-//            expect(repeater('#table1 li').count()).toBe(9);
-//
-//            input('name.person').enter('Cox');
-//            expect(repeater('#table1 li').count()).toBe(1);
-//        });
-//
-//        it('should filter the skill list as user types into the search box', function () {
-//            expect(repeater('#table2 li').count()).toBe(35);
-//
-//            input('skillname.skill').enter('UNIX');
-//            expect(repeater('#table2 li').count()).toBe(5);
-//
-//            input('skillname.skill').enter('intermediate');
-//            expect(repeater('#table2 li').count()).toBe(7);
-//        });
-//
-//    });
-//});
+
+
+describe('Map A Skill view', function () {
+
+	it('navigate to #/mapaskill', function(){
+		element('#mapASkill').click();
+        expect(browser().location().url()).toBe('/mapaskill');
+	});
+
+
+    it('should filter the personel list as user types into the search box', function () {
+        input('personquery').enter('');
+        expect(repeater('#table1 div').count()).toBe(17);  // (one for the table1 div itself, one for the pagination div, and 15 for the people rows) 
+
+        input('personquery').enter('Ty');
+        expect(repeater('#table1 div').count()).toBe(11);  // 9 real rows, see above
+
+        input('personquery').enter('Cox');
+        expect(repeater('#table1 div').count()).toBe(3);  // 1 real row, see above.
+    });
+
+    it('should filter the skill list as user types into the search box', function () {
+        input('skillquery').enter('');
+        expect(repeater('#table2 div').count()).toBe(17);
+
+        input('skillquery').enter('UNIX');
+        expect(repeater('#table2 div').count()).toBe(3);
+
+        input('skillquery').enter('intermediate');
+        expect(repeater('#table2 div').count()).toBe(2);
+    });
+
+});
