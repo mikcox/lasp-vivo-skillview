@@ -75,17 +75,29 @@ skillsmodule.controller('mapASkillCtrl', ['$scope','$filter','dataFactory','form
         }
         $scope.SubmitText = "personuri,leveluri\n";
         var levelSelected = 0;
+        var addingNewSkill = false;
         for(var i=0; i < $scope.addPersonList.length; i++){
             for(var j=0; j < $scope.addSkillList.length; j++){
                 $scope.SubmitText += $scope.addPersonList[i].uri + ",";
                 levelSelected = document.getElementById($scope.addSkillList[j].skill).selectedIndex;
                 $scope.SubmitText += $scope.addSkillList[j].levels[levelSelected].skillleveluri + "\n";
+                if($scope.addSkillList[j].levels[levelSelected].skillleveluri == "fakeuri"){
+                	addingNewSkill = true;
+                }
             }
+        }
+        if(addingNewSkill){
+        	confirm("Warning: You are about to add a new skill to the database that didn't exist before.  Only continue if you are SURE that this skill (or any alternate way of spelling it) doesn't already exist in the database.");	
         }
         //display cute working gif even though it doesn't matter
         document.getElementById("submitButtonDiv").innerHTML = '<img src="images/loading.gif"/><br>Working... ';
-        //actually post the new skill(s)
-        ajaxSubmitNewSkillMap();
+        //actually post the new skill(s), using the corresponding version of the harvester if the skill doesn't already exist
+        if(addingNewSkill){
+        	ajaxSubmitNewSkillMap();
+        }
+        else{
+        	ajaxSubmitExistingSkillMap();
+        }
         //wait 5 seconds and then display a success message (yes, this is a lie since the skill may or may not have actually been added by now)
         setTimeout(function(){document.getElementById("submitButtonDiv").innerHTML = 'Done. ';}, 5000);
         setTimeout(function(){alert("New skill mapping added!"); location.reload();},5000);
@@ -95,7 +107,16 @@ skillsmodule.controller('mapASkillCtrl', ['$scope','$filter','dataFactory','form
         $.ajax
         ({
             type: "POST",
-            url: "scripts/button_actions/submitbuttonaction.php",
+            url: "scripts/button_actions/submitButtonActionNewSkill.php",
+            data: {SubmitText : $scope.SubmitText}, 
+        });
+    };
+    
+    function ajaxSubmitExistingSkillMap() {
+        $.ajax
+        ({
+            type: "POST",
+            url: "scripts/button_actions/submitButtonAction.php",
             data: {SubmitText : $scope.SubmitText}, 
         });
     };
@@ -128,15 +149,15 @@ skillsmodule.controller('mapASkillCtrl', ['$scope','$filter','dataFactory','form
     		"skill": skill,
     		"levels": [
     		{"skilllevel": skill+" (unranked)",
-             "skillleveluri": "fakeuri1"},
+             "skillleveluri": "fakeuri"},
     		{"skilllevel": skill+" beginner",
-             "skillleveluri": "fakeuri2"},
+             "skillleveluri": "fakeuri"},
     		{"skilllevel": skill+" intermediate",
-             "skillleveluri": "fakeuri3"},
+             "skillleveluri": "fakeuri"},
     		{"skilllevel": skill+" advanced",
-             "skillleveluri": "fakeuri4"},
+             "skillleveluri": "fakeuri"},
     		{"skilllevel": skill+" guru",
-             "skillleveluri": "fakeuri5"}]
+             "skillleveluri": "fakeuri"}]
     	});
     	$scope.searchSkills(skill);
     };
