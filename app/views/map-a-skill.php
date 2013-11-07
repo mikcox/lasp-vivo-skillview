@@ -54,9 +54,9 @@
 			<input type="text" class="input-large search-query" data-ng-model="skillquery" placeholder="Search for a Skill ($all = show all)" ng-change="searchSkills(skillquery)"/><br/>
 			<p class="error">{{error}}</p>
 			<ul id="table2" class="skills">
-				<p ng-hide="skilllist && skillquery && countPagedList(pagedSkills) == 0">Skills Found: {{countPagedList(pagedSkills)}}</p>
+				<p ng-hide="!skilllist ||(skillquery && countPagedList(pagedSkills) == 0 && (addSkillList | filter: {skill: skillquery}).length == 0)">Skills Found: {{countPagedList(pagedSkills)}}</p>
 				<p ng-hide="skilllist"> Loading...</p>
-				<p id="addSkillButtonDiv" ng-show="skilllist && skillquery && countPagedList(pagedSkills) == 0">
+				<p id="addSkillButtonDiv" ng-show="skilllist && skillquery && countPagedList(pagedSkills) == 0 && (addSkillList | filter: {skill: skillquery}).length == 0">
 					No Skills Found.  
 					<button id="addNewSkillButton" class="btn" ng-click="addNewSkill(skillquery)" >Add this skill?</button>
 				</p>
