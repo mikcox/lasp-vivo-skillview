@@ -6,9 +6,9 @@ with the VM, so none of the submit or delete buttons will actually work, so for 
 
 ## Testing Architecture Overview ##
 To simplify and seperate our areas of testing concerns, and also keep us in a strict MVC/REST design, a good way to see our current testing approach is this. 
--`unit = model/services` and anything that relates to formatting our model for delivery to the controller
--`midway = controller/filters` so that when we call the controller, we can test for achieving the proper scope variables. We can also test the filters here.
--`e2e = html elements/user input`
+- `unit = model/services` and anything that relates to formatting our model for delivery to the controller
+- `midway = controller/filters` so that when we call the controller, we can test for achieving the proper scope variables. We can also test the filters here.
+- `e2e = html elements/user input`
 
 ## Naming Conventions ##
  ---
