@@ -4772,15 +4772,15 @@ describe('Unit Tests: mapASkillCtrl', function(){
     		"skill": skillToAdd,
     		"levels": [
     		{"skilllevel": skillToAdd+" (unranked)",
-             "skillleveluri": "fakeuri"},
+             "skillleveluri": "fakeuri1"},
     		{"skilllevel": skillToAdd+" beginner",
-             "skillleveluri": "fakeuri"},
+             "skillleveluri": "fakeuri2"},
     		{"skilllevel": skillToAdd+" intermediate",
-             "skillleveluri": "fakeuri"},
+             "skillleveluri": "fakeuri3"},
     		{"skilllevel": skillToAdd+" advanced",
-             "skillleveluri": "fakeuri"},
+             "skillleveluri": "fakeuri4"},
     		{"skilllevel": skillToAdd+" guru",
-             "skillleveluri": "fakeuri"}]
+             "skillleveluri": "fakeuri5"}]
     	}];
 		
 		//act
@@ -4796,15 +4796,15 @@ describe('Unit Tests: mapASkillCtrl', function(){
     		"skill": skillToAdd,
     		"levels": [
     		{"skilllevel": skillToAdd+" (unranked)",
-             "skillleveluri": "fakeuri"},
+             "skillleveluri": "fakeuri1"},
     		{"skilllevel": skillToAdd+" beginner",
-             "skillleveluri": "fakeuri"},
+             "skillleveluri": "fakeuri2"},
     		{"skilllevel": skillToAdd+" intermediate",
-             "skillleveluri": "fakeuri"},
+             "skillleveluri": "fakeuri3"},
     		{"skilllevel": skillToAdd+" advanced",
-             "skillleveluri": "fakeuri"},
+             "skillleveluri": "fakeuri4"},
     		{"skilllevel": skillToAdd+" guru",
-             "skillleveluri": "fakeuri"}]});
+             "skillleveluri": "fakeuri5"}]});
 		$scope.addNewSkill(skillToAdd);
 		returnedSkillList = $scope.skilllist;
 		

@@ -73,23 +73,24 @@ skillsmodule.controller('mapASkillCtrl', ['$scope','$filter','dataFactory','form
             alert("Please select at least one skill.");
             return;
         }
-        $scope.SubmitText = "personuri,leveluri\n";
+        $scope.SubmitText = "personuri,leveluri,skill\n";
         var levelSelected = 0;
         var addingNewSkill = false;
         for(var i=0; i < $scope.addPersonList.length; i++){
             for(var j=0; j < $scope.addSkillList.length; j++){
-                $scope.SubmitText += $scope.addPersonList[i].uri + ",";
-                levelSelected = document.getElementById($scope.addSkillList[j].skill).selectedIndex;
-                $scope.SubmitText += $scope.addSkillList[j].levels[levelSelected].skillleveluri + "\n";
-                if($scope.addSkillList[j].levels[levelSelected].skillleveluri == "fakeuri"){
+            	if($scope.addSkillList[j].levels[levelSelected].skillleveluri.indexOf("fakeuri") !== -1){
                 	addingNewSkill = true;
                 }
+                $scope.SubmitText += $scope.addPersonList[i].uri + ",";
+                levelSelected = document.getElementById($scope.addSkillList[j].skill).selectedIndex;
+                $scope.SubmitText += $scope.addSkillList[j].levels[levelSelected].skillleveluri + ",";
+                $scope.SubmitText += $scope.addSkillList[j].skill + "\n";
             }
         }
         if(addingNewSkill){
         	confirm("Warning: You are about to add a new skill to the database that didn't exist before.  Only continue if you are SURE that this skill (or any alternate way of spelling it) doesn't already exist in the database.");	
         }
-        //display cute working gif even though it doesn't matter
+        //display cute working gif even though it doesn't really know anything about anything
         document.getElementById("submitButtonDiv").innerHTML = '<img src="images/loading.gif"/><br>Working... ';
         //actually post the new skill(s), using the corresponding version of the harvester if the skill doesn't already exist
         if(addingNewSkill){
@@ -149,15 +150,15 @@ skillsmodule.controller('mapASkillCtrl', ['$scope','$filter','dataFactory','form
     		"skill": skill,
     		"levels": [
     		{"skilllevel": skill+" (unranked)",
-             "skillleveluri": "fakeuri"},
+             "skillleveluri": "fakeuri1"},
     		{"skilllevel": skill+" beginner",
-             "skillleveluri": "fakeuri"},
+             "skillleveluri": "fakeuri2"},
     		{"skilllevel": skill+" intermediate",
-             "skillleveluri": "fakeuri"},
+             "skillleveluri": "fakeuri3"},
     		{"skilllevel": skill+" advanced",
-             "skillleveluri": "fakeuri"},
+             "skillleveluri": "fakeuri4"},
     		{"skilllevel": skill+" guru",
-             "skillleveluri": "fakeuri"}]
+             "skillleveluri": "fakeuri5"}]
     	});
     	$scope.searchSkills(skill);
     };
