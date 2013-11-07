@@ -38,7 +38,7 @@ module.exports = function(config) {
     // - PhantomJS
     // - IE (only Windows)
     browsers: ['Chrome',
-    			'Firefox'],
+    			],
 
 
     // Continuous Integration mode
