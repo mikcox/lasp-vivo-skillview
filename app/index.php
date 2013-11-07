@@ -26,7 +26,7 @@
             <a id="logo" href="#/" ><img src="images/cu-lasp-logo.png"/></a>
         </header>
         <div style="width:100%; text-align:center;">
-            <p style="margin-bottom: 0; font-size: 30px; line-height: 1; letter-spacing: -1px; color:white;"><a id="viewAllSkills" href="#/" style="color: #004C80;">View All Skills</a> | <a id="mapASkill" href="#/mapaskill" style="color: #004C80;">Map New Skill</a></p>
+            <p style="margin-bottom: 0; font-size: 30px; line-height: 1; letter-spacing: -1px; color:white;"><a id="viewAllSkills" href="#/" style="color: white;">View All Skills</a> | <a id="mapASkill" href="#/mapaskill" style="color: white;">Map New Skill</a></p>
         </div>
         <div ng-view>
         </div>
