@@ -123,17 +123,34 @@ skillsmodule.controller('mapASkillCtrl', ['$scope','$filter','dataFactory','form
         $scope.skilllist.splice(actualIndex,1);
         $scope.filterSkills();
     };
+    $scope.addNewSkill = function(skill){
+    	$scope.skilllist.push({
+    		"skill": skill,
+    		"levels": [
+    		{"skilllevel": skill+" (unranked)",
+             "skillleveluri": "fakeuri1"},
+    		{"skilllevel": skill+" beginner",
+             "skillleveluri": "fakeuri2"},
+    		{"skilllevel": skill+" intermediate",
+             "skillleveluri": "fakeuri3"},
+    		{"skilllevel": skill+" advanced",
+             "skillleveluri": "fakeuri4"},
+    		{"skilllevel": skill+" guru",
+             "skillleveluri": "fakeuri5"}]
+    	});
+    	$scope.searchSkills(skill);
+    };
 
     //search functions
     $scope.searchPeople = function(person){
-        if(person.length > 2){
+        if(person.length > 0){
             $scope.currentPagePeople = 1;
         }
         return $scope.filterPeople();
     };
 
     $scope.searchSkills = function(skill){
-        if(skill.length > 2){
+        if(skill.length > 0){
             $scope.currentPageSkills = 1;
         }
         return $scope.filterSkills();

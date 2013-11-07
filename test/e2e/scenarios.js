@@ -5,7 +5,7 @@
 
 describe('LEMR app navigation', function () {
 
-	//Navigating to /index.php before every single function is what was slowing the tests down so much... so let's not do it.
+	// Navigating to /index.php before every single function is what was slowing the tests down so much... so let's not do it.
     //beforeEach(function () {
     //    browser().navigateTo('../../index.php#/');
     //});
@@ -43,8 +43,11 @@ describe('All skills filtering', function () {
 
     });
     
-    it('builds results properly when a search input is entered', function () {
+    it('builds some results when a search input is entered', function () {
    
+   		/* Note that the actual specific results of the search function are being tested with unit tests, so we only verify here that
+   		*  the search box is indeed doing something.
+   		*/ 
     	input('query').enter('Michael');
         expect(repeater('tr').count()).toBeGreaterThan(1);
         expect(repeater('th').count()).toBe(8);
@@ -68,28 +71,48 @@ describe('Map A Skill view', function () {
 		element('#mapASkill').click();
         expect(browser().location().url()).toBe('/mapaskill');
 	});
-
-
+	
     it('should filter the personel list as user types into the search box', function () {
         input('personquery').enter('');
-        expect(repeater('#table1 div').count()).toBe(17);  // (one for the table1 div itself, one for the pagination div, and 15 for the people rows) 
+        expect(repeater('#table1 div').count()).toBe(15);  // (one for the pagination div and 15 for the people rows) 
 
         input('personquery').enter('Ty');
-        expect(repeater('#table1 div').count()).toBe(11);  // 9 real rows, see above
+        expect(repeater('#table1 div').count()).toBe(9);  // 9 real rows, see above
 
         input('personquery').enter('Cox');
-        expect(repeater('#table1 div').count()).toBe(3);  // 1 real row, see above.
+        expect(repeater('#table1 div').count()).toBe(1);  // 1 real row, see above.
     });
 
     it('should filter the skill list as user types into the search box', function () {
         input('skillquery').enter('');
-        expect(repeater('#table2 div').count()).toBe(17);
+        expect(repeater('#table2 div').count()).toBe(15);  // 15 real rows
 
         input('skillquery').enter('UNIX');
-        expect(repeater('#table2 div').count()).toBe(3);
+        expect(repeater('#table2 div').count()).toBe(1);  // 1 real row
 
         input('skillquery').enter('intermediate');
-        expect(repeater('#table2 div').count()).toBe(2);
+        expect(repeater('#table2 div').count()).toBe(0);  // 0 real rows
     });
+    
+    it('should give us an "Add this skill" button if no results are returned', function () {
+        //don't display the div if there's a result found...
+        input('skillquery').enter('Java');
+        expect(repeater('#addSkillButtonDiv:visible').count()).toBe(0);
+        //display the div if we didn't find a result
+        input('skillquery').enter('fakeNonexistentSkill');
+        expect(repeater('#addSkillButtonDiv:visible').count()).toBe(1);       
 
+    });
+    
+    it('clicking on "add this skill" button should add the item to the list', function () {
+        //make sure this skill doesn't yet exist
+        input('skillquery').enter('fakeNonexistentSkill');
+        expect(repeater('#table2 div').count()).toBe(0);
+        //click on the 'add this skill' button
+        element('#addNewSkillButton').click();
+        //double-check that it got added locally
+       	expect(repeater('#table2 div').count()).toBe(1); 
+
+    });
+    
 });

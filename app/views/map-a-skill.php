@@ -1,11 +1,10 @@
 <div class="container-fluid">
-    <h1>Add a Skill</h1>
 	<div class="row-fluid" style="width:100%; align:center; text-align:center;">
-		<div id="table1" style="width:25%; display:inline-block; text-align:left; vertical-align:top;">
-			<input type="text" class="input-large search-query" data-ng-model="personquery" placeholder="Search for a Person" ng-change="searchPeople(personquery)" typeahead="p.person for p in peoplelist | filter:$viewValue | limitTo:8" typeahead-on-select="searchPeople(personquery)"/><br/>
+		<div style="width:25%; display:inline-block; text-align:left; vertical-align:top;">
+			<h2>People</h2>
+			<input type="text" class="input-large search-query" data-ng-model="personquery" placeholder="Search for a Person ($all = show all)" ng-change="searchPeople(personquery)"/><br/>
 			<p class="error">{{error}}</p>
-			<ul class="people">
-				<h2>People</h2>
+			<ul id="table1" class="people">
 				<p ng-show="peoplelist">People Found: {{countPagedList(pagedPeople)}}</p>
 				<p ng-hide="peoplelist"> Loading...</p>
 				<li class="thumbnail" ng-repeat="person in pagedPeople[currentPagePeople-1]" data-drop="true" ng-model="peoplelist" jqyoui-droppable="{multiple: true, onDrop: 'filterPeople'}" data-jqyoui-options="{accept:'.btn-draggable:not([ng-model!=addPersonList])'}"> 
@@ -50,13 +49,17 @@
 				</div>
 			</div>
 		</div>
-		<div id="table2" style="width:25%; display:inline-block; text-align:left; vertical-align:top;">
-			<input type="text" class="input-large search-query" data-ng-model="skillquery" placeholder="Search for a Skill" ng-change="searchSkills(skillquery)" typeahead="s.skill for s in skilllist | filter:$viewValue | limitTo:8" typeahed-on-select="searchSkills(skillquery)"/><br/>
+		<div style="width:25%; display:inline-block; text-align:left; vertical-align:top;">
+			<h2>Skills</h2>
+			<input type="text" class="input-large search-query" data-ng-model="skillquery" placeholder="Search for a Skill ($all = show all)" ng-change="searchSkills(skillquery)"/><br/>
 			<p class="error">{{error}}</p>
-			<ul class="skills">
-				<h2>Skills</h2>
-				<p ng-show="skilllist">Skills Found: {{countPagedList(pagedSkills)}}</p>
+			<ul id="table2" class="skills">
+				<p ng-hide="skilllist && skillquery && countPagedList(pagedSkills) == 0">Skills Found: {{countPagedList(pagedSkills)}}</p>
 				<p ng-hide="skilllist"> Loading...</p>
+				<p id="addSkillButtonDiv" ng-show="skilllist && skillquery && countPagedList(pagedSkills) == 0">
+					No Skills Found.  
+					<button id="addNewSkillButton" class="btn" ng-click="addNewSkill(skillquery)" >Add this skill?</button>
+				</p>
 				<li class="thumbnail" ng-repeat="skill in pagedSkills[currentPageSkills-1]" data-drop="true" ng-model="skilllist" jqyoui-droppable="{multiple: true, onDrop: 'filterSkills'}" data-jqyoui-options="{accept:'.btn-draggable:not([ng-model!=addSkillList])'}"> 
 					<div class="btn btn-info btn-draggable" data-drag="true" data-jqyoui-options="{revert: 'invalid'}" ng-model="skilllist" jqyoui-draggable="{index: {{$index+(currentPageSkills-1)*15}}, animate: false, applyFilter: 'filterSkills'}" ng-hide="!skill.skill">{{skill.skill}}</div>
 					<button class="addButton" ng-click="addToSkills(skill)" title="Add Skill" style="padding:2px"><img src="images/add-button.png" height="25px" width="25px"/></button>

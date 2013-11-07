@@ -16,7 +16,10 @@ filterMod.filter('QuickSearch', function() {
                                         }
                                                 return 0;
                                         });
-                                return haystack;
+                                return [];
+                        }
+                        else if(needle == '$all') {
+                        	return haystack;
                         }
                         else{
                                 //split up our search string into a list of the words
