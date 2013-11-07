@@ -88,7 +88,10 @@ skillsmodule.controller('mapASkillCtrl', ['$scope','$filter','dataFactory','form
             }
         }
         if(addingNewSkill){
-        	confirm("Warning: You are about to add a new skill to the database that didn't exist before.  Only continue if you are SURE that this skill (or any alternate way of spelling it) doesn't already exist in the database.");	
+        	var moveon = confirm("Warning: You are about to add a new skill to the database that didn't exist before.  Only continue if you are SURE that this skill (or any alternate way of spelling it) doesn't already exist in the database.");	
+			if(!moveon){
+				return;
+			}        
         }
         //display cute working gif even though it doesn't really know anything about anything
         document.getElementById("submitButtonDiv").innerHTML = '<img src="images/loading.gif"/><br>Working... ';
