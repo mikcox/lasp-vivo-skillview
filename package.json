@@ -44,7 +44,11 @@
     "karma-phantomjs-launcher": "~0.1.0",
     "karma": "~0.10.2",
     "karma-ng-html2js-preprocessor": "~0.1.0",
-    "phantomjs": "~1.9.2-2"
+    "phantomjs": "~1.9.2-2",
+    "mocha": "~1.14.0",
+    "chai": "~1.8.1",
+    "karma-mocha": "~0.1.0",
+    "ng-midway-tester": "~2.0.4"
   },
   "engines": {
     "node": ">=0.8.0"
