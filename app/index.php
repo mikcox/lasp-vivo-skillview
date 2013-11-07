@@ -26,14 +26,20 @@
             <a id="logo" href="#/" ><img src="images/cu-lasp-logo.png"/></a>
         </header>
         <div style="width:100%; text-align:center;">
-            <p style="margin-bottom: 0; font-size: 30px; line-height: 1; letter-spacing: -1px; color:white;"><a id="viewAllSkills" href="#/" style="color: white;">View All Skills</a> | <a id="mapASkill" href="#/mapaskill" style="color: white;">Map New Skill</a></p>
+            <p style="margin-bottom: 0; font-size: 30px; line-height: 1; letter-spacing: -1px; color:black;">
+            	<a id="viewAllSkills" href="#/" style="color: white;">View All Skills</a>
+            	 | 
+            	<a id="mapASkill" href="#/mapaskill" style="color: white;">Map New Skill</a></p>
         </div>
         <div ng-view>
         </div>
         <footer style="margin: 3% 0% 0% 0%">
+            <p> <a href="mailto:michael.b.cox@lasp.colorado.edu?subject=LEMR Skills App Bug&body=I found a bug with the LEMR Skills app and wanted to tell you!  Details:">Report A Bug</a>
+            	 | 
+            	<a href="mailto:michael.b.cox@lasp.colorado.edu?subject=LEMR Skills App Suggestion&body=I want to suggest a way to improve the LEMR skills app!  Details:">Suggestions</a></p>
             <p>Created by the LEMR Development Team</p>
             <h3>Powered By</h3>
-            <a href="http://webdev1.lasp.colorado.edu:57529/vivo/">LEMR (The LASP Extended Metadata Repository)</a> and <a href="http://angularjs.org/"><img src="images/AngularJS-small.png"/></a>
+            <a href="http://lemr.lasp.colorado.edu">LEMR (The LASP Extended Metadata Repository)</a> and <a href="http://angularjs.org/"><img src="images/AngularJS-small.png"/></a>
         </footer>
     </body>
 </html>
