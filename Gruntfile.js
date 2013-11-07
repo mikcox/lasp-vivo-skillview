@@ -54,6 +54,11 @@ module.exports = function (grunt) {
             unit: {
                 configFile: 'test/config/karma-unit.conf.js',
                 singleRun: false
+            },
+	    midway: {
+	    configFile: 'test/config/karma-midway.conf.js',
+	    autoWatch: false,
+	    singleRun: true
             }
         },
         connect: {
@@ -285,6 +290,12 @@ module.exports = function (grunt) {
         'livereload-start',
         'connect:livereload',
         'karma:e2e'
+    ]);
+    grunt.registerTask('test:midway', [
+        'clean:server',
+        'livereload-start',
+        'connect:livereload',
+        'karma:midway'
     ]);
 
     grunt.registerTask('build', [
