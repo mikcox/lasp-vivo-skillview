@@ -1,9 +1,9 @@
 describe("Testing Modules", function() {
-  describe("skillsmodule:", function() {
+  describe("skillsModule:", function() {
 
     var module;
     before(function() {
-      module = angular.module("skillsmodule");
+      module = angular.module("skillsModule");
     });
 
     it("should be registered", function() {
@@ -17,7 +17,7 @@ describe("Testing Modules", function() {
         return deps.indexOf(m) >= 0;
       };
       before(function() {
-        deps = module.value('skillsmodule').requires;
+        deps = module.value('skillsModule').requires;
       });
 
       //you can also test the module's dependencies

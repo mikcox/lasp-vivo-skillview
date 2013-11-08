@@ -1,6 +1,6 @@
 'use strict';
 
-skillsmodule.controller('mapASkillCtrl', ['$scope','$filter','dataFactory','formatFactory',function ($scope, $filter,dataFactory, formatFactory){
+skillsModule.controller('mapASkillCtrl', ['$scope','$filter','dataFactory','formatFactory',function ($scope, $filter,dataFactory, formatFactory){
     $scope.filteredPeople = []; 
     $scope.filteredSkills = [];
     $scope.addPersonList = [];

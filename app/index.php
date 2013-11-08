@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" ng-app="skillsmodule">
+<html lang="en" ng-app="skillsModule">
     <head>
         <meta charset="utf-8" />
         <title>LEMR : Skills</title>

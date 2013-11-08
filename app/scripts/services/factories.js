@@ -1,7 +1,7 @@
 'use strict';
 
 /* Services */
-skillsmodule.factory('dataFactory', function($http){
+skillsModule.factory('dataFactory', function($http){
     
     var dataFactory = {};
     
@@ -13,7 +13,7 @@ skillsmodule.factory('dataFactory', function($http){
     return dataFactory;
 });
 
-skillsmodule.factory('formatFactory', function(){
+skillsModule.factory('formatFactory', function(){
     var formatFactory = {};
     
     formatFactory.formatMasterList = function formatData(data){

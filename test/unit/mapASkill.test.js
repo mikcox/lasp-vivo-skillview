@@ -4,7 +4,7 @@ describe('Unit Tests: mapASkillCtrl', function(){
     var $httpBackend, $http, $scope, $rootScope, $dataFactory, $formatFactory, $controller;
     var ctrl = null;
 
-    beforeEach(angular.mock.module('skillsmodule'));
+    beforeEach(angular.mock.module('skillsModule'));
 
   beforeEach(inject(function($httpBackend, $http, $rootScope, dataFactory, formatFactory, $controller){
     $httpBackend = $httpBackend;
