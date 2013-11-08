@@ -46,13 +46,35 @@ module.exports = function (grunt) {
                 tasks: ['livereload']
             }
         },
+	concurrent: {
+			    options:{
+					    logConcurrentOutput: true
+				    },
+		continuous:{
+			    tasks: ["karma:unit_auto","karma:e2e_auto"]
+		    }
+
+
+		    },
         karma: {
             e2e: {
                 configFile: 'test/config/karma-e2e.conf.js',
-                singleRun: false
+		autoWatch:false,
+                singleRun: true
             },
             unit: {
                 configFile: 'test/config/karma-unit.conf.js',
+		autoWatch:false,
+                singleRun: true
+            },
+            e2e_auto:{
+                configFile: 'test/config/karma-e2e.conf.js',
+                autoWatch: true,
+                singleRun: false
+            },
+            unit_auto: {
+                configFile: 'test/config/karma-unit.conf.js',
+                autoWatch: true,
                 singleRun: false
             },
 	    midway: {
@@ -273,23 +295,23 @@ module.exports = function (grunt) {
         ]);
     });
 
-    grunt.registerTask('test', [
-        'test:unit',
-        'test:e2e'
-
+    grunt.registerTask('testall', [
+        'unit',
+        'e2e'
     ]);
 
-    grunt.registerTask('test:unit', [
-        'clean:server',
-        'connect:test',
+    grunt.registerTask('unit', [
         'karma:unit'
     ]);
 
-    grunt.registerTask('test:e2e', [
+    grunt.registerTask('e2e', [
         'clean:server',
         'livereload-start',
         'connect:livereload',
         'karma:e2e'
+    ]);
+    grunt.registerTask('continuous', [
+		    "concurrent:continuous"
     ]);
     grunt.registerTask('test:midway', [
         'clean:server',
