@@ -46,28 +46,31 @@ module.exports = function (grunt) {
                 tasks: ['livereload']
             }
         },
-	concurrent: {
-			    options:{
-					    logConcurrentOutput: true
-				    },
-		continuous:{
-			    tasks: ["karma:unit_auto","karma:e2e_auto"]
-		    }
+        //to run two tasks at once, grunt module concurrent
+        concurrent: {
+            options: {
+                logConcurrentOutput: true
+            },
+            continuous: {
+                tasks: ["karma:unit_auto", "karma:e2e_auto"]
+            }
 
 
-		    },
+        },
         karma: {
+            //single run
             e2e: {
                 configFile: 'test/config/karma-e2e.conf.js',
-		autoWatch:false,
+                autoWatch: false,
                 singleRun: true
             },
             unit: {
                 configFile: 'test/config/karma-unit.conf.js',
-		autoWatch:false,
+                autoWatch: false,
                 singleRun: true
             },
-            e2e_auto:{
+            //continuous run
+            e2e_auto: {
                 configFile: 'test/config/karma-e2e.conf.js',
                 autoWatch: true,
                 singleRun: false
@@ -77,10 +80,10 @@ module.exports = function (grunt) {
                 autoWatch: true,
                 singleRun: false
             },
-	    midway: {
-	    configFile: 'test/config/karma-midway.conf.js',
-	    autoWatch: false,
-	    singleRun: true
+            midway: {
+                configFile: 'test/config/karma-midway.conf.js',
+                autoWatch: false,
+                singleRun: true
             }
         },
         connect: {
@@ -301,6 +304,7 @@ module.exports = function (grunt) {
     ]);
 
     grunt.registerTask('unit', [
+        'clean:server',
         'karma:unit'
     ]);
 
@@ -310,9 +314,11 @@ module.exports = function (grunt) {
         'connect:livereload',
         'karma:e2e'
     ]);
+
     grunt.registerTask('continuous', [
-		    "concurrent:continuous"
+        "concurrent:continuous"
     ]);
+
     grunt.registerTask('test:midway', [
         'clean:server',
         'livereload-start',
