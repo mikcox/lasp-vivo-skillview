@@ -4,10 +4,18 @@ Note that a number of places in our code state to pull data from the SPARQL endp
 if you want to pull from your local SPARQL endpoint instead (changing https://lasp-db-dev:3030 to https://localhost:3030).  Note that the harvester code isn't currently included
 with the VM, so none of the submit or delete buttons will actually work, so for the time being it will always be safe to let the app pull from lasp-db-dev.
 
+## Grunt workflow ##
+- `grunt unit` for single run unit tests
+- `grunt e2e` for single run e2e tests
+- `grunt continuous` for both unit and e2e to run simultaneously in continous mode, use this in development
+- `grunt testall` to run unit then e2e in single run mode
+
 ## Testing Architecture Overview ##
 To simplify and seperate our areas of testing concerns, and also keep us in a strict MVC/REST design, a good way to see our current testing approach is this. 
 - `unit = model/services` and anything that relates to formatting our model for delivery to the controller
+
 - `midway = controller/filters` so that when we call the controller, we can test for achieving the proper scope variables. We can also test the filters here.
+
 - `e2e = html elements/user input`
 
 ## Naming Conventions ##
