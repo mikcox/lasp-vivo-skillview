@@ -316,6 +316,9 @@ module.exports = function (grunt) {
     ]);
 
     grunt.registerTask('continuous', [
+        'clean:server',
+        'livereload-start',
+        'connect:livereload',
         "concurrent:continuous"
     ]);
 //    still debating on benefit of midway tests
