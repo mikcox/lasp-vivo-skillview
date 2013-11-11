@@ -3,32 +3,7 @@
 /* http://docs.angularjs.org/guide/dev_guide.e2e-testing */
 //IMPORTANT: Remember when counting tables the title counts as one
 
-describe('LEMR app navigation', function () {
-
-	// Navigating to /index.php before every single function is what was slowing the tests down so much... so let's not do it.
-    //beforeEach(function () {
-    //    browser().navigateTo('../../index.php#/');
-    //});
-    it('should redirect index.html to index.php#/', function () {
-        browser().navigateTo('../../index.php');
-        expect(browser().location().url()).toBe('/');
-    });
-    it('Logo click redirect us to the home page', function () {
-        element('#logo').click();
-        expect(browser().location().url()).toBe('/');
-    });
-    it('View all skills click should redirect to root page', function () {
-        element('#viewAllSkills').click();
-        expect(browser().location().url()).toBe('/');
-    });
-    it('Add a skill click should redirect us to #/mapaskill page', function () {
-        element('#mapASkill').click();
-        expect(browser().location().url()).toBe('/mapaskill');
-    });
-
-});
-
-describe('All skills filtering', function () {
+describe('All Skills view', function () {
 
 	it('navigate to all skills view', function(){
 		browser().navigateTo('../../index.php#/');
@@ -115,4 +90,29 @@ describe('Map A Skill view', function () {
 
     });
     
+});
+
+describe('LEMR app navigation', function () {
+
+	// Navigating to /index.php before every single function is what was slowing the tests down so much... so let's not do it.
+    //beforeEach(function () {
+    //    browser().navigateTo('../../index.php#/');
+    //});
+    it('should redirect index.html to index.php#/', function () {
+        browser().navigateTo('../../index.php');
+        expect(browser().location().url()).toBe('/');
+    });
+    it('Logo click redirect us to the home page', function () {
+        element('#logo').click();
+        expect(browser().location().url()).toBe('/');
+    });
+    it('View all skills click should redirect to root page', function () {
+        element('#viewAllSkills').click();
+        expect(browser().location().url()).toBe('/');
+    });
+    it('Add a skill click should redirect us to #/mapaskill page', function () {
+        element('#mapASkill').click();
+        expect(browser().location().url()).toBe('/mapaskill');
+    });
+
 });
