@@ -74,24 +74,24 @@ describe('Map A Skill view', function () {
 	
     it('should filter the personel list as user types into the search box', function () {
         input('personquery').enter('');
-        expect(repeater('#table1 div').count()).toBe(15);  // (one for the pagination div and 15 for the people rows) 
+        expect(repeater('#table1 div').count()).toBe(0);
 
         input('personquery').enter('Ty');
-        expect(repeater('#table1 div').count()).toBe(9);  // 9 real rows, see above
+        expect(repeater('#table1 div').count()).toBe(9);
 
         input('personquery').enter('Cox');
-        expect(repeater('#table1 div').count()).toBe(1);  // 1 real row, see above.
+        expect(repeater('#table1 div').count()).toBe(1);
     });
 
     it('should filter the skill list as user types into the search box', function () {
         input('skillquery').enter('');
-        expect(repeater('#table2 div').count()).toBe(15);  // 15 real rows
+        expect(repeater('#table2 div').count()).toBe(0);
 
         input('skillquery').enter('UNIX');
-        expect(repeater('#table2 div').count()).toBe(1);  // 1 real row
+        expect(repeater('#table2 div').count()).toBe(1);
 
         input('skillquery').enter('intermediate');
-        expect(repeater('#table2 div').count()).toBe(0);  // 0 real rows
+        expect(repeater('#table2 div').count()).toBe(0);
     });
     
     it('should give us an "Add this skill" button if no results are returned', function () {
