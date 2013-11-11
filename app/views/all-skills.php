@@ -52,7 +52,6 @@
 				</div>
 				<p ng-show="skills">
 				Number of Results: {{countPagedList(pagedResults)}}
-				{{skills}}
 				</p>
 				<br><br>
 			</div>
