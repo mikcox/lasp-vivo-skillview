@@ -7,15 +7,6 @@ filterMod.filter('QuickSearch', function() {
                 return function(haystack, needle, searchkey) {
                         var returnList = [];
                         if(!needle || needle.length < 1){
-                                haystack.sort(function(a,b) { 
-                                        if(a[searchkey] < b[searchkey]){
-                                                return -1;
-                                        }
-                                        else if(a[searchkey] > b[searchkey]){
-                                                return 1;
-                                        }
-                                                return 0;
-                                        });
                                 return [];
                         }
                         else if(needle == '$all') {
@@ -49,8 +40,8 @@ filterMod.filter('QuickSearch', function() {
                                         else if(a[searchkey] > b[searchkey]){
                                                 return 1;
                                         }
-                                                return 0;
-                                        });
+                                        return 0;
+                                });
                                 return returnList;
                         }
                 };
@@ -60,6 +51,15 @@ filterMod.filter('ViewAllSearch', function() {
                 return function(haystack, needle) {
                         var returnList = [];
                         if(!needle || needle.length < 3){
+                               /* haystack.sort(function(a,b) { 
+                                    if(a[Skill] < b[Skill]){
+                                            return -1;
+                                    }
+                                    else if(a[Skill] > b[Skill]){
+                                            return 1;
+                                    }
+                                            return 0;
+                                });*/
                                 return haystack;
                         }
                         else{
@@ -83,6 +83,16 @@ filterMod.filter('ViewAllSearch', function() {
                                                 returnList.push(haystack[i]);
                                         }
                                 }
+                                /*
+                                returnList.sort(function(a,b) { 
+                                    if(a[Skill] < b[Skill]){
+                                            return -1;
+                                    }
+                                    else if(a[Skill] > b[Skill]){
+                                            return 1;
+                                    }
+                                    return 0;
+                                });*/
                                 return returnList;
                         }
                 };

@@ -104,20 +104,20 @@ skillsModule.factory('formatFactory', function(){
                     }
                 }
                 //push the temp variables into our fixed list in pretty JSON format
-                fixedList.push({"Person": {"type":"literal", "value": tmpPerson},
-                                "PersonURI": {"type":"literal", "value": tmpPersonURI},
-                                "Skill": {"type":"literal", "value": tmpSkill}, 
-                                "SkillURI": {"type":"literal", "value": tmpSkillURI},
-                                "Office": {"type":"literal", "value": tmpOffice},
-                                "Email": {"type":"literal", "value": tmpEmail},
-                                "PhoneNumber": {"type":"literal", "value": tmpPhone},
-                                "Position": {"type":"literal", "value": tmpPosition},
-                                "Division": {"type":"literal", "value": tmpDivision},
-                                "Group": {"type":"literal", "value":tmpGroup}});
+                fixedList.push({"Person": tmpPerson,
+                                "PersonURI": tmpPersonURI,
+                                "Skill": tmpSkill, 
+                                "SkillURI": tmpSkillURI,
+                                "Office": tmpOffice,
+                                "Email": tmpEmail,
+                                "PhoneNumber": tmpPhone,
+                                "Position": tmpPosition,
+                                "Division": tmpDivision,
+                                "Group": tmpGroup});
             }
         }
         //set the results to be our entire fixed list rather than the raw SPARQL results
-        data.results.bindings = fixedList;
+        data = fixedList;
         return data;
     };
     
