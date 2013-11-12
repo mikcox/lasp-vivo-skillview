@@ -2,7 +2,6 @@
 	<div class="row-fluid" style="width:100%; align:center; text-align:center;">
 		<div style="width:25%; display:inline-block; text-align:left; vertical-align:top;">
 			<h2>People</h2>
-			{{filteredPeople}}
 			<input type="text" class="input-large search-query" data-ng-model="personquery" placeholder="Search for a Person ($all = show all)" ng-change="searchPeople(personquery)"/><br/>
 			<p class="error">{{error}}</p>
 			<ul id="table1" class="people">
