@@ -134,15 +134,32 @@ module.exports = function (grunt) {
             server: '.tmp'
         },
         jshint: {
+
             options: {
                 jshintrc: '.jshintrc'
             },
-            all: [
-                'Gruntfile.js',
-                '<%= yeoman.app %>/scripts/{,*/}*.js',
-                '!<%= yeoman.app %>/scripts/vendor/*',
-                'test/spec/{,*/}*.js'
-            ]
+            scripts: {
+                src: [
+                    'Gruntfile.js',
+                    '<%= yeoman.app %>/scripts/**/*.js',
+                    //'<%= yeoman.app %>/scripts/{,*/}*.js'
+//                '!<%= yeoman.app %>/scripts/vendor/*',
+//                'test/spec/{,*/}*.js'
+                ],
+                ignore: [
+                    '<%= yeoman.app %>/scripts/lib/*.js',
+                    '<%= yeoman.app %>/scripts/app.js'
+                ]
+            },
+            test: {
+                src: [
+                    '<%= yeoman.app %>/../test/**/*.js'
+                ],
+                ignore: [
+                    '<%= yeoman.app %>/test/lib/*.js',
+                    '<%= yeoman.app %>/test/config/*.js'
+                ]
+            }
         },
         mocha: {
             all: {
@@ -298,6 +315,7 @@ module.exports = function (grunt) {
         ]);
     });
 
+
     grunt.registerTask('testall', [
         'unit',
         'e2e'
@@ -341,6 +359,12 @@ module.exports = function (grunt) {
         'usemin'
     ]);
 
+    grunt.registerTask('hint-test', [
+        'jshint:test'
+    ]);
+    grunt.registerTask('hint-scripts', [
+        'jshint:scripts'
+    ]);
     grunt.registerTask('default', [
         'jshint',
         'test',
