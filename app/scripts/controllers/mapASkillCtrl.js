@@ -153,15 +153,15 @@ skillsModule.controller('mapASkillCtrl', ['$scope','$filter','dataFactory','form
     		"skill": skill,
     		"levels": [
     		{"skilllevel": skill+" (unranked)",
-             "skillleveluri": "fakeuri1"},
+             "skillleveluri": "0"},
     		{"skilllevel": skill+" beginner",
-             "skillleveluri": "fakeuri2"},
+             "skillleveluri": "1"},
     		{"skilllevel": skill+" intermediate",
-             "skillleveluri": "fakeuri3"},
+             "skillleveluri": "2"},
     		{"skilllevel": skill+" advanced",
-             "skillleveluri": "fakeuri4"},
+             "skillleveluri": "3"},
     		{"skilllevel": skill+" guru",
-             "skillleveluri": "fakeuri5"}]
+             "skillleveluri": "4"}]
     	});
     	$scope.searchSkills(skill);
     };
