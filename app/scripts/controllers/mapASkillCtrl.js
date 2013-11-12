@@ -88,7 +88,7 @@ skillsModule.controller('mapASkillCtrl', ['$scope','$filter','dataFactory','form
             }
         }
         if(addingNewSkill){
-        	var moveon = confirm("Warning: You are about to add a new skill to the database that didn't exist before.  Only continue if you are SURE that this skill (or any alternate way of spelling it) doesn't already exist in the database.");	
+        	var moveon = confirm("Warning: You are about to add a new skill to the database that didn't exist before.  Only click 'OK' if you are SURE that this skill (or any alternate way of spelling it) doesn't already exist in the database.");	
 			if(!moveon){
 				return;
 			}        
@@ -149,6 +149,7 @@ skillsModule.controller('mapASkillCtrl', ['$scope','$filter','dataFactory','form
         $scope.filterSkills();
     };
     $scope.addNewSkill = function(skill){
+    	alert(skill+" will now be shown in the skill list.  Note that it will only be added to the database when you assign it to a person.");
     	$scope.skilllist.push({
     		"skill": skill,
     		"levels": [
