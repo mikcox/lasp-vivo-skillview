@@ -10,6 +10,15 @@ filterMod.filter('QuickSearch', function() {
                                 return [];
                         }
                         else if(needle == '$all') {
+                        	haystack.sort(function(a,b) { 
+                                if(a[searchkey].toUpperCase() < b[searchkey].toUpperCase()){
+                                        return -1;
+                                }
+                                else if(a[searchkey].toUpperCase() > b[searchkey].toUpperCase()){
+                                        return 1;
+                                }
+                                return 0;
+                            });
                         	return haystack;
                         }
                         else{
@@ -17,8 +26,6 @@ filterMod.filter('QuickSearch', function() {
                                 var needleWordList = needle.split(" ");
                                 //boolean variable
                                 var allWordMatch = true;
-                                //variable to keep a concatenated version of each row to search through
-                                var allFieldsString = "";
                                 
                                 //join all the values of each row into a single string that we can search
                                 for(var i = 0; i < haystack.length; i++){
@@ -34,10 +41,10 @@ filterMod.filter('QuickSearch', function() {
                                         }
                                 }
                                 returnList.sort(function(a,b) { 
-                                        if(a[searchkey] < b[searchkey]){
+                                        if(a[searchkey].toUpperCase() < b[searchkey].toUpperCase()){
                                                 return -1;
                                         }
-                                        else if(a[searchkey] > b[searchkey]){
+                                        else if(a[searchkey].toUpperCase() > b[searchkey].toUpperCase()){
                                                 return 1;
                                         }
                                         return 0;
@@ -51,15 +58,15 @@ filterMod.filter('ViewAllSearch', function() {
                 return function(haystack, needle) {
                         var returnList = [];
                         if(!needle || needle.length < 3){
-                               /* haystack.sort(function(a,b) { 
-                                    if(a[Skill] < b[Skill]){
+                               haystack.sort(function(a,b) { 
+                                    if(a.Skill.toUpperCase() < b.Skill.toUpperCase()){
                                             return -1;
                                     }
-                                    else if(a[Skill] > b[Skill]){
+                                    else if(a.Skill.toUpperCase() > b.Skill.toUpperCase()){
                                             return 1;
                                     }
-                                            return 0;
-                                });*/
+                                    return 0;
+                                });
                                 return haystack;
                         }
                         else{
@@ -70,11 +77,19 @@ filterMod.filter('ViewAllSearch', function() {
                                 //variable to keep a concatenated version of each row to search through
                                 var allFieldsString = "";
                                 
-                                //join all the values of each row into a single string that we can search
+                                //join only the searchable values of each row into a single string that we can search
                                 for(var i = 0; i < haystack.length; i++){
                                         allWordMatch = true;
+                                        allFieldsString = "";
+                                        
+                                        for (var key in haystack[i]) {
+											if (haystack[i].hasOwnProperty(key) && key.toUpperCase().indexOf("URI") == -1) {
+										    	//alert(key + " -> " + haystack[i][key]);
+										    	allFieldsString += haystack[i][key];
+											}
+										}
                                         for(var j = 0; j < needleWordList.length; j++){
-                                                if(JSON.stringify(haystack[i]).toUpperCase().indexOf(needleWordList[j].toUpperCase()) == -1){
+                                                if(allFieldsString.toUpperCase().indexOf(needleWordList[j].toUpperCase()) == -1){
                                                         allWordMatch = false;
                                                         break;
                                                 }
@@ -83,16 +98,15 @@ filterMod.filter('ViewAllSearch', function() {
                                                 returnList.push(haystack[i]);
                                         }
                                 }
-                                /*
                                 returnList.sort(function(a,b) { 
-                                    if(a[Skill] < b[Skill]){
+                                    if(a.Skill.toUpperCase() < b.Skill.toUpperCase()){
                                             return -1;
                                     }
-                                    else if(a[Skill] > b[Skill]){
+                                    else if(a.Skill.toUpperCase() > b.Skill.toUpperCase()){
                                             return 1;
                                     }
                                     return 0;
-                                });*/
+                                });
                                 return returnList;
                         }
                 };
