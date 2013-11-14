@@ -13,7 +13,7 @@
 				</li>
 			</ul>
 			<div class="center">
-				<pagination boundary-links="true" total-items="countPagedList(pagedPeople)" page="currentPagePeople" items-per-page="itemsPerPage" max-size="maxPages" class="pagination-small" previous-text="&lsaquo;" next-text="&rsaquo;" first-text="&laquo;" last-text="&raquo;"></pagination>
+				<pagination ng-hide="!pagedPeople" boundary-links="true" total-items="countPagedList(pagedPeople)" page="currentPagePeople" items-per-page="itemsPerPage" max-size="maxPages" class="pagination-small" previous-text="&lsaquo;" next-text="&rsaquo;" first-text="&laquo;" last-text="&raquo;"></pagination>
 			</div>
 		</div>
 		<div id="spacer container" style="width:45%; display:inline-block; align:center; text-align:center;">
@@ -66,7 +66,7 @@
 				</li>
 			</ul>
 			<div class="center">
-				<pagination boundary-links="true" total-items="countPagedList(pagedSkills)" page="currentPageSkills" items-per-page="itemsPerPage" max-size="maxPages" class="pagination-small" previous-text="&lsaquo;" next-text="&rsaquo;" first-text="&laquo;" last-text="&raquo;"></pagination>
+				<pagination ng-hide="!pagedSkills" boundary-links="true" total-items="countPagedList(pagedSkills)" page="currentPageSkills" items-per-page="itemsPerPage" max-size="maxPages" class="pagination-small" previous-text="&lsaquo;" next-text="&rsaquo;" first-text="&laquo;" last-text="&raquo;"></pagination>
 			</div>
 		</div>
 </div>
