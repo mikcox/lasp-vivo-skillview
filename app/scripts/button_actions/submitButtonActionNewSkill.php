@@ -10,6 +10,7 @@ if(isset($_POST['SubmitText']))
 	exec('cp ../../outputcsv/'.$OutputFileName.' /tools/vivo-harvester/VIVOharvester/ingest_scripts/new_skill_csv/skills_csv');
 	exec('/tools/vivo-harvester/VIVOharvester/ingest_scripts/new_skill_csv/skills_csv/run-skills.sh '.$OutputFileName);
 	exec('rm -rf /tools/vivo-harvester/VIVOharvester/ingest_scripts/new_skill_csv/skills_csv/'.$OutputFileName);
+	$emailString = 'The new CSV generated was:   ' . $SubmitText;
 	mail ( 'michael.cox@lasp.colorado.edu', 'New skill added via LEMR webapp' , 'The new CSV generated was:   '+$SubmitText);
 }
 
