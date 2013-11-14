@@ -74,17 +74,25 @@ skillsModule.controller('mapASkillCtrl', ['$scope','$filter','dataFactory','form
             return;
         }
         $scope.SubmitText = "personuri,leveluri,skill\n";
+        $scope.newSkillSubmitText = "personuri,skillname,level\n";
         var levelSelected = 0;
         var addingNewSkill = false;
+        var addingExistingSkill = false;
         for(var i=0; i < $scope.addPersonList.length; i++){
             for(var j=0; j < $scope.addSkillList.length; j++){
-            	if($scope.addSkillList[j].levels[levelSelected].skillleveluri.indexOf("fakeuri") !== -1){
+            	levelSelected = document.getElementById($scope.addSkillList[j].skill).selectedIndex;
+            	if($scope.addSkillList[j].levels[0].skillleveluri == 0) {
                 	addingNewSkill = true;
+                	$scope.newSkillSubmitText += $scope.addPersonList[i].uri + ",";
+                	$scope.newSkillSubmitText += $scope.addSkillList[j].skill + ",";
+                	$scope.newSkillSubmitText += $scope.addSkillList[j].levels[levelSelected].skillleveluri + "\n";
                 }
-                $scope.SubmitText += $scope.addPersonList[i].uri + ",";
-                levelSelected = document.getElementById($scope.addSkillList[j].skill).selectedIndex;
-                $scope.SubmitText += $scope.addSkillList[j].levels[levelSelected].skillleveluri + ",";
-                $scope.SubmitText += $scope.addSkillList[j].skill + "\n";
+                else {
+                	addingExistingSkill = true;
+	                $scope.SubmitText += $scope.addPersonList[i].uri + ",";
+	                $scope.SubmitText += $scope.addSkillList[j].levels[levelSelected].skillleveluri + ",";
+	                $scope.SubmitText += $scope.addSkillList[j].skill + "\n";
+                }
             }
         }
         if(addingNewSkill){
@@ -99,7 +107,7 @@ skillsModule.controller('mapASkillCtrl', ['$scope','$filter','dataFactory','form
         if(addingNewSkill){
         	ajaxSubmitNewSkillMap();
         }
-        else{
+        if(addingExistingSkill){
         	ajaxSubmitExistingSkillMap();
         }
         //wait 5 seconds and then display a success message (yes, this is a lie since the skill may or may not have actually been added by now)
