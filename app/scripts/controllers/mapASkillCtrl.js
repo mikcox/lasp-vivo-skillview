@@ -120,7 +120,7 @@ skillsModule.controller('mapASkillCtrl', ['$scope','$filter','dataFactory','form
         ({
             type: "POST",
             url: "scripts/button_actions/submitButtonActionNewSkill.php",
-            data: {SubmitText : $scope.SubmitText}, 
+            data: {SubmitText : $scope.newSkillSubmitText}, 
         });
     };
     
@@ -129,7 +129,7 @@ skillsModule.controller('mapASkillCtrl', ['$scope','$filter','dataFactory','form
         ({
             type: "POST",
             url: "scripts/button_actions/submitButtonAction.php",
-            data: {SubmitText : $scope.newSkillSubmitText}, 
+            data: {SubmitText : $scope.SubmitText}, 
         });
     };
     
