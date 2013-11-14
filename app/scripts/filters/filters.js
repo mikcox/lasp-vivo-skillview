@@ -98,15 +98,6 @@ filterMod.filter('ViewAllSearch', function() {
                                                 returnList.push(haystack[i]);
                                         }
                                 }
-                                returnList.sort(function(a,b) { 
-                                    if(a.Skill.toUpperCase() < b.Skill.toUpperCase()){
-                                            return -1;
-                                    }
-                                    else if(a.Skill.toUpperCase() > b.Skill.toUpperCase()){
-                                            return 1;
-                                    }
-                                    return 0;
-                                });
                                 return returnList;
                         }
                 };

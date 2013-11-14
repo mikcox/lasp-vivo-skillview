@@ -111,3 +111,30 @@ color: white;
 	width: 13%;
 	padding: 0px;
 }
+
+.columnHeader {
+	cursor: pointer;
+	-webkit-user-select: none; /* Chrome/Safari */        
+	-moz-user-select: none; /* Firefox */
+	-ms-user-select: none; /* IE10+ */
+}
+
+.sorting_asc {
+background: url('../images/sort_asc.png') no-repeat center right;
+}
+
+.sorting_desc {
+background: url('../images/sort_desc.png') no-repeat center right;
+}
+
+.sorting_both {
+background: url('../images/sort_both.png') no-repeat center right;
+}
+
+.row_odd {
+	background-color: white;
+}
+
+.row_even{
+	background-color: #CCCCCC;
+}

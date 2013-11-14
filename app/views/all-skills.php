@@ -11,15 +11,15 @@
 				<p class="error">{{error}}</p>
 				<p ng-hide="skills"> Loading...</p>
 				<table ng-table class="table" ng-show="skills">
-					<th> Name </th>
-					<th> Skill </th>
-					<th> Office </th>
-					<th> Email </th>
-					<th> Phone Number </th>
-					<th> Position </th>
-					<th> Division </th>
-					<th> Group </th>
-					<tr ng-repeat="row in pagedResults[currentPageResults-1]">
+					<th class="columnHeader" ng-class="sortingClass('Person')" ng-click="changeSorting('Person')"> Name </th>
+					<th class="columnHeader" ng-class="sortingClass('Skill')" ng-click="changeSorting('Skill')"> Skill </th>
+					<th class="columnHeader" ng-class="sortingClass('Office')" ng-click="changeSorting('Office')"> Office </th>
+					<th class="columnHeader" ng-class="sortingClass('Email')" ng-click="changeSorting('Email')"> Email </th>
+					<th class="columnHeader" ng-class="sortingClass('PhoneNumber')" ng-click="changeSorting('PhoneNumber')"> Phone Number </th>
+					<th class="columnHeader" ng-class="sortingClass('Position')" ng-click="changeSorting('Position')"> Position </th>
+					<th class="columnHeader" ng-class="sortingClass('Division')" ng-click="changeSorting('Division')"> Division </th>
+					<th class="columnHeader" ng-class="sortingClass('Group')" ng-click="changeSorting('Group')"> Group </th>
+					<tr ng-repeat="row in pagedResults[currentPageResults-1] | orderBy:orderProp:reverse">
 						<td>
 							{{row.Person}}
 						</td>

@@ -26,6 +26,7 @@ skillsModule.controller('allSkillsCtrl', ['$scope','$filter','dataFactory','form
     $scope.getPersonnel();
     	
     $scope.orderProp = "Skill";
+    $scope.reverse = false;
     
     $scope.DeleteButtonPressed = function(name, personuri, skill, skilluri, $index){
         var moveon = confirm("Delete "+name+"'s "+skill+" skill?");
@@ -90,4 +91,27 @@ skillsModule.controller('allSkillsCtrl', ['$scope','$filter','dataFactory','form
         }
         return count;
     };
+    
+    //Sorting Function
+    $scope.changeSorting = function(sort){
+    	if ($scope.orderProp == sort) {
+    		$scope.reverse = !$scope.reverse;
+    	} else {
+    		$scope.orderProp = sort;
+    		$scope.reverses = false;
+    	}
+	};
+	
+	$scope.sortingClass = function(sort){
+		var cls;
+		if ($scope.orderProp == sort){
+			if ($scope.reverse)
+				cls="sorting_asc";
+			else
+				cls="sorting_desc";
+		} else {
+			cls="sorting_both";
+		}
+		return cls;
+	};
 }]);
