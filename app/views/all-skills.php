@@ -19,7 +19,7 @@
 					<th class="columnHeader" ng-class="sortingClass('Position')" ng-click="changeSorting('Position')"> Position </th>
 					<th class="columnHeader" ng-class="sortingClass('Division')" ng-click="changeSorting('Division')"> Division </th>
 					<th class="columnHeader" ng-class="sortingClass('Group')" ng-click="changeSorting('Group')"> Group </th>
-					<tr ng-repeat="row in pagedResults[currentPageResults-1] | orderBy:orderProp:reverse">
+					<tr ng-repeat="row in pagedResults[currentPageResults-1]">
 						<td>
 							{{row.Person}}
 						</td>
@@ -47,10 +47,10 @@
 						</td>
 					</tr>
 				</table>
-				<div class="center">
+				<div ng-hide="!skills" class="center">
 					<pagination boundary-links="true" total-items="countPagedList(pagedResults)" page="currentPageResults" items-per-page="itemsPerPage" max-size="maxPages" class="pagination-small" previous-text="&lsaquo;" next-text="&rsaquo;" first-text="&laquo;" last-text="&raquo;"></pagination>
 				</div>
-				<p ng-show="skills">
+				<p ng-hide="!skills">
 				Number of Results: {{countPagedList(pagedResults)}}
 				</p>
 				<br><br>
