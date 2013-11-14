@@ -62,6 +62,7 @@ skillsModule.controller('allSkillsCtrl', ['$scope','$filter','dataFactory','form
     
     $scope.filterResults = function(){
         $scope.filteredResults = $filter('ViewAllSearch')($scope.skills, $scope.query);
+        $scope.filteredResults = $filter('orderBy')($scope.filteredResults,$scope.orderProp,$scope.reverse);
         //groupToPages() does not filter input
         $scope.pagedResults = $scope.groupToPages($scope.filteredResults);
         return $scope.filteredResults;
@@ -100,6 +101,7 @@ skillsModule.controller('allSkillsCtrl', ['$scope','$filter','dataFactory','form
     		$scope.orderProp = sort;
     		$scope.reverses = false;
     	}
+    	$scope.filterResults();
 	};
 	
 	$scope.sortingClass = function(sort){
