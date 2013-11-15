@@ -48,7 +48,8 @@
     "mocha": "~1.14.0",
     "chai": "~1.8.1",
     "karma-mocha": "~0.1.0",
-    "grunt-jslint": "~1.1.1"
+    "grunt-jslint": "~1.1.1",
+    "grunt-angular-build-tool": "~0.1.2"
   },
   "engines": {
     "node": ">=0.8.0"

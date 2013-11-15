@@ -19,7 +19,7 @@ var phpGateway = function (dir) {
 // 'test/spec/**/*.js'
 
 module.exports = function (grunt) {
-    // load all grunt tasks
+    // load all grunt tasks as we config, this skips initial call
     require('matchdep').filterDev('grunt-*').forEach(grunt.loadNpmTasks);
 
     // configurable paths
@@ -46,6 +46,7 @@ module.exports = function (grunt) {
                 tasks: ['livereload']
             }
         },
+
         //to run two tasks at once, grunt module concurrent
         concurrent: {
             options: {
@@ -134,33 +135,86 @@ module.exports = function (grunt) {
             server: '.tmp'
         },
         jshint: {
-
-            options: {
-                jshintrc: '.jshintrc'
-            },
             scripts: {
                 src: [
                     'Gruntfile.js',
-                    '<%= yeoman.app %>/scripts/**/*.js',
+                    '<%= yeoman.app %>/scripts/controllers/*.js',
+                    '<%= yeoman.app %>/scripts/filters/*.js',
+                    '<%= yeoman.app %>/scripts/directives/*.js',
+                    '<%= yeoman.app %>/scripts/button_actions/*.js',
+                    '<%= yeoman.app %>/scripts/services/*.js',
                     //'<%= yeoman.app %>/scripts/{,*/}*.js'
 //                '!<%= yeoman.app %>/scripts/vendor/*',
 //                'test/spec/{,*/}*.js'
                 ],
-                ignore: [
-                    '<%= yeoman.app %>/scripts/lib/*.js',
-                    '<%= yeoman.app %>/scripts/app.js'
-                ]
+                options: {
+                    jshintrc: '.jshintrc',
+                    curly: true,
+                    eqeqeq: true,
+                    immed: true,
+                    latedef: true,
+                    newcap: true,
+                    noarg: true,
+                    sub: true,
+                    undef: true,
+                    boss: true,
+                    eqnull: true,
+                    unused: true,
+                    browser: true,
+                    strict: true,
+                    jquery: true,
+                    //ignores seems to not be working, need to just qualify what we want
+                    ignores: [
+                        '<%= yeoman.app %>/scripts/lib/*.js',
+                        '<%= yeoman.app %>/scripts/app.js'
+                    ]
+                },
+                globals: {
+                    angular: true,
+                    moment: true,
+                    console: true,
+                    define: true,
+                    require: true
+                }
             },
-            test: {
+
+            tests: {
                 src: [
-                    '<%= yeoman.app %>/../test/**/*.js'
+                    '<%= yeoman.app %>/../test/e2e/*.js',
+                    '<%= yeoman.app %>/../test/unit/*.js'
                 ],
-                ignore: [
-                    '<%= yeoman.app %>/test/lib/*.js',
-                    '<%= yeoman.app %>/test/config/*.js'
-                ]
+                options: {
+                    jshintrc: '.jshintrc',
+                    curly: true,
+                    eqeqeq: true,
+                    immed: true,
+                    latedef: true,
+                    newcap: true,
+                    noarg: true,
+                    sub: true,
+                    undef: true,
+                    boss: true,
+                    eqnull: true,
+                    unused: true,
+                    browser: true,
+                    strict: true,
+                    jquery: true,
+                    //ignores seems to not be working, need to just qualify what we want
+                    ignores: [
+                        '<%= yeoman.app %>/../tests/lib/**/*.js',
+                        '<%= yeoman.app %>/../tests/config/*.js'
+                    ]
+                },
+                globals: {
+                    angular: true,
+                    moment: true,
+                    console: true,
+                    define: true,
+                    require: true
+                }
             }
         },
+
         mocha: {
             all: {
                 options: {
@@ -214,7 +268,7 @@ module.exports = function (grunt) {
                 files: {
                     '<%= yeoman.dist %>/scripts/main.js': [
                         '<%= yeoman.app %>/scripts/{,*/}*.js'
-                    ],
+                    ]
                 }
             }
         },
@@ -301,6 +355,8 @@ module.exports = function (grunt) {
 
     grunt.renameTask('regarde', 'watch');
 
+    //by using our watch module grunt server will watch for any changes and
+    //apply automatically
     grunt.registerTask('server', function (target) {
         if (target === 'dist') {
             return grunt.task.run(['build', 'open', 'connect:dist:keepalive']);
@@ -359,8 +415,8 @@ module.exports = function (grunt) {
         'usemin'
     ]);
 
-    grunt.registerTask('hint-test', [
-        'jshint:test'
+    grunt.registerTask('hint-tests', [
+        'jshint:tests'
     ]);
     grunt.registerTask('hint-scripts', [
         'jshint:scripts'
