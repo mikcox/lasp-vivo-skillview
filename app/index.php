@@ -9,16 +9,7 @@
 
         <link rel="stylesheet" href="styles/bootstrap.css">
         <link rel="stylesheet" href="styles/app.css">
-        <script src="components/jquery/jquery.min.js"></script>
-        <script src="components/angular/angular.min.js"></script>
-        <script src="scripts/lib/jquery-ui.min.js"></script>
-        <script src="scripts/lib/angular-dragdrop.min.js"></script>
-        <script src="scripts/lib/ui-bootstrap-tpls-0.6.0.js"></script>
-        <script src="scripts/app.js"></script>
-        <script src="scripts/controllers/allSkillsCtrl.js"></script>
-        <script src="scripts/controllers/mapASkillCtrl.js"></script>
-        <script src="scripts/filters/filters.js"></script>
-        <script src="scripts/services/factories.js"></script>
+        <script src="scripts/skillsModuleTemplates.js"></script>
     </head>
 
     <body class="no-logo fae">
@@ -41,5 +32,15 @@
             <h3>Powered By</h3>
             <a href="http://lemr.lasp.colorado.edu">LEMR (The LASP Extended Metadata Repository)</a> and <a href="http://angularjs.org/"><img src="images/AngularJS-small.png"/></a>
         </footer>
+        <script src="components/jquery/jquery.min.js"></script>
+        <script src="components/angular/angular.min.js"></script>
+        <script src="scripts/lib/jquery-ui.min.js"></script>
+        <script src="scripts/lib/angular-dragdrop.min.js"></script>
+        <script src="scripts/lib/ui-bootstrap-tpls-0.6.0.js"></script>
+        <script src="scripts/app.js"></script>
+        <script src="scripts/controllers/allSkillsCtrl.js"></script>
+        <script src="scripts/controllers/mapASkillCtrl.js"></script>
+        <script src="scripts/filters/filters.js"></script>
+        <script src="scripts/services/factories.js"></script>
     </body>
 </html>

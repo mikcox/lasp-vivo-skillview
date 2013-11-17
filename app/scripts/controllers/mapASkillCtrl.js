@@ -38,9 +38,9 @@ skillsModule.controller('mapASkillCtrl', [
         $scope.error = 'Fuseki person query returned: ' + status;
       });
     }
-    //function to remove the skill names from the skill level dropdown options
-    $scope.skillLevelDisplay = function (skill, skilllevel) {
-      return skilllevel.replace(skill, '');
+    //function to remove the skill names from the skill level drop down options
+    $scope.skillLevelDisplay = function (skill, skillLevel) {
+      return skillLevel.replace(skill, '');
     };
     $scope.filterSkills = function () {
       $scope.filteredSkills = $filter('QuickSearch')($scope.skilllist, $scope.skillquery, 'skill');
@@ -72,7 +72,7 @@ skillsModule.controller('mapASkillCtrl', [
       for (var i = 0; i < $scope.addPersonList.length; i++) {
         for (var j = 0; j < $scope.addSkillList.length; j++) {
           levelSelected = document.getElementById($scope.addSkillList[j].skill).selectedIndex;
-          if ($scope.addSkillList[j].levels[0].skillleveluri == 0) {
+          if ($scope.addSkillList[j].levels[0].skillleveluri === 0) {
             addingNewSkill = true;
             $scope.newSkillSubmitText += $scope.addPersonList[i].uri + ',';
             $scope.newSkillSubmitText += $scope.addSkillList[j].skill + ',';
@@ -86,8 +86,8 @@ skillsModule.controller('mapASkillCtrl', [
         }
       }
       if (addingNewSkill) {
-        var moveon = confirm('Warning: You are about to add a new skill to the database that didn\'t exist before.  Only click \'OK\' if you are SURE that this skill (or any alternate way of spelling it) doesn\'t already exist in the database.');
-        if (!moveon) {
+        var moveOn = confirm('Warning: You are about to add a new skill to the database that didn\'t exist before.  Only click \'OK\' if you are SURE that this skill (or any alternate way of spelling it) doesn\'t already exist in the database.');
+        if (!moveOn) {
           return;
         }
       }
@@ -188,7 +188,7 @@ skillsModule.controller('mapASkillCtrl', [
       }
       return $scope.filterSkills();
     };
-    //Pagination Functions 
+    //Pagination Functions
     $scope.itemsPerPage = 15;
     $scope.maxPages = 5;
     //groupToPages() does not filter input
