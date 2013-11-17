@@ -258,7 +258,9 @@ module.exports = function (grunt) {
             dist: {
                 files: {
                     '<%= yeoman.dist %>/app/scripts/main.js': ['<%= yeoman.app %>/scripts/*.js', '<%= yeoman.app %>/scripts/lib/*.js', '<%= yeoman.app %>/components/{,*/}*.min.js']
-                } } },
+                }
+            }
+        },
         useminPrepare: {
             html: '<%= yeoman.app %>/index.php',
             options: { dest: '<%= yeoman.dist %>' }
@@ -378,7 +380,7 @@ module.exports = function (grunt) {
         'imagemin',
         'htmlmin:dist',
         //currently broken
-        //'ngtemplates:skillsModule', 
+        //'ngtemplates:skillsModule',
         //'concat',
         'cssmin',
         'uglify',
