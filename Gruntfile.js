@@ -257,7 +257,16 @@ module.exports = function (grunt) {
         uglify: {
             dist: {
                 files: {
-                    '<%= yeoman.dist %>/app/scripts/main.js': ['<%= yeoman.app %>/scripts/*.js', '<%= yeoman.app %>/scripts/lib/*.js', '<%= yeoman.app %>/components/{,*/}*.min.js']
+                    '<%= yeoman.dist %>/app/scripts/main.js': [
+                        '<%= yeoman.app %>/components/angular/angular.min.js',
+                        '<%= yeoman.app %>/components/jquery/jquery.min.js',
+                        '<%= yeoman.app %>/scripts/lib/*.js',
+                        '<%= yeoman.app %>/scripts/app.js',
+                        '<%= yeoman.app %>/scripts/controllers/*.js',
+                        '<%= yeoman.app %>/scripts/filters/*.js',
+                        '<%= yeoman.app %>/scripts/services/*.js',
+                        '<%= yeoman.app %>/scripts/directives/*.js'
+                    ]
                 } } },
         useminPrepare: {
             html: '<%= yeoman.app %>/index.php',
