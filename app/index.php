@@ -28,6 +28,7 @@
             <p> <a href="mailto:michael.cox@lasp.colorado.edu?subject=LEMR Skills App Bug&body=I found a bug with the LEMR Skills app and wanted to tell you!  Details:">Report A Bug</a>
             	 | 
             	<a href="mailto:michael.cox@lasp.colorado.edu?subject=LEMR Skills App Suggestion&body=I want to suggest a way to improve the LEMR skills app!  Details:">Suggestions</a></p>
+            <p>Skills App Version 1.0, 11/18/2013</p>
             <p>Created by the LEMR Development Team</p>
             <h3>Powered By</h3>
             <a href="http://lemr.lasp.colorado.edu">LEMR (The LASP Extended Metadata Repository)</a> and <a href="http://angularjs.org/"><img src="images/AngularJS-small.png"/></a>
