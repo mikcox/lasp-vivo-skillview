@@ -387,7 +387,7 @@ module.exports = function (grunt) {
         'imagemin',
         'htmlmin:dist',
         //currently broken
-        //'ngtemplates:skillsModule', 
+        //'ngtemplates:skillsModule',
         //'concat',
         'cssmin',
         'uglify',
