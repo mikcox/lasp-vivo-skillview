@@ -74,7 +74,7 @@ skillsModule.controller('mapASkillCtrl', [
 			for (var i = 0; i < $scope.addPersonList.length; i++) {
 				for (var j = 0; j < $scope.addSkillList.length; j++) {
 					levelSelected = document.getElementById($scope.addSkillList[j].skill).selectedIndex;
-					if ($scope.addSkillList[j].levels[0].skillleveluri === 0) {
+					if ($scope.addSkillList[j].levels[0].skillleveluri === '0') {
 						addingNewSkill = true;
 						$scope.newSkillSubmitText += $scope.addPersonList[i].uri + ',';
 						$scope.newSkillSubmitText += $scope.addSkillList[j].skill + ',';
