@@ -4,6 +4,7 @@
 			<h2>People</h2>
 			<input type="text" class="input-large search-query" data-ng-model="personquery" placeholder="Search for a Person ($all = show all)" ng-change="searchPeople(personquery)"/><br/>
 			<p class="error">{{error}}</p>
+			<p>{{skilllist}}</p>
 			<ul id="table1" class="people">
 				<p ng-show="peoplelist">People Found: {{countPagedList(pagedPeople)}}</p>
 				<p ng-hide="peoplelist"> Loading...</p>
