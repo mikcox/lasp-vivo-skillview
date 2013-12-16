@@ -29,7 +29,7 @@ module.exports = function (grunt) {
         yeoman: yeomanConfig,
         //currently run $templateCache is not loaded prior to the config
         //file, so this is broken because the app always makes the ajax
-        //request to /views before using $temlateCache (templateUrl)
+        //request to /views before using $templateCache (templateUrl)
         //This can be fixed if we make our partials directives
         ngtemplates: {
             skillsModule: {
@@ -253,21 +253,42 @@ module.exports = function (grunt) {
             dist: {},
             server: { options: { debugInfo: true } }
         },
-
+        concat: {
+            //ordering is crucial, concat according to the html ordering
+            '<%= yeoman.dist %>/app/scripts/main.js': [
+                '<%= yeoman.app %>/components/jquery/jquery.min.js',
+                '<%= yeoman.app %>/components/angular/angular.min.js',
+                '<%= yeoman.app %>/scripts/lib/jquery-ui.min.js',
+                '<%= yeoman.app %>/scripts/lib/angular-dragdrop.min.js',
+                '<%= yeoman.app %>/scripts/lib/ui-bootstrap-tpls-0.6.0.js',
+                '<%= yeoman.dist %>/app/scripts/main.min.js'
+            ]
+        },
         uglify: {
             dist: {
+                options: {
+                    beautify: false,
+                    mangle: false
+                },
+                //'output':[input,input]
+                //do not minify 3rd party minified files
+
                 files: {
-                    '<%= yeoman.dist %>/app/scripts/main.js': [
-                        '<%= yeoman.app %>/components/angular/angular.min.js',
-                        '<%= yeoman.app %>/components/jquery/jquery.min.js',
-                        '<%= yeoman.app %>/scripts/lib/*.js',
+                    '<%= yeoman.dist %>/app/scripts/main.min.js': [
+//                        '<%= yeoman.app %>/components/jquery/jquery.min.js',
+//                        '<%= yeoman.app %>/components/angular/angular.min.js',
+//                        '<%= yeoman.app %>scripts/lib/jquery-ui.min.js',
+//                        '<%= yeoman.app %>scripts/lib/angular-dragdrop.min.js',
+//                        '<%= yeoman.app %>scripts/lib/ui-bootstrap-tpls-0.6.0.js',
                         '<%= yeoman.app %>/scripts/app.js',
-                        '<%= yeoman.app %>/scripts/controllers/*.js',
-                        '<%= yeoman.app %>/scripts/filters/*.js',
                         '<%= yeoman.app %>/scripts/services/*.js',
+                        '<%= yeoman.app %>/scripts/filters/*.js',
+                        '<%= yeoman.app %>/scripts/controllers/*.js',
                         '<%= yeoman.app %>/scripts/directives/*.js'
                     ]
-                } } },
+                }
+            }
+        },
         useminPrepare: {
             html: '<%= yeoman.app %>/index.php',
             options: { dest: '<%= yeoman.dist %>' }
@@ -279,6 +300,9 @@ module.exports = function (grunt) {
         },
         imagemin: {
             dist: {
+                options: {
+                    optimizationLevel: 3
+                },
                 files: [
                     {
                         expand: true,
@@ -292,24 +316,27 @@ module.exports = function (grunt) {
         cssmin: {
             dist: {
                 files: {
-                    '<%= yeoman.dist %>/app/styles/main.css': [
-                        '.tmp/styles/{,*/}*.css',
-                        '<%= yeoman.app %>/styles/{,*/}*.css'
+                    '<%= yeoman.dist %>/app/styles/main.min.css': [
+                        '<%= yeoman.app %>/styles/app.css',
+                        '<%= yeoman.app %>/styles/bootstrap.css'
                     ]
                 }
             }
         },
+        //using htmlmin until i can get ngTemplates working
         htmlmin: {
             dist: {
                 options: {
                     removeComments: true,
-                    collapseWhitespace: true
+                    collapseWhitespace: true,
+                    beautify: true
 
                 },
+                //remove html to php once debugging
                 files: {
-                    '<%= yeoman.app %>/../dist/app/index.php': '<%= yeoman.app %>/index.php',
-                    '<%= yeoman.app %>/../dist/app/views/all-skills.php': '<%= yeoman.app %>/views/all-skills.php',
-                    '<%= yeoman.app %>/../dist/app/views/map-a-skill.php': '<%= yeoman.app %>/views/map-a-skill.php'
+                    '<%= yeoman.app %>/../dist/app/index.min.html': '<%= yeoman.app %>/index.php',
+                    '<%= yeoman.app %>/../dist/app/views/all-skills.html': '<%= yeoman.app %>/views/all-skills.php',
+                    '<%= yeoman.app %>/../dist/app/views/map-a-skill.html': '<%= yeoman.app %>/views/map-a-skill.php'
                 }
             }
         },
@@ -383,16 +410,16 @@ module.exports = function (grunt) {
     ]);
     grunt.registerTask('build', [
         'clean:dist',
-        'useminPrepare',
+       'useminPrepare',
         'imagemin',
-        'htmlmin:dist',
-        //currently broken
+        'htmlmin',
+        //currently broken, using htmlmin instead until it is fixed
         //'ngtemplates:skillsModule',
-        //'concat',
         'cssmin',
         'uglify',
-        'copy',
-        'usemin'
+        'concat',
+        'copy'
+//        'usemin'
     ]);
     grunt.registerTask('hint-tests', ['jshint:tests']);
     grunt.registerTask('hint-scripts', ['jshint:scripts']);

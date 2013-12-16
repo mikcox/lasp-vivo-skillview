@@ -5,7 +5,7 @@ filterMod.filter('QuickSearch', function () {
 	return function (haystack, needle, searchkey) {
 		var returnList = [];
 		if (!needle || needle.length < 1) {
-			return [];
+			return haystack;
 		} else if (needle === '$all') {
 			haystack.sort(function (a, b) {
 				if (a[searchkey].toUpperCase() < b[searchkey].toUpperCase()) {
