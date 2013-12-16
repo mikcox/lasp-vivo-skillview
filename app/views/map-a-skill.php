@@ -16,9 +16,9 @@
 				<pagination boundary-links="true" total-items="countPagedList(pagedPeople)" page="currentPagePeople" items-per-page="itemsPerPage" max-size="maxPages" class="pagination-small" previous-text="&lsaquo;" next-text="&rsaquo;" first-text="&laquo;" last-text="&raquo;"></pagination>
 				Results Per Page:
 				<div class="btn-group">
-					<button type="button" class="btn btn-danger" ng-model="itemsPerPage" btn-radio=15 ng-click="filterPeople();filterSkills()">15</button>
-					<button type="button" class="btn btn-danger" ng-model="itemsPerPage" btn-radio=25 ng-click="filterPeople();filterSkills()">25</button>
-					<button type="button" class="btn btn-danger" ng-model="itemsPerPage" btn-radio=50 ng-click="filterPeople();filterSkills()">50</button>
+					<button type="button" class="btn btn-success" ng-model="itemsPerPage" btn-radio=15 ng-click="filterPeople();filterSkills()">15</button>
+					<button type="button" class="btn btn-success" ng-model="itemsPerPage" btn-radio=25 ng-click="filterPeople();filterSkills()">25</button>
+					<button type="button" class="btn btn-success" ng-model="itemsPerPage" btn-radio=50 ng-click="filterPeople();filterSkills()">50</button>
 				</div>
 			</div>
 		</div>
@@ -73,12 +73,6 @@
 			</ul>
 			<div class="center" ng-hide="countPagedList(pagedSkills) < 1">
 				<pagination boundary-links="true" total-items="countPagedList(pagedSkills)" page="currentPageSkills" items-per-page="itemsPerPage" max-size="maxPages" class="pagination-small" previous-text="&lsaquo;" next-text="&rsaquo;" first-text="&laquo;" last-text="&raquo;"></pagination>
-				Results Per Page:
-				<div class="btn-group">
-					<button type="button" class="btn btn-danger" ng-model="itemsPerPage" btn-radio=15 ng-click="filterPeople();filterSkills()">15</button>
-					<button type="button" class="btn btn-danger" ng-model="itemsPerPage" btn-radio=25 ng-click="filterPeople();filterSkills()">25</button>
-					<button type="button" class="btn btn-danger" ng-model="itemsPerPage" btn-radio=50 ng-click="filterPeople();filterSkills()">50</button>
-				</div>
 			</div>
 		</div>
 </div>
