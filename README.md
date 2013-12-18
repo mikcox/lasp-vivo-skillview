@@ -1,62 +1,79 @@
-## Important note for local development in VM ##
+Evented I/O for V8 javascript.
+===
+
+### To build:
+
+Prerequisites (Unix only):
+
+    * GCC 4.2 or newer
+    * Python 2.6 or 2.7
+    * GNU Make 3.81 or newer
+    * libexecinfo (FreeBSD and OpenBSD only)
+
+Unix/Macintosh:
+
+    ./configure
+    make
+    make install
+
+If your python binary is in a non-standard location or has a
+non-standard name, run the following instead:
+
+    export PYTHON=/path/to/python
+    $PYTHON ./configure
+    make
+    make install
+
+Prerequisites (Windows only):
+
+    * Python 2.6 or 2.7
+    * Visual Studio 2010 or 2012
+
+Windows:
+
+    vcbuild nosign
+
+You can download pre-built binaries for various operating systems from
+[http://nodejs.org/download/](http://nodejs.org/download/).  The Windows
+and OS X installers will prompt you for the location to install to.
+The tarballs are self-contained; you can extract them to a local directory
+with:
+
+    tar xzf /path/to/node-<version>-<platform>-<arch>.tar.gz
+
+Or system-wide with:
+
+    cd /usr/local && tar --strip-components 1 -xzf \
+                         /path/to/node-<version>-<platform>-<arch>.tar.gz
+
+### To run the tests:
+
+Unix/Macintosh:
+
+    make test
+
+Windows:
+
+    vcbuild test
+
+### To build the documentation:
+
+    make doc
+
+### To read the documentation:
+
+    man doc/node.1
+
+Resources for Newcomers
 ---
-Note that a number of places in our code state to pull data from the SPARQL endpoint on lasp-db-dev.  You should run a global find and replace on the project after checking it out
-if you want to pull from your local SPARQL endpoint instead (changing https://lasp-db-dev:3030 to https://localhost:3030).  Note that the harvester code isn't currently included
-with the VM, so none of the submit or delete buttons will actually work, so for the time being it will always be safe to let the app pull from lasp-db-dev.
-
-## Grunt workflow ##
-- `grunt unit` for single run unit tests
-- `grunt e2e` for single run e2e tests
-- `grunt continuous` for both unit and e2e to run simultaneously in continous mode, use this in development
-- `grunt testall` to run unit then e2e in single run mode
-
-## Testing Architecture Overview ##
-To simplify and seperate our areas of testing concerns, and also keep us in a strict MVC/REST design, a good way to see our current testing approach is this. 
-- `unit = model/services` and anything that relates to formatting our model for delivery to the controller
-
-- `midway = controller/filters` so that when we call the controller, we can test for achieving the proper scope variables. We can also test the filters here.
-
-- `e2e = html elements/user input`
-
-## Naming Conventions ##
- ---
-- *Controllers* will be UpperCamelCase, as we can think of them as classes
-that instantiate our models and create scope variables `Ex: "SkillsCtrl"`
-- *Everything else* will be lowerCamelCase, `Ex: ng-app "timeExampleModule"`
-- *Files* will be seperated by - `Ex: skill-app-ctrl.js`
-- *Directories* will be seperated by _ `Ex: bower_components/`
-
-## Helpful Articles/Videos ##
----
-- [angular unit/midway/e2e testing] [5]
-- [angular unit testing] [1]
-- [angular rest api guide] [2]
-- [awesome markdown guide] [3]
-- [all of angular js in 60 min, good for review] [4]
-
-## Grunt/Bower/Yo guideline ##
----
-- the only global npm module should be the grunt cli, other wise use
-`--save-dev` for example, `npm install grunt-contrib --save-dev`, that way it will be placed on the package.json list for easy deployment
-- the Gruntfile is essentially composed of registered tasks where we call them through grunt.
-- Bower should manage it's own libaries/updates, we shouldn't place any of our own libraries in bower components
-
-
-[1]: http://andyshora.com/unit-testing-best-practices-angularjs.html
-[2]: http://weblogs.asp.net/dwahlin/archive/2013/08/16/using-an-angularjs-factory-to-interact-with-a-restful-service.aspx
-[3]: http://dillinger.io/
-[4]: http://www.youtube.com/watch?v=i9MHigUZKEM
-[5]: http://www.yearofmoo.com/2013/01/full-spectrum-testing-with-angularjs-and-karma.html
-
-## Deployment
-
-- Dependencies
-    $ sudo apt-get install php5-cgi
-    $ git clone git@github.com:revathskumar/yeoman-php.git
-    $ cd yeoman-php
-    $ npm install
-    $ bower install
-    $ grunt server
-
-
-
+  - [The Wiki](https://github.com/joyent/node/wiki)
+  - [nodejs.org](http://nodejs.org/)
+  - [how to install node.js and npm (node package manager)](http://www.joyent.com/blog/installing-node-and-npm/)
+  - [list of modules](https://github.com/joyent/node/wiki/modules)
+  - [searching the npm registry](http://npmjs.org/)
+  - [list of companies and projects using node](https://github.com/joyent/node/wiki/Projects,-Applications,-and-Companies-Using-Node)
+  - [node.js mailing list](http://groups.google.com/group/nodejs)
+  - irc chatroom, [#node.js on freenode.net](http://webchat.freenode.net?channels=node.js&uio=d4)
+  - [community](https://github.com/joyent/node/wiki/Community)
+  - [contributing](https://github.com/joyent/node/wiki/Contributing)
+  - [big list of all the helpful wiki pages](https://github.com/joyent/node/wiki/_pages)
