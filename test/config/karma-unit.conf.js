@@ -13,9 +13,10 @@ module.exports = function(config) {
     files: [
       'app/components/angular/angular.js',
       'app/components/jquery/jquery.min.js',
+      'app/components/angular-dragdrop/src/angular-dragdrop.js',
       'app/components/angular-mocks/angular-mocks.js',
-      'app/scripts/lib/ui-bootstrap-tpls-0.6.0.js',
-      'app/scripts/lib/angular-dragdrop.min.js',
+      'app/components/angular-bootstrap/ui-bootstrap-tpls.min.js',
+      'app/components/jquery-ui/ui/minified/jquery-ui.min.js',
       'app/scripts/app.js',
       'app/scripts/controllers/*.js',
       'app/scripts/directives/*.js',
