@@ -2,7 +2,7 @@
 	<div class="row-fluid" style="width:100%; align:center; text-align:center;">
 		<div style="width:25%; display:inline-block; text-align:left; vertical-align:top;">
 			<h2>People</h2>
-			<input type="text" class="input-large search-query" data-ng-model="personquery" placeholder="Search for a Person ($all = show all)" ng-change="searchPeople(personquery)"/><br/>
+			<input type="text" class="input-large search-query" data-ng-model="personquery" placeholder="Search for a Person" ng-change="searchPeople(personquery)"/><br/>
 			<p class="error">{{error}}</p>
 			<ul id="table1" class="people">
 				<p ng-show="peoplelist">People Found: {{countPagedList(pagedPeople)}}</p>
@@ -14,7 +14,7 @@
 			</ul>
 			<div class="center" ng-hide="countPagedList(pagedPeople) < 1">
 				<pagination boundary-links="true" total-items="countPagedList(pagedPeople)" page="currentPagePeople" items-per-page="itemsPerPage" max-size="maxPages" class="pagination-small" previous-text="&lsaquo;" next-text="&rsaquo;" first-text="&laquo;" last-text="&raquo;"></pagination>
-				Results Per Page:
+				<p>Results Per Page:</p>
 				<div style="width: 106px" class="btn-group" ng-click="filterPeople();filterSkills()">
 					<button id="btn-resize-15" type="button" class="btn btn-success" ng-model="itemsPerPage" btn-radio=15>15</button>
 					<button id="btn-resize-25" type="button" class="btn btn-success" ng-model="itemsPerPage" btn-radio=25>25</button>
@@ -57,7 +57,7 @@
 		</div>
 		<div style="width:25%; display:inline-block; text-align:left; vertical-align:top;">
 			<h2>Skills</h2>
-			<input type="text" class="input-large search-query" data-ng-model="skillquery" placeholder="Search for a Skill ($all = show all)" ng-change="searchSkills(skillquery)"/><br/>
+			<input type="text" class="input-large search-query" data-ng-model="skillquery" placeholder="Search for a Skill" ng-change="searchSkills(skillquery)"/><br/>
 			<p class="error">{{error}}</p>
 			<ul id="table2" class="skills">
 				<p ng-hide="!skilllist ||(skillquery && countPagedList(pagedSkills) == 0 && (addSkillList | filter: {skill: skillquery}).length == 0)">Skills Found: {{countPagedList(pagedSkills)}}</p>
