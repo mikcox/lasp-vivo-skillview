@@ -25,6 +25,18 @@ describe('All Skills view', function () {
     expect(repeater('tr').count()).toBe(1);
     expect(repeater('th').count()).toBe(8);
   });
+  it('builds lists according to the size selected at the bottom' , function() {
+  	//reset search box
+  	input('query').enter('');
+  	//should default to 15 (REMEMBER ADD 1 FOR HEADER)
+  	expect(repeater('tr').count()).toBe(16);
+  	element('#btn-resize-25').click();
+  	expect(repeater('tr').count()).toBe(26);
+  	element('#btn-resize-50').click();
+  	expect(repeater('tr').count()).toBe(51);
+  	element('#btn-resize-15').click();
+  	expect(repeater('tr').count()).toBe(16);
+  });
 });
 describe('Map A Skill view', function () {
   it('navigate to #/mapaskill', function () {
@@ -33,7 +45,7 @@ describe('Map A Skill view', function () {
   });
   it('should filter the personel list as user types into the search box', function () {
     input('personquery').enter('');
-    expect(repeater('#table1 div').count()).toBe(0);
+    expect(repeater('#table1 div').count()).toBe(15);
     input('personquery').enter('Ty');
     expect(repeater('#table1 div').count()).toBe(9);
     input('personquery').enter('Cox');
@@ -41,7 +53,7 @@ describe('Map A Skill view', function () {
   });
   it('should filter the skill list as user types into the search box', function () {
     input('skillquery').enter('');
-    expect(repeater('#table2 div').count()).toBe(0);
+    expect(repeater('#table2 div').count()).toBe(15);
     input('skillquery').enter('UNIX');
     expect(repeater('#table2 div').count()).toBe(1);
     input('skillquery').enter('intermediate');
@@ -63,6 +75,23 @@ describe('Map A Skill view', function () {
     element('#addNewSkillButton').click();
     //double-check that it got added locally
     expect(repeater('#table2 div').count()).toBe(1);
+  });
+  it('builds lists according to the size selected at the bottom' , function() {
+  	//reset search box
+  	input('skillquery').enter('');
+  	input('personquery').enter('');
+  	//should default to 15 (REMEMBER ADD 1 FOR HEADER)
+  	expect(repeater('#table1 div').count()).toBe(15);
+  	expect(repeater('#table2 div').count()).toBe(15);
+  	element('#btn-resize-25').click();
+  	expect(repeater('#table1 div').count()).toBe(25);
+  	expect(repeater('#table2 div').count()).toBe(25);
+  	element('#btn-resize-50').click();
+  	expect(repeater('#table1 div').count()).toBe(50);
+  	expect(repeater('#table2 div').count()).toBe(50);
+  	element('#btn-resize-15').click();
+  	expect(repeater('#table1 div').count()).toBe(15);
+  	expect(repeater('#table2 div').count()).toBe(15);
   });
 });
 describe('LEMR app navigation', function () {

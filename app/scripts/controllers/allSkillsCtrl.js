@@ -5,11 +5,9 @@ skillsModule.controller('allSkillsCtrl', [
 	'dataFactory',
 	'formatFactory',
 	function ($scope, $filter, dataFactory, formatFactory) {
-		$scope.filteredResults = [];
 		$scope.pagedResults = [];
 		$scope.currentPageResults = 1;
 		$scope.itemsPerPage = 15;
-		$scope.maxPages = 10;
 		$scope.urlBase = 'http://lasp-db-dev:3030/VIVO/query';
 		$scope.queryStr = 'PREFIX rdfs:<http://www.w3.org/2000/01/rdf-schema#> PREFIX foaf: <http://xmlns.com/foaf/0.1/> PREFIX vivo: <http://vivoweb.org/ontology/core#> PREFIX laspskills: <http://webdev1.lasp.colorado.edu:57529/laspskills#>  SELECT ?Person ?personuri ?Skill ?SkillLevel ?skillleveluri ?Office ?Email ?PhoneNumber ?Position ?Division ?Group WHERE { ?personuri a foaf:Person . ?personuri rdfs:label ?Person . ?personuri laspskills:hasSkill ?skillleveluri . ?skillleveluri rdfs:label ?SkillLevel . ?skillleveluri laspskills:levelForSkill ?skilluri . ?skilluri rdfs:label ?Skill . OPTIONAL{?personuri vivo:primaryEmail ?Email}. OPTIONAL{?personuri vivo:hasFacility ?roomuri . ?roomuri rdfs:label ?Office} . OPTIONAL{?personuri vivo:phoneNumber ?PhoneNumber} . OPTIONAL{?personuri vivo:personInPosition ?positionuri . ?positionuri rdfs:label ?Position . ?positionuri vivo:positionInOrganization ?groupuri . ?groupuri rdfs:label ?Group . ?groupuri vivo:subOrganizationWithin ?divisionuri . ?divisionuri rdfs:label ?Division }}';
 		$scope.getPersonnel = function () {
@@ -52,11 +50,10 @@ skillsModule.controller('allSkillsCtrl', [
 			return $scope.filterResults();
 		};
 		$scope.filterResults = function () {
-			$scope.filteredResults = $filter('ViewAllSearch')($scope.skills, $scope.query);
-			$scope.filteredResults = $filter('orderBy')($scope.filteredResults, $scope.orderProp, $scope.reverse);
-			//groupToPages() does not filter input
-			$scope.pagedResults = $scope.groupToPages($scope.filteredResults);
-			return $scope.filteredResults;
+			var filteredResults = [];
+			filteredResults = $filter('ViewAllSearch')($scope.skills, $scope.query);
+			filteredResults = $filter('orderBy')(filteredResults, $scope.orderProp, $scope.reverse);
+			$scope.pagedResults = $scope.groupToPages(filteredResults);
 		};
 		//Pagination Functions
 		//groupToPages() does not filter input
