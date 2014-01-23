@@ -10,12 +10,12 @@ describe('Unit Tests: mapASkillCtrl', function () {
     $dataFactory = dataFactory;
     $formatFactory = formatFactory;
     //expect a post for the person SPARQL query
-    $httpBackend.expectPOST('http://lasp-db-dev:3030/VIVO/query', 'query=' + escape('PREFIX rdfs:  <http://www.w3.org/2000/01/rdf-schema#> PREFIX foaf: <http://xmlns.com/foaf/0.1/> SELECT ?person ?personuri WHERE{ ?personuri a foaf:Person . ?personuri rdfs:label ?person}'), {
+    $httpBackend.expectPOST('http://lemr-dev:3030/VIVO/query', 'query=' + escape('PREFIX rdfs:  <http://www.w3.org/2000/01/rdf-schema#> PREFIX foaf: <http://xmlns.com/foaf/0.1/> SELECT ?person ?personuri WHERE{ ?personuri a foaf:Person . ?personuri rdfs:label ?person}'), {
       'Accept': 'application/sparql-results+json',
       'Content-type': 'application/x-www-form-urlencoded'
     }).respond(200);
     //expect a post for the skill SPARQL query
-    $httpBackend.expectPOST('http://lasp-db-dev:3030/VIVO/query', 'query=' + escape('PREFIX laspcms: <http://localhost:8080/laspcms#> PREFIX rdfs:  <http://www.w3.org/2000/01/rdf-schema#> PREFIX laspskills: <http://webdev1.lasp.colorado.edu:57529/laspskills#> SELECT ?skill ?skilllevel ?skillleveluri WHERE{?skillleveluri a laspskills:SkillLevel . ?skillleveluri laspskills:levelForSkill ?skilluri . OPTIONAL{?skillleveluri laspcms:uniqueScoreID ?scoreid} . ?skilluri rdfs:label ?skill . ?skillleveluri rdfs:label ?skilllevel} ORDER BY asc(?skill) asc(?scoreid)'), {
+    $httpBackend.expectPOST('http://lemr-dev:3030/VIVO/query', 'query=' + escape('PREFIX laspcms: <http://localhost:8080/laspcms#> PREFIX rdfs:  <http://www.w3.org/2000/01/rdf-schema#> PREFIX laspskills: <http://webdev1.lasp.colorado.edu:57529/laspskills#> SELECT ?skill ?skilllevel ?skillleveluri WHERE{?skillleveluri a laspskills:SkillLevel . ?skillleveluri laspskills:levelForSkill ?skilluri . OPTIONAL{?skillleveluri laspcms:uniqueScoreID ?scoreid} . ?skilluri rdfs:label ?skill . ?skillleveluri rdfs:label ?skilllevel} ORDER BY asc(?skill) asc(?scoreid)'), {
       'Accept': 'application/sparql-results+json',
       'Content-type': 'application/x-www-form-urlencoded'
     }).respond(200);
@@ -57,7 +57,7 @@ describe('Unit Tests: mapASkillCtrl', function () {
   });
   it('sent the SPARQL queries to the correct place', function () {
     //all assertion since $scope has already been created by the controller in beforeEach above
-    expect($scope.urlBase).toBe('http://lasp-db-dev:3030/VIVO/query');
+    expect($scope.urlBase).toBe('http://lemr-dev:3030/VIVO/query');
     expect($scope.personQueryStr).toBe('PREFIX rdfs:  <http://www.w3.org/2000/01/rdf-schema#> PREFIX foaf: <http://xmlns.com/foaf/0.1/> SELECT ?person ?personuri WHERE{ ?personuri a foaf:Person . ?personuri rdfs:label ?person}');
     expect($scope.skillQueryStr).toBe('PREFIX laspcms: <http://localhost:8080/laspcms#> PREFIX rdfs:  <http://www.w3.org/2000/01/rdf-schema#> PREFIX laspskills: <http://webdev1.lasp.colorado.edu:57529/laspskills#> SELECT ?skill ?skilllevel ?skillleveluri WHERE{?skillleveluri a laspskills:SkillLevel . ?skillleveluri laspskills:levelForSkill ?skilluri . OPTIONAL{?skillleveluri laspcms:uniqueScoreID ?scoreid} . ?skilluri rdfs:label ?skill . ?skillleveluri rdfs:label ?skilllevel} ORDER BY asc(?skill) asc(?scoreid)');
   });

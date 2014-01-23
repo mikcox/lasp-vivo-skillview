@@ -11,7 +11,8 @@ skillsModule.controller('mapASkillCtrl', [
 		$scope.addSkillList = [];
 		$scope.currentPagePeople = 1;
 		$scope.currentPageSkills = 1;
-		$scope.urlBase = 'http://lasp-db-dev:3030/VIVO/query';
+		//$scope.urlBase = 'http://lasp-db-dev:3030/VIVO/query';
+		$scope.urlBase = 'http://lemr-dev:3030/VIVO/query';
 		function getPersonnel() {
 			$scope.personQueryStr = 'PREFIX rdfs:  <http://www.w3.org/2000/01/rdf-schema#> PREFIX foaf: <http://xmlns.com/foaf/0.1/> SELECT ?person ?personuri WHERE{ ?personuri a foaf:Person . ?personuri rdfs:label ?person}';
 			dataFactory.getSPARQLQuery($scope.urlBase, $scope.personQueryStr).success(function (data) {
