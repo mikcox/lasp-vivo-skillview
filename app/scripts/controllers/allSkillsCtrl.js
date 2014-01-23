@@ -8,7 +8,8 @@ skillsModule.controller('allSkillsCtrl', [
 		$scope.pagedResults = [];
 		$scope.currentPageResults = 1;
 		$scope.itemsPerPage = 15;
-		$scope.urlBase = 'http://lasp-db-dev:3030/VIVO/query';
+		//$scope.urlBase = 'http://lasp-db-dev:3030/VIVO/query';
+		$scope.urlBase = 'http://lemr-dev:3030/VIVO/query';
 		$scope.queryStr = 'PREFIX rdfs:<http://www.w3.org/2000/01/rdf-schema#> PREFIX foaf: <http://xmlns.com/foaf/0.1/> PREFIX vivo: <http://vivoweb.org/ontology/core#> PREFIX laspskills: <http://webdev1.lasp.colorado.edu:57529/laspskills#>  SELECT ?Person ?personuri ?Skill ?SkillLevel ?skillleveluri ?Office ?Email ?PhoneNumber ?Position ?Division ?Group WHERE { ?personuri a foaf:Person . ?personuri rdfs:label ?Person . ?personuri laspskills:hasSkill ?skillleveluri . ?skillleveluri rdfs:label ?SkillLevel . ?skillleveluri laspskills:levelForSkill ?skilluri . ?skilluri rdfs:label ?Skill . OPTIONAL{?personuri vivo:primaryEmail ?Email}. OPTIONAL{?personuri vivo:hasFacility ?roomuri . ?roomuri rdfs:label ?Office} . OPTIONAL{?personuri vivo:phoneNumber ?PhoneNumber} . OPTIONAL{?personuri vivo:personInPosition ?positionuri . ?positionuri rdfs:label ?Position . ?positionuri vivo:positionInOrganization ?groupuri . ?groupuri rdfs:label ?Group . ?groupuri vivo:subOrganizationWithin ?divisionuri . ?divisionuri rdfs:label ?Division }}';
 		$scope.getPersonnel = function () {
 			dataFactory.getSPARQLQuery($scope.urlBase, $scope.queryStr).success(function (data) {
