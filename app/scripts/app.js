@@ -1,10 +1,7 @@
 'use strict';
 
 /* App Module */
-var skillsModule = angular.module('skillsModule',
-    [ 'ngDragDrop',
-        'mapaskillFilters',
-        'ui.bootstrap']); //dependencies go inside the square brackets
+var skillsModule = angular.module('skillsModule', [ 'ngDragDrop', 'mapaskillFilters', 'ui.bootstrap', 'ngRoute']); //dependencies go inside the square brackets
 
 skillsModule.config(function ($routeProvider, $httpProvider) {
     $routeProvider. //this controls navigation within our app
@@ -12,7 +9,7 @@ skillsModule.config(function ($routeProvider, $httpProvider) {
         when('/mapaskill', { controller: 'mapASkillCtrl', templateUrl: 'views/map-a-skill.php' }).
         otherwise({ redirectTo: '/' });
 
-//enable crossdomain requests
+//enable cross domain requests
     $httpProvider.defaults.withCredentials = true;
     delete $httpProvider.defaults.headers.common["X-Requested-With"];
     delete $httpProvider.defaults.headers.post["Content-Type"];

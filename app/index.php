@@ -33,9 +33,10 @@
             <h3>Powered By</h3>
             <a href="http://lemr.lasp.colorado.edu">LEMR (The LASP Extended Metadata Repository)</a> and <a href="http://angularjs.org/"><img src="images/AngularJS-small.png"/></a>
         </footer>
-        <script src="components/jquery/jquery.js"></script>
+        <script src="components/jquery/dist/jquery.js"></script>
         <script src="components/jquery-ui/ui/minified/jquery-ui.min.js"></script>
         <script src="components/angular/angular.min.js"></script>
+        <script src="components/angular-route/angular-route.js"></script>
         <script src="components/angular-bootstrap/ui-bootstrap-tpls.js"></script>
         <script src="components/angular-dragdrop/src/angular-dragdrop.js"></script>
         <script src="scripts/app.js"></script>
