@@ -11,6 +11,16 @@ skillsModule.factory('dataFactory', function ($http) {
 			}
 		});
 	};
+	dataFactory.submitSPARQLUpdate = function (urlBase, queryStr) {
+		var query = 'query=' + escape(queryStr);
+		return $http.post(urlBase, query, {
+			headers: {
+				'update':query,
+				'email': 'vivoroot@mydomain.edu',
+				'password': 'application/x-www-form-urlencoded'
+			}
+		});
+	};
 	return dataFactory;
 });
 
