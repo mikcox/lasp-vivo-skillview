@@ -13,7 +13,8 @@
 				</li>
 			</ul>
 			<div class="center" ng-hide="countPagedList(pagedPeople) < 1">
-				<pagination boundary-links="true" total-items="countPagedList(pagedPeople)" page="currentPagePeople" items-per-page="itemsPerPage" max-size="maxPages" class="pagination-small" previous-text="&lsaquo;" next-text="&rsaquo;" first-text="&laquo;" last-text="&raquo;"></pagination>
+				<pagination boundary-links="true" total-items="countPagedList(pagedPeople)" page="currentPagePeople" items-per-page="itemsPerPage" max-size="maxPages"
+				class="pagination-small" rotate="false" previous-text="&lsaquo;" next-text="&rsaquo;" first-text="&laquo;" last-text="&raquo;"></pagination>
 				<p>Results Per Page:</p>
 				<div style="width: 106px" class="btn-group" ng-click="filterPeople();filterSkills()">
 					<button id="btn-resize-15" type="button" class="btn btn-success" ng-model="itemsPerPage" btn-radio=15>15</button>
@@ -72,7 +73,8 @@
 				</li>
 			</ul>
 			<div class="center" ng-hide="countPagedList(pagedSkills) < 1">
-				<pagination boundary-links="true" total-items="countPagedList(pagedSkills)" page="currentPageSkills" items-per-page="itemsPerPage" max-size="maxPages" class="pagination-small" previous-text="&lsaquo;" next-text="&rsaquo;" first-text="&laquo;" last-text="&raquo;"></pagination>
+				<pagination boundary-links="true" total-items="countPagedList(pagedSkills)" page="currentPageSkills" items-per-page="itemsPerPage"
+				max-size="maxPages" class="pagination-small" rotate="false" previous-text="&lsaquo;" next-text="&rsaquo;" first-text="&laquo;" last-text="&raquo;"></pagination>
 			</div>
 		</div>
 </div>

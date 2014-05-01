@@ -11,6 +11,7 @@ skillsModule.controller('mapASkillCtrl', [
 		$scope.addSkillList = [];
 		$scope.currentPagePeople = 1;
 		$scope.currentPageSkills = 1;
+		$scope.maxPages = 10;
 		//$scope.urlBase = 'http://lasp-db-dev:3030/VIVO/query';
 		$scope.urlBase = 'http://lemr-dev:3030/VIVO/query';
 		function getPersonnel() {

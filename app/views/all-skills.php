@@ -9,7 +9,10 @@
 			<div>
 				<!--Body content-->
 				<p class="error">{{error}}</p>
-				<p ng-hide="skills"> Loading...</p>
+				<p ng-hide="skills" style="text-align:center;"> 
+					<img src="images/loading.gif"/><br>
+					Loading...
+				</p>
 				<table ng-table class="table" ng-show="skills">
 					<th class="columnHeader" ng-class="sortingClass('Person')" ng-click="changeSorting('Person')"> Name </th>
 					<th class="columnHeader" ng-class="sortingClass('Skill')" ng-click="changeSorting('Skill')"> Skill </th>
@@ -48,7 +51,8 @@
 					</tr>
 				</table>
 				<div ng-hide="!skills" class="center">
-					<pagination boundary-links="true" total-items="countPagedList(pagedResults)" page="currentPageResults" items-per-page="itemsPerPage" max-size="maxPages" class="pagination-small" previous-text="&lsaquo;" next-text="&rsaquo;" first-text="&laquo;" last-text="&raquo;"></pagination>
+					<pagination boundary-links="true" total-items="countPagedList(pagedResults)" page="currentPageResults" items-per-page="itemsPerPage" max-size="maxPages"
+					class="pagination-small" rotate="false" previous-text="&lsaquo;" next-text="&rsaquo;" first-text="&laquo;" last-text="&raquo;"></pagination>
 					<div style="width: 106px" class="btn-group" ng-click="filterResults()">
 						<button id="btn-resize-15" type="button" class="btn btn-success" ng-model="itemsPerPage" btn-radio=15>15</button>
 						<button id="btn-resize-25" type="button" class="btn btn-success" ng-model="itemsPerPage" btn-radio=25>25</button>

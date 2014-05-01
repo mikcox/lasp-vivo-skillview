@@ -418,8 +418,8 @@ module.exports = function (grunt) {
         'cssmin',
         'uglify',
         'concat',
-        'copy'
-//        'usemin'
+        'copy',
+        'usemin'
     ]);
     grunt.registerTask('hint-tests', ['jshint:tests']);
     grunt.registerTask('hint-scripts', ['jshint:scripts']);
