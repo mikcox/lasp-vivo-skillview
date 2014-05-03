@@ -89,21 +89,32 @@ skillsModule.factory('formatFactory', function () {
 						//add the cursor's row to the list of duplicate indexes
 						duplicateRows.push(cursor);
 						//concatenate the results from the duplicate row with the temp variable
-						if (data.results.bindings[i].Office.value !== data.results.bindings[cursor].Office.value) {
-							tmpOffice = tmpOffice + ', ' + data.results.bindings[cursor].Office.value;
+						if(data.results.bindings[i].Office != null){
+							if (data.results.bindings[i].Office.value !== data.results.bindings[cursor].Office.value) {
+								tmpOffice = tmpOffice + ', ' + data.results.bindings[cursor].Office.value;
+							}
 						}
-						if (data.results.bindings[i].PhoneNumber.value !== data.results.bindings[cursor].PhoneNumber.value) {
-							tmpPhone = tmpPhone + ', ' + data.results.bindings[cursor].PhoneNumber.value;
+						if(data.results.bindings[i].PhoneNumber != null){
+							if (data.results.bindings[i].PhoneNumber.value !== data.results.bindings[cursor].PhoneNumber.value) {
+								tmpPhone = tmpPhone + ', ' + data.results.bindings[cursor].PhoneNumber.value;
+							}
 						}
-						if (data.results.bindings[i].Position.value !== data.results.bindings[cursor].Position.value) {
-							tmpPosition = tmpPosition + ', ' + data.results.bindings[cursor].Position.value;
+						if(data.results.bindings[i].Position != null){
+							if (data.results.bindings[i].Position.value !== data.results.bindings[cursor].Position.value) {
+								tmpPosition = tmpPosition + ', ' + data.results.bindings[cursor].Position.value;
+							}
 						}
-						if (data.results.bindings[i].Division.value !== data.results.bindings[cursor].Division.value) {
-							tmpDivision = tmpDivision + ', ' + data.results.bindings[cursor].Division.value;
+						if(data.results.bindings[i].Division != null){
+							if (data.results.bindings[i].Division.value !== data.results.bindings[cursor].Division.value) {
+								tmpDivision = tmpDivision + ', ' + data.results.bindings[cursor].Division.value;
+							}
 						}
-						if (data.results.bindings[i].Group.value !== data.results.bindings[cursor].Group.value) {
-							tmpGroup = tmpGroup + ', ' + data.results.bindings[cursor].Group.value;
+						if(data.results.bindings[i].Group != null){
+							if (data.results.bindings[i].Group.value !== data.results.bindings[cursor].Group.value) {
+								tmpGroup = tmpGroup + ', ' + data.results.bindings[cursor].Group.value;
+							}
 						}
+						
 					}
 				}
 				//push the temp variables into our fixed list in pretty JSON format
