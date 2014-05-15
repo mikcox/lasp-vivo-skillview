@@ -11,6 +11,7 @@ skillsModule.controller('mapASkillCtrl', [
 		$scope.addSkillList = [];
 		$scope.currentPagePeople = 1;
 		$scope.currentPageSkills = 1;
+		$scope.maxPages = 5;
 		//$scope.urlBase = 'http://lasp-db-dev:3030/VIVO/query';
 		$scope.urlBase = 'http://lemr-dev:3030/VIVO/query';
 		function getPersonnel() {
@@ -75,7 +76,7 @@ skillsModule.controller('mapASkillCtrl', [
 			for (var i = 0; i < $scope.addPersonList.length; i++) {
 				for (var j = 0; j < $scope.addSkillList.length; j++) {
 					levelSelected = document.getElementById($scope.addSkillList[j].skill).selectedIndex;
-					if ($scope.addSkillList[j].levels[0].skillleveluri === 0) {
+					if ($scope.addSkillList[j].levels[0].skillleveluri === '0') {
 						addingNewSkill = true;
 						$scope.newSkillSubmitText += $scope.addPersonList[i].uri + ',';
 						$scope.newSkillSubmitText += $scope.addSkillList[j].skill + ',';

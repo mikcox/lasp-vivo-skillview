@@ -47,9 +47,9 @@ describe('Map A Skill view', function () {
     input('personquery').enter('');
     expect(repeater('#table1 div').count()).toBe(15);
     input('personquery').enter('Ty');
-    expect(repeater('#table1 div').count()).toBe(9);
+    expect(repeater('#table1 div').count()).toBe(13);
     input('personquery').enter('Cox');
-    expect(repeater('#table1 div').count()).toBe(1);
+    expect(repeater('#table1 div').count()).toBe(2);
   });
   it('should filter the skill list as user types into the search box', function () {
     input('skillquery').enter('');

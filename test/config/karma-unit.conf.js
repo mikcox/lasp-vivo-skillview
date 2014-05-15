@@ -11,18 +11,15 @@ module.exports = function(config) {
 
     // list of files / patterns to load in the browser
     files: [
-      'app/components/angular/angular.js',
-      'app/components/jquery/dist/jquery.js',
-      'app/components/angular-dragdrop/src/angular-dragdrop.js',
-      'app/components/angular-route/angular-route.js',
-      'app/components/angular-mocks/angular-mocks.js',
-      'app/components/angular-bootstrap/ui-bootstrap-tpls.min.js',
-      'app/components/jquery-ui/ui/minified/jquery-ui.min.js',
-      'app/scripts/app.js',
+      'app/bower_components/jquery/dist/jquery.js',
+      'app/bower_components/angular/angular.js',
+      'app/bower_components/angular-route/angular-route.js',
+      'app/bower_components/angular-bootstrap/ui-bootstrap-tpls.js',
+      'app/bower_components/jquery-ui/ui/jquery-ui.js',
+      'app/bower_components/angular-dragdrop/src/angular-dragdrop.js',
+      'app/bower_components/angular-mocks/angular-mocks.js',
+      'app/scripts/*.js',
       'app/scripts/controllers/*.js',
-      'app/scripts/directives/*.js',
-      'app/scripts/filters/*.js',
-      'app/scripts/services/*.js',
       'test/unit/*.js'
     ],
 
@@ -38,7 +35,7 @@ module.exports = function(config) {
     colors: true,
 
     // If browser does not capture in a given timeout [ms], kill it
-    captureTimeout: 10000,
+    captureTimeout: 5000,
 
     // Start these browsers, currently available:
     // - Chrome
