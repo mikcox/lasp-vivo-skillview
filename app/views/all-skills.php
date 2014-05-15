@@ -9,7 +9,10 @@
 			<div>
 				<!--Body content-->
 				<p class="error">{{error}}</p>
-				<p ng-hide="skills"> Loading...</p>
+				<p ng-hide="skills" style="text-align:center;"> 
+					<img src="images/loading.gif"/><br>
+					Loading...
+				</p>
 				<table ng-table class="table" ng-show="skills">
 					<th class="columnHeader" ng-class="sortingClass('Person')" ng-click="changeSorting('Person')"> Name </th>
 					<th class="columnHeader" ng-class="sortingClass('Skill')" ng-click="changeSorting('Skill')"> Skill </th>
