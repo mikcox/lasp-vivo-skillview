@@ -73,13 +73,8 @@
 				</li>
 			</ul>
 			<div class="center" ng-hide="countPagedList(pagedSkills) < 1">
-<<<<<<< HEAD
 				<pagination total-items="countPagedList(pagedSkills)" page="currentPageSkills" items-per-page="itemsPerPage" max-size="maxPages" rotate="false"
 											class="pagination-small" previous-text="&lsaquo;" next-text="&rsaquo;" first-text="&laquo;" last-text="&raquo;"></pagination>
-=======
-				<pagination boundary-links="true" total-items="countPagedList(pagedSkills)" page="currentPageSkills" items-per-page="itemsPerPage"
-				max-size="maxPages" class="pagination-small" rotate="false" previous-text="&lsaquo;" next-text="&rsaquo;" first-text="&laquo;" last-text="&raquo;"></pagination>
->>>>>>> 8a3a0906148dd2e37e76b464dc4b3b5d0c873a2d
 			</div>
 		</div>
 </div>
