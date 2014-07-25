@@ -1,0 +1,2 @@
+personuri,leveluri,skill
+http://lemr-dev.lasp.colorado.edu:8080/vivo/individual/n255311939,http://webdev1.lasp.colorado.edu:57529/vivo/individual/n439479224,AMCharts
