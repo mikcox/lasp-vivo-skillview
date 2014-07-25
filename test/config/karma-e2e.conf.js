@@ -12,18 +12,15 @@ module.exports = function(config) {
   // list of files / patterns to load in the browser
     files: [
       'test/e2e/*.js',
-      'app/scripts/app.js',
+      'app/scripts/*.js',
       'app/scripts/controllers/*.js',
-      'app/scripts/directives/*.js',
-      'app/scripts/filters/*.js',
-      'app/scripts/services/*.js'
     ],
 
     // list of files / patterns to exclude
     exclude: [],
 
     // web server port
-    port: 9998,
+    port: 8000,
 
     // level of logging
     // possible values: LOG_DISABLE || LOG_ERROR || LOG_WARN || LOG_INFO || LOG_DEBUG
