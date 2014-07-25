@@ -2,9 +2,10 @@
 skillsModule.controller('mapASkillCtrl', [
 	'$scope',
 	'$filter',
+	'$http',
 	'dataFactory',
 	'formatFactory',
-	function ($scope, $filter, dataFactory, formatFactory) {
+	function ($scope, $filter, $http, dataFactory, formatFactory) {
 		$scope.filteredPeople = [];
 		$scope.filteredSkills = [];
 		$scope.addPersonList = [];
@@ -100,6 +101,7 @@ skillsModule.controller('mapASkillCtrl', [
 						$scope.SubmitText += $scope.addPersonList[i].uri + ',';
 						$scope.SubmitText += $scope.addSkillList[j].levels[levelSelected].skillleveluri + ',';
 						$scope.SubmitText += $scope.addSkillList[j].skill + '\n';
+						$scope.SubmitTextPublic = $scope.SubmitText;
 					}
 				}
 			}
@@ -134,12 +136,19 @@ skillsModule.controller('mapASkillCtrl', [
 				data: { SubmitText: $scope.newSkillSubmitText }
 			});
 		}
-		function ajaxSubmitExistingSkillMap() {
+		/*function ajaxSubmitExistingSkillMap() {
 			$.ajax({
 				type: 'POST',
 				url: 'scripts/button_actions/submitButtonAction.php',
 				data: { SubmitText: $scope.SubmitText }
 			});
+		}*/
+		function ajaxSubmitExistingSkillMap() {
+            $.ajax({
+                type: 'POST',
+                url: 'scripts/button_actions/submit_button_action_public.php',
+                data: { SubmitTextPublic: $scope.SubmitTextPublic }
+            });
 		}
 		//Add and Remove Button Functions
 		$scope.removeFromAddPerson = function (index) {
