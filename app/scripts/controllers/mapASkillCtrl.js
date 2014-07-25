@@ -12,15 +12,29 @@ skillsModule.controller('mapASkillCtrl', [
 		$scope.currentPagePeople = 1;
 		$scope.currentPageSkills = 1;
 		$scope.maxPages = 5;
-		//$scope.urlBase = 'http://lasp-db-dev:3030/VIVO/query';
-		$scope.urlBase = 'http://lemr-dev:3030/VIVO/query';
+		$scope.urlBase = 'http://lasp-db-dev:3030/VIVO/query';
+		$scope.UFurlBase = 'http://sparql.vivo.ufl.edu/VIVO/query';
+		$scope.LASPCachedJSONLocation = 'cached_json/LASP_personnel.json';
 		function getPersonnel() {
-			$scope.personQueryStr = 'PREFIX rdfs:  <http://www.w3.org/2000/01/rdf-schema#> PREFIX foaf: <http://xmlns.com/foaf/0.1/> SELECT ?person ?personuri WHERE{ ?personuri a foaf:Person . ?personuri rdfs:label ?person}';
-			dataFactory.getSPARQLQuery($scope.urlBase, $scope.personQueryStr).success(function (data) {
+		    $scope.personQueryStr = 'PREFIX rdfs:  <http://www.w3.org/2000/01/rdf-schema#> PREFIX foaf: <http://xmlns.com/foaf/0.1/> SELECT ?person ?personuri WHERE{ ?personuri a foaf:Person . ?personuri rdfs:label ?person}';
+			$scope.UFpersonQueryStr = 'PREFIX rdfs:  <http://www.w3.org/2000/01/rdf-schema#> PREFIX foaf: <http://xmlns.com/foaf/0.1/> PREFIX ufVivo: <http://vivo.ufl.edu/ontology/vivo-ufl/> SELECT ?person ?personuri WHERE{ ?personuri ufVivo:homeDept <http://vivo.ufl.edu/individual/n391868> . ?personuri a foaf:Person . ?personuri rdfs:label ?person}';
+			// Get UF's real vivo people
+		    dataFactory.getSPARQLQuery($scope.UFurlBase, $scope.UFpersonQueryStr).success(function (data) {
 				$scope.error = '';
+				// If we got UF's real vivo output, get LASP's cached people
 				if (data) {
-					$scope.peoplelist = formatFactory.formatPersonnelList(data);
-					$scope.filterPeople();
+				    $scope.peoplelist = data;
+				    for ( var i = 0; i < $scope.peoplelist.results.bindings.length; i++ ) {
+				        $scope.peoplelist.results.bindings[i].person.value = $scope.peoplelist.results.bindings[i].person.value + " (UF)"
+				    }
+				    dataFactory.getCachedJSON( $scope.LASPCachedJSONLocation ).success(function (data) {
+				        for ( var i = 0; i < data.results.bindings.length; i++ ) {
+	                        data.results.bindings[i].person.value = data.results.bindings[i].person.value + " (LASP)"
+	                    }
+				        $scope.peoplelist.results.bindings = $scope.peoplelist.results.bindings.concat( data.results.bindings );
+				        $scope.peoplelist = formatFactory.formatPersonnelList( $scope.peoplelist );
+	                    $scope.filterPeople();
+				    });
 				}
 			}).error(function (data, status) {
 				$scope.error = 'Fuseki person query returned: ' + status;

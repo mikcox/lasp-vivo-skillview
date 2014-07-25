@@ -63,7 +63,7 @@
         <script src="scripts/app.js"></script>
         <script src="scripts/controllers/allSkillsCtrl.js"></script>
         <script src="scripts/filters.js"></script>
-        <script src="scripts/factories.js"></script>
+        <script src="scripts/services/factories.js"></script>
         <script src="scripts/controllers/aboutModalCtrl.js"></script>
         <script src="scripts/controllers/mapASkillCtrl.js"></script>
         <!-- endbuild -->

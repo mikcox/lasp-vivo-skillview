@@ -21,6 +21,9 @@ skillsModule.factory('dataFactory', function ($http) {
 			}
 		});
 	};
+	dataFactory.getCachedJSON = function ( location ) {
+        return $http.get( location ); 
+	};
 	return dataFactory;
 });
 
@@ -139,6 +142,9 @@ skillsModule.factory('formatFactory', function () {
 	formatFactory.formatPersonnelList = function (data) {
 		var list = [];
 		for (var i = 0; i < data.results.bindings.length; i++) {
+		    if( typeof data.results.bindings[i].person === 'undefined'){
+		        alert(JSON.stringify(data.results.bindings[i]));
+		    }
 			list.push({
 				'person': data.results.bindings[i].person.value,
 				'uri': data.results.bindings[i].personuri.value
