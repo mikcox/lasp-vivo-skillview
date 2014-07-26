@@ -43,19 +43,26 @@ skillsModule.controller('allSkillsCtrl', [
 		$scope.DeleteButtonPressed = function (name, personuri, skill, skilluri) {
 			var moveon = confirm('Delete ' + name + '\'s ' + skill + ' skill?');
 			if (moveon) {
-				alert('Deleting ' + name + '\'s ' + skill + ' skill.  Wait a moment and refresh your page to see the change.');
-				ajaxSubmitDeletion(personuri, skilluri);
+				ajaxSubmitDeletion(name, personuri, skilluri);
+				alert('Deleted ' + name + '\'s ' + skill + ' skill.');
+				location.reload();
 			} else {
 				return;
 			}
 		};
-		function ajaxSubmitDeletion(personuri, skilluri) {
-			var deletionText = 'personuri,leveluri\n';
+		function ajaxSubmitDeletion(person, personuri, skilluri) {
+			/*var deletionText = 'personuri,leveluri\n';
 			deletionText += personuri + ',' + skilluri + '\n';
 			$.ajax({
 				type: 'POST',
 				url: 'scripts/button_actions/removebuttonaction.php',
 				data: { DeletionText: deletionText }
+			});*/
+			//deletionText = '';
+			$.ajax({
+				type: 'POST',
+				url: 'scripts/button_actions/remove_button_action_public.php',
+				data: { person: person, personuri: personuri, skilluri: skilluri }
 			});
 		}
 		//search functions

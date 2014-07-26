@@ -111,7 +111,9 @@ skillsModule.controller('mapASkillCtrl', [
 					} else {
 						addingExistingSkill = true;
 						$scope.SubmitTextPublic += '{'+
-							'"Person": { "type": "literal" , "value": "'+$scope.addPersonList[i].person+'" } ,'+
+							'"Person": { "type": "literal" , "value": "'+
+							$scope.addPersonList[i].person.substring( 0, $scope.addPersonList[i].person.lastIndexOf(' ') )+
+							'" } ,'+
 					        '"personuri": { "type": "uri" , "value": "http://tmpURI" } ,'+
 					        '"Skill": { "type": "literal" , "value": "'+$scope.addSkillList[j].skill+'" } ,'+
 					        '"SkillLevel": { "type": "literal" , "value": "'+$scope.addSkillList[j].levels[levelSelected].skilllevel+'" } ,'+
@@ -146,7 +148,6 @@ skillsModule.controller('mapASkillCtrl', [
 				ajaxSubmitNewSkillMap();
 			}
 			if (addingExistingSkill) {
-				alert( $scope.SubmitTextPublic );
 				ajaxSubmitExistingSkillMap();
 			}
 			
