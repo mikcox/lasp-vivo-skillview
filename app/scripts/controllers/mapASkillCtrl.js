@@ -15,7 +15,8 @@ skillsModule.controller('mapASkillCtrl', [
 		$scope.maxPages = 5;
 		$scope.urlBase = 'http://lasp-db-dev:3030/VIVO/query';
 		$scope.UFurlBase = 'http://sparql.vivo.ufl.edu/VIVO/query';
-		$scope.LASPCachedJSONLocation = 'cached_json/LASP_personnel.json';
+		$scope.LASPpersonnelLocation = 'cached_json/LASP_personnel.json';
+		$scope.LASPskillsLocation = 'cached_json/LASP_skills.json';
 		function getPersonnel() {
 		    $scope.personQueryStr = 'PREFIX rdfs:  <http://www.w3.org/2000/01/rdf-schema#> PREFIX foaf: <http://xmlns.com/foaf/0.1/> SELECT ?person ?personuri WHERE{ ?personuri a foaf:Person . ?personuri rdfs:label ?person}';
 			$scope.UFpersonQueryStr = 'PREFIX rdfs:  <http://www.w3.org/2000/01/rdf-schema#> PREFIX foaf: <http://xmlns.com/foaf/0.1/> PREFIX ufVivo: <http://vivo.ufl.edu/ontology/vivo-ufl/> SELECT ?person ?personuri WHERE{ ?personuri ufVivo:homeDept <http://vivo.ufl.edu/individual/n391868> . ?personuri a foaf:Person . ?personuri rdfs:label ?person}';
@@ -28,7 +29,7 @@ skillsModule.controller('mapASkillCtrl', [
 				    for ( var i = 0; i < $scope.peoplelist.results.bindings.length; i++ ) {
 				        $scope.peoplelist.results.bindings[i].person.value = $scope.peoplelist.results.bindings[i].person.value + " (UF)"
 				    }
-				    dataFactory.getCachedJSON( $scope.LASPCachedJSONLocation ).success(function (data) {
+				    dataFactory.getCachedJSON( $scope.LASPpersonnelLocation ).success(function (data) {
 				        for ( var i = 0; i < data.results.bindings.length; i++ ) {
 	                        data.results.bindings[i].person.value = data.results.bindings[i].person.value + " (LASP)"
 	                    }
@@ -42,6 +43,7 @@ skillsModule.controller('mapASkillCtrl', [
 			});
 		}
 		function getSkills() {
+			/*
 			$scope.skillQueryStr = 'PREFIX laspcms: <http://localhost:8080/laspcms#> PREFIX rdfs:  <http://www.w3.org/2000/01/rdf-schema#> PREFIX laspskills: <http://webdev1.lasp.colorado.edu:57529/laspskills#> SELECT ?skill ?skilllevel ?skillleveluri WHERE{?skillleveluri a laspskills:SkillLevel . ?skillleveluri laspskills:levelForSkill ?skilluri . OPTIONAL{?skillleveluri laspcms:uniqueScoreID ?scoreid} . ?skilluri rdfs:label ?skill . ?skillleveluri rdfs:label ?skilllevel} ORDER BY asc(?skill) asc(?scoreid)';
 			dataFactory.getSPARQLQuery($scope.urlBase, $scope.skillQueryStr).success(function (data) {
 				$scope.error = '';
@@ -50,7 +52,16 @@ skillsModule.controller('mapASkillCtrl', [
 					$scope.filterSkills();
 				}
 			}).error(function (data, status) {
-				$scope.error = 'Fuseki person query returned: ' + status;
+				$scope.error = 'Fuseki skill query returned: ' + status;
+			});*/
+			dataFactory.getCachedJSON( $scope.LASPskillsLocation ).success(function (data) {
+				$scope.error = '';
+				if (data) {
+					$scope.skilllist = formatFactory.formatSkillList( data );
+					$scope.filterSkills();
+				}
+			}).error(function ( data, status ) {
+				$scope.error = 'Fuseki skill query returned: ' + status;
 			});
 		}
 		//Call initialization functions
@@ -83,7 +94,8 @@ skillsModule.controller('mapASkillCtrl', [
 				alert('Please select at least one skill.');
 				return;
 			}
-			$scope.SubmitText = 'personuri,leveluri,skill\n';
+			//$scope.SubmitText = 'personuri,leveluri,skill\n';
+			$scope.SubmitTextPublic = '';
 			$scope.newSkillSubmitText = 'personuri,skillname,level\n';
 			var levelSelected = 0;
 			var addingNewSkill = false;
@@ -98,13 +110,29 @@ skillsModule.controller('mapASkillCtrl', [
 						$scope.newSkillSubmitText += $scope.addSkillList[j].levels[levelSelected].skillleveluri + '\n';
 					} else {
 						addingExistingSkill = true;
+						$scope.SubmitTextPublic += '{'+
+							'"Person": { "type": "literal" , "value": "'+$scope.addPersonList[i].person+'" } ,'+
+					        '"personuri": { "type": "uri" , "value": "http://tmpURI" } ,'+
+					        '"Skill": { "type": "literal" , "value": "'+$scope.addSkillList[j].skill+'" } ,'+
+					        '"SkillLevel": { "type": "literal" , "value": "'+$scope.addSkillList[j].levels[levelSelected].skilllevel+'" } ,'+
+					        '"skillleveluri": { "type": "uri" , "value": "'+$scope.addSkillList[j].levels[levelSelected].skillleveluri+'" } ,'+
+					        '"Office": { "type": "literal" , "value": "" } ,'+
+					        '"Email": { "type": "literal" , "value": "" } ,'+
+					        '"PhoneNumber": { "type": "literal" , "value": "" } ,'+
+					        '"Position": { "type": "literal" , "value": "" } ,'+
+					        '"Division": { "type": "literal" , "value": "" } ,'+
+					        '"Group": { "type": "literal" , "value": "" }'+
+					      '} ,';
+						/*
 						$scope.SubmitText += $scope.addPersonList[i].uri + ',';
 						$scope.SubmitText += $scope.addSkillList[j].levels[levelSelected].skillleveluri + ',';
 						$scope.SubmitText += $scope.addSkillList[j].skill + '\n';
 						$scope.SubmitTextPublic = $scope.SubmitText;
+						*/
 					}
 				}
 			}
+			$scope.SubmitTextPublic = $scope.SubmitTextPublic.substring( 0, $scope.SubmitTextPublic.length-1 ) + ']';
 			if (addingNewSkill) {
 				var moveOn = confirm('Warning: You are about to add a new skill to the database that didn\'t exist before.  Only click \'OK\' if you are SURE that this skill (or any alternate way of spelling it) doesn\'t already exist in the database.');
 				if (!moveOn) {
@@ -118,8 +146,13 @@ skillsModule.controller('mapASkillCtrl', [
 				ajaxSubmitNewSkillMap();
 			}
 			if (addingExistingSkill) {
+				alert( $scope.SubmitTextPublic );
 				ajaxSubmitExistingSkillMap();
 			}
+			
+			alert('New skill mapping added!');
+			location.reload();
+			/*
 			//wait 5 seconds and then display a success message (yes, this is a lie since the skill may or may not have actually been added by now)
 			setTimeout(function () {
 				document.getElementById('submitButtonDiv').innerHTML = 'Done. ';
@@ -128,6 +161,7 @@ skillsModule.controller('mapASkillCtrl', [
 				alert('New skill mapping added!');
 				location.reload();
 			}, 5000);
+			*/
 		};
 		function ajaxSubmitNewSkillMap() {
 			$.ajax({

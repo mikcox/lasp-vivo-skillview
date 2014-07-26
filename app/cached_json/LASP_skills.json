@@ -1,0 +1,3359 @@
+{
+  "head": {
+    "vars": [ "skill" , "skilllevel" , "skillleveluri" ]
+  } ,
+  "results": {
+    "bindings": [
+      {
+        "skill": { "type": "literal" , "value": "3D Modelling" } ,
+        "skilllevel": { "type": "literal" , "value": "3D Modelling (unranked)" } ,
+        "skillleveluri": { "type": "uri" , "value": "http://lemr-dev.lasp.colorado.edu:8080/vivo/individual/n1053687711" }
+      } ,
+      {
+        "skill": { "type": "literal" , "value": "3D Modelling" } ,
+        "skilllevel": { "type": "literal" , "value": "3D Modelling beginner" } ,
+        "skillleveluri": { "type": "uri" , "value": "http://lemr-dev.lasp.colorado.edu:8080/vivo/individual/n1062971602" }
+      } ,
+      {
+        "skill": { "type": "literal" , "value": "3D Modelling" } ,
+        "skilllevel": { "type": "literal" , "value": "3D Modelling intermediate" } ,
+        "skillleveluri": { "type": "uri" , "value": "http://lemr-dev.lasp.colorado.edu:8080/vivo/individual/n50761232" }
+      } ,
+      {
+        "skill": { "type": "literal" , "value": "3D Modelling" } ,
+        "skilllevel": { "type": "literal" , "value": "3D Modelling advanced" } ,
+        "skillleveluri": { "type": "uri" , "value": "http://lemr-dev.lasp.colorado.edu:8080/vivo/individual/n441929278" }
+      } ,
+      {
+        "skill": { "type": "literal" , "value": "3D Modelling" } ,
+        "skilllevel": { "type": "literal" , "value": "3D Modelling guru" } ,
+        "skillleveluri": { "type": "uri" , "value": "http://lemr-dev.lasp.colorado.edu:8080/vivo/individual/n972051533" }
+      } ,
+      {
+        "skill": { "type": "literal" , "value": "AMCharts" } ,
+        "skilllevel": { "type": "literal" , "value": "AMCharts (unranked)" } ,
+        "skillleveluri": { "type": "uri" , "value": "http://lemr-dev.lasp.colorado.edu:8080/vivo/individual/n439479224" }
+      } ,
+      {
+        "skill": { "type": "literal" , "value": "AMCharts" } ,
+        "skilllevel": { "type": "literal" , "value": "AMCharts beginner" } ,
+        "skillleveluri": { "type": "uri" , "value": "http://lemr-dev.lasp.colorado.edu:8080/vivo/individual/n1269075514" }
+      } ,
+      {
+        "skill": { "type": "literal" , "value": "AMCharts" } ,
+        "skilllevel": { "type": "literal" , "value": "AMCharts intermediate" } ,
+        "skillleveluri": { "type": "uri" , "value": "http://lemr-dev.lasp.colorado.edu:8080/vivo/individual/n1115838072" }
+      } ,
+      {
+        "skill": { "type": "literal" , "value": "AMCharts" } ,
+        "skilllevel": { "type": "literal" , "value": "AMCharts advanced" } ,
+        "skillleveluri": { "type": "uri" , "value": "http://lemr-dev.lasp.colorado.edu:8080/vivo/individual/n2088524822" }
+      } ,
+      {
+        "skill": { "type": "literal" , "value": "AMCharts" } ,
+        "skilllevel": { "type": "literal" , "value": "AMCharts guru" } ,
+        "skillleveluri": { "type": "uri" , "value": "http://lemr-dev.lasp.colorado.edu:8080/vivo/individual/n1117711741" }
+      } ,
+      {
+        "skill": { "type": "literal" , "value": "Adobe Forms" } ,
+        "skilllevel": { "type": "literal" , "value": "Adobe Forms (unranked)" } ,
+        "skillleveluri": { "type": "uri" , "value": "http://lemr-dev.lasp.colorado.edu:8080/vivo/individual/n1143045369" }
+      } ,
+      {
+        "skill": { "type": "literal" , "value": "Adobe Forms" } ,
+        "skilllevel": { "type": "literal" , "value": "Adobe Forms beginner" } ,
+        "skillleveluri": { "type": "uri" , "value": "http://lemr-dev.lasp.colorado.edu:8080/vivo/individual/n1934609946" }
+      } ,
+      {
+        "skill": { "type": "literal" , "value": "Adobe Forms" } ,
+        "skilllevel": { "type": "literal" , "value": "Adobe Forms intermediate" } ,
+        "skillleveluri": { "type": "uri" , "value": "http://lemr-dev.lasp.colorado.edu:8080/vivo/individual/n981057267" }
+      } ,
+      {
+        "skill": { "type": "literal" , "value": "Adobe Forms" } ,
+        "skilllevel": { "type": "literal" , "value": "Adobe Forms advanced" } ,
+        "skillleveluri": { "type": "uri" , "value": "http://lemr-dev.lasp.colorado.edu:8080/vivo/individual/n28344951" }
+      } ,
+      {
+        "skill": { "type": "literal" , "value": "Adobe Forms" } ,
+        "skilllevel": { "type": "literal" , "value": "Adobe Forms guru" } ,
+        "skillleveluri": { "type": "uri" , "value": "http://lemr-dev.lasp.colorado.edu:8080/vivo/individual/n799459865" }
+      } ,
+      {
+        "skill": { "type": "literal" , "value": "AngularJS" } ,
+        "skilllevel": { "type": "literal" , "value": "AngularJS (unranked)" } ,
+        "skillleveluri": { "type": "uri" , "value": "http://lemr-dev.lasp.colorado.edu:8080/vivo/individual/n1135254945" }
+      } ,
+      {
+        "skill": { "type": "literal" , "value": "AngularJS" } ,
+        "skilllevel": { "type": "literal" , "value": "AngularJS beginner" } ,
+        "skillleveluri": { "type": "uri" , "value": "http://lemr-dev.lasp.colorado.edu:8080/vivo/individual/n994473475" }
+      } ,
+      {
+        "skill": { "type": "literal" , "value": "AngularJS" } ,
+        "skilllevel": { "type": "literal" , "value": "AngularJS intermediate" } ,
+        "skillleveluri": { "type": "uri" , "value": "http://lemr-dev.lasp.colorado.edu:8080/vivo/individual/n2122206999" }
+      } ,
+      {
+        "skill": { "type": "literal" , "value": "AngularJS" } ,
+        "skilllevel": { "type": "literal" , "value": "AngularJS advanced" } ,
+        "skillleveluri": { "type": "uri" , "value": "http://lemr-dev.lasp.colorado.edu:8080/vivo/individual/n1836477458" }
+      } ,
+      {
+        "skill": { "type": "literal" , "value": "AngularJS" } ,
+        "skilllevel": { "type": "literal" , "value": "AngularJS guru" } ,
+        "skillleveluri": { "type": "uri" , "value": "http://lemr-dev.lasp.colorado.edu:8080/vivo/individual/n1671030649" }
+      } ,
+      {
+        "skill": { "type": "literal" , "value": "Astronomical Algorithms" } ,
+        "skilllevel": { "type": "literal" , "value": "Astronomical Algorithms (unranked)" } ,
+        "skillleveluri": { "type": "uri" , "value": "http://lemr-dev.lasp.colorado.edu:8080/vivo/individual/n1795663283" }
+      } ,
+      {
+        "skill": { "type": "literal" , "value": "Astronomical Algorithms" } ,
+        "skilllevel": { "type": "literal" , "value": "Astronomical Algorithms beginner" } ,
+        "skillleveluri": { "type": "uri" , "value": "http://lemr-dev.lasp.colorado.edu:8080/vivo/individual/n637392457" }
+      } ,
+      {
+        "skill": { "type": "literal" , "value": "Astronomical Algorithms" } ,
+        "skilllevel": { "type": "literal" , "value": "Astronomical Algorithms intermediate" } ,
+        "skillleveluri": { "type": "uri" , "value": "http://lemr-dev.lasp.colorado.edu:8080/vivo/individual/n1762201346" }
+      } ,
+      {
+        "skill": { "type": "literal" , "value": "Astronomical Algorithms" } ,
+        "skilllevel": { "type": "literal" , "value": "Astronomical Algorithms advanced" } ,
+        "skillleveluri": { "type": "uri" , "value": "http://lemr-dev.lasp.colorado.edu:8080/vivo/individual/n1398263944" }
+      } ,
+      {
+        "skill": { "type": "literal" , "value": "Astronomical Algorithms" } ,
+        "skilllevel": { "type": "literal" , "value": "Astronomical Algorithms guru" } ,
+        "skillleveluri": { "type": "uri" , "value": "http://lemr-dev.lasp.colorado.edu:8080/vivo/individual/n843890716" }
+      } ,
+      {
+        "skill": { "type": "literal" , "value": "Audio Recording" } ,
+        "skilllevel": { "type": "literal" , "value": "Audio Recording (unranked)" } ,
+        "skillleveluri": { "type": "uri" , "value": "http://lemr-dev.lasp.colorado.edu:8080/vivo/individual/n1850885710" }
+      } ,
+      {
+        "skill": { "type": "literal" , "value": "Audio Recording" } ,
+        "skilllevel": { "type": "literal" , "value": "Audio Recording beginner" } ,
+        "skillleveluri": { "type": "uri" , "value": "http://lemr-dev.lasp.colorado.edu:8080/vivo/individual/n1619045870" }
+      } ,
+      {
+        "skill": { "type": "literal" , "value": "Audio Recording" } ,
+        "skilllevel": { "type": "literal" , "value": "Audio Recording intermediate" } ,
+        "skillleveluri": { "type": "uri" , "value": "http://lemr-dev.lasp.colorado.edu:8080/vivo/individual/n530821507" }
+      } ,
+      {
+        "skill": { "type": "literal" , "value": "Audio Recording" } ,
+        "skilllevel": { "type": "literal" , "value": "Audio Recording advanced" } ,
+        "skillleveluri": { "type": "uri" , "value": "http://lemr-dev.lasp.colorado.edu:8080/vivo/individual/n390887168" }
+      } ,
+      {
+        "skill": { "type": "literal" , "value": "Audio Recording" } ,
+        "skilllevel": { "type": "literal" , "value": "Audio Recording guru" } ,
+        "skillleveluri": { "type": "uri" , "value": "http://lemr-dev.lasp.colorado.edu:8080/vivo/individual/n22386644" }
+      } ,
+      {
+        "skill": { "type": "literal" , "value": "BBQ" } ,
+        "skilllevel": { "type": "literal" , "value": "BBQ (unranked)" } ,
+        "skillleveluri": { "type": "uri" , "value": "http://lemr-dev.lasp.colorado.edu:8080/vivo/individual/n1353383208" }
+      } ,
+      {
+        "skill": { "type": "literal" , "value": "BBQ" } ,
+        "skilllevel": { "type": "literal" , "value": "BBQ beginner" } ,
+        "skillleveluri": { "type": "uri" , "value": "http://lemr-dev.lasp.colorado.edu:8080/vivo/individual/n783748972" }
+      } ,
+      {
+        "skill": { "type": "literal" , "value": "BBQ" } ,
+        "skilllevel": { "type": "literal" , "value": "BBQ intermediate" } ,
+        "skillleveluri": { "type": "uri" , "value": "http://lemr-dev.lasp.colorado.edu:8080/vivo/individual/n748016125" }
+      } ,
+      {
+        "skill": { "type": "literal" , "value": "BBQ" } ,
+        "skilllevel": { "type": "literal" , "value": "BBQ advanced" } ,
+        "skillleveluri": { "type": "uri" , "value": "http://lemr-dev.lasp.colorado.edu:8080/vivo/individual/n1874651324" }
+      } ,
+      {
+        "skill": { "type": "literal" , "value": "BBQ" } ,
+        "skilllevel": { "type": "literal" , "value": "BBQ guru" } ,
+        "skillleveluri": { "type": "uri" , "value": "http://lemr-dev.lasp.colorado.edu:8080/vivo/individual/n692874352" }
+      } ,
+      {
+        "skill": { "type": "literal" , "value": "C" } ,
+        "skilllevel": { "type": "literal" , "value": "C (unranked)" } ,
+        "skillleveluri": { "type": "uri" , "value": "http://lemr-dev.lasp.colorado.edu:8080/vivo/individual/n793602038" }
+      } ,
+      {
+        "skill": { "type": "literal" , "value": "C" } ,
+        "skilllevel": { "type": "literal" , "value": "C beginner" } ,
+        "skillleveluri": { "type": "uri" , "value": "http://lemr-dev.lasp.colorado.edu:8080/vivo/individual/n2116726559" }
+      } ,
+      {
+        "skill": { "type": "literal" , "value": "C" } ,
+        "skilllevel": { "type": "literal" , "value": "C intermediate" } ,
+        "skillleveluri": { "type": "uri" , "value": "http://lemr-dev.lasp.colorado.edu:8080/vivo/individual/n591116589" }
+      } ,
+      {
+        "skill": { "type": "literal" , "value": "C" } ,
+        "skilllevel": { "type": "literal" , "value": "C advanced" } ,
+        "skillleveluri": { "type": "uri" , "value": "http://lemr-dev.lasp.colorado.edu:8080/vivo/individual/n1026055000" }
+      } ,
+      {
+        "skill": { "type": "literal" , "value": "C" } ,
+        "skilllevel": { "type": "literal" , "value": "C guru" } ,
+        "skillleveluri": { "type": "uri" , "value": "http://lemr-dev.lasp.colorado.edu:8080/vivo/individual/n1337968289" }
+      } ,
+      {
+        "skill": { "type": "literal" , "value": "C Shell" } ,
+        "skilllevel": { "type": "literal" , "value": "C Shell (unranked)" } ,
+        "skillleveluri": { "type": "uri" , "value": "http://lemr-dev.lasp.colorado.edu:8080/vivo/individual/n960721007" }
+      } ,
+      {
+        "skill": { "type": "literal" , "value": "C Shell" } ,
+        "skilllevel": { "type": "literal" , "value": "C Shell beginner" } ,
+        "skillleveluri": { "type": "uri" , "value": "http://lemr-dev.lasp.colorado.edu:8080/vivo/individual/n18978706" }
+      } ,
+      {
+        "skill": { "type": "literal" , "value": "C Shell" } ,
+        "skilllevel": { "type": "literal" , "value": "C Shell intermediate" } ,
+        "skillleveluri": { "type": "uri" , "value": "http://lemr-dev.lasp.colorado.edu:8080/vivo/individual/n1678575185" }
+      } ,
+      {
+        "skill": { "type": "literal" , "value": "C Shell" } ,
+        "skilllevel": { "type": "literal" , "value": "C Shell advanced" } ,
+        "skillleveluri": { "type": "uri" , "value": "http://lemr-dev.lasp.colorado.edu:8080/vivo/individual/n225932203" }
+      } ,
+      {
+        "skill": { "type": "literal" , "value": "C Shell" } ,
+        "skilllevel": { "type": "literal" , "value": "C Shell guru" } ,
+        "skillleveluri": { "type": "uri" , "value": "http://lemr-dev.lasp.colorado.edu:8080/vivo/individual/n2046173907" }
+      } ,
+      {
+        "skill": { "type": "literal" , "value": "C++" } ,
+        "skilllevel": { "type": "literal" , "value": "C++ (unranked)" } ,
+        "skillleveluri": { "type": "uri" , "value": "http://lemr-dev.lasp.colorado.edu:8080/vivo/individual/n2001992658" }
+      } ,
+      {
+        "skill": { "type": "literal" , "value": "C++" } ,
+        "skilllevel": { "type": "literal" , "value": "C++ beginner" } ,
+        "skillleveluri": { "type": "uri" , "value": "http://lemr-dev.lasp.colorado.edu:8080/vivo/individual/n455885633" }
+      } ,
+      {
+        "skill": { "type": "literal" , "value": "C++" } ,
+        "skilllevel": { "type": "literal" , "value": "C++ intermediate" } ,
+        "skillleveluri": { "type": "uri" , "value": "http://lemr-dev.lasp.colorado.edu:8080/vivo/individual/n632168803" }
+      } ,
+      {
+        "skill": { "type": "literal" , "value": "C++" } ,
+        "skilllevel": { "type": "literal" , "value": "C++ advanced" } ,
+        "skillleveluri": { "type": "uri" , "value": "http://lemr-dev.lasp.colorado.edu:8080/vivo/individual/n906704525" }
+      } ,
+      {
+        "skill": { "type": "literal" , "value": "C++" } ,
+        "skilllevel": { "type": "literal" , "value": "C++ guru" } ,
+        "skillleveluri": { "type": "uri" , "value": "http://lemr-dev.lasp.colorado.edu:8080/vivo/individual/n370638602" }
+      } ,
+      {
+        "skill": { "type": "literal" , "value": "CDF" } ,
+        "skilllevel": { "type": "literal" , "value": "CDF (unranked)" } ,
+        "skillleveluri": { "type": "uri" , "value": "http://lemr-dev.lasp.colorado.edu:8080/vivo/individual/n887666611" }
+      } ,
+      {
+        "skill": { "type": "literal" , "value": "CDF" } ,
+        "skilllevel": { "type": "literal" , "value": "CDF beginner" } ,
+        "skillleveluri": { "type": "uri" , "value": "http://lemr-dev.lasp.colorado.edu:8080/vivo/individual/n445798236" }
+      } ,
+      {
+        "skill": { "type": "literal" , "value": "CDF" } ,
+        "skilllevel": { "type": "literal" , "value": "CDF intermediate" } ,
+        "skillleveluri": { "type": "uri" , "value": "http://lemr-dev.lasp.colorado.edu:8080/vivo/individual/n468207266" }
+      } ,
+      {
+        "skill": { "type": "literal" , "value": "CDF" } ,
+        "skilllevel": { "type": "literal" , "value": "CDF advanced" } ,
+        "skillleveluri": { "type": "uri" , "value": "http://lemr-dev.lasp.colorado.edu:8080/vivo/individual/n495602294" }
+      } ,
+      {
+        "skill": { "type": "literal" , "value": "CDF" } ,
+        "skilllevel": { "type": "literal" , "value": "CDF guru" } ,
+        "skillleveluri": { "type": "uri" , "value": "http://lemr-dev.lasp.colorado.edu:8080/vivo/individual/n1999962869" }
+      } ,
+      {
+        "skill": { "type": "literal" , "value": "CSTOL" } ,
+        "skilllevel": { "type": "literal" , "value": "CSTOL (unranked)" } ,
+        "skillleveluri": { "type": "uri" , "value": "http://lemr-dev.lasp.colorado.edu:8080/vivo/individual/n580119452" }
+      } ,
+      {
+        "skill": { "type": "literal" , "value": "CSTOL" } ,
+        "skilllevel": { "type": "literal" , "value": "CSTOL beginner" } ,
+        "skillleveluri": { "type": "uri" , "value": "http://lemr-dev.lasp.colorado.edu:8080/vivo/individual/n647556400" }
+      } ,
+      {
+        "skill": { "type": "literal" , "value": "CSTOL" } ,
+        "skilllevel": { "type": "literal" , "value": "CSTOL intermediate" } ,
+        "skillleveluri": { "type": "uri" , "value": "http://lemr-dev.lasp.colorado.edu:8080/vivo/individual/n815630262" }
+      } ,
+      {
+        "skill": { "type": "literal" , "value": "CSTOL" } ,
+        "skilllevel": { "type": "literal" , "value": "CSTOL advanced" } ,
+        "skillleveluri": { "type": "uri" , "value": "http://lemr-dev.lasp.colorado.edu:8080/vivo/individual/n377484763" }
+      } ,
+      {
+        "skill": { "type": "literal" , "value": "CSTOL" } ,
+        "skilllevel": { "type": "literal" , "value": "CSTOL guru" } ,
+        "skillleveluri": { "type": "uri" , "value": "http://lemr-dev.lasp.colorado.edu:8080/vivo/individual/n645781042" }
+      } ,
+      {
+        "skill": { "type": "literal" , "value": "CVS" } ,
+        "skilllevel": { "type": "literal" , "value": "CVS (unranked)" } ,
+        "skillleveluri": { "type": "uri" , "value": "http://lemr-dev.lasp.colorado.edu:8080/vivo/individual/n777645831" }
+      } ,
+      {
+        "skill": { "type": "literal" , "value": "CVS" } ,
+        "skilllevel": { "type": "literal" , "value": "CVS beginner" } ,
+        "skillleveluri": { "type": "uri" , "value": "http://lemr-dev.lasp.colorado.edu:8080/vivo/individual/n91451367" }
+      } ,
+      {
+        "skill": { "type": "literal" , "value": "CVS" } ,
+        "skilllevel": { "type": "literal" , "value": "CVS intermediate" } ,
+        "skillleveluri": { "type": "uri" , "value": "http://lemr-dev.lasp.colorado.edu:8080/vivo/individual/n844881810" }
+      } ,
+      {
+        "skill": { "type": "literal" , "value": "CVS" } ,
+        "skilllevel": { "type": "literal" , "value": "CVS advanced" } ,
+        "skillleveluri": { "type": "uri" , "value": "http://lemr-dev.lasp.colorado.edu:8080/vivo/individual/n874325827" }
+      } ,
+      {
+        "skill": { "type": "literal" , "value": "CVS" } ,
+        "skilllevel": { "type": "literal" , "value": "CVS guru" } ,
+        "skillleveluri": { "type": "uri" , "value": "http://lemr-dev.lasp.colorado.edu:8080/vivo/individual/n301452772" }
+      } ,
+      {
+        "skill": { "type": "literal" , "value": "Confluence" } ,
+        "skilllevel": { "type": "literal" , "value": "Confluence (unranked)" } ,
+        "skillleveluri": { "type": "uri" , "value": "http://lemr-dev.lasp.colorado.edu:8080/vivo/individual/n169192069" }
+      } ,
+      {
+        "skill": { "type": "literal" , "value": "Confluence" } ,
+        "skilllevel": { "type": "literal" , "value": "Confluence beginner" } ,
+        "skillleveluri": { "type": "uri" , "value": "http://lemr-dev.lasp.colorado.edu:8080/vivo/individual/n1601745543" }
+      } ,
+      {
+        "skill": { "type": "literal" , "value": "Confluence" } ,
+        "skilllevel": { "type": "literal" , "value": "Confluence intermediate" } ,
+        "skillleveluri": { "type": "uri" , "value": "http://lemr-dev.lasp.colorado.edu:8080/vivo/individual/n664178855" }
+      } ,
+      {
+        "skill": { "type": "literal" , "value": "Confluence" } ,
+        "skilllevel": { "type": "literal" , "value": "Confluence advanced" } ,
+        "skillleveluri": { "type": "uri" , "value": "http://lemr-dev.lasp.colorado.edu:8080/vivo/individual/n1681131761" }
+      } ,
+      {
+        "skill": { "type": "literal" , "value": "Confluence" } ,
+        "skilllevel": { "type": "literal" , "value": "Confluence guru" } ,
+        "skillleveluri": { "type": "uri" , "value": "http://lemr-dev.lasp.colorado.edu:8080/vivo/individual/n1994142933" }
+      } ,
+      {
+        "skill": { "type": "literal" , "value": "Contracts" } ,
+        "skilllevel": { "type": "literal" , "value": "Contracts (unranked)" } ,
+        "skillleveluri": { "type": "uri" , "value": "http://lemr-dev.lasp.colorado.edu:8080/vivo/individual/n2059460543" }
+      } ,
+      {
+        "skill": { "type": "literal" , "value": "Contracts" } ,
+        "skilllevel": { "type": "literal" , "value": "Contracts beginner" } ,
+        "skillleveluri": { "type": "uri" , "value": "http://lemr-dev.lasp.colorado.edu:8080/vivo/individual/n2003402286" }
+      } ,
+      {
+        "skill": { "type": "literal" , "value": "Contracts" } ,
+        "skilllevel": { "type": "literal" , "value": "Contracts intermediate" } ,
+        "skillleveluri": { "type": "uri" , "value": "http://lemr-dev.lasp.colorado.edu:8080/vivo/individual/n1556206671" }
+      } ,
+      {
+        "skill": { "type": "literal" , "value": "Contracts" } ,
+        "skilllevel": { "type": "literal" , "value": "Contracts advanced" } ,
+        "skillleveluri": { "type": "uri" , "value": "http://lemr-dev.lasp.colorado.edu:8080/vivo/individual/n319092444" }
+      } ,
+      {
+        "skill": { "type": "literal" , "value": "Contracts" } ,
+        "skilllevel": { "type": "literal" , "value": "Contracts guru" } ,
+        "skillleveluri": { "type": "uri" , "value": "http://lemr-dev.lasp.colorado.edu:8080/vivo/individual/n530927661" }
+      } ,
+      {
+        "skill": { "type": "literal" , "value": "DNS - Domain Name Service" } ,
+        "skilllevel": { "type": "literal" , "value": "DNS - Domain Name Service (unranked)" } ,
+        "skillleveluri": { "type": "uri" , "value": "http://lemr-dev.lasp.colorado.edu:8080/vivo/individual/n1019188668" }
+      } ,
+      {
+        "skill": { "type": "literal" , "value": "DNS - Domain Name Service" } ,
+        "skilllevel": { "type": "literal" , "value": "DNS - Domain Name Service beginner" } ,
+        "skillleveluri": { "type": "uri" , "value": "http://lemr-dev.lasp.colorado.edu:8080/vivo/individual/n487555171" }
+      } ,
+      {
+        "skill": { "type": "literal" , "value": "DNS - Domain Name Service" } ,
+        "skilllevel": { "type": "literal" , "value": "DNS - Domain Name Service intermediate" } ,
+        "skillleveluri": { "type": "uri" , "value": "http://lemr-dev.lasp.colorado.edu:8080/vivo/individual/n1183992693" }
+      } ,
+      {
+        "skill": { "type": "literal" , "value": "DNS - Domain Name Service" } ,
+        "skilllevel": { "type": "literal" , "value": "DNS - Domain Name Service advanced" } ,
+        "skillleveluri": { "type": "uri" , "value": "http://lemr-dev.lasp.colorado.edu:8080/vivo/individual/n1606242612" }
+      } ,
+      {
+        "skill": { "type": "literal" , "value": "DNS - Domain Name Service" } ,
+        "skilllevel": { "type": "literal" , "value": "DNS - Domain Name Service guru" } ,
+        "skillleveluri": { "type": "uri" , "value": "http://lemr-dev.lasp.colorado.edu:8080/vivo/individual/n1591325689" }
+      } ,
+      {
+        "skill": { "type": "literal" , "value": "DOORS" } ,
+        "skilllevel": { "type": "literal" , "value": "DOORS (unranked)" } ,
+        "skillleveluri": { "type": "uri" , "value": "http://lemr-dev:8080/vivo/individual/n66418154" }
+      } ,
+      {
+        "skill": { "type": "literal" , "value": "DOORS" } ,
+        "skilllevel": { "type": "literal" , "value": "DOORS beginner" } ,
+        "skillleveluri": { "type": "uri" , "value": "http://lemr-dev:8080/vivo/individual/n1166265076" }
+      } ,
+      {
+        "skill": { "type": "literal" , "value": "DOORS" } ,
+        "skilllevel": { "type": "literal" , "value": "DOORS intermediate" } ,
+        "skillleveluri": { "type": "uri" , "value": "http://lemr-dev:8080/vivo/individual/n1617792601" }
+      } ,
+      {
+        "skill": { "type": "literal" , "value": "DOORS" } ,
+        "skilllevel": { "type": "literal" , "value": "DOORS advanced" } ,
+        "skillleveluri": { "type": "uri" , "value": "http://lemr-dev:8080/vivo/individual/n1221365543" }
+      } ,
+      {
+        "skill": { "type": "literal" , "value": "DOORS" } ,
+        "skilllevel": { "type": "literal" , "value": "DOORS guru" } ,
+        "skillleveluri": { "type": "uri" , "value": "http://lemr-dev:8080/vivo/individual/n2018625797" }
+      } ,
+      {
+        "skill": { "type": "literal" , "value": "Deltek COBRA" } ,
+        "skilllevel": { "type": "literal" , "value": "Deltek COBRA (unranked)" } ,
+        "skillleveluri": { "type": "uri" , "value": "http://lemr-dev.lasp.colorado.edu:8080/vivo/individual/n1060861762" }
+      } ,
+      {
+        "skill": { "type": "literal" , "value": "Deltek COBRA" } ,
+        "skilllevel": { "type": "literal" , "value": "Deltek COBRA beginner" } ,
+        "skillleveluri": { "type": "uri" , "value": "http://lemr-dev.lasp.colorado.edu:8080/vivo/individual/n1737266517" }
+      } ,
+      {
+        "skill": { "type": "literal" , "value": "Deltek COBRA" } ,
+        "skilllevel": { "type": "literal" , "value": "Deltek COBRA intermediate" } ,
+        "skillleveluri": { "type": "uri" , "value": "http://lemr-dev.lasp.colorado.edu:8080/vivo/individual/n996134548" }
+      } ,
+      {
+        "skill": { "type": "literal" , "value": "Deltek COBRA" } ,
+        "skilllevel": { "type": "literal" , "value": "Deltek COBRA advanced" } ,
+        "skillleveluri": { "type": "uri" , "value": "http://lemr-dev.lasp.colorado.edu:8080/vivo/individual/n1289942474" }
+      } ,
+      {
+        "skill": { "type": "literal" , "value": "Deltek COBRA" } ,
+        "skilllevel": { "type": "literal" , "value": "Deltek COBRA guru" } ,
+        "skillleveluri": { "type": "uri" , "value": "http://lemr-dev.lasp.colorado.edu:8080/vivo/individual/n683068403" }
+      } ,
+      {
+        "skill": { "type": "literal" , "value": "Digital Electronics" } ,
+        "skilllevel": { "type": "literal" , "value": "Digital Electronics (unranked)" } ,
+        "skillleveluri": { "type": "uri" , "value": "http://lemr-dev.lasp.colorado.edu:8080/vivo/individual/n2058660535" }
+      } ,
+      {
+        "skill": { "type": "literal" , "value": "Digital Electronics" } ,
+        "skilllevel": { "type": "literal" , "value": "Digital Electronics beginner" } ,
+        "skillleveluri": { "type": "uri" , "value": "http://lemr-dev.lasp.colorado.edu:8080/vivo/individual/n773016086" }
+      } ,
+      {
+        "skill": { "type": "literal" , "value": "Digital Electronics" } ,
+        "skilllevel": { "type": "literal" , "value": "Digital Electronics intermediate" } ,
+        "skillleveluri": { "type": "uri" , "value": "http://lemr-dev.lasp.colorado.edu:8080/vivo/individual/n900218835" }
+      } ,
+      {
+        "skill": { "type": "literal" , "value": "Digital Electronics" } ,
+        "skilllevel": { "type": "literal" , "value": "Digital Electronics advanced" } ,
+        "skillleveluri": { "type": "uri" , "value": "http://lemr-dev.lasp.colorado.edu:8080/vivo/individual/n1169651406" }
+      } ,
+      {
+        "skill": { "type": "literal" , "value": "Digital Electronics" } ,
+        "skilllevel": { "type": "literal" , "value": "Digital Electronics guru" } ,
+        "skillleveluri": { "type": "uri" , "value": "http://lemr-dev.lasp.colorado.edu:8080/vivo/individual/n1022886668" }
+      } ,
+      {
+        "skill": { "type": "literal" , "value": "Digital Hardware" } ,
+        "skilllevel": { "type": "literal" , "value": "Digital Hardware (unranked)" } ,
+        "skillleveluri": { "type": "uri" , "value": "http://lemr-dev.lasp.colorado.edu:8080/vivo/individual/n102344373" }
+      } ,
+      {
+        "skill": { "type": "literal" , "value": "Digital Hardware" } ,
+        "skilllevel": { "type": "literal" , "value": "Digital Hardware beginner" } ,
+        "skillleveluri": { "type": "uri" , "value": "http://lemr-dev.lasp.colorado.edu:8080/vivo/individual/n2004953666" }
+      } ,
+      {
+        "skill": { "type": "literal" , "value": "Digital Hardware" } ,
+        "skilllevel": { "type": "literal" , "value": "Digital Hardware intermediate" } ,
+        "skillleveluri": { "type": "uri" , "value": "http://lemr-dev.lasp.colorado.edu:8080/vivo/individual/n1272656063" }
+      } ,
+      {
+        "skill": { "type": "literal" , "value": "Digital Hardware" } ,
+        "skilllevel": { "type": "literal" , "value": "Digital Hardware advanced" } ,
+        "skillleveluri": { "type": "uri" , "value": "http://lemr-dev.lasp.colorado.edu:8080/vivo/individual/n1749891366" }
+      } ,
+      {
+        "skill": { "type": "literal" , "value": "Digital Hardware" } ,
+        "skilllevel": { "type": "literal" , "value": "Digital Hardware guru" } ,
+        "skillleveluri": { "type": "uri" , "value": "http://lemr-dev.lasp.colorado.edu:8080/vivo/individual/n1014091669" }
+      } ,
+      {
+        "skill": { "type": "literal" , "value": "DreamWeaver" } ,
+        "skilllevel": { "type": "literal" , "value": "DreamWeaver (unranked)" } ,
+        "skillleveluri": { "type": "uri" , "value": "http://lemr-dev.lasp.colorado.edu:8080/vivo/individual/n1513352046" }
+      } ,
+      {
+        "skill": { "type": "literal" , "value": "DreamWeaver" } ,
+        "skilllevel": { "type": "literal" , "value": "DreamWeaver beginner" } ,
+        "skillleveluri": { "type": "uri" , "value": "http://lemr-dev.lasp.colorado.edu:8080/vivo/individual/n1074476742" }
+      } ,
+      {
+        "skill": { "type": "literal" , "value": "DreamWeaver" } ,
+        "skilllevel": { "type": "literal" , "value": "DreamWeaver intermediate" } ,
+        "skillleveluri": { "type": "uri" , "value": "http://lemr-dev.lasp.colorado.edu:8080/vivo/individual/n417437827" }
+      } ,
+      {
+        "skill": { "type": "literal" , "value": "DreamWeaver" } ,
+        "skilllevel": { "type": "literal" , "value": "DreamWeaver advanced" } ,
+        "skillleveluri": { "type": "uri" , "value": "http://lemr-dev.lasp.colorado.edu:8080/vivo/individual/n1203072807" }
+      } ,
+      {
+        "skill": { "type": "literal" , "value": "DreamWeaver" } ,
+        "skilllevel": { "type": "literal" , "value": "DreamWeaver guru" } ,
+        "skillleveluri": { "type": "uri" , "value": "http://lemr-dev.lasp.colorado.edu:8080/vivo/individual/n327939122" }
+      } ,
+      {
+        "skill": { "type": "literal" , "value": "Dygraphs" } ,
+        "skilllevel": { "type": "literal" , "value": "Dygraphs (unranked)" } ,
+        "skillleveluri": { "type": "uri" , "value": "http://lemr-dev.lasp.colorado.edu:8080/vivo/individual/n859963165" }
+      } ,
+      {
+        "skill": { "type": "literal" , "value": "Dygraphs" } ,
+        "skilllevel": { "type": "literal" , "value": "Dygraphs beginner" } ,
+        "skillleveluri": { "type": "uri" , "value": "http://lemr-dev.lasp.colorado.edu:8080/vivo/individual/n996489377" }
+      } ,
+      {
+        "skill": { "type": "literal" , "value": "Dygraphs" } ,
+        "skilllevel": { "type": "literal" , "value": "Dygraphs intermediate" } ,
+        "skillleveluri": { "type": "uri" , "value": "http://lemr-dev.lasp.colorado.edu:8080/vivo/individual/n2023679351" }
+      } ,
+      {
+        "skill": { "type": "literal" , "value": "Dygraphs" } ,
+        "skilllevel": { "type": "literal" , "value": "Dygraphs advanced" } ,
+        "skillleveluri": { "type": "uri" , "value": "http://lemr-dev.lasp.colorado.edu:8080/vivo/individual/n1568905926" }
+      } ,
+      {
+        "skill": { "type": "literal" , "value": "Dygraphs" } ,
+        "skilllevel": { "type": "literal" , "value": "Dygraphs guru" } ,
+        "skillleveluri": { "type": "uri" , "value": "http://lemr-dev.lasp.colorado.edu:8080/vivo/individual/n904901577" }
+      } ,
+      {
+        "skill": { "type": "literal" , "value": "ENVI" } ,
+        "skilllevel": { "type": "literal" , "value": "ENVI (unranked)" } ,
+        "skillleveluri": { "type": "uri" , "value": "http://lemr-dev.lasp.colorado.edu:8080/vivo/individual/n705633567" }
+      } ,
+      {
+        "skill": { "type": "literal" , "value": "ENVI" } ,
+        "skilllevel": { "type": "literal" , "value": "ENVI beginner" } ,
+        "skillleveluri": { "type": "uri" , "value": "http://lemr-dev.lasp.colorado.edu:8080/vivo/individual/n1460110611" }
+      } ,
+      {
+        "skill": { "type": "literal" , "value": "ENVI" } ,
+        "skilllevel": { "type": "literal" , "value": "ENVI intermediate" } ,
+        "skillleveluri": { "type": "uri" , "value": "http://lemr-dev.lasp.colorado.edu:8080/vivo/individual/n1730570217" }
+      } ,
+      {
+        "skill": { "type": "literal" , "value": "ENVI" } ,
+        "skilllevel": { "type": "literal" , "value": "ENVI advanced" } ,
+        "skillleveluri": { "type": "uri" , "value": "http://lemr-dev.lasp.colorado.edu:8080/vivo/individual/n1791169703" }
+      } ,
+      {
+        "skill": { "type": "literal" , "value": "ENVI" } ,
+        "skilllevel": { "type": "literal" , "value": "ENVI guru" } ,
+        "skillleveluri": { "type": "uri" , "value": "http://lemr-dev.lasp.colorado.edu:8080/vivo/individual/n1933582934" }
+      } ,
+      {
+        "skill": { "type": "literal" , "value": "Embedded Software" } ,
+        "skilllevel": { "type": "literal" , "value": "Embedded Software (unranked)" } ,
+        "skillleveluri": { "type": "uri" , "value": "http://lemr-dev.lasp.colorado.edu:8080/vivo/individual/n485482812" }
+      } ,
+      {
+        "skill": { "type": "literal" , "value": "Embedded Software" } ,
+        "skilllevel": { "type": "literal" , "value": "Embedded Software beginner" } ,
+        "skillleveluri": { "type": "uri" , "value": "http://lemr-dev.lasp.colorado.edu:8080/vivo/individual/n745386241" }
+      } ,
+      {
+        "skill": { "type": "literal" , "value": "Embedded Software" } ,
+        "skilllevel": { "type": "literal" , "value": "Embedded Software intermediate" } ,
+        "skillleveluri": { "type": "uri" , "value": "http://lemr-dev.lasp.colorado.edu:8080/vivo/individual/n433964494" }
+      } ,
+      {
+        "skill": { "type": "literal" , "value": "Embedded Software" } ,
+        "skilllevel": { "type": "literal" , "value": "Embedded Software advanced" } ,
+        "skillleveluri": { "type": "uri" , "value": "http://lemr-dev.lasp.colorado.edu:8080/vivo/individual/n1318076678" }
+      } ,
+      {
+        "skill": { "type": "literal" , "value": "Embedded Software" } ,
+        "skilllevel": { "type": "literal" , "value": "Embedded Software guru" } ,
+        "skillleveluri": { "type": "uri" , "value": "http://lemr-dev.lasp.colorado.edu:8080/vivo/individual/n1723936454" }
+      } ,
+      {
+        "skill": { "type": "literal" , "value": "Embedded Systems" } ,
+        "skilllevel": { "type": "literal" , "value": "Embedded Systems (unranked)" } ,
+        "skillleveluri": { "type": "uri" , "value": "http://lemr-dev.lasp.colorado.edu:8080/vivo/individual/n1862272509" }
+      } ,
+      {
+        "skill": { "type": "literal" , "value": "Embedded Systems" } ,
+        "skilllevel": { "type": "literal" , "value": "Embedded Systems beginner" } ,
+        "skillleveluri": { "type": "uri" , "value": "http://lemr-dev.lasp.colorado.edu:8080/vivo/individual/n945088180" }
+      } ,
+      {
+        "skill": { "type": "literal" , "value": "Embedded Systems" } ,
+        "skilllevel": { "type": "literal" , "value": "Embedded Systems intermediate" } ,
+        "skillleveluri": { "type": "uri" , "value": "http://lemr-dev.lasp.colorado.edu:8080/vivo/individual/n1063720439" }
+      } ,
+      {
+        "skill": { "type": "literal" , "value": "Embedded Systems" } ,
+        "skilllevel": { "type": "literal" , "value": "Embedded Systems advanced" } ,
+        "skillleveluri": { "type": "uri" , "value": "http://lemr-dev.lasp.colorado.edu:8080/vivo/individual/n718016630" }
+      } ,
+      {
+        "skill": { "type": "literal" , "value": "Embedded Systems" } ,
+        "skilllevel": { "type": "literal" , "value": "Embedded Systems guru" } ,
+        "skillleveluri": { "type": "uri" , "value": "http://lemr-dev.lasp.colorado.edu:8080/vivo/individual/n202651854" }
+      } ,
+      {
+        "skill": { "type": "literal" , "value": "FORTRAN" } ,
+        "skilllevel": { "type": "literal" , "value": "FORTRAN (unranked)" } ,
+        "skillleveluri": { "type": "uri" , "value": "http://lemr-dev.lasp.colorado.edu:8080/vivo/individual/n1636482519" }
+      } ,
+      {
+        "skill": { "type": "literal" , "value": "FORTRAN" } ,
+        "skilllevel": { "type": "literal" , "value": "FORTRAN beginner" } ,
+        "skillleveluri": { "type": "uri" , "value": "http://lemr-dev.lasp.colorado.edu:8080/vivo/individual/n443098442" }
+      } ,
+      {
+        "skill": { "type": "literal" , "value": "FORTRAN" } ,
+        "skilllevel": { "type": "literal" , "value": "FORTRAN intermediate" } ,
+        "skillleveluri": { "type": "uri" , "value": "http://lemr-dev.lasp.colorado.edu:8080/vivo/individual/n745263199" }
+      } ,
+      {
+        "skill": { "type": "literal" , "value": "FORTRAN" } ,
+        "skilllevel": { "type": "literal" , "value": "FORTRAN advanced" } ,
+        "skillleveluri": { "type": "uri" , "value": "http://lemr-dev.lasp.colorado.edu:8080/vivo/individual/n1694332440" }
+      } ,
+      {
+        "skill": { "type": "literal" , "value": "FORTRAN" } ,
+        "skilllevel": { "type": "literal" , "value": "FORTRAN guru" } ,
+        "skillleveluri": { "type": "uri" , "value": "http://lemr-dev.lasp.colorado.edu:8080/vivo/individual/n1796173201" }
+      } ,
+      {
+        "skill": { "type": "literal" , "value": "Fisheye/Crucible" } ,
+        "skilllevel": { "type": "literal" , "value": "Fisheye/Crucible (unranked)" } ,
+        "skillleveluri": { "type": "uri" , "value": "http://lemr-dev.lasp.colorado.edu:8080/vivo/individual/n545321976" }
+      } ,
+      {
+        "skill": { "type": "literal" , "value": "Fisheye/Crucible" } ,
+        "skilllevel": { "type": "literal" , "value": "Fisheye/Crucible beginner" } ,
+        "skillleveluri": { "type": "uri" , "value": "http://lemr-dev.lasp.colorado.edu:8080/vivo/individual/n481615982" }
+      } ,
+      {
+        "skill": { "type": "literal" , "value": "Fisheye/Crucible" } ,
+        "skilllevel": { "type": "literal" , "value": "Fisheye/Crucible intermediate" } ,
+        "skillleveluri": { "type": "uri" , "value": "http://lemr-dev.lasp.colorado.edu:8080/vivo/individual/n1836921231" }
+      } ,
+      {
+        "skill": { "type": "literal" , "value": "Fisheye/Crucible" } ,
+        "skilllevel": { "type": "literal" , "value": "Fisheye/Crucible advanced" } ,
+        "skillleveluri": { "type": "uri" , "value": "http://lemr-dev.lasp.colorado.edu:8080/vivo/individual/n1649778122" }
+      } ,
+      {
+        "skill": { "type": "literal" , "value": "Fisheye/Crucible" } ,
+        "skilllevel": { "type": "literal" , "value": "Fisheye/Crucible guru" } ,
+        "skillleveluri": { "type": "uri" , "value": "http://lemr-dev.lasp.colorado.edu:8080/vivo/individual/n1773876386" }
+      } ,
+      {
+        "skill": { "type": "literal" , "value": "Flash" } ,
+        "skilllevel": { "type": "literal" , "value": "Flash (unranked)" } ,
+        "skillleveluri": { "type": "uri" , "value": "http://lemr-dev.lasp.colorado.edu:8080/vivo/individual/n100403272" }
+      } ,
+      {
+        "skill": { "type": "literal" , "value": "Flash" } ,
+        "skilllevel": { "type": "literal" , "value": "Flash beginner" } ,
+        "skillleveluri": { "type": "uri" , "value": "http://lemr-dev.lasp.colorado.edu:8080/vivo/individual/n1722358499" }
+      } ,
+      {
+        "skill": { "type": "literal" , "value": "Flash" } ,
+        "skilllevel": { "type": "literal" , "value": "Flash intermediate" } ,
+        "skillleveluri": { "type": "uri" , "value": "http://lemr-dev.lasp.colorado.edu:8080/vivo/individual/n1452874899" }
+      } ,
+      {
+        "skill": { "type": "literal" , "value": "Flash" } ,
+        "skilllevel": { "type": "literal" , "value": "Flash advanced" } ,
+        "skillleveluri": { "type": "uri" , "value": "http://lemr-dev.lasp.colorado.edu:8080/vivo/individual/n1910328820" }
+      } ,
+      {
+        "skill": { "type": "literal" , "value": "Flash" } ,
+        "skilllevel": { "type": "literal" , "value": "Flash guru" } ,
+        "skillleveluri": { "type": "uri" , "value": "http://lemr-dev.lasp.colorado.edu:8080/vivo/individual/n830992144" }
+      } ,
+      {
+        "skill": { "type": "literal" , "value": "Functional Programming" } ,
+        "skilllevel": { "type": "literal" , "value": "Functional Programming (unranked)" } ,
+        "skillleveluri": { "type": "uri" , "value": "http://lemr-dev.lasp.colorado.edu:8080/vivo/individual/n1508351168" }
+      } ,
+      {
+        "skill": { "type": "literal" , "value": "Functional Programming" } ,
+        "skilllevel": { "type": "literal" , "value": "Functional Programming beginner" } ,
+        "skillleveluri": { "type": "uri" , "value": "http://lemr-dev.lasp.colorado.edu:8080/vivo/individual/n762131495" }
+      } ,
+      {
+        "skill": { "type": "literal" , "value": "Functional Programming" } ,
+        "skilllevel": { "type": "literal" , "value": "Functional Programming intermediate" } ,
+        "skillleveluri": { "type": "uri" , "value": "http://lemr-dev.lasp.colorado.edu:8080/vivo/individual/n344398060" }
+      } ,
+      {
+        "skill": { "type": "literal" , "value": "Functional Programming" } ,
+        "skilllevel": { "type": "literal" , "value": "Functional Programming advanced" } ,
+        "skillleveluri": { "type": "uri" , "value": "http://lemr-dev.lasp.colorado.edu:8080/vivo/individual/n783802818" }
+      } ,
+      {
+        "skill": { "type": "literal" , "value": "Functional Programming" } ,
+        "skilllevel": { "type": "literal" , "value": "Functional Programming guru" } ,
+        "skillleveluri": { "type": "uri" , "value": "http://lemr-dev.lasp.colorado.edu:8080/vivo/individual/n98084355" }
+      } ,
+      {
+        "skill": { "type": "literal" , "value": "Git" } ,
+        "skilllevel": { "type": "literal" , "value": "Git (unranked)" } ,
+        "skillleveluri": { "type": "uri" , "value": "http://lemr-dev.lasp.colorado.edu:8080/vivo/individual/n1287556097" }
+      } ,
+      {
+        "skill": { "type": "literal" , "value": "Git" } ,
+        "skilllevel": { "type": "literal" , "value": "Git beginner" } ,
+        "skillleveluri": { "type": "uri" , "value": "http://lemr-dev.lasp.colorado.edu:8080/vivo/individual/n500477259" }
+      } ,
+      {
+        "skill": { "type": "literal" , "value": "Git" } ,
+        "skilllevel": { "type": "literal" , "value": "Git intermediate" } ,
+        "skillleveluri": { "type": "uri" , "value": "http://lemr-dev.lasp.colorado.edu:8080/vivo/individual/n806707353" }
+      } ,
+      {
+        "skill": { "type": "literal" , "value": "Git" } ,
+        "skilllevel": { "type": "literal" , "value": "Git advanced" } ,
+        "skillleveluri": { "type": "uri" , "value": "http://lemr-dev.lasp.colorado.edu:8080/vivo/individual/n636170521" }
+      } ,
+      {
+        "skill": { "type": "literal" , "value": "Git" } ,
+        "skilllevel": { "type": "literal" , "value": "Git guru" } ,
+        "skillleveluri": { "type": "uri" , "value": "http://lemr-dev.lasp.colorado.edu:8080/vivo/individual/n1371185402" }
+      } ,
+      {
+        "skill": { "type": "literal" , "value": "Google Forms" } ,
+        "skilllevel": { "type": "literal" , "value": "Google Forms (unranked)" } ,
+        "skillleveluri": { "type": "uri" , "value": "http://lemr-dev.lasp.colorado.edu:8080/vivo/individual/n296568149" }
+      } ,
+      {
+        "skill": { "type": "literal" , "value": "Google Forms" } ,
+        "skilllevel": { "type": "literal" , "value": "Google Forms beginner" } ,
+        "skillleveluri": { "type": "uri" , "value": "http://lemr-dev.lasp.colorado.edu:8080/vivo/individual/n586712661" }
+      } ,
+      {
+        "skill": { "type": "literal" , "value": "Google Forms" } ,
+        "skilllevel": { "type": "literal" , "value": "Google Forms intermediate" } ,
+        "skillleveluri": { "type": "uri" , "value": "http://lemr-dev.lasp.colorado.edu:8080/vivo/individual/n1485541935" }
+      } ,
+      {
+        "skill": { "type": "literal" , "value": "Google Forms" } ,
+        "skilllevel": { "type": "literal" , "value": "Google Forms advanced" } ,
+        "skillleveluri": { "type": "uri" , "value": "http://lemr-dev.lasp.colorado.edu:8080/vivo/individual/n1187816219" }
+      } ,
+      {
+        "skill": { "type": "literal" , "value": "Google Forms" } ,
+        "skilllevel": { "type": "literal" , "value": "Google Forms guru" } ,
+        "skillleveluri": { "type": "uri" , "value": "http://lemr-dev.lasp.colorado.edu:8080/vivo/individual/n1792037604" }
+      } ,
+      {
+        "skill": { "type": "literal" , "value": "Google Groups" } ,
+        "skilllevel": { "type": "literal" , "value": "Google Groups (unranked)" } ,
+        "skillleveluri": { "type": "uri" , "value": "http://lemr-dev:8080/vivo/individual/n2019903479" }
+      } ,
+      {
+        "skill": { "type": "literal" , "value": "Google Groups" } ,
+        "skilllevel": { "type": "literal" , "value": "Google Groups beginner" } ,
+        "skillleveluri": { "type": "uri" , "value": "http://lemr-dev:8080/vivo/individual/n1546062523" }
+      } ,
+      {
+        "skill": { "type": "literal" , "value": "Google Groups" } ,
+        "skilllevel": { "type": "literal" , "value": "Google Groups intermediate" } ,
+        "skillleveluri": { "type": "uri" , "value": "http://lemr-dev:8080/vivo/individual/n965834727" }
+      } ,
+      {
+        "skill": { "type": "literal" , "value": "Google Groups" } ,
+        "skilllevel": { "type": "literal" , "value": "Google Groups advanced" } ,
+        "skillleveluri": { "type": "uri" , "value": "http://lemr-dev:8080/vivo/individual/n1214736809" }
+      } ,
+      {
+        "skill": { "type": "literal" , "value": "Google Groups" } ,
+        "skilllevel": { "type": "literal" , "value": "Google Groups guru" } ,
+        "skillleveluri": { "type": "uri" , "value": "http://lemr-dev:8080/vivo/individual/n264728103" }
+      } ,
+      {
+        "skill": { "type": "literal" , "value": "Gradle" } ,
+        "skilllevel": { "type": "literal" , "value": "Gradle (unranked)" } ,
+        "skillleveluri": { "type": "uri" , "value": "http://lemr-dev.lasp.colorado.edu:8080/vivo/individual/n412972819" }
+      } ,
+      {
+        "skill": { "type": "literal" , "value": "Gradle" } ,
+        "skilllevel": { "type": "literal" , "value": "Gradle beginner" } ,
+        "skillleveluri": { "type": "uri" , "value": "http://lemr-dev.lasp.colorado.edu:8080/vivo/individual/n1792784409" }
+      } ,
+      {
+        "skill": { "type": "literal" , "value": "Gradle" } ,
+        "skilllevel": { "type": "literal" , "value": "Gradle intermediate" } ,
+        "skillleveluri": { "type": "uri" , "value": "http://lemr-dev.lasp.colorado.edu:8080/vivo/individual/n1398193760" }
+      } ,
+      {
+        "skill": { "type": "literal" , "value": "Gradle" } ,
+        "skilllevel": { "type": "literal" , "value": "Gradle advanced" } ,
+        "skillleveluri": { "type": "uri" , "value": "http://lemr-dev.lasp.colorado.edu:8080/vivo/individual/n569311957" }
+      } ,
+      {
+        "skill": { "type": "literal" , "value": "Gradle" } ,
+        "skilllevel": { "type": "literal" , "value": "Gradle guru" } ,
+        "skillleveluri": { "type": "uri" , "value": "http://lemr-dev.lasp.colorado.edu:8080/vivo/individual/n1069833509" }
+      } ,
+      {
+        "skill": { "type": "literal" , "value": "Grants" } ,
+        "skilllevel": { "type": "literal" , "value": "Grants (unranked)" } ,
+        "skillleveluri": { "type": "uri" , "value": "http://lemr-dev.lasp.colorado.edu:8080/vivo/individual/n1706539070" }
+      } ,
+      {
+        "skill": { "type": "literal" , "value": "Grants" } ,
+        "skilllevel": { "type": "literal" , "value": "Grants beginner" } ,
+        "skillleveluri": { "type": "uri" , "value": "http://lemr-dev.lasp.colorado.edu:8080/vivo/individual/n1591706475" }
+      } ,
+      {
+        "skill": { "type": "literal" , "value": "Grants" } ,
+        "skilllevel": { "type": "literal" , "value": "Grants intermediate" } ,
+        "skillleveluri": { "type": "uri" , "value": "http://lemr-dev.lasp.colorado.edu:8080/vivo/individual/n473101934" }
+      } ,
+      {
+        "skill": { "type": "literal" , "value": "Grants" } ,
+        "skilllevel": { "type": "literal" , "value": "Grants advanced" } ,
+        "skillleveluri": { "type": "uri" , "value": "http://lemr-dev.lasp.colorado.edu:8080/vivo/individual/n502212599" }
+      } ,
+      {
+        "skill": { "type": "literal" , "value": "Grants" } ,
+        "skilllevel": { "type": "literal" , "value": "Grants guru" } ,
+        "skillleveluri": { "type": "uri" , "value": "http://lemr-dev.lasp.colorado.edu:8080/vivo/individual/n1747849534" }
+      } ,
+      {
+        "skill": { "type": "literal" , "value": "Graphical User Interface (GUI) design" } ,
+        "skilllevel": { "type": "literal" , "value": "Graphical User Interface (GUI) design (unranked)" } ,
+        "skillleveluri": { "type": "uri" , "value": "http://lemr-dev.lasp.colorado.edu:8080/vivo/individual/n440619623" }
+      } ,
+      {
+        "skill": { "type": "literal" , "value": "Graphical User Interface (GUI) design" } ,
+        "skilllevel": { "type": "literal" , "value": "Graphical User Interface (GUI) design beginner" } ,
+        "skillleveluri": { "type": "uri" , "value": "http://lemr-dev.lasp.colorado.edu:8080/vivo/individual/n969597673" }
+      } ,
+      {
+        "skill": { "type": "literal" , "value": "Graphical User Interface (GUI) design" } ,
+        "skilllevel": { "type": "literal" , "value": "Graphical User Interface (GUI) design intermediate" } ,
+        "skillleveluri": { "type": "uri" , "value": "http://lemr-dev.lasp.colorado.edu:8080/vivo/individual/n824061673" }
+      } ,
+      {
+        "skill": { "type": "literal" , "value": "Graphical User Interface (GUI) design" } ,
+        "skilllevel": { "type": "literal" , "value": "Graphical User Interface (GUI) design advanced" } ,
+        "skillleveluri": { "type": "uri" , "value": "http://lemr-dev.lasp.colorado.edu:8080/vivo/individual/n1846193957" }
+      } ,
+      {
+        "skill": { "type": "literal" , "value": "Graphical User Interface (GUI) design" } ,
+        "skilllevel": { "type": "literal" , "value": "Graphical User Interface (GUI) design guru" } ,
+        "skillleveluri": { "type": "uri" , "value": "http://lemr-dev.lasp.colorado.edu:8080/vivo/individual/n470903593" }
+      } ,
+      {
+        "skill": { "type": "literal" , "value": "Greenhopper" } ,
+        "skilllevel": { "type": "literal" , "value": "Greenhopper (unranked)" } ,
+        "skillleveluri": { "type": "uri" , "value": "http://lemr-dev.lasp.colorado.edu:8080/vivo/individual/n674121804" }
+      } ,
+      {
+        "skill": { "type": "literal" , "value": "Greenhopper" } ,
+        "skilllevel": { "type": "literal" , "value": "Greenhopper beginner" } ,
+        "skillleveluri": { "type": "uri" , "value": "http://lemr-dev.lasp.colorado.edu:8080/vivo/individual/n743299727" }
+      } ,
+      {
+        "skill": { "type": "literal" , "value": "Greenhopper" } ,
+        "skilllevel": { "type": "literal" , "value": "Greenhopper intermediate" } ,
+        "skillleveluri": { "type": "uri" , "value": "http://lemr-dev.lasp.colorado.edu:8080/vivo/individual/n1621503107" }
+      } ,
+      {
+        "skill": { "type": "literal" , "value": "Greenhopper" } ,
+        "skilllevel": { "type": "literal" , "value": "Greenhopper advanced" } ,
+        "skillleveluri": { "type": "uri" , "value": "http://lemr-dev.lasp.colorado.edu:8080/vivo/individual/n1458590281" }
+      } ,
+      {
+        "skill": { "type": "literal" , "value": "Greenhopper" } ,
+        "skilllevel": { "type": "literal" , "value": "Greenhopper guru" } ,
+        "skillleveluri": { "type": "uri" , "value": "http://lemr-dev.lasp.colorado.edu:8080/vivo/individual/n33149245" }
+      } ,
+      {
+        "skill": { "type": "literal" , "value": "HDF" } ,
+        "skilllevel": { "type": "literal" , "value": "HDF (unranked)" } ,
+        "skillleveluri": { "type": "uri" , "value": "http://lemr-dev.lasp.colorado.edu:8080/vivo/individual/n525201002" }
+      } ,
+      {
+        "skill": { "type": "literal" , "value": "HDF" } ,
+        "skilllevel": { "type": "literal" , "value": "HDF beginner" } ,
+        "skillleveluri": { "type": "uri" , "value": "http://lemr-dev.lasp.colorado.edu:8080/vivo/individual/n446544932" }
+      } ,
+      {
+        "skill": { "type": "literal" , "value": "HDF" } ,
+        "skilllevel": { "type": "literal" , "value": "HDF intermediate" } ,
+        "skillleveluri": { "type": "uri" , "value": "http://lemr-dev.lasp.colorado.edu:8080/vivo/individual/n181977816" }
+      } ,
+      {
+        "skill": { "type": "literal" , "value": "HDF" } ,
+        "skilllevel": { "type": "literal" , "value": "HDF advanced" } ,
+        "skillleveluri": { "type": "uri" , "value": "http://lemr-dev.lasp.colorado.edu:8080/vivo/individual/n561508048" }
+      } ,
+      {
+        "skill": { "type": "literal" , "value": "HDF" } ,
+        "skilllevel": { "type": "literal" , "value": "HDF guru" } ,
+        "skillleveluri": { "type": "uri" , "value": "http://lemr-dev.lasp.colorado.edu:8080/vivo/individual/n642895041" }
+      } ,
+      {
+        "skill": { "type": "literal" , "value": "HTML5" } ,
+        "skilllevel": { "type": "literal" , "value": "HTML5 (unranked)" } ,
+        "skillleveluri": { "type": "uri" , "value": "http://lemr-dev.lasp.colorado.edu:8080/vivo/individual/n738198172" }
+      } ,
+      {
+        "skill": { "type": "literal" , "value": "HTML5" } ,
+        "skilllevel": { "type": "literal" , "value": "HTML5 beginner" } ,
+        "skillleveluri": { "type": "uri" , "value": "http://lemr-dev.lasp.colorado.edu:8080/vivo/individual/n1782921057" }
+      } ,
+      {
+        "skill": { "type": "literal" , "value": "HTML5" } ,
+        "skilllevel": { "type": "literal" , "value": "HTML5 intermediate" } ,
+        "skillleveluri": { "type": "uri" , "value": "http://lemr-dev.lasp.colorado.edu:8080/vivo/individual/n2144932849" }
+      } ,
+      {
+        "skill": { "type": "literal" , "value": "HTML5" } ,
+        "skilllevel": { "type": "literal" , "value": "HTML5 advanced" } ,
+        "skillleveluri": { "type": "uri" , "value": "http://lemr-dev.lasp.colorado.edu:8080/vivo/individual/n1182983491" }
+      } ,
+      {
+        "skill": { "type": "literal" , "value": "HTML5" } ,
+        "skilllevel": { "type": "literal" , "value": "HTML5 guru" } ,
+        "skillleveluri": { "type": "uri" , "value": "http://lemr-dev.lasp.colorado.edu:8080/vivo/individual/n286927675" }
+      } ,
+      {
+        "skill": { "type": "literal" , "value": "Haskell" } ,
+        "skilllevel": { "type": "literal" , "value": "Haskell (unranked)" } ,
+        "skillleveluri": { "type": "uri" , "value": "http://lemr-dev.lasp.colorado.edu:8080/vivo/individual/n1099652606" }
+      } ,
+      {
+        "skill": { "type": "literal" , "value": "Haskell" } ,
+        "skilllevel": { "type": "literal" , "value": "Haskell beginner" } ,
+        "skillleveluri": { "type": "uri" , "value": "http://lemr-dev.lasp.colorado.edu:8080/vivo/individual/n1221305260" }
+      } ,
+      {
+        "skill": { "type": "literal" , "value": "Haskell" } ,
+        "skilllevel": { "type": "literal" , "value": "Haskell intermediate" } ,
+        "skillleveluri": { "type": "uri" , "value": "http://lemr-dev.lasp.colorado.edu:8080/vivo/individual/n1350815999" }
+      } ,
+      {
+        "skill": { "type": "literal" , "value": "Haskell" } ,
+        "skilllevel": { "type": "literal" , "value": "Haskell advanced" } ,
+        "skillleveluri": { "type": "uri" , "value": "http://lemr-dev.lasp.colorado.edu:8080/vivo/individual/n383348917" }
+      } ,
+      {
+        "skill": { "type": "literal" , "value": "Haskell" } ,
+        "skilllevel": { "type": "literal" , "value": "Haskell guru" } ,
+        "skillleveluri": { "type": "uri" , "value": "http://lemr-dev.lasp.colorado.edu:8080/vivo/individual/n216702501" }
+      } ,
+      {
+        "skill": { "type": "literal" , "value": "HighCharts" } ,
+        "skilllevel": { "type": "literal" , "value": "HighCharts (unranked)" } ,
+        "skillleveluri": { "type": "uri" , "value": "http://lemr-dev.lasp.colorado.edu:8080/vivo/individual/n2003879660" }
+      } ,
+      {
+        "skill": { "type": "literal" , "value": "HighCharts" } ,
+        "skilllevel": { "type": "literal" , "value": "HighCharts beginner" } ,
+        "skillleveluri": { "type": "uri" , "value": "http://lemr-dev.lasp.colorado.edu:8080/vivo/individual/n514540812" }
+      } ,
+      {
+        "skill": { "type": "literal" , "value": "HighCharts" } ,
+        "skilllevel": { "type": "literal" , "value": "HighCharts intermediate" } ,
+        "skillleveluri": { "type": "uri" , "value": "http://lemr-dev.lasp.colorado.edu:8080/vivo/individual/n1976111064" }
+      } ,
+      {
+        "skill": { "type": "literal" , "value": "HighCharts" } ,
+        "skilllevel": { "type": "literal" , "value": "HighCharts advanced" } ,
+        "skillleveluri": { "type": "uri" , "value": "http://lemr-dev.lasp.colorado.edu:8080/vivo/individual/n528825677" }
+      } ,
+      {
+        "skill": { "type": "literal" , "value": "HighCharts" } ,
+        "skilllevel": { "type": "literal" , "value": "HighCharts guru" } ,
+        "skillleveluri": { "type": "uri" , "value": "http://lemr-dev.lasp.colorado.edu:8080/vivo/individual/n348862312" }
+      } ,
+      {
+        "skill": { "type": "literal" , "value": "Hudson / Jenkins" } ,
+        "skilllevel": { "type": "literal" , "value": "Hudson / Jenkins (unranked)" } ,
+        "skillleveluri": { "type": "uri" , "value": "http://lemr-dev.lasp.colorado.edu:8080/vivo/individual/n1737437541" }
+      } ,
+      {
+        "skill": { "type": "literal" , "value": "Hudson / Jenkins" } ,
+        "skilllevel": { "type": "literal" , "value": "Hudson / Jenkins beginner" } ,
+        "skillleveluri": { "type": "uri" , "value": "http://lemr-dev.lasp.colorado.edu:8080/vivo/individual/n1242391364" }
+      } ,
+      {
+        "skill": { "type": "literal" , "value": "Hudson / Jenkins" } ,
+        "skilllevel": { "type": "literal" , "value": "Hudson / Jenkins intermediate" } ,
+        "skillleveluri": { "type": "uri" , "value": "http://lemr-dev.lasp.colorado.edu:8080/vivo/individual/n2041232720" }
+      } ,
+      {
+        "skill": { "type": "literal" , "value": "Hudson / Jenkins" } ,
+        "skilllevel": { "type": "literal" , "value": "Hudson / Jenkins advanced" } ,
+        "skillleveluri": { "type": "uri" , "value": "http://lemr-dev.lasp.colorado.edu:8080/vivo/individual/n552016427" }
+      } ,
+      {
+        "skill": { "type": "literal" , "value": "Hudson / Jenkins" } ,
+        "skilllevel": { "type": "literal" , "value": "Hudson / Jenkins guru" } ,
+        "skillleveluri": { "type": "uri" , "value": "http://lemr-dev.lasp.colorado.edu:8080/vivo/individual/n1784251736" }
+      } ,
+      {
+        "skill": { "type": "literal" , "value": "I&T Ops" } ,
+        "skilllevel": { "type": "literal" , "value": "I&T Ops (unranked)" } ,
+        "skillleveluri": { "type": "uri" , "value": "http://lemr-dev:8080/vivo/individual/n1352975674" }
+      } ,
+      {
+        "skill": { "type": "literal" , "value": "I&T Ops" } ,
+        "skilllevel": { "type": "literal" , "value": "I&T Ops beginner" } ,
+        "skillleveluri": { "type": "uri" , "value": "http://lemr-dev:8080/vivo/individual/n234346033" }
+      } ,
+      {
+        "skill": { "type": "literal" , "value": "I&T Ops" } ,
+        "skilllevel": { "type": "literal" , "value": "I&T Ops intermediate" } ,
+        "skillleveluri": { "type": "uri" , "value": "http://lemr-dev:8080/vivo/individual/n1904965669" }
+      } ,
+      {
+        "skill": { "type": "literal" , "value": "I&T Ops" } ,
+        "skilllevel": { "type": "literal" , "value": "I&T Ops advanced" } ,
+        "skillleveluri": { "type": "uri" , "value": "http://lemr-dev:8080/vivo/individual/n1711517763" }
+      } ,
+      {
+        "skill": { "type": "literal" , "value": "I&T Ops" } ,
+        "skilllevel": { "type": "literal" , "value": "I&T Ops guru" } ,
+        "skillleveluri": { "type": "uri" , "value": "http://lemr-dev:8080/vivo/individual/n1422887228" }
+      } ,
+      {
+        "skill": { "type": "literal" , "value": "IDL" } ,
+        "skilllevel": { "type": "literal" , "value": "IDL (unranked)" } ,
+        "skillleveluri": { "type": "uri" , "value": "http://lemr-dev.lasp.colorado.edu:8080/vivo/individual/n1087137639" }
+      } ,
+      {
+        "skill": { "type": "literal" , "value": "IDL" } ,
+        "skilllevel": { "type": "literal" , "value": "IDL beginner" } ,
+        "skillleveluri": { "type": "uri" , "value": "http://lemr-dev.lasp.colorado.edu:8080/vivo/individual/n1646792738" }
+      } ,
+      {
+        "skill": { "type": "literal" , "value": "IDL" } ,
+        "skilllevel": { "type": "literal" , "value": "IDL intermediate" } ,
+        "skillleveluri": { "type": "uri" , "value": "http://lemr-dev.lasp.colorado.edu:8080/vivo/individual/n1187718791" }
+      } ,
+      {
+        "skill": { "type": "literal" , "value": "IDL" } ,
+        "skilllevel": { "type": "literal" , "value": "IDL advanced" } ,
+        "skillleveluri": { "type": "uri" , "value": "http://lemr-dev.lasp.colorado.edu:8080/vivo/individual/n800153536" }
+      } ,
+      {
+        "skill": { "type": "literal" , "value": "IDL" } ,
+        "skilllevel": { "type": "literal" , "value": "IDL guru" } ,
+        "skillleveluri": { "type": "uri" , "value": "http://lemr-dev.lasp.colorado.edu:8080/vivo/individual/n1101836142" }
+      } ,
+      {
+        "skill": { "type": "literal" , "value": "IPython" } ,
+        "skilllevel": { "type": "literal" , "value": "IPython (unranked)" } ,
+        "skillleveluri": { "type": "uri" , "value": "http://lemr-dev.lasp.colorado.edu:8080/vivo/individual/n1073217258" }
+      } ,
+      {
+        "skill": { "type": "literal" , "value": "IPython" } ,
+        "skilllevel": { "type": "literal" , "value": "IPython beginner" } ,
+        "skillleveluri": { "type": "uri" , "value": "http://lemr-dev.lasp.colorado.edu:8080/vivo/individual/n1945263411" }
+      } ,
+      {
+        "skill": { "type": "literal" , "value": "IPython" } ,
+        "skilllevel": { "type": "literal" , "value": "IPython intermediate" } ,
+        "skillleveluri": { "type": "uri" , "value": "http://lemr-dev.lasp.colorado.edu:8080/vivo/individual/n599035978" }
+      } ,
+      {
+        "skill": { "type": "literal" , "value": "IPython" } ,
+        "skilllevel": { "type": "literal" , "value": "IPython advanced" } ,
+        "skillleveluri": { "type": "uri" , "value": "http://lemr-dev.lasp.colorado.edu:8080/vivo/individual/n2027410933" }
+      } ,
+      {
+        "skill": { "type": "literal" , "value": "IPython" } ,
+        "skilllevel": { "type": "literal" , "value": "IPython guru" } ,
+        "skillleveluri": { "type": "uri" , "value": "http://lemr-dev.lasp.colorado.edu:8080/vivo/individual/n1774494722" }
+      } ,
+      {
+        "skill": { "type": "literal" , "value": "ISIS" } ,
+        "skilllevel": { "type": "literal" , "value": "ISIS (unranked)" } ,
+        "skillleveluri": { "type": "uri" , "value": "http://lemr-dev.lasp.colorado.edu:8080/vivo/individual/n900856747" }
+      } ,
+      {
+        "skill": { "type": "literal" , "value": "ISIS" } ,
+        "skilllevel": { "type": "literal" , "value": "ISIS beginner" } ,
+        "skillleveluri": { "type": "uri" , "value": "http://lemr-dev.lasp.colorado.edu:8080/vivo/individual/n21737050" }
+      } ,
+      {
+        "skill": { "type": "literal" , "value": "ISIS" } ,
+        "skilllevel": { "type": "literal" , "value": "ISIS intermediate" } ,
+        "skillleveluri": { "type": "uri" , "value": "http://lemr-dev.lasp.colorado.edu:8080/vivo/individual/n244416436" }
+      } ,
+      {
+        "skill": { "type": "literal" , "value": "ISIS" } ,
+        "skilllevel": { "type": "literal" , "value": "ISIS advanced" } ,
+        "skillleveluri": { "type": "uri" , "value": "http://lemr-dev.lasp.colorado.edu:8080/vivo/individual/n1962751830" }
+      } ,
+      {
+        "skill": { "type": "literal" , "value": "ISIS" } ,
+        "skilllevel": { "type": "literal" , "value": "ISIS guru" } ,
+        "skillleveluri": { "type": "uri" , "value": "http://lemr-dev.lasp.colorado.edu:8080/vivo/individual/n1188959694" }
+      } ,
+      {
+        "skill": { "type": "literal" , "value": "ITAR" } ,
+        "skilllevel": { "type": "literal" , "value": "ITAR (unranked)" } ,
+        "skillleveluri": { "type": "uri" , "value": "http://lemr-dev.lasp.colorado.edu:8080/vivo/individual/n1480446255" }
+      } ,
+      {
+        "skill": { "type": "literal" , "value": "ITAR" } ,
+        "skilllevel": { "type": "literal" , "value": "ITAR beginner" } ,
+        "skillleveluri": { "type": "uri" , "value": "http://lemr-dev.lasp.colorado.edu:8080/vivo/individual/n1148338077" }
+      } ,
+      {
+        "skill": { "type": "literal" , "value": "ITAR" } ,
+        "skilllevel": { "type": "literal" , "value": "ITAR intermediate" } ,
+        "skillleveluri": { "type": "uri" , "value": "http://lemr-dev.lasp.colorado.edu:8080/vivo/individual/n712114463" }
+      } ,
+      {
+        "skill": { "type": "literal" , "value": "ITAR" } ,
+        "skilllevel": { "type": "literal" , "value": "ITAR advanced" } ,
+        "skillleveluri": { "type": "uri" , "value": "http://lemr-dev.lasp.colorado.edu:8080/vivo/individual/n1864652832" }
+      } ,
+      {
+        "skill": { "type": "literal" , "value": "ITAR" } ,
+        "skilllevel": { "type": "literal" , "value": "ITAR guru" } ,
+        "skillleveluri": { "type": "uri" , "value": "http://lemr-dev.lasp.colorado.edu:8080/vivo/individual/n547757885" }
+      } ,
+      {
+        "skill": { "type": "literal" , "value": "InDesign" } ,
+        "skilllevel": { "type": "literal" , "value": "InDesign (unranked)" } ,
+        "skillleveluri": { "type": "uri" , "value": "http://lemr-dev.lasp.colorado.edu:8080/vivo/individual/n1900327018" }
+      } ,
+      {
+        "skill": { "type": "literal" , "value": "InDesign" } ,
+        "skilllevel": { "type": "literal" , "value": "InDesign beginner" } ,
+        "skillleveluri": { "type": "uri" , "value": "http://lemr-dev.lasp.colorado.edu:8080/vivo/individual/n1752833702" }
+      } ,
+      {
+        "skill": { "type": "literal" , "value": "InDesign" } ,
+        "skilllevel": { "type": "literal" , "value": "InDesign intermediate" } ,
+        "skillleveluri": { "type": "uri" , "value": "http://lemr-dev.lasp.colorado.edu:8080/vivo/individual/n540127379" }
+      } ,
+      {
+        "skill": { "type": "literal" , "value": "InDesign" } ,
+        "skilllevel": { "type": "literal" , "value": "InDesign advanced" } ,
+        "skillleveluri": { "type": "uri" , "value": "http://lemr-dev.lasp.colorado.edu:8080/vivo/individual/n1492137050" }
+      } ,
+      {
+        "skill": { "type": "literal" , "value": "InDesign" } ,
+        "skilllevel": { "type": "literal" , "value": "InDesign guru" } ,
+        "skillleveluri": { "type": "uri" , "value": "http://lemr-dev.lasp.colorado.edu:8080/vivo/individual/n640823450" }
+      } ,
+      {
+        "skill": { "type": "literal" , "value": "JIRA" } ,
+        "skilllevel": { "type": "literal" , "value": "JIRA (unranked)" } ,
+        "skillleveluri": { "type": "uri" , "value": "http://lemr-dev.lasp.colorado.edu:8080/vivo/individual/n315190482" }
+      } ,
+      {
+        "skill": { "type": "literal" , "value": "JIRA" } ,
+        "skilllevel": { "type": "literal" , "value": "JIRA beginner" } ,
+        "skillleveluri": { "type": "uri" , "value": "http://lemr-dev.lasp.colorado.edu:8080/vivo/individual/n2004191433" }
+      } ,
+      {
+        "skill": { "type": "literal" , "value": "JIRA" } ,
+        "skilllevel": { "type": "literal" , "value": "JIRA intermediate" } ,
+        "skillleveluri": { "type": "uri" , "value": "http://lemr-dev.lasp.colorado.edu:8080/vivo/individual/n1149926731" }
+      } ,
+      {
+        "skill": { "type": "literal" , "value": "JIRA" } ,
+        "skilllevel": { "type": "literal" , "value": "JIRA advanced" } ,
+        "skillleveluri": { "type": "uri" , "value": "http://lemr-dev.lasp.colorado.edu:8080/vivo/individual/n34465221" }
+      } ,
+      {
+        "skill": { "type": "literal" , "value": "JIRA" } ,
+        "skilllevel": { "type": "literal" , "value": "JIRA guru" } ,
+        "skillleveluri": { "type": "uri" , "value": "http://lemr-dev.lasp.colorado.edu:8080/vivo/individual/n1080774604" }
+      } ,
+      {
+        "skill": { "type": "literal" , "value": "Java" } ,
+        "skilllevel": { "type": "literal" , "value": "Java (unranked)" } ,
+        "skillleveluri": { "type": "uri" , "value": "http://lemr-dev.lasp.colorado.edu:8080/vivo/individual/n5477" }
+      } ,
+      {
+        "skill": { "type": "literal" , "value": "Java" } ,
+        "skilllevel": { "type": "literal" , "value": "Java beginner" } ,
+        "skillleveluri": { "type": "uri" , "value": "http://lemr-dev.lasp.colorado.edu:8080/vivo/individual/n5091" }
+      } ,
+      {
+        "skill": { "type": "literal" , "value": "Java" } ,
+        "skilllevel": { "type": "literal" , "value": "Java intermediate" } ,
+        "skillleveluri": { "type": "uri" , "value": "http://lemr-dev.lasp.colorado.edu:8080/vivo/individual/n5409" }
+      } ,
+      {
+        "skill": { "type": "literal" , "value": "Java" } ,
+        "skilllevel": { "type": "literal" , "value": "Java advanced" } ,
+        "skillleveluri": { "type": "uri" , "value": "http://lemr-dev.lasp.colorado.edu:8080/vivo/individual/n1613" }
+      } ,
+      {
+        "skill": { "type": "literal" , "value": "Java" } ,
+        "skilllevel": { "type": "literal" , "value": "Java guru" } ,
+        "skillleveluri": { "type": "uri" , "value": "http://lemr-dev.lasp.colorado.edu:8080/vivo/individual/n2416" }
+      } ,
+      {
+        "skill": { "type": "literal" , "value": "Javascript" } ,
+        "skilllevel": { "type": "literal" , "value": "Javascript (unranked)" } ,
+        "skillleveluri": { "type": "uri" , "value": "http://lemr-dev.lasp.colorado.edu:8080/vivo/individual/n1749531629" }
+      } ,
+      {
+        "skill": { "type": "literal" , "value": "Javascript" } ,
+        "skilllevel": { "type": "literal" , "value": "Javascript beginner" } ,
+        "skillleveluri": { "type": "uri" , "value": "http://lemr-dev.lasp.colorado.edu:8080/vivo/individual/n2069783663" }
+      } ,
+      {
+        "skill": { "type": "literal" , "value": "Javascript" } ,
+        "skilllevel": { "type": "literal" , "value": "Javascript intermediate" } ,
+        "skillleveluri": { "type": "uri" , "value": "http://lemr-dev.lasp.colorado.edu:8080/vivo/individual/n262027611" }
+      } ,
+      {
+        "skill": { "type": "literal" , "value": "Javascript" } ,
+        "skilllevel": { "type": "literal" , "value": "Javascript advanced" } ,
+        "skillleveluri": { "type": "uri" , "value": "http://lemr-dev.lasp.colorado.edu:8080/vivo/individual/n121234857" }
+      } ,
+      {
+        "skill": { "type": "literal" , "value": "Javascript" } ,
+        "skilllevel": { "type": "literal" , "value": "Javascript guru" } ,
+        "skillleveluri": { "type": "uri" , "value": "http://lemr-dev.lasp.colorado.edu:8080/vivo/individual/n421925993" }
+      } ,
+      {
+        "skill": { "type": "literal" , "value": "Julia" } ,
+        "skilllevel": { "type": "literal" , "value": "Julia (unranked)" } ,
+        "skillleveluri": { "type": "uri" , "value": "http://lemr-dev.lasp.colorado.edu:8080/vivo/individual/n11310484" }
+      } ,
+      {
+        "skill": { "type": "literal" , "value": "Julia" } ,
+        "skilllevel": { "type": "literal" , "value": "Julia beginner" } ,
+        "skillleveluri": { "type": "uri" , "value": "http://lemr-dev.lasp.colorado.edu:8080/vivo/individual/n384893030" }
+      } ,
+      {
+        "skill": { "type": "literal" , "value": "Julia" } ,
+        "skilllevel": { "type": "literal" , "value": "Julia intermediate" } ,
+        "skillleveluri": { "type": "uri" , "value": "http://lemr-dev.lasp.colorado.edu:8080/vivo/individual/n944572186" }
+      } ,
+      {
+        "skill": { "type": "literal" , "value": "Julia" } ,
+        "skilllevel": { "type": "literal" , "value": "Julia advanced" } ,
+        "skillleveluri": { "type": "uri" , "value": "http://lemr-dev.lasp.colorado.edu:8080/vivo/individual/n413082806" }
+      } ,
+      {
+        "skill": { "type": "literal" , "value": "Julia" } ,
+        "skilllevel": { "type": "literal" , "value": "Julia guru" } ,
+        "skillleveluri": { "type": "uri" , "value": "http://lemr-dev.lasp.colorado.edu:8080/vivo/individual/n1816191640" }
+      } ,
+      {
+        "skill": { "type": "literal" , "value": "Klocwork Insight" } ,
+        "skilllevel": { "type": "literal" , "value": "Klocwork Insight (unranked)" } ,
+        "skillleveluri": { "type": "uri" , "value": "http://lemr-dev.lasp.colorado.edu:8080/vivo/individual/n1812336606" }
+      } ,
+      {
+        "skill": { "type": "literal" , "value": "Klocwork Insight" } ,
+        "skilllevel": { "type": "literal" , "value": "Klocwork Insight beginner" } ,
+        "skillleveluri": { "type": "uri" , "value": "http://lemr-dev.lasp.colorado.edu:8080/vivo/individual/n1327292223" }
+      } ,
+      {
+        "skill": { "type": "literal" , "value": "Klocwork Insight" } ,
+        "skilllevel": { "type": "literal" , "value": "Klocwork Insight intermediate" } ,
+        "skillleveluri": { "type": "uri" , "value": "http://lemr-dev.lasp.colorado.edu:8080/vivo/individual/n1127207099" }
+      } ,
+      {
+        "skill": { "type": "literal" , "value": "Klocwork Insight" } ,
+        "skilllevel": { "type": "literal" , "value": "Klocwork Insight advanced" } ,
+        "skillleveluri": { "type": "uri" , "value": "http://lemr-dev.lasp.colorado.edu:8080/vivo/individual/n1606046839" }
+      } ,
+      {
+        "skill": { "type": "literal" , "value": "Klocwork Insight" } ,
+        "skilllevel": { "type": "literal" , "value": "Klocwork Insight guru" } ,
+        "skillleveluri": { "type": "uri" , "value": "http://lemr-dev.lasp.colorado.edu:8080/vivo/individual/n130720797" }
+      } ,
+      {
+        "skill": { "type": "literal" , "value": "LAPIS" } ,
+        "skilllevel": { "type": "literal" , "value": "LAPIS (unranked)" } ,
+        "skillleveluri": { "type": "uri" , "value": "http://lemr-dev.lasp.colorado.edu:8080/vivo/individual/n1502183070" }
+      } ,
+      {
+        "skill": { "type": "literal" , "value": "LAPIS" } ,
+        "skilllevel": { "type": "literal" , "value": "LAPIS beginner" } ,
+        "skillleveluri": { "type": "uri" , "value": "http://lemr-dev.lasp.colorado.edu:8080/vivo/individual/n910650024" }
+      } ,
+      {
+        "skill": { "type": "literal" , "value": "LAPIS" } ,
+        "skilllevel": { "type": "literal" , "value": "LAPIS intermediate" } ,
+        "skillleveluri": { "type": "uri" , "value": "http://lemr-dev.lasp.colorado.edu:8080/vivo/individual/n210389538" }
+      } ,
+      {
+        "skill": { "type": "literal" , "value": "LAPIS" } ,
+        "skilllevel": { "type": "literal" , "value": "LAPIS advanced" } ,
+        "skillleveluri": { "type": "uri" , "value": "http://lemr-dev.lasp.colorado.edu:8080/vivo/individual/n1363606303" }
+      } ,
+      {
+        "skill": { "type": "literal" , "value": "LAPIS" } ,
+        "skilllevel": { "type": "literal" , "value": "LAPIS guru" } ,
+        "skillleveluri": { "type": "uri" , "value": "http://lemr-dev.lasp.colorado.edu:8080/vivo/individual/n963358014" }
+      } ,
+      {
+        "skill": { "type": "literal" , "value": "LaTiS" } ,
+        "skilllevel": { "type": "literal" , "value": "LaTiS (unranked)" } ,
+        "skillleveluri": { "type": "uri" , "value": "http://lemr-dev:8080/vivo/individual/n2116524637" }
+      } ,
+      {
+        "skill": { "type": "literal" , "value": "LaTiS" } ,
+        "skilllevel": { "type": "literal" , "value": "LaTiS beginner" } ,
+        "skillleveluri": { "type": "uri" , "value": "http://lemr-dev:8080/vivo/individual/n378417149" }
+      } ,
+      {
+        "skill": { "type": "literal" , "value": "LaTiS" } ,
+        "skilllevel": { "type": "literal" , "value": "LaTiS intermediate" } ,
+        "skillleveluri": { "type": "uri" , "value": "http://lemr-dev:8080/vivo/individual/n1198284240" }
+      } ,
+      {
+        "skill": { "type": "literal" , "value": "LaTiS" } ,
+        "skilllevel": { "type": "literal" , "value": "LaTiS advanced" } ,
+        "skillleveluri": { "type": "uri" , "value": "http://lemr-dev:8080/vivo/individual/n501264682" }
+      } ,
+      {
+        "skill": { "type": "literal" , "value": "LaTiS" } ,
+        "skilllevel": { "type": "literal" , "value": "LaTiS guru" } ,
+        "skillleveluri": { "type": "uri" , "value": "http://lemr-dev:8080/vivo/individual/n2055815986" }
+      } ,
+      {
+        "skill": { "type": "literal" , "value": "LabView" } ,
+        "skilllevel": { "type": "literal" , "value": "LabView (unranked)" } ,
+        "skillleveluri": { "type": "uri" , "value": "http://lemr-dev.lasp.colorado.edu:8080/vivo/individual/n1872560217" }
+      } ,
+      {
+        "skill": { "type": "literal" , "value": "LabView" } ,
+        "skilllevel": { "type": "literal" , "value": "LabView beginner" } ,
+        "skillleveluri": { "type": "uri" , "value": "http://lemr-dev.lasp.colorado.edu:8080/vivo/individual/n958593504" }
+      } ,
+      {
+        "skill": { "type": "literal" , "value": "LabView" } ,
+        "skilllevel": { "type": "literal" , "value": "LabView intermediate" } ,
+        "skillleveluri": { "type": "uri" , "value": "http://lemr-dev.lasp.colorado.edu:8080/vivo/individual/n1729689433" }
+      } ,
+      {
+        "skill": { "type": "literal" , "value": "LabView" } ,
+        "skilllevel": { "type": "literal" , "value": "LabView advanced" } ,
+        "skillleveluri": { "type": "uri" , "value": "http://lemr-dev.lasp.colorado.edu:8080/vivo/individual/n1734042133" }
+      } ,
+      {
+        "skill": { "type": "literal" , "value": "LabView" } ,
+        "skilllevel": { "type": "literal" , "value": "LabView guru" } ,
+        "skillleveluri": { "type": "uri" , "value": "http://lemr-dev.lasp.colorado.edu:8080/vivo/individual/n1012557516" }
+      } ,
+      {
+        "skill": { "type": "literal" , "value": "Least Squares Fitting" } ,
+        "skilllevel": { "type": "literal" , "value": "Least Squares Fitting (unranked)" } ,
+        "skillleveluri": { "type": "uri" , "value": "http://lemr-dev.lasp.colorado.edu:8080/vivo/individual/n1806846241" }
+      } ,
+      {
+        "skill": { "type": "literal" , "value": "Least Squares Fitting" } ,
+        "skilllevel": { "type": "literal" , "value": "Least Squares Fitting beginner" } ,
+        "skillleveluri": { "type": "uri" , "value": "http://lemr-dev.lasp.colorado.edu:8080/vivo/individual/n848923856" }
+      } ,
+      {
+        "skill": { "type": "literal" , "value": "Least Squares Fitting" } ,
+        "skilllevel": { "type": "literal" , "value": "Least Squares Fitting intermediate" } ,
+        "skillleveluri": { "type": "uri" , "value": "http://lemr-dev.lasp.colorado.edu:8080/vivo/individual/n563249855" }
+      } ,
+      {
+        "skill": { "type": "literal" , "value": "Least Squares Fitting" } ,
+        "skilllevel": { "type": "literal" , "value": "Least Squares Fitting advanced" } ,
+        "skillleveluri": { "type": "uri" , "value": "http://lemr-dev.lasp.colorado.edu:8080/vivo/individual/n154172632" }
+      } ,
+      {
+        "skill": { "type": "literal" , "value": "Least Squares Fitting" } ,
+        "skilllevel": { "type": "literal" , "value": "Least Squares Fitting guru" } ,
+        "skillleveluri": { "type": "uri" , "value": "http://lemr-dev.lasp.colorado.edu:8080/vivo/individual/n453811035" }
+      } ,
+      {
+        "skill": { "type": "literal" , "value": "Linux" } ,
+        "skilllevel": { "type": "literal" , "value": "Linux (unranked)" } ,
+        "skillleveluri": { "type": "uri" , "value": "http://lemr-dev.lasp.colorado.edu:8080/vivo/individual/n1003796096" }
+      } ,
+      {
+        "skill": { "type": "literal" , "value": "Linux" } ,
+        "skilllevel": { "type": "literal" , "value": "Linux beginner" } ,
+        "skillleveluri": { "type": "uri" , "value": "http://lemr-dev.lasp.colorado.edu:8080/vivo/individual/n102309501" }
+      } ,
+      {
+        "skill": { "type": "literal" , "value": "Linux" } ,
+        "skilllevel": { "type": "literal" , "value": "Linux intermediate" } ,
+        "skillleveluri": { "type": "uri" , "value": "http://lemr-dev.lasp.colorado.edu:8080/vivo/individual/n1103914087" }
+      } ,
+      {
+        "skill": { "type": "literal" , "value": "Linux" } ,
+        "skilllevel": { "type": "literal" , "value": "Linux advanced" } ,
+        "skillleveluri": { "type": "uri" , "value": "http://lemr-dev.lasp.colorado.edu:8080/vivo/individual/n2100386976" }
+      } ,
+      {
+        "skill": { "type": "literal" , "value": "Linux" } ,
+        "skilllevel": { "type": "literal" , "value": "Linux guru" } ,
+        "skillleveluri": { "type": "uri" , "value": "http://lemr-dev.lasp.colorado.edu:8080/vivo/individual/n1574739549" }
+      } ,
+      {
+        "skill": { "type": "literal" , "value": "MacOS" } ,
+        "skilllevel": { "type": "literal" , "value": "MacOS (unranked)" } ,
+        "skillleveluri": { "type": "uri" , "value": "http://lemr-dev.lasp.colorado.edu:8080/vivo/individual/n257741671" }
+      } ,
+      {
+        "skill": { "type": "literal" , "value": "MacOS" } ,
+        "skilllevel": { "type": "literal" , "value": "MacOS beginner" } ,
+        "skillleveluri": { "type": "uri" , "value": "http://lemr-dev.lasp.colorado.edu:8080/vivo/individual/n1094760625" }
+      } ,
+      {
+        "skill": { "type": "literal" , "value": "MacOS" } ,
+        "skilllevel": { "type": "literal" , "value": "MacOS intermediate" } ,
+        "skillleveluri": { "type": "uri" , "value": "http://lemr-dev.lasp.colorado.edu:8080/vivo/individual/n845544070" }
+      } ,
+      {
+        "skill": { "type": "literal" , "value": "MacOS" } ,
+        "skilllevel": { "type": "literal" , "value": "MacOS advanced" } ,
+        "skillleveluri": { "type": "uri" , "value": "http://lemr-dev.lasp.colorado.edu:8080/vivo/individual/n1036406957" }
+      } ,
+      {
+        "skill": { "type": "literal" , "value": "MacOS" } ,
+        "skilllevel": { "type": "literal" , "value": "MacOS guru" } ,
+        "skillleveluri": { "type": "uri" , "value": "http://lemr-dev.lasp.colorado.edu:8080/vivo/individual/n1086823868" }
+      } ,
+      {
+        "skill": { "type": "literal" , "value": "Matlab" } ,
+        "skilllevel": { "type": "literal" , "value": "Matlab (unranked)" } ,
+        "skillleveluri": { "type": "uri" , "value": "http://lemr-dev.lasp.colorado.edu:8080/vivo/individual/n1574568149" }
+      } ,
+      {
+        "skill": { "type": "literal" , "value": "Matlab" } ,
+        "skilllevel": { "type": "literal" , "value": "Matlab beginner" } ,
+        "skillleveluri": { "type": "uri" , "value": "http://lemr-dev.lasp.colorado.edu:8080/vivo/individual/n982331912" }
+      } ,
+      {
+        "skill": { "type": "literal" , "value": "Matlab" } ,
+        "skilllevel": { "type": "literal" , "value": "Matlab intermediate" } ,
+        "skillleveluri": { "type": "uri" , "value": "http://lemr-dev.lasp.colorado.edu:8080/vivo/individual/n387374551" }
+      } ,
+      {
+        "skill": { "type": "literal" , "value": "Matlab" } ,
+        "skilllevel": { "type": "literal" , "value": "Matlab advanced" } ,
+        "skillleveluri": { "type": "uri" , "value": "http://lemr-dev.lasp.colorado.edu:8080/vivo/individual/n916250560" }
+      } ,
+      {
+        "skill": { "type": "literal" , "value": "Matlab" } ,
+        "skilllevel": { "type": "literal" , "value": "Matlab guru" } ,
+        "skillleveluri": { "type": "uri" , "value": "http://lemr-dev.lasp.colorado.edu:8080/vivo/individual/n234619747" }
+      } ,
+      {
+        "skill": { "type": "literal" , "value": "MediaWiki" } ,
+        "skilllevel": { "type": "literal" , "value": "MediaWiki (unranked)" } ,
+        "skillleveluri": { "type": "uri" , "value": "http://lemr-dev.lasp.colorado.edu:8080/vivo/individual/n1853486041" }
+      } ,
+      {
+        "skill": { "type": "literal" , "value": "MediaWiki" } ,
+        "skilllevel": { "type": "literal" , "value": "MediaWiki beginner" } ,
+        "skillleveluri": { "type": "uri" , "value": "http://lemr-dev.lasp.colorado.edu:8080/vivo/individual/n1299767191" }
+      } ,
+      {
+        "skill": { "type": "literal" , "value": "MediaWiki" } ,
+        "skilllevel": { "type": "literal" , "value": "MediaWiki intermediate" } ,
+        "skillleveluri": { "type": "uri" , "value": "http://lemr-dev.lasp.colorado.edu:8080/vivo/individual/n446453562" }
+      } ,
+      {
+        "skill": { "type": "literal" , "value": "MediaWiki" } ,
+        "skilllevel": { "type": "literal" , "value": "MediaWiki advanced" } ,
+        "skillleveluri": { "type": "uri" , "value": "http://lemr-dev.lasp.colorado.edu:8080/vivo/individual/n876419576" }
+      } ,
+      {
+        "skill": { "type": "literal" , "value": "MediaWiki" } ,
+        "skilllevel": { "type": "literal" , "value": "MediaWiki guru" } ,
+        "skillleveluri": { "type": "uri" , "value": "http://lemr-dev.lasp.colorado.edu:8080/vivo/individual/n1474335554" }
+      } ,
+      {
+        "skill": { "type": "literal" , "value": "Metastorm" } ,
+        "skilllevel": { "type": "literal" , "value": "Metastorm (unranked)" } ,
+        "skillleveluri": { "type": "uri" , "value": "http://lemr-dev.lasp.colorado.edu:8080/vivo/individual/n1561677047" }
+      } ,
+      {
+        "skill": { "type": "literal" , "value": "Metastorm" } ,
+        "skilllevel": { "type": "literal" , "value": "Metastorm beginner" } ,
+        "skillleveluri": { "type": "uri" , "value": "http://lemr-dev.lasp.colorado.edu:8080/vivo/individual/n726056373" }
+      } ,
+      {
+        "skill": { "type": "literal" , "value": "Metastorm" } ,
+        "skilllevel": { "type": "literal" , "value": "Metastorm intermediate" } ,
+        "skillleveluri": { "type": "uri" , "value": "http://lemr-dev.lasp.colorado.edu:8080/vivo/individual/n1834976109" }
+      } ,
+      {
+        "skill": { "type": "literal" , "value": "Metastorm" } ,
+        "skilllevel": { "type": "literal" , "value": "Metastorm advanced" } ,
+        "skillleveluri": { "type": "uri" , "value": "http://lemr-dev.lasp.colorado.edu:8080/vivo/individual/n377306649" }
+      } ,
+      {
+        "skill": { "type": "literal" , "value": "Metastorm" } ,
+        "skilllevel": { "type": "literal" , "value": "Metastorm guru" } ,
+        "skillleveluri": { "type": "uri" , "value": "http://lemr-dev.lasp.colorado.edu:8080/vivo/individual/n270444721" }
+      } ,
+      {
+        "skill": { "type": "literal" , "value": "Microsoft Excel" } ,
+        "skilllevel": { "type": "literal" , "value": "Microsoft Excel (unranked)" } ,
+        "skillleveluri": { "type": "uri" , "value": "http://lemr-dev.lasp.colorado.edu:8080/vivo/individual/n1728291009" }
+      } ,
+      {
+        "skill": { "type": "literal" , "value": "Microsoft Excel" } ,
+        "skilllevel": { "type": "literal" , "value": "Microsoft Excel beginner" } ,
+        "skillleveluri": { "type": "uri" , "value": "http://lemr-dev.lasp.colorado.edu:8080/vivo/individual/n2038895378" }
+      } ,
+      {
+        "skill": { "type": "literal" , "value": "Microsoft Excel" } ,
+        "skilllevel": { "type": "literal" , "value": "Microsoft Excel intermediate" } ,
+        "skillleveluri": { "type": "uri" , "value": "http://lemr-dev.lasp.colorado.edu:8080/vivo/individual/n927066295" }
+      } ,
+      {
+        "skill": { "type": "literal" , "value": "Microsoft Excel" } ,
+        "skilllevel": { "type": "literal" , "value": "Microsoft Excel advanced" } ,
+        "skillleveluri": { "type": "uri" , "value": "http://lemr-dev.lasp.colorado.edu:8080/vivo/individual/n549514676" }
+      } ,
+      {
+        "skill": { "type": "literal" , "value": "Microsoft Excel" } ,
+        "skilllevel": { "type": "literal" , "value": "Microsoft Excel guru" } ,
+        "skillleveluri": { "type": "uri" , "value": "http://lemr-dev.lasp.colorado.edu:8080/vivo/individual/n352583939" }
+      } ,
+      {
+        "skill": { "type": "literal" , "value": "Microsoft OneNote" } ,
+        "skilllevel": { "type": "literal" , "value": "Microsoft OneNote (unranked)" } ,
+        "skillleveluri": { "type": "uri" , "value": "http://lemr-dev.lasp.colorado.edu:8080/vivo/individual/n115305060" }
+      } ,
+      {
+        "skill": { "type": "literal" , "value": "Microsoft OneNote" } ,
+        "skilllevel": { "type": "literal" , "value": "Microsoft OneNote beginner" } ,
+        "skillleveluri": { "type": "uri" , "value": "http://lemr-dev.lasp.colorado.edu:8080/vivo/individual/n1850432041" }
+      } ,
+      {
+        "skill": { "type": "literal" , "value": "Microsoft OneNote" } ,
+        "skilllevel": { "type": "literal" , "value": "Microsoft OneNote intermediate" } ,
+        "skillleveluri": { "type": "uri" , "value": "http://lemr-dev.lasp.colorado.edu:8080/vivo/individual/n202128694" }
+      } ,
+      {
+        "skill": { "type": "literal" , "value": "Microsoft OneNote" } ,
+        "skilllevel": { "type": "literal" , "value": "Microsoft OneNote advanced" } ,
+        "skillleveluri": { "type": "uri" , "value": "http://lemr-dev.lasp.colorado.edu:8080/vivo/individual/n330270900" }
+      } ,
+      {
+        "skill": { "type": "literal" , "value": "Microsoft OneNote" } ,
+        "skilllevel": { "type": "literal" , "value": "Microsoft OneNote guru" } ,
+        "skillleveluri": { "type": "uri" , "value": "http://lemr-dev.lasp.colorado.edu:8080/vivo/individual/n31966338" }
+      } ,
+      {
+        "skill": { "type": "literal" , "value": "Microsoft PowerPoint" } ,
+        "skilllevel": { "type": "literal" , "value": "Microsoft PowerPoint (unranked)" } ,
+        "skillleveluri": { "type": "uri" , "value": "http://lemr-dev.lasp.colorado.edu:8080/vivo/individual/n601023829" }
+      } ,
+      {
+        "skill": { "type": "literal" , "value": "Microsoft PowerPoint" } ,
+        "skilllevel": { "type": "literal" , "value": "Microsoft PowerPoint beginner" } ,
+        "skillleveluri": { "type": "uri" , "value": "http://lemr-dev.lasp.colorado.edu:8080/vivo/individual/n401762512" }
+      } ,
+      {
+        "skill": { "type": "literal" , "value": "Microsoft PowerPoint" } ,
+        "skilllevel": { "type": "literal" , "value": "Microsoft PowerPoint intermediate" } ,
+        "skillleveluri": { "type": "uri" , "value": "http://lemr-dev.lasp.colorado.edu:8080/vivo/individual/n2132356262" }
+      } ,
+      {
+        "skill": { "type": "literal" , "value": "Microsoft PowerPoint" } ,
+        "skilllevel": { "type": "literal" , "value": "Microsoft PowerPoint advanced" } ,
+        "skillleveluri": { "type": "uri" , "value": "http://lemr-dev.lasp.colorado.edu:8080/vivo/individual/n1573553938" }
+      } ,
+      {
+        "skill": { "type": "literal" , "value": "Microsoft PowerPoint" } ,
+        "skilllevel": { "type": "literal" , "value": "Microsoft PowerPoint guru" } ,
+        "skillleveluri": { "type": "uri" , "value": "http://lemr-dev.lasp.colorado.edu:8080/vivo/individual/n1679272387" }
+      } ,
+      {
+        "skill": { "type": "literal" , "value": "Microsoft Project" } ,
+        "skilllevel": { "type": "literal" , "value": "Microsoft Project (unranked)" } ,
+        "skillleveluri": { "type": "uri" , "value": "http://lemr-dev.lasp.colorado.edu:8080/vivo/individual/n1549151088" }
+      } ,
+      {
+        "skill": { "type": "literal" , "value": "Microsoft Project" } ,
+        "skilllevel": { "type": "literal" , "value": "Microsoft Project beginner" } ,
+        "skillleveluri": { "type": "uri" , "value": "http://lemr-dev.lasp.colorado.edu:8080/vivo/individual/n1275511200" }
+      } ,
+      {
+        "skill": { "type": "literal" , "value": "Microsoft Project" } ,
+        "skilllevel": { "type": "literal" , "value": "Microsoft Project intermediate" } ,
+        "skillleveluri": { "type": "uri" , "value": "http://lemr-dev.lasp.colorado.edu:8080/vivo/individual/n342920979" }
+      } ,
+      {
+        "skill": { "type": "literal" , "value": "Microsoft Project" } ,
+        "skilllevel": { "type": "literal" , "value": "Microsoft Project advanced" } ,
+        "skillleveluri": { "type": "uri" , "value": "http://lemr-dev.lasp.colorado.edu:8080/vivo/individual/n12846418" }
+      } ,
+      {
+        "skill": { "type": "literal" , "value": "Microsoft Project" } ,
+        "skilllevel": { "type": "literal" , "value": "Microsoft Project guru" } ,
+        "skillleveluri": { "type": "uri" , "value": "http://lemr-dev.lasp.colorado.edu:8080/vivo/individual/n830332280" }
+      } ,
+      {
+        "skill": { "type": "literal" , "value": "Microsoft Windows" } ,
+        "skilllevel": { "type": "literal" , "value": "Microsoft Windows (unranked)" } ,
+        "skillleveluri": { "type": "uri" , "value": "http://lemr-dev.lasp.colorado.edu:8080/vivo/individual/n1893090861" }
+      } ,
+      {
+        "skill": { "type": "literal" , "value": "Microsoft Windows" } ,
+        "skilllevel": { "type": "literal" , "value": "Microsoft Windows beginner" } ,
+        "skillleveluri": { "type": "uri" , "value": "http://lemr-dev.lasp.colorado.edu:8080/vivo/individual/n1658078054" }
+      } ,
+      {
+        "skill": { "type": "literal" , "value": "Microsoft Windows" } ,
+        "skilllevel": { "type": "literal" , "value": "Microsoft Windows intermediate" } ,
+        "skillleveluri": { "type": "uri" , "value": "http://lemr-dev.lasp.colorado.edu:8080/vivo/individual/n207841270" }
+      } ,
+      {
+        "skill": { "type": "literal" , "value": "Microsoft Windows" } ,
+        "skilllevel": { "type": "literal" , "value": "Microsoft Windows advanced" } ,
+        "skillleveluri": { "type": "uri" , "value": "http://lemr-dev.lasp.colorado.edu:8080/vivo/individual/n1492519565" }
+      } ,
+      {
+        "skill": { "type": "literal" , "value": "Microsoft Windows" } ,
+        "skilllevel": { "type": "literal" , "value": "Microsoft Windows guru" } ,
+        "skillleveluri": { "type": "uri" , "value": "http://lemr-dev.lasp.colorado.edu:8080/vivo/individual/n944265434" }
+      } ,
+      {
+        "skill": { "type": "literal" , "value": "Microsoft Word" } ,
+        "skilllevel": { "type": "literal" , "value": "Microsoft Word (unranked)" } ,
+        "skillleveluri": { "type": "uri" , "value": "http://lemr-dev.lasp.colorado.edu:8080/vivo/individual/n1858761653" }
+      } ,
+      {
+        "skill": { "type": "literal" , "value": "Microsoft Word" } ,
+        "skilllevel": { "type": "literal" , "value": "Microsoft Word beginner" } ,
+        "skillleveluri": { "type": "uri" , "value": "http://lemr-dev.lasp.colorado.edu:8080/vivo/individual/n873329460" }
+      } ,
+      {
+        "skill": { "type": "literal" , "value": "Microsoft Word" } ,
+        "skilllevel": { "type": "literal" , "value": "Microsoft Word intermediate" } ,
+        "skillleveluri": { "type": "uri" , "value": "http://lemr-dev.lasp.colorado.edu:8080/vivo/individual/n2131579087" }
+      } ,
+      {
+        "skill": { "type": "literal" , "value": "Microsoft Word" } ,
+        "skilllevel": { "type": "literal" , "value": "Microsoft Word advanced" } ,
+        "skillleveluri": { "type": "uri" , "value": "http://lemr-dev.lasp.colorado.edu:8080/vivo/individual/n341709716" }
+      } ,
+      {
+        "skill": { "type": "literal" , "value": "Microsoft Word" } ,
+        "skilllevel": { "type": "literal" , "value": "Microsoft Word guru" } ,
+        "skillleveluri": { "type": "uri" , "value": "http://lemr-dev.lasp.colorado.edu:8080/vivo/individual/n881800927" }
+      } ,
+      {
+        "skill": { "type": "literal" , "value": "Mobile Devices" } ,
+        "skilllevel": { "type": "literal" , "value": "Mobile Devices (unranked)" } ,
+        "skillleveluri": { "type": "uri" , "value": "http://lemr-dev:8080/vivo/individual/n724222467" }
+      } ,
+      {
+        "skill": { "type": "literal" , "value": "Mobile Devices" } ,
+        "skilllevel": { "type": "literal" , "value": "Mobile Devices beginner" } ,
+        "skillleveluri": { "type": "uri" , "value": "http://lemr-dev:8080/vivo/individual/n1623895708" }
+      } ,
+      {
+        "skill": { "type": "literal" , "value": "Mobile Devices" } ,
+        "skilllevel": { "type": "literal" , "value": "Mobile Devices intermediate" } ,
+        "skillleveluri": { "type": "uri" , "value": "http://lemr-dev:8080/vivo/individual/n2084232347" }
+      } ,
+      {
+        "skill": { "type": "literal" , "value": "Mobile Devices" } ,
+        "skilllevel": { "type": "literal" , "value": "Mobile Devices advanced" } ,
+        "skillleveluri": { "type": "uri" , "value": "http://lemr-dev:8080/vivo/individual/n310031462" }
+      } ,
+      {
+        "skill": { "type": "literal" , "value": "Mobile Devices" } ,
+        "skilllevel": { "type": "literal" , "value": "Mobile Devices guru" } ,
+        "skillleveluri": { "type": "uri" , "value": "http://lemr-dev:8080/vivo/individual/n1566892290" }
+      } ,
+      {
+        "skill": { "type": "literal" , "value": "Music Production" } ,
+        "skilllevel": { "type": "literal" , "value": "Music Production (unranked)" } ,
+        "skillleveluri": { "type": "uri" , "value": "http://lemr-dev.lasp.colorado.edu:8080/vivo/individual/n276854765" }
+      } ,
+      {
+        "skill": { "type": "literal" , "value": "Music Production" } ,
+        "skilllevel": { "type": "literal" , "value": "Music Production beginner" } ,
+        "skillleveluri": { "type": "uri" , "value": "http://lemr-dev.lasp.colorado.edu:8080/vivo/individual/n1942706522" }
+      } ,
+      {
+        "skill": { "type": "literal" , "value": "Music Production" } ,
+        "skilllevel": { "type": "literal" , "value": "Music Production intermediate" } ,
+        "skillleveluri": { "type": "uri" , "value": "http://lemr-dev.lasp.colorado.edu:8080/vivo/individual/n1193904359" }
+      } ,
+      {
+        "skill": { "type": "literal" , "value": "Music Production" } ,
+        "skilllevel": { "type": "literal" , "value": "Music Production advanced" } ,
+        "skillleveluri": { "type": "uri" , "value": "http://lemr-dev.lasp.colorado.edu:8080/vivo/individual/n894314815" }
+      } ,
+      {
+        "skill": { "type": "literal" , "value": "Music Production" } ,
+        "skilllevel": { "type": "literal" , "value": "Music Production guru" } ,
+        "skillleveluri": { "type": "uri" , "value": "http://lemr-dev.lasp.colorado.edu:8080/vivo/individual/n1686446913" }
+      } ,
+      {
+        "skill": { "type": "literal" , "value": "MySQL" } ,
+        "skilllevel": { "type": "literal" , "value": "MySQL (unranked)" } ,
+        "skillleveluri": { "type": "uri" , "value": "http://lemr-dev.lasp.colorado.edu:8080/vivo/individual/n1326691645" }
+      } ,
+      {
+        "skill": { "type": "literal" , "value": "MySQL" } ,
+        "skilllevel": { "type": "literal" , "value": "MySQL beginner" } ,
+        "skillleveluri": { "type": "uri" , "value": "http://lemr-dev.lasp.colorado.edu:8080/vivo/individual/n1107210262" }
+      } ,
+      {
+        "skill": { "type": "literal" , "value": "MySQL" } ,
+        "skilllevel": { "type": "literal" , "value": "MySQL intermediate" } ,
+        "skillleveluri": { "type": "uri" , "value": "http://lemr-dev.lasp.colorado.edu:8080/vivo/individual/n159378921" }
+      } ,
+      {
+        "skill": { "type": "literal" , "value": "MySQL" } ,
+        "skilllevel": { "type": "literal" , "value": "MySQL advanced" } ,
+        "skillleveluri": { "type": "uri" , "value": "http://lemr-dev.lasp.colorado.edu:8080/vivo/individual/n1300325321" }
+      } ,
+      {
+        "skill": { "type": "literal" , "value": "MySQL" } ,
+        "skilllevel": { "type": "literal" , "value": "MySQL guru" } ,
+        "skillleveluri": { "type": "uri" , "value": "http://lemr-dev.lasp.colorado.edu:8080/vivo/individual/n216062184" }
+      } ,
+      {
+        "skill": { "type": "literal" , "value": "NoSQL" } ,
+        "skilllevel": { "type": "literal" , "value": "NoSQL (unranked)" } ,
+        "skillleveluri": { "type": "uri" , "value": "http://lemr-dev.lasp.colorado.edu:8080/vivo/individual/n568413183" }
+      } ,
+      {
+        "skill": { "type": "literal" , "value": "NoSQL" } ,
+        "skilllevel": { "type": "literal" , "value": "NoSQL beginner" } ,
+        "skillleveluri": { "type": "uri" , "value": "http://lemr-dev.lasp.colorado.edu:8080/vivo/individual/n1386268568" }
+      } ,
+      {
+        "skill": { "type": "literal" , "value": "NoSQL" } ,
+        "skilllevel": { "type": "literal" , "value": "NoSQL intermediate" } ,
+        "skillleveluri": { "type": "uri" , "value": "http://lemr-dev.lasp.colorado.edu:8080/vivo/individual/n711818855" }
+      } ,
+      {
+        "skill": { "type": "literal" , "value": "NoSQL" } ,
+        "skilllevel": { "type": "literal" , "value": "NoSQL advanced" } ,
+        "skillleveluri": { "type": "uri" , "value": "http://lemr-dev.lasp.colorado.edu:8080/vivo/individual/n1160557263" }
+      } ,
+      {
+        "skill": { "type": "literal" , "value": "NoSQL" } ,
+        "skilllevel": { "type": "literal" , "value": "NoSQL guru" } ,
+        "skillleveluri": { "type": "uri" , "value": "http://lemr-dev.lasp.colorado.edu:8080/vivo/individual/n237118047" }
+      } ,
+      {
+        "skill": { "type": "literal" , "value": "Numerical Recipes" } ,
+        "skilllevel": { "type": "literal" , "value": "Numerical Recipes (unranked)" } ,
+        "skillleveluri": { "type": "uri" , "value": "http://lemr-dev.lasp.colorado.edu:8080/vivo/individual/n1607410337" }
+      } ,
+      {
+        "skill": { "type": "literal" , "value": "Numerical Recipes" } ,
+        "skilllevel": { "type": "literal" , "value": "Numerical Recipes beginner" } ,
+        "skillleveluri": { "type": "uri" , "value": "http://lemr-dev.lasp.colorado.edu:8080/vivo/individual/n1741962757" }
+      } ,
+      {
+        "skill": { "type": "literal" , "value": "Numerical Recipes" } ,
+        "skilllevel": { "type": "literal" , "value": "Numerical Recipes intermediate" } ,
+        "skillleveluri": { "type": "uri" , "value": "http://lemr-dev.lasp.colorado.edu:8080/vivo/individual/n735547840" }
+      } ,
+      {
+        "skill": { "type": "literal" , "value": "Numerical Recipes" } ,
+        "skilllevel": { "type": "literal" , "value": "Numerical Recipes advanced" } ,
+        "skillleveluri": { "type": "uri" , "value": "http://lemr-dev.lasp.colorado.edu:8080/vivo/individual/n394713168" }
+      } ,
+      {
+        "skill": { "type": "literal" , "value": "Numerical Recipes" } ,
+        "skilllevel": { "type": "literal" , "value": "Numerical Recipes guru" } ,
+        "skillleveluri": { "type": "uri" , "value": "http://lemr-dev.lasp.colorado.edu:8080/vivo/individual/n1979520237" }
+      } ,
+      {
+        "skill": { "type": "literal" , "value": "Numerical methods" } ,
+        "skilllevel": { "type": "literal" , "value": "Numerical methods (unranked)" } ,
+        "skillleveluri": { "type": "uri" , "value": "http://lemr-dev.lasp.colorado.edu:8080/vivo/individual/n203604722" }
+      } ,
+      {
+        "skill": { "type": "literal" , "value": "Numerical methods" } ,
+        "skilllevel": { "type": "literal" , "value": "Numerical methods beginner" } ,
+        "skillleveluri": { "type": "uri" , "value": "http://lemr-dev.lasp.colorado.edu:8080/vivo/individual/n1343726345" }
+      } ,
+      {
+        "skill": { "type": "literal" , "value": "Numerical methods" } ,
+        "skilllevel": { "type": "literal" , "value": "Numerical methods intermediate" } ,
+        "skillleveluri": { "type": "uri" , "value": "http://lemr-dev.lasp.colorado.edu:8080/vivo/individual/n667100965" }
+      } ,
+      {
+        "skill": { "type": "literal" , "value": "Numerical methods" } ,
+        "skilllevel": { "type": "literal" , "value": "Numerical methods advanced" } ,
+        "skillleveluri": { "type": "uri" , "value": "http://lemr-dev.lasp.colorado.edu:8080/vivo/individual/n1413713087" }
+      } ,
+      {
+        "skill": { "type": "literal" , "value": "Numerical methods" } ,
+        "skilllevel": { "type": "literal" , "value": "Numerical methods guru" } ,
+        "skillleveluri": { "type": "uri" , "value": "http://lemr-dev.lasp.colorado.edu:8080/vivo/individual/n2045720713" }
+      } ,
+      {
+        "skill": { "type": "literal" , "value": "Object Oriented Software Engineering" } ,
+        "skilllevel": { "type": "literal" , "value": "Object Oriented Software Engineering (unranked)" } ,
+        "skillleveluri": { "type": "uri" , "value": "http://lemr-dev.lasp.colorado.edu:8080/vivo/individual/n420844594" }
+      } ,
+      {
+        "skill": { "type": "literal" , "value": "Object Oriented Software Engineering" } ,
+        "skilllevel": { "type": "literal" , "value": "Object Oriented Software Engineering beginner" } ,
+        "skillleveluri": { "type": "uri" , "value": "http://lemr-dev.lasp.colorado.edu:8080/vivo/individual/n378387660" }
+      } ,
+      {
+        "skill": { "type": "literal" , "value": "Object Oriented Software Engineering" } ,
+        "skilllevel": { "type": "literal" , "value": "Object Oriented Software Engineering intermediate" } ,
+        "skillleveluri": { "type": "uri" , "value": "http://lemr-dev.lasp.colorado.edu:8080/vivo/individual/n1704908319" }
+      } ,
+      {
+        "skill": { "type": "literal" , "value": "Object Oriented Software Engineering" } ,
+        "skilllevel": { "type": "literal" , "value": "Object Oriented Software Engineering advanced" } ,
+        "skillleveluri": { "type": "uri" , "value": "http://lemr-dev.lasp.colorado.edu:8080/vivo/individual/n980752808" }
+      } ,
+      {
+        "skill": { "type": "literal" , "value": "Object Oriented Software Engineering" } ,
+        "skilllevel": { "type": "literal" , "value": "Object Oriented Software Engineering guru" } ,
+        "skillleveluri": { "type": "uri" , "value": "http://lemr-dev.lasp.colorado.edu:8080/vivo/individual/n1696704915" }
+      } ,
+      {
+        "skill": { "type": "literal" , "value": "Objective-C" } ,
+        "skilllevel": { "type": "literal" , "value": "Objective-C (unranked)" } ,
+        "skillleveluri": { "type": "uri" , "value": "http://lemr-dev.lasp.colorado.edu:8080/vivo/individual/n339284749" }
+      } ,
+      {
+        "skill": { "type": "literal" , "value": "Objective-C" } ,
+        "skilllevel": { "type": "literal" , "value": "Objective-C beginner" } ,
+        "skillleveluri": { "type": "uri" , "value": "http://lemr-dev.lasp.colorado.edu:8080/vivo/individual/n1311857126" }
+      } ,
+      {
+        "skill": { "type": "literal" , "value": "Objective-C" } ,
+        "skilllevel": { "type": "literal" , "value": "Objective-C intermediate" } ,
+        "skillleveluri": { "type": "uri" , "value": "http://lemr-dev.lasp.colorado.edu:8080/vivo/individual/n125022064" }
+      } ,
+      {
+        "skill": { "type": "literal" , "value": "Objective-C" } ,
+        "skilllevel": { "type": "literal" , "value": "Objective-C advanced" } ,
+        "skillleveluri": { "type": "uri" , "value": "http://lemr-dev.lasp.colorado.edu:8080/vivo/individual/n828383530" }
+      } ,
+      {
+        "skill": { "type": "literal" , "value": "Objective-C" } ,
+        "skilllevel": { "type": "literal" , "value": "Objective-C guru" } ,
+        "skillleveluri": { "type": "uri" , "value": "http://lemr-dev.lasp.colorado.edu:8080/vivo/individual/n270894351" }
+      } ,
+      {
+        "skill": { "type": "literal" , "value": "Oracle" } ,
+        "skilllevel": { "type": "literal" , "value": "Oracle (unranked)" } ,
+        "skillleveluri": { "type": "uri" , "value": "http://lemr-dev.lasp.colorado.edu:8080/vivo/individual/n1749463434" }
+      } ,
+      {
+        "skill": { "type": "literal" , "value": "Oracle" } ,
+        "skilllevel": { "type": "literal" , "value": "Oracle beginner" } ,
+        "skillleveluri": { "type": "uri" , "value": "http://lemr-dev.lasp.colorado.edu:8080/vivo/individual/n643546038" }
+      } ,
+      {
+        "skill": { "type": "literal" , "value": "Oracle" } ,
+        "skilllevel": { "type": "literal" , "value": "Oracle intermediate" } ,
+        "skillleveluri": { "type": "uri" , "value": "http://lemr-dev.lasp.colorado.edu:8080/vivo/individual/n372628957" }
+      } ,
+      {
+        "skill": { "type": "literal" , "value": "Oracle" } ,
+        "skilllevel": { "type": "literal" , "value": "Oracle advanced" } ,
+        "skillleveluri": { "type": "uri" , "value": "http://lemr-dev.lasp.colorado.edu:8080/vivo/individual/n1465053752" }
+      } ,
+      {
+        "skill": { "type": "literal" , "value": "Oracle" } ,
+        "skilllevel": { "type": "literal" , "value": "Oracle guru" } ,
+        "skillleveluri": { "type": "uri" , "value": "http://lemr-dev.lasp.colorado.edu:8080/vivo/individual/n1297217083" }
+      } ,
+      {
+        "skill": { "type": "literal" , "value": "Orbit / Attitude Algorithms" } ,
+        "skilllevel": { "type": "literal" , "value": "Orbit / Attitude Algorithms (unranked)" } ,
+        "skillleveluri": { "type": "uri" , "value": "http://lemr-dev.lasp.colorado.edu:8080/vivo/individual/n364813779" }
+      } ,
+      {
+        "skill": { "type": "literal" , "value": "Orbit / Attitude Algorithms" } ,
+        "skilllevel": { "type": "literal" , "value": "Orbit / Attitude Algorithms beginner" } ,
+        "skillleveluri": { "type": "uri" , "value": "http://lemr-dev.lasp.colorado.edu:8080/vivo/individual/n5427509" }
+      } ,
+      {
+        "skill": { "type": "literal" , "value": "Orbit / Attitude Algorithms" } ,
+        "skilllevel": { "type": "literal" , "value": "Orbit / Attitude Algorithms intermediate" } ,
+        "skillleveluri": { "type": "uri" , "value": "http://lemr-dev.lasp.colorado.edu:8080/vivo/individual/n2032542125" }
+      } ,
+      {
+        "skill": { "type": "literal" , "value": "Orbit / Attitude Algorithms" } ,
+        "skilllevel": { "type": "literal" , "value": "Orbit / Attitude Algorithms advanced" } ,
+        "skillleveluri": { "type": "uri" , "value": "http://lemr-dev.lasp.colorado.edu:8080/vivo/individual/n922046728" }
+      } ,
+      {
+        "skill": { "type": "literal" , "value": "Orbit / Attitude Algorithms" } ,
+        "skilllevel": { "type": "literal" , "value": "Orbit / Attitude Algorithms guru" } ,
+        "skillleveluri": { "type": "uri" , "value": "http://lemr-dev.lasp.colorado.edu:8080/vivo/individual/n1198873636" }
+      } ,
+      {
+        "skill": { "type": "literal" , "value": "PHP" } ,
+        "skilllevel": { "type": "literal" , "value": "PHP (unranked)" } ,
+        "skillleveluri": { "type": "uri" , "value": "http://lemr-dev.lasp.colorado.edu:8080/vivo/individual/n1917855917" }
+      } ,
+      {
+        "skill": { "type": "literal" , "value": "PHP" } ,
+        "skilllevel": { "type": "literal" , "value": "PHP beginner" } ,
+        "skillleveluri": { "type": "uri" , "value": "http://lemr-dev.lasp.colorado.edu:8080/vivo/individual/n1379998420" }
+      } ,
+      {
+        "skill": { "type": "literal" , "value": "PHP" } ,
+        "skilllevel": { "type": "literal" , "value": "PHP intermediate" } ,
+        "skillleveluri": { "type": "uri" , "value": "http://lemr-dev.lasp.colorado.edu:8080/vivo/individual/n898488249" }
+      } ,
+      {
+        "skill": { "type": "literal" , "value": "PHP" } ,
+        "skilllevel": { "type": "literal" , "value": "PHP advanced" } ,
+        "skillleveluri": { "type": "uri" , "value": "http://lemr-dev.lasp.colorado.edu:8080/vivo/individual/n183584130" }
+      } ,
+      {
+        "skill": { "type": "literal" , "value": "PHP" } ,
+        "skilllevel": { "type": "literal" , "value": "PHP guru" } ,
+        "skillleveluri": { "type": "uri" , "value": "http://lemr-dev.lasp.colorado.edu:8080/vivo/individual/n523390433" }
+      } ,
+      {
+        "skill": { "type": "literal" , "value": "Photography" } ,
+        "skilllevel": { "type": "literal" , "value": "Photography (unranked)" } ,
+        "skillleveluri": { "type": "uri" , "value": "http://lemr-dev.lasp.colorado.edu:8080/vivo/individual/n113250758" }
+      } ,
+      {
+        "skill": { "type": "literal" , "value": "Photography" } ,
+        "skilllevel": { "type": "literal" , "value": "Photography beginner" } ,
+        "skillleveluri": { "type": "uri" , "value": "http://lemr-dev.lasp.colorado.edu:8080/vivo/individual/n1438661270" }
+      } ,
+      {
+        "skill": { "type": "literal" , "value": "Photography" } ,
+        "skilllevel": { "type": "literal" , "value": "Photography intermediate" } ,
+        "skillleveluri": { "type": "uri" , "value": "http://lemr-dev.lasp.colorado.edu:8080/vivo/individual/n1727916947" }
+      } ,
+      {
+        "skill": { "type": "literal" , "value": "Photography" } ,
+        "skilllevel": { "type": "literal" , "value": "Photography advanced" } ,
+        "skillleveluri": { "type": "uri" , "value": "http://lemr-dev.lasp.colorado.edu:8080/vivo/individual/n1633382078" }
+      } ,
+      {
+        "skill": { "type": "literal" , "value": "Photography" } ,
+        "skilllevel": { "type": "literal" , "value": "Photography guru" } ,
+        "skillleveluri": { "type": "uri" , "value": "http://lemr-dev.lasp.colorado.edu:8080/vivo/individual/n1144259820" }
+      } ,
+      {
+        "skill": { "type": "literal" , "value": "Photoshop" } ,
+        "skilllevel": { "type": "literal" , "value": "Photoshop (unranked)" } ,
+        "skillleveluri": { "type": "uri" , "value": "http://lemr-dev.lasp.colorado.edu:8080/vivo/individual/n190111809" }
+      } ,
+      {
+        "skill": { "type": "literal" , "value": "Photoshop" } ,
+        "skilllevel": { "type": "literal" , "value": "Photoshop beginner" } ,
+        "skillleveluri": { "type": "uri" , "value": "http://lemr-dev.lasp.colorado.edu:8080/vivo/individual/n311191452" }
+      } ,
+      {
+        "skill": { "type": "literal" , "value": "Photoshop" } ,
+        "skilllevel": { "type": "literal" , "value": "Photoshop intermediate" } ,
+        "skillleveluri": { "type": "uri" , "value": "http://lemr-dev.lasp.colorado.edu:8080/vivo/individual/n1897279194" }
+      } ,
+      {
+        "skill": { "type": "literal" , "value": "Photoshop" } ,
+        "skilllevel": { "type": "literal" , "value": "Photoshop advanced" } ,
+        "skillleveluri": { "type": "uri" , "value": "http://lemr-dev.lasp.colorado.edu:8080/vivo/individual/n479582924" }
+      } ,
+      {
+        "skill": { "type": "literal" , "value": "Photoshop" } ,
+        "skilllevel": { "type": "literal" , "value": "Photoshop guru" } ,
+        "skillleveluri": { "type": "uri" , "value": "http://lemr-dev.lasp.colorado.edu:8080/vivo/individual/n2137724044" }
+      } ,
+      {
+        "skill": { "type": "literal" , "value": "Polar Exploration" } ,
+        "skilllevel": { "type": "literal" , "value": "Polar Exploration (unranked)" } ,
+        "skillleveluri": { "type": "uri" , "value": "http://lemr-dev.lasp.colorado.edu:8080/vivo/individual/n1252089842" }
+      } ,
+      {
+        "skill": { "type": "literal" , "value": "Polar Exploration" } ,
+        "skilllevel": { "type": "literal" , "value": "Polar Exploration beginner" } ,
+        "skillleveluri": { "type": "uri" , "value": "http://lemr-dev.lasp.colorado.edu:8080/vivo/individual/n1718023213" }
+      } ,
+      {
+        "skill": { "type": "literal" , "value": "Polar Exploration" } ,
+        "skilllevel": { "type": "literal" , "value": "Polar Exploration intermediate" } ,
+        "skillleveluri": { "type": "uri" , "value": "http://lemr-dev.lasp.colorado.edu:8080/vivo/individual/n1776107670" }
+      } ,
+      {
+        "skill": { "type": "literal" , "value": "Polar Exploration" } ,
+        "skilllevel": { "type": "literal" , "value": "Polar Exploration advanced" } ,
+        "skillleveluri": { "type": "uri" , "value": "http://lemr-dev.lasp.colorado.edu:8080/vivo/individual/n174442082" }
+      } ,
+      {
+        "skill": { "type": "literal" , "value": "Polar Exploration" } ,
+        "skilllevel": { "type": "literal" , "value": "Polar Exploration guru" } ,
+        "skillleveluri": { "type": "uri" , "value": "http://lemr-dev.lasp.colorado.edu:8080/vivo/individual/n2036880278" }
+      } ,
+      {
+        "skill": { "type": "literal" , "value": "PostgreSQL" } ,
+        "skilllevel": { "type": "literal" , "value": "PostgreSQL (unranked)" } ,
+        "skillleveluri": { "type": "uri" , "value": "http://lemr-dev.lasp.colorado.edu:8080/vivo/individual/n1764629184" }
+      } ,
+      {
+        "skill": { "type": "literal" , "value": "PostgreSQL" } ,
+        "skilllevel": { "type": "literal" , "value": "PostgreSQL beginner" } ,
+        "skillleveluri": { "type": "uri" , "value": "http://lemr-dev.lasp.colorado.edu:8080/vivo/individual/n1823456412" }
+      } ,
+      {
+        "skill": { "type": "literal" , "value": "PostgreSQL" } ,
+        "skilllevel": { "type": "literal" , "value": "PostgreSQL intermediate" } ,
+        "skillleveluri": { "type": "uri" , "value": "http://lemr-dev.lasp.colorado.edu:8080/vivo/individual/n19546766" }
+      } ,
+      {
+        "skill": { "type": "literal" , "value": "PostgreSQL" } ,
+        "skilllevel": { "type": "literal" , "value": "PostgreSQL advanced" } ,
+        "skillleveluri": { "type": "uri" , "value": "http://lemr-dev.lasp.colorado.edu:8080/vivo/individual/n644096346" }
+      } ,
+      {
+        "skill": { "type": "literal" , "value": "PostgreSQL" } ,
+        "skilllevel": { "type": "literal" , "value": "PostgreSQL guru" } ,
+        "skillleveluri": { "type": "uri" , "value": "http://lemr-dev.lasp.colorado.edu:8080/vivo/individual/n952124056" }
+      } ,
+      {
+        "skill": { "type": "literal" , "value": "Procurement" } ,
+        "skilllevel": { "type": "literal" , "value": "Procurement (unranked)" } ,
+        "skillleveluri": { "type": "uri" , "value": "http://lemr-dev.lasp.colorado.edu:8080/vivo/individual/n1348665024" }
+      } ,
+      {
+        "skill": { "type": "literal" , "value": "Procurement" } ,
+        "skilllevel": { "type": "literal" , "value": "Procurement beginner" } ,
+        "skillleveluri": { "type": "uri" , "value": "http://lemr-dev.lasp.colorado.edu:8080/vivo/individual/n1484913265" }
+      } ,
+      {
+        "skill": { "type": "literal" , "value": "Procurement" } ,
+        "skilllevel": { "type": "literal" , "value": "Procurement intermediate" } ,
+        "skillleveluri": { "type": "uri" , "value": "http://lemr-dev.lasp.colorado.edu:8080/vivo/individual/n1229755004" }
+      } ,
+      {
+        "skill": { "type": "literal" , "value": "Procurement" } ,
+        "skilllevel": { "type": "literal" , "value": "Procurement advanced" } ,
+        "skillleveluri": { "type": "uri" , "value": "http://lemr-dev.lasp.colorado.edu:8080/vivo/individual/n1299218139" }
+      } ,
+      {
+        "skill": { "type": "literal" , "value": "Procurement" } ,
+        "skilllevel": { "type": "literal" , "value": "Procurement guru" } ,
+        "skillleveluri": { "type": "uri" , "value": "http://lemr-dev.lasp.colorado.edu:8080/vivo/individual/n793306753" }
+      } ,
+      {
+        "skill": { "type": "literal" , "value": "Proposal Writing" } ,
+        "skilllevel": { "type": "literal" , "value": "Proposal Writing (unranked)" } ,
+        "skillleveluri": { "type": "uri" , "value": "http://lemr-dev.lasp.colorado.edu:8080/vivo/individual/n1732438413" }
+      } ,
+      {
+        "skill": { "type": "literal" , "value": "Proposal Writing" } ,
+        "skilllevel": { "type": "literal" , "value": "Proposal Writing beginner" } ,
+        "skillleveluri": { "type": "uri" , "value": "http://lemr-dev.lasp.colorado.edu:8080/vivo/individual/n755932066" }
+      } ,
+      {
+        "skill": { "type": "literal" , "value": "Proposal Writing" } ,
+        "skilllevel": { "type": "literal" , "value": "Proposal Writing intermediate" } ,
+        "skillleveluri": { "type": "uri" , "value": "http://lemr-dev.lasp.colorado.edu:8080/vivo/individual/n1810899944" }
+      } ,
+      {
+        "skill": { "type": "literal" , "value": "Proposal Writing" } ,
+        "skilllevel": { "type": "literal" , "value": "Proposal Writing advanced" } ,
+        "skillleveluri": { "type": "uri" , "value": "http://lemr-dev.lasp.colorado.edu:8080/vivo/individual/n469342427" }
+      } ,
+      {
+        "skill": { "type": "literal" , "value": "Proposal Writing" } ,
+        "skilllevel": { "type": "literal" , "value": "Proposal Writing guru" } ,
+        "skillleveluri": { "type": "uri" , "value": "http://lemr-dev.lasp.colorado.edu:8080/vivo/individual/n971192723" }
+      } ,
+      {
+        "skill": { "type": "literal" , "value": "Python" } ,
+        "skilllevel": { "type": "literal" , "value": "Python (unranked)" } ,
+        "skillleveluri": { "type": "uri" , "value": "http://lemr-dev.lasp.colorado.edu:8080/vivo/individual/n1518348383" }
+      } ,
+      {
+        "skill": { "type": "literal" , "value": "Python" } ,
+        "skilllevel": { "type": "literal" , "value": "Python beginner" } ,
+        "skillleveluri": { "type": "uri" , "value": "http://lemr-dev.lasp.colorado.edu:8080/vivo/individual/n748690313" }
+      } ,
+      {
+        "skill": { "type": "literal" , "value": "Python" } ,
+        "skilllevel": { "type": "literal" , "value": "Python intermediate" } ,
+        "skillleveluri": { "type": "uri" , "value": "http://lemr-dev.lasp.colorado.edu:8080/vivo/individual/n424885468" }
+      } ,
+      {
+        "skill": { "type": "literal" , "value": "Python" } ,
+        "skilllevel": { "type": "literal" , "value": "Python advanced" } ,
+        "skillleveluri": { "type": "uri" , "value": "http://lemr-dev.lasp.colorado.edu:8080/vivo/individual/n531394462" }
+      } ,
+      {
+        "skill": { "type": "literal" , "value": "Python" } ,
+        "skilllevel": { "type": "literal" , "value": "Python guru" } ,
+        "skillleveluri": { "type": "uri" , "value": "http://lemr-dev.lasp.colorado.edu:8080/vivo/individual/n324855540" }
+      } ,
+      {
+        "skill": { "type": "literal" , "value": "RCS" } ,
+        "skilllevel": { "type": "literal" , "value": "RCS (unranked)" } ,
+        "skillleveluri": { "type": "uri" , "value": "http://lemr-dev.lasp.colorado.edu:8080/vivo/individual/n1648456383" }
+      } ,
+      {
+        "skill": { "type": "literal" , "value": "RCS" } ,
+        "skilllevel": { "type": "literal" , "value": "RCS beginner" } ,
+        "skillleveluri": { "type": "uri" , "value": "http://lemr-dev.lasp.colorado.edu:8080/vivo/individual/n1446893445" }
+      } ,
+      {
+        "skill": { "type": "literal" , "value": "RCS" } ,
+        "skilllevel": { "type": "literal" , "value": "RCS intermediate" } ,
+        "skillleveluri": { "type": "uri" , "value": "http://lemr-dev.lasp.colorado.edu:8080/vivo/individual/n890219573" }
+      } ,
+      {
+        "skill": { "type": "literal" , "value": "RCS" } ,
+        "skilllevel": { "type": "literal" , "value": "RCS advanced" } ,
+        "skillleveluri": { "type": "uri" , "value": "http://lemr-dev.lasp.colorado.edu:8080/vivo/individual/n2047507411" }
+      } ,
+      {
+        "skill": { "type": "literal" , "value": "RCS" } ,
+        "skilllevel": { "type": "literal" , "value": "RCS guru" } ,
+        "skillleveluri": { "type": "uri" , "value": "http://lemr-dev.lasp.colorado.edu:8080/vivo/individual/n908413896" }
+      } ,
+      {
+        "skill": { "type": "literal" , "value": "Racket" } ,
+        "skilllevel": { "type": "literal" , "value": "Racket (unranked)" } ,
+        "skillleveluri": { "type": "uri" , "value": "http://lemr-dev.lasp.colorado.edu:8080/vivo/individual/n1658016948" }
+      } ,
+      {
+        "skill": { "type": "literal" , "value": "Racket" } ,
+        "skilllevel": { "type": "literal" , "value": "Racket beginner" } ,
+        "skillleveluri": { "type": "uri" , "value": "http://lemr-dev.lasp.colorado.edu:8080/vivo/individual/n1398556369" }
+      } ,
+      {
+        "skill": { "type": "literal" , "value": "Racket" } ,
+        "skilllevel": { "type": "literal" , "value": "Racket intermediate" } ,
+        "skillleveluri": { "type": "uri" , "value": "http://lemr-dev.lasp.colorado.edu:8080/vivo/individual/n164156601" }
+      } ,
+      {
+        "skill": { "type": "literal" , "value": "Racket" } ,
+        "skilllevel": { "type": "literal" , "value": "Racket advanced" } ,
+        "skillleveluri": { "type": "uri" , "value": "http://lemr-dev.lasp.colorado.edu:8080/vivo/individual/n1350943821" }
+      } ,
+      {
+        "skill": { "type": "literal" , "value": "Racket" } ,
+        "skilllevel": { "type": "literal" , "value": "Racket guru" } ,
+        "skillleveluri": { "type": "uri" , "value": "http://lemr-dev.lasp.colorado.edu:8080/vivo/individual/n350492821" }
+      } ,
+      {
+        "skill": { "type": "literal" , "value": "Relational Database Application Development" } ,
+        "skilllevel": { "type": "literal" , "value": "Relational Database Application Development (unranked)" } ,
+        "skillleveluri": { "type": "uri" , "value": "http://lemr-dev.lasp.colorado.edu:8080/vivo/individual/n21061795" }
+      } ,
+      {
+        "skill": { "type": "literal" , "value": "Relational Database Application Development" } ,
+        "skilllevel": { "type": "literal" , "value": "Relational Database Application Development beginner" } ,
+        "skillleveluri": { "type": "uri" , "value": "http://lemr-dev.lasp.colorado.edu:8080/vivo/individual/n2099264145" }
+      } ,
+      {
+        "skill": { "type": "literal" , "value": "Relational Database Application Development" } ,
+        "skilllevel": { "type": "literal" , "value": "Relational Database Application Development intermediate" } ,
+        "skillleveluri": { "type": "uri" , "value": "http://lemr-dev.lasp.colorado.edu:8080/vivo/individual/n701203852" }
+      } ,
+      {
+        "skill": { "type": "literal" , "value": "Relational Database Application Development" } ,
+        "skilllevel": { "type": "literal" , "value": "Relational Database Application Development advanced" } ,
+        "skillleveluri": { "type": "uri" , "value": "http://lemr-dev.lasp.colorado.edu:8080/vivo/individual/n154717227" }
+      } ,
+      {
+        "skill": { "type": "literal" , "value": "Relational Database Application Development" } ,
+        "skilllevel": { "type": "literal" , "value": "Relational Database Application Development guru" } ,
+        "skillleveluri": { "type": "uri" , "value": "http://lemr-dev.lasp.colorado.edu:8080/vivo/individual/n151581269" }
+      } ,
+      {
+        "skill": { "type": "literal" , "value": "Relational Database Design" } ,
+        "skilllevel": { "type": "literal" , "value": "Relational Database Design (unranked)" } ,
+        "skillleveluri": { "type": "uri" , "value": "http://lemr-dev.lasp.colorado.edu:8080/vivo/individual/n1062976249" }
+      } ,
+      {
+        "skill": { "type": "literal" , "value": "Relational Database Design" } ,
+        "skilllevel": { "type": "literal" , "value": "Relational Database Design beginner" } ,
+        "skillleveluri": { "type": "uri" , "value": "http://lemr-dev.lasp.colorado.edu:8080/vivo/individual/n434908470" }
+      } ,
+      {
+        "skill": { "type": "literal" , "value": "Relational Database Design" } ,
+        "skilllevel": { "type": "literal" , "value": "Relational Database Design intermediate" } ,
+        "skillleveluri": { "type": "uri" , "value": "http://lemr-dev.lasp.colorado.edu:8080/vivo/individual/n1647277519" }
+      } ,
+      {
+        "skill": { "type": "literal" , "value": "Relational Database Design" } ,
+        "skilllevel": { "type": "literal" , "value": "Relational Database Design advanced" } ,
+        "skillleveluri": { "type": "uri" , "value": "http://lemr-dev.lasp.colorado.edu:8080/vivo/individual/n1746324127" }
+      } ,
+      {
+        "skill": { "type": "literal" , "value": "Relational Database Design" } ,
+        "skilllevel": { "type": "literal" , "value": "Relational Database Design guru" } ,
+        "skillleveluri": { "type": "uri" , "value": "http://lemr-dev.lasp.colorado.edu:8080/vivo/individual/n232262040" }
+      } ,
+      {
+        "skill": { "type": "literal" , "value": "Restaurants and Food" } ,
+        "skilllevel": { "type": "literal" , "value": "Restaurants and Food (unranked)" } ,
+        "skillleveluri": { "type": "uri" , "value": "http://lemr-dev.lasp.colorado.edu:8080/vivo/individual/n1432305702" }
+      } ,
+      {
+        "skill": { "type": "literal" , "value": "Restaurants and Food" } ,
+        "skilllevel": { "type": "literal" , "value": "Restaurants and Food beginner" } ,
+        "skillleveluri": { "type": "uri" , "value": "http://lemr-dev.lasp.colorado.edu:8080/vivo/individual/n405790669" }
+      } ,
+      {
+        "skill": { "type": "literal" , "value": "Restaurants and Food" } ,
+        "skilllevel": { "type": "literal" , "value": "Restaurants and Food intermediate" } ,
+        "skillleveluri": { "type": "uri" , "value": "http://lemr-dev.lasp.colorado.edu:8080/vivo/individual/n315796421" }
+      } ,
+      {
+        "skill": { "type": "literal" , "value": "Restaurants and Food" } ,
+        "skilllevel": { "type": "literal" , "value": "Restaurants and Food advanced" } ,
+        "skillleveluri": { "type": "uri" , "value": "http://lemr-dev.lasp.colorado.edu:8080/vivo/individual/n514779249" }
+      } ,
+      {
+        "skill": { "type": "literal" , "value": "Restaurants and Food" } ,
+        "skilllevel": { "type": "literal" , "value": "Restaurants and Food guru" } ,
+        "skillleveluri": { "type": "uri" , "value": "http://lemr-dev.lasp.colorado.edu:8080/vivo/individual/n1692596849" }
+      } ,
+      {
+        "skill": { "type": "literal" , "value": "Ruby" } ,
+        "skilllevel": { "type": "literal" , "value": "Ruby (unranked)" } ,
+        "skillleveluri": { "type": "uri" , "value": "http://lemr-dev.lasp.colorado.edu:8080/vivo/individual/n1749583954" }
+      } ,
+      {
+        "skill": { "type": "literal" , "value": "Ruby" } ,
+        "skilllevel": { "type": "literal" , "value": "Ruby beginner" } ,
+        "skillleveluri": { "type": "uri" , "value": "http://lemr-dev.lasp.colorado.edu:8080/vivo/individual/n1541694823" }
+      } ,
+      {
+        "skill": { "type": "literal" , "value": "Ruby" } ,
+        "skilllevel": { "type": "literal" , "value": "Ruby intermediate" } ,
+        "skillleveluri": { "type": "uri" , "value": "http://lemr-dev.lasp.colorado.edu:8080/vivo/individual/n123506868" }
+      } ,
+      {
+        "skill": { "type": "literal" , "value": "Ruby" } ,
+        "skilllevel": { "type": "literal" , "value": "Ruby advanced" } ,
+        "skillleveluri": { "type": "uri" , "value": "http://lemr-dev.lasp.colorado.edu:8080/vivo/individual/n1961399363" }
+      } ,
+      {
+        "skill": { "type": "literal" , "value": "Ruby" } ,
+        "skilllevel": { "type": "literal" , "value": "Ruby guru" } ,
+        "skillleveluri": { "type": "uri" , "value": "http://lemr-dev.lasp.colorado.edu:8080/vivo/individual/n1562841965" }
+      } ,
+      {
+        "skill": { "type": "literal" , "value": "SPARQL" } ,
+        "skilllevel": { "type": "literal" , "value": "SPARQL (unranked)" } ,
+        "skillleveluri": { "type": "uri" , "value": "http://lemr-dev.lasp.colorado.edu:8080/vivo/individual/n277766444" }
+      } ,
+      {
+        "skill": { "type": "literal" , "value": "SPARQL" } ,
+        "skilllevel": { "type": "literal" , "value": "SPARQL beginner" } ,
+        "skillleveluri": { "type": "uri" , "value": "http://lemr-dev.lasp.colorado.edu:8080/vivo/individual/n1877415030" }
+      } ,
+      {
+        "skill": { "type": "literal" , "value": "SPARQL" } ,
+        "skilllevel": { "type": "literal" , "value": "SPARQL intermediate" } ,
+        "skillleveluri": { "type": "uri" , "value": "http://lemr-dev.lasp.colorado.edu:8080/vivo/individual/n970297452" }
+      } ,
+      {
+        "skill": { "type": "literal" , "value": "SPARQL" } ,
+        "skilllevel": { "type": "literal" , "value": "SPARQL advanced" } ,
+        "skillleveluri": { "type": "uri" , "value": "http://lemr-dev.lasp.colorado.edu:8080/vivo/individual/n1967931854" }
+      } ,
+      {
+        "skill": { "type": "literal" , "value": "SPARQL" } ,
+        "skilllevel": { "type": "literal" , "value": "SPARQL guru" } ,
+        "skillleveluri": { "type": "uri" , "value": "http://lemr-dev.lasp.colorado.edu:8080/vivo/individual/n1237690332" }
+      } ,
+      {
+        "skill": { "type": "literal" , "value": "SPICE Toolkit" } ,
+        "skilllevel": { "type": "literal" , "value": "SPICE Toolkit (unranked)" } ,
+        "skillleveluri": { "type": "uri" , "value": "http://lemr-dev.lasp.colorado.edu:8080/vivo/individual/n1392273861" }
+      } ,
+      {
+        "skill": { "type": "literal" , "value": "SPICE Toolkit" } ,
+        "skilllevel": { "type": "literal" , "value": "SPICE Toolkit beginner" } ,
+        "skillleveluri": { "type": "uri" , "value": "http://lemr-dev.lasp.colorado.edu:8080/vivo/individual/n781362262" }
+      } ,
+      {
+        "skill": { "type": "literal" , "value": "SPICE Toolkit" } ,
+        "skilllevel": { "type": "literal" , "value": "SPICE Toolkit intermediate" } ,
+        "skillleveluri": { "type": "uri" , "value": "http://lemr-dev.lasp.colorado.edu:8080/vivo/individual/n1302791421" }
+      } ,
+      {
+        "skill": { "type": "literal" , "value": "SPICE Toolkit" } ,
+        "skilllevel": { "type": "literal" , "value": "SPICE Toolkit advanced" } ,
+        "skillleveluri": { "type": "uri" , "value": "http://lemr-dev.lasp.colorado.edu:8080/vivo/individual/n1188454832" }
+      } ,
+      {
+        "skill": { "type": "literal" , "value": "SPICE Toolkit" } ,
+        "skilllevel": { "type": "literal" , "value": "SPICE Toolkit guru" } ,
+        "skillleveluri": { "type": "uri" , "value": "http://lemr-dev.lasp.colorado.edu:8080/vivo/individual/n593721991" }
+      } ,
+      {
+        "skill": { "type": "literal" , "value": "Scala" } ,
+        "skilllevel": { "type": "literal" , "value": "Scala (unranked)" } ,
+        "skillleveluri": { "type": "uri" , "value": "http://lemr-dev.lasp.colorado.edu:8080/vivo/individual/n1513873979" }
+      } ,
+      {
+        "skill": { "type": "literal" , "value": "Scala" } ,
+        "skilllevel": { "type": "literal" , "value": "Scala beginner" } ,
+        "skillleveluri": { "type": "uri" , "value": "http://lemr-dev.lasp.colorado.edu:8080/vivo/individual/n1627743057" }
+      } ,
+      {
+        "skill": { "type": "literal" , "value": "Scala" } ,
+        "skilllevel": { "type": "literal" , "value": "Scala intermediate" } ,
+        "skillleveluri": { "type": "uri" , "value": "http://lemr-dev.lasp.colorado.edu:8080/vivo/individual/n2099386419" }
+      } ,
+      {
+        "skill": { "type": "literal" , "value": "Scala" } ,
+        "skilllevel": { "type": "literal" , "value": "Scala advanced" } ,
+        "skillleveluri": { "type": "uri" , "value": "http://lemr-dev.lasp.colorado.edu:8080/vivo/individual/n1330698146" }
+      } ,
+      {
+        "skill": { "type": "literal" , "value": "Scala" } ,
+        "skilllevel": { "type": "literal" , "value": "Scala guru" } ,
+        "skillleveluri": { "type": "uri" , "value": "http://lemr-dev.lasp.colorado.edu:8080/vivo/individual/n1590998608" }
+      } ,
+      {
+        "skill": { "type": "literal" , "value": "Science Algorithm Development" } ,
+        "skilllevel": { "type": "literal" , "value": "Science Algorithm Development (unranked)" } ,
+        "skillleveluri": { "type": "uri" , "value": "http://lemr-dev.lasp.colorado.edu:8080/vivo/individual/n336617474" }
+      } ,
+      {
+        "skill": { "type": "literal" , "value": "Science Algorithm Development" } ,
+        "skilllevel": { "type": "literal" , "value": "Science Algorithm Development beginner" } ,
+        "skillleveluri": { "type": "uri" , "value": "http://lemr-dev.lasp.colorado.edu:8080/vivo/individual/n1101287218" }
+      } ,
+      {
+        "skill": { "type": "literal" , "value": "Science Algorithm Development" } ,
+        "skilllevel": { "type": "literal" , "value": "Science Algorithm Development intermediate" } ,
+        "skillleveluri": { "type": "uri" , "value": "http://lemr-dev.lasp.colorado.edu:8080/vivo/individual/n1870781320" }
+      } ,
+      {
+        "skill": { "type": "literal" , "value": "Science Algorithm Development" } ,
+        "skilllevel": { "type": "literal" , "value": "Science Algorithm Development advanced" } ,
+        "skillleveluri": { "type": "uri" , "value": "http://lemr-dev.lasp.colorado.edu:8080/vivo/individual/n281520001" }
+      } ,
+      {
+        "skill": { "type": "literal" , "value": "Science Algorithm Development" } ,
+        "skilllevel": { "type": "literal" , "value": "Science Algorithm Development guru" } ,
+        "skillleveluri": { "type": "uri" , "value": "http://lemr-dev.lasp.colorado.edu:8080/vivo/individual/n769254267" }
+      } ,
+      {
+        "skill": { "type": "literal" , "value": "SharePoint" } ,
+        "skilllevel": { "type": "literal" , "value": "SharePoint (unranked)" } ,
+        "skillleveluri": { "type": "uri" , "value": "http://lemr-dev.lasp.colorado.edu:8080/vivo/individual/n915511558" }
+      } ,
+      {
+        "skill": { "type": "literal" , "value": "SharePoint" } ,
+        "skilllevel": { "type": "literal" , "value": "SharePoint beginner" } ,
+        "skillleveluri": { "type": "uri" , "value": "http://lemr-dev.lasp.colorado.edu:8080/vivo/individual/n2042036714" }
+      } ,
+      {
+        "skill": { "type": "literal" , "value": "SharePoint" } ,
+        "skilllevel": { "type": "literal" , "value": "SharePoint intermediate" } ,
+        "skillleveluri": { "type": "uri" , "value": "http://lemr-dev.lasp.colorado.edu:8080/vivo/individual/n992690117" }
+      } ,
+      {
+        "skill": { "type": "literal" , "value": "SharePoint" } ,
+        "skilllevel": { "type": "literal" , "value": "SharePoint advanced" } ,
+        "skillleveluri": { "type": "uri" , "value": "http://lemr-dev.lasp.colorado.edu:8080/vivo/individual/n416848843" }
+      } ,
+      {
+        "skill": { "type": "literal" , "value": "SharePoint" } ,
+        "skilllevel": { "type": "literal" , "value": "SharePoint guru" } ,
+        "skillleveluri": { "type": "uri" , "value": "http://lemr-dev.lasp.colorado.edu:8080/vivo/individual/n379581646" }
+      } ,
+      {
+        "skill": { "type": "literal" , "value": "Solaris" } ,
+        "skilllevel": { "type": "literal" , "value": "Solaris (unranked)" } ,
+        "skillleveluri": { "type": "uri" , "value": "http://lemr-dev.lasp.colorado.edu:8080/vivo/individual/n525809816" }
+      } ,
+      {
+        "skill": { "type": "literal" , "value": "Solaris" } ,
+        "skilllevel": { "type": "literal" , "value": "Solaris beginner" } ,
+        "skillleveluri": { "type": "uri" , "value": "http://lemr-dev.lasp.colorado.edu:8080/vivo/individual/n1849778210" }
+      } ,
+      {
+        "skill": { "type": "literal" , "value": "Solaris" } ,
+        "skilllevel": { "type": "literal" , "value": "Solaris intermediate" } ,
+        "skillleveluri": { "type": "uri" , "value": "http://lemr-dev.lasp.colorado.edu:8080/vivo/individual/n1487833516" }
+      } ,
+      {
+        "skill": { "type": "literal" , "value": "Solaris" } ,
+        "skilllevel": { "type": "literal" , "value": "Solaris advanced" } ,
+        "skillleveluri": { "type": "uri" , "value": "http://lemr-dev.lasp.colorado.edu:8080/vivo/individual/n1771893770" }
+      } ,
+      {
+        "skill": { "type": "literal" , "value": "Solaris" } ,
+        "skilllevel": { "type": "literal" , "value": "Solaris guru" } ,
+        "skillleveluri": { "type": "uri" , "value": "http://lemr-dev.lasp.colorado.edu:8080/vivo/individual/n1665913127" }
+      } ,
+      {
+        "skill": { "type": "literal" , "value": "SolidWorks" } ,
+        "skilllevel": { "type": "literal" , "value": "SolidWorks (unranked)" } ,
+        "skillleveluri": { "type": "uri" , "value": "http://lemr-dev.lasp.colorado.edu:8080/vivo/individual/n377972079" }
+      } ,
+      {
+        "skill": { "type": "literal" , "value": "SolidWorks" } ,
+        "skilllevel": { "type": "literal" , "value": "SolidWorks beginner" } ,
+        "skillleveluri": { "type": "uri" , "value": "http://lemr-dev.lasp.colorado.edu:8080/vivo/individual/n1808663624" }
+      } ,
+      {
+        "skill": { "type": "literal" , "value": "SolidWorks" } ,
+        "skilllevel": { "type": "literal" , "value": "SolidWorks intermediate" } ,
+        "skillleveluri": { "type": "uri" , "value": "http://lemr-dev.lasp.colorado.edu:8080/vivo/individual/n1386194456" }
+      } ,
+      {
+        "skill": { "type": "literal" , "value": "SolidWorks" } ,
+        "skilllevel": { "type": "literal" , "value": "SolidWorks advanced" } ,
+        "skillleveluri": { "type": "uri" , "value": "http://lemr-dev.lasp.colorado.edu:8080/vivo/individual/n1652985855" }
+      } ,
+      {
+        "skill": { "type": "literal" , "value": "SolidWorks" } ,
+        "skilllevel": { "type": "literal" , "value": "SolidWorks guru" } ,
+        "skillleveluri": { "type": "uri" , "value": "http://lemr-dev.lasp.colorado.edu:8080/vivo/individual/n1087623199" }
+      } ,
+      {
+        "skill": { "type": "literal" , "value": "Structured Query Language (SQL)" } ,
+        "skilllevel": { "type": "literal" , "value": "Structured Query Language (SQL) (unranked)" } ,
+        "skillleveluri": { "type": "uri" , "value": "http://lemr-dev.lasp.colorado.edu:8080/vivo/individual/n1198943528" }
+      } ,
+      {
+        "skill": { "type": "literal" , "value": "Structured Query Language (SQL)" } ,
+        "skilllevel": { "type": "literal" , "value": "Structured Query Language (SQL) beginner" } ,
+        "skillleveluri": { "type": "uri" , "value": "http://lemr-dev.lasp.colorado.edu:8080/vivo/individual/n2107484853" }
+      } ,
+      {
+        "skill": { "type": "literal" , "value": "Structured Query Language (SQL)" } ,
+        "skilllevel": { "type": "literal" , "value": "Structured Query Language (SQL) intermediate" } ,
+        "skillleveluri": { "type": "uri" , "value": "http://lemr-dev.lasp.colorado.edu:8080/vivo/individual/n1704091589" }
+      } ,
+      {
+        "skill": { "type": "literal" , "value": "Structured Query Language (SQL)" } ,
+        "skilllevel": { "type": "literal" , "value": "Structured Query Language (SQL) advanced" } ,
+        "skillleveluri": { "type": "uri" , "value": "http://lemr-dev.lasp.colorado.edu:8080/vivo/individual/n2056391629" }
+      } ,
+      {
+        "skill": { "type": "literal" , "value": "Structured Query Language (SQL)" } ,
+        "skilllevel": { "type": "literal" , "value": "Structured Query Language (SQL) guru" } ,
+        "skillleveluri": { "type": "uri" , "value": "http://lemr-dev.lasp.colorado.edu:8080/vivo/individual/n547846283" }
+      } ,
+      {
+        "skill": { "type": "literal" , "value": "Subversion" } ,
+        "skilllevel": { "type": "literal" , "value": "Subversion (unranked)" } ,
+        "skillleveluri": { "type": "uri" , "value": "http://lemr-dev.lasp.colorado.edu:8080/vivo/individual/n1946395419" }
+      } ,
+      {
+        "skill": { "type": "literal" , "value": "Subversion" } ,
+        "skilllevel": { "type": "literal" , "value": "Subversion beginner" } ,
+        "skillleveluri": { "type": "uri" , "value": "http://lemr-dev.lasp.colorado.edu:8080/vivo/individual/n920242555" }
+      } ,
+      {
+        "skill": { "type": "literal" , "value": "Subversion" } ,
+        "skilllevel": { "type": "literal" , "value": "Subversion intermediate" } ,
+        "skillleveluri": { "type": "uri" , "value": "http://lemr-dev.lasp.colorado.edu:8080/vivo/individual/n1330304752" }
+      } ,
+      {
+        "skill": { "type": "literal" , "value": "Subversion" } ,
+        "skilllevel": { "type": "literal" , "value": "Subversion advanced" } ,
+        "skillleveluri": { "type": "uri" , "value": "http://lemr-dev.lasp.colorado.edu:8080/vivo/individual/n2134894538" }
+      } ,
+      {
+        "skill": { "type": "literal" , "value": "Subversion" } ,
+        "skilllevel": { "type": "literal" , "value": "Subversion guru" } ,
+        "skillleveluri": { "type": "uri" , "value": "http://lemr-dev.lasp.colorado.edu:8080/vivo/individual/n324520520" }
+      } ,
+      {
+        "skill": { "type": "literal" , "value": "SunRays" } ,
+        "skilllevel": { "type": "literal" , "value": "SunRays (unranked)" } ,
+        "skillleveluri": { "type": "uri" , "value": "http://lemr-dev.lasp.colorado.edu:8080/vivo/individual/n1727557509" }
+      } ,
+      {
+        "skill": { "type": "literal" , "value": "SunRays" } ,
+        "skilllevel": { "type": "literal" , "value": "SunRays beginner" } ,
+        "skillleveluri": { "type": "uri" , "value": "http://lemr-dev.lasp.colorado.edu:8080/vivo/individual/n1346865514" }
+      } ,
+      {
+        "skill": { "type": "literal" , "value": "SunRays" } ,
+        "skilllevel": { "type": "literal" , "value": "SunRays intermediate" } ,
+        "skillleveluri": { "type": "uri" , "value": "http://lemr-dev.lasp.colorado.edu:8080/vivo/individual/n365371672" }
+      } ,
+      {
+        "skill": { "type": "literal" , "value": "SunRays" } ,
+        "skilllevel": { "type": "literal" , "value": "SunRays advanced" } ,
+        "skillleveluri": { "type": "uri" , "value": "http://lemr-dev.lasp.colorado.edu:8080/vivo/individual/n631403184" }
+      } ,
+      {
+        "skill": { "type": "literal" , "value": "SunRays" } ,
+        "skilllevel": { "type": "literal" , "value": "SunRays guru" } ,
+        "skillleveluri": { "type": "uri" , "value": "http://lemr-dev.lasp.colorado.edu:8080/vivo/individual/n1927603394" }
+      } ,
+      {
+        "skill": { "type": "literal" , "value": "Sybase" } ,
+        "skilllevel": { "type": "literal" , "value": "Sybase (unranked)" } ,
+        "skillleveluri": { "type": "uri" , "value": "http://lemr-dev.lasp.colorado.edu:8080/vivo/individual/n467937305" }
+      } ,
+      {
+        "skill": { "type": "literal" , "value": "Sybase" } ,
+        "skilllevel": { "type": "literal" , "value": "Sybase beginner" } ,
+        "skillleveluri": { "type": "uri" , "value": "http://lemr-dev.lasp.colorado.edu:8080/vivo/individual/n718212954" }
+      } ,
+      {
+        "skill": { "type": "literal" , "value": "Sybase" } ,
+        "skilllevel": { "type": "literal" , "value": "Sybase intermediate" } ,
+        "skillleveluri": { "type": "uri" , "value": "http://lemr-dev.lasp.colorado.edu:8080/vivo/individual/n168524923" }
+      } ,
+      {
+        "skill": { "type": "literal" , "value": "Sybase" } ,
+        "skilllevel": { "type": "literal" , "value": "Sybase advanced" } ,
+        "skillleveluri": { "type": "uri" , "value": "http://lemr-dev.lasp.colorado.edu:8080/vivo/individual/n1859553074" }
+      } ,
+      {
+        "skill": { "type": "literal" , "value": "Sybase" } ,
+        "skilllevel": { "type": "literal" , "value": "Sybase guru" } ,
+        "skillleveluri": { "type": "uri" , "value": "http://lemr-dev.lasp.colorado.edu:8080/vivo/individual/n881771531" }
+      } ,
+      {
+        "skill": { "type": "literal" , "value": "Tablets" } ,
+        "skilllevel": { "type": "literal" , "value": "Tablets (unranked)" } ,
+        "skillleveluri": { "type": "uri" , "value": "http://lemr-dev:8080/vivo/individual/n2064188260" }
+      } ,
+      {
+        "skill": { "type": "literal" , "value": "Tablets" } ,
+        "skilllevel": { "type": "literal" , "value": "Tablets beginner" } ,
+        "skillleveluri": { "type": "uri" , "value": "http://lemr-dev:8080/vivo/individual/n787566815" }
+      } ,
+      {
+        "skill": { "type": "literal" , "value": "Tablets" } ,
+        "skilllevel": { "type": "literal" , "value": "Tablets intermediate" } ,
+        "skillleveluri": { "type": "uri" , "value": "http://lemr-dev:8080/vivo/individual/n1436691534" }
+      } ,
+      {
+        "skill": { "type": "literal" , "value": "Tablets" } ,
+        "skilllevel": { "type": "literal" , "value": "Tablets advanced" } ,
+        "skillleveluri": { "type": "uri" , "value": "http://lemr-dev:8080/vivo/individual/n1042681010" }
+      } ,
+      {
+        "skill": { "type": "literal" , "value": "Tablets" } ,
+        "skilllevel": { "type": "literal" , "value": "Tablets guru" } ,
+        "skillleveluri": { "type": "uri" , "value": "http://lemr-dev:8080/vivo/individual/n2796059" }
+      } ,
+      {
+        "skill": { "type": "literal" , "value": "TeamCity" } ,
+        "skilllevel": { "type": "literal" , "value": "TeamCity (unranked)" } ,
+        "skillleveluri": { "type": "uri" , "value": "http://lemr-dev.lasp.colorado.edu:8080/vivo/individual/n578708216" }
+      } ,
+      {
+        "skill": { "type": "literal" , "value": "TeamCity" } ,
+        "skilllevel": { "type": "literal" , "value": "TeamCity beginner" } ,
+        "skillleveluri": { "type": "uri" , "value": "http://lemr-dev.lasp.colorado.edu:8080/vivo/individual/n1052528994" }
+      } ,
+      {
+        "skill": { "type": "literal" , "value": "TeamCity" } ,
+        "skilllevel": { "type": "literal" , "value": "TeamCity intermediate" } ,
+        "skillleveluri": { "type": "uri" , "value": "http://lemr-dev.lasp.colorado.edu:8080/vivo/individual/n1365886265" }
+      } ,
+      {
+        "skill": { "type": "literal" , "value": "TeamCity" } ,
+        "skilllevel": { "type": "literal" , "value": "TeamCity advanced" } ,
+        "skillleveluri": { "type": "uri" , "value": "http://lemr-dev.lasp.colorado.edu:8080/vivo/individual/n951208546" }
+      } ,
+      {
+        "skill": { "type": "literal" , "value": "TeamCity" } ,
+        "skilllevel": { "type": "literal" , "value": "TeamCity guru" } ,
+        "skillleveluri": { "type": "uri" , "value": "http://lemr-dev.lasp.colorado.edu:8080/vivo/individual/n2142570208" }
+      } ,
+      {
+        "skill": { "type": "literal" , "value": "UNIX" } ,
+        "skilllevel": { "type": "literal" , "value": "UNIX (unranked)" } ,
+        "skillleveluri": { "type": "uri" , "value": "http://lemr-dev.lasp.colorado.edu:8080/vivo/individual/n444108825" }
+      } ,
+      {
+        "skill": { "type": "literal" , "value": "UNIX" } ,
+        "skilllevel": { "type": "literal" , "value": "UNIX beginner" } ,
+        "skillleveluri": { "type": "uri" , "value": "http://lemr-dev.lasp.colorado.edu:8080/vivo/individual/n1811330000" }
+      } ,
+      {
+        "skill": { "type": "literal" , "value": "UNIX" } ,
+        "skilllevel": { "type": "literal" , "value": "UNIX intermediate" } ,
+        "skillleveluri": { "type": "uri" , "value": "http://lemr-dev.lasp.colorado.edu:8080/vivo/individual/n1515330233" }
+      } ,
+      {
+        "skill": { "type": "literal" , "value": "UNIX" } ,
+        "skilllevel": { "type": "literal" , "value": "UNIX advanced" } ,
+        "skillleveluri": { "type": "uri" , "value": "http://lemr-dev.lasp.colorado.edu:8080/vivo/individual/n368975038" }
+      } ,
+      {
+        "skill": { "type": "literal" , "value": "UNIX" } ,
+        "skilllevel": { "type": "literal" , "value": "UNIX guru" } ,
+        "skillleveluri": { "type": "uri" , "value": "http://lemr-dev.lasp.colorado.edu:8080/vivo/individual/n1023625925" }
+      } ,
+      {
+        "skill": { "type": "literal" , "value": "Unified Modeling Language (UML)" } ,
+        "skilllevel": { "type": "literal" , "value": "Unified Modeling Language (UML) (unranked)" } ,
+        "skillleveluri": { "type": "uri" , "value": "http://lemr-dev.lasp.colorado.edu:8080/vivo/individual/n917408733" }
+      } ,
+      {
+        "skill": { "type": "literal" , "value": "Unified Modeling Language (UML)" } ,
+        "skilllevel": { "type": "literal" , "value": "Unified Modeling Language (UML) beginner" } ,
+        "skillleveluri": { "type": "uri" , "value": "http://lemr-dev.lasp.colorado.edu:8080/vivo/individual/n1453088749" }
+      } ,
+      {
+        "skill": { "type": "literal" , "value": "Unified Modeling Language (UML)" } ,
+        "skilllevel": { "type": "literal" , "value": "Unified Modeling Language (UML) intermediate" } ,
+        "skillleveluri": { "type": "uri" , "value": "http://lemr-dev.lasp.colorado.edu:8080/vivo/individual/n1569894841" }
+      } ,
+      {
+        "skill": { "type": "literal" , "value": "Unified Modeling Language (UML)" } ,
+        "skilllevel": { "type": "literal" , "value": "Unified Modeling Language (UML) advanced" } ,
+        "skillleveluri": { "type": "uri" , "value": "http://lemr-dev.lasp.colorado.edu:8080/vivo/individual/n1440990092" }
+      } ,
+      {
+        "skill": { "type": "literal" , "value": "Unified Modeling Language (UML)" } ,
+        "skilllevel": { "type": "literal" , "value": "Unified Modeling Language (UML) guru" } ,
+        "skillleveluri": { "type": "uri" , "value": "http://lemr-dev.lasp.colorado.edu:8080/vivo/individual/n1039162219" }
+      } ,
+      {
+        "skill": { "type": "literal" , "value": "VHDL" } ,
+        "skilllevel": { "type": "literal" , "value": "VHDL (unranked)" } ,
+        "skillleveluri": { "type": "uri" , "value": "http://lemr-dev.lasp.colorado.edu:8080/vivo/individual/n1292414043" }
+      } ,
+      {
+        "skill": { "type": "literal" , "value": "VHDL" } ,
+        "skilllevel": { "type": "literal" , "value": "VHDL beginner" } ,
+        "skillleveluri": { "type": "uri" , "value": "http://lemr-dev.lasp.colorado.edu:8080/vivo/individual/n1615912534" }
+      } ,
+      {
+        "skill": { "type": "literal" , "value": "VHDL" } ,
+        "skilllevel": { "type": "literal" , "value": "VHDL intermediate" } ,
+        "skillleveluri": { "type": "uri" , "value": "http://lemr-dev.lasp.colorado.edu:8080/vivo/individual/n988112260" }
+      } ,
+      {
+        "skill": { "type": "literal" , "value": "VHDL" } ,
+        "skilllevel": { "type": "literal" , "value": "VHDL advanced" } ,
+        "skillleveluri": { "type": "uri" , "value": "http://lemr-dev.lasp.colorado.edu:8080/vivo/individual/n427282262" }
+      } ,
+      {
+        "skill": { "type": "literal" , "value": "VHDL" } ,
+        "skilllevel": { "type": "literal" , "value": "VHDL guru" } ,
+        "skillleveluri": { "type": "uri" , "value": "http://lemr-dev.lasp.colorado.edu:8080/vivo/individual/n1971106582" }
+      } ,
+      {
+        "skill": { "type": "literal" , "value": "VIVO" } ,
+        "skilllevel": { "type": "literal" , "value": "VIVO (unranked)" } ,
+        "skillleveluri": { "type": "uri" , "value": "http://lemr-dev.lasp.colorado.edu:8080/vivo/individual/n920844606" }
+      } ,
+      {
+        "skill": { "type": "literal" , "value": "VIVO" } ,
+        "skilllevel": { "type": "literal" , "value": "VIVO beginner" } ,
+        "skillleveluri": { "type": "uri" , "value": "http://lemr-dev.lasp.colorado.edu:8080/vivo/individual/n812057586" }
+      } ,
+      {
+        "skill": { "type": "literal" , "value": "VIVO" } ,
+        "skilllevel": { "type": "literal" , "value": "VIVO intermediate" } ,
+        "skillleveluri": { "type": "uri" , "value": "http://lemr-dev.lasp.colorado.edu:8080/vivo/individual/n1524740150" }
+      } ,
+      {
+        "skill": { "type": "literal" , "value": "VIVO" } ,
+        "skilllevel": { "type": "literal" , "value": "VIVO advanced" } ,
+        "skillleveluri": { "type": "uri" , "value": "http://lemr-dev.lasp.colorado.edu:8080/vivo/individual/n690223823" }
+      } ,
+      {
+        "skill": { "type": "literal" , "value": "VIVO" } ,
+        "skilllevel": { "type": "literal" , "value": "VIVO guru" } ,
+        "skillleveluri": { "type": "uri" , "value": "http://lemr-dev.lasp.colorado.edu:8080/vivo/individual/n390262573" }
+      } ,
+      {
+        "skill": { "type": "literal" , "value": "Video Conferencing Equipment" } ,
+        "skilllevel": { "type": "literal" , "value": "Video Conferencing Equipment (unranked)" } ,
+        "skillleveluri": { "type": "uri" , "value": "http://lemr-dev.lasp.colorado.edu:8080/vivo/individual/n682118795" }
+      } ,
+      {
+        "skill": { "type": "literal" , "value": "Video Conferencing Equipment" } ,
+        "skilllevel": { "type": "literal" , "value": "Video Conferencing Equipment beginner" } ,
+        "skillleveluri": { "type": "uri" , "value": "http://lemr-dev.lasp.colorado.edu:8080/vivo/individual/n1692483687" }
+      } ,
+      {
+        "skill": { "type": "literal" , "value": "Video Conferencing Equipment" } ,
+        "skilllevel": { "type": "literal" , "value": "Video Conferencing Equipment intermediate" } ,
+        "skillleveluri": { "type": "uri" , "value": "http://lemr-dev.lasp.colorado.edu:8080/vivo/individual/n1900691484" }
+      } ,
+      {
+        "skill": { "type": "literal" , "value": "Video Conferencing Equipment" } ,
+        "skilllevel": { "type": "literal" , "value": "Video Conferencing Equipment advanced" } ,
+        "skillleveluri": { "type": "uri" , "value": "http://lemr-dev.lasp.colorado.edu:8080/vivo/individual/n1984479512" }
+      } ,
+      {
+        "skill": { "type": "literal" , "value": "Video Conferencing Equipment" } ,
+        "skilllevel": { "type": "literal" , "value": "Video Conferencing Equipment guru" } ,
+        "skillleveluri": { "type": "uri" , "value": "http://lemr-dev.lasp.colorado.edu:8080/vivo/individual/n241032219" }
+      } ,
+      {
+        "skill": { "type": "literal" , "value": "Video Streaming" } ,
+        "skilllevel": { "type": "literal" , "value": "Video Streaming (unranked)" } ,
+        "skillleveluri": { "type": "uri" , "value": "http://lemr-dev.lasp.colorado.edu:8080/vivo/individual/n401501326" }
+      } ,
+      {
+        "skill": { "type": "literal" , "value": "Video Streaming" } ,
+        "skilllevel": { "type": "literal" , "value": "Video Streaming beginner" } ,
+        "skillleveluri": { "type": "uri" , "value": "http://lemr-dev.lasp.colorado.edu:8080/vivo/individual/n727958903" }
+      } ,
+      {
+        "skill": { "type": "literal" , "value": "Video Streaming" } ,
+        "skilllevel": { "type": "literal" , "value": "Video Streaming intermediate" } ,
+        "skillleveluri": { "type": "uri" , "value": "http://lemr-dev.lasp.colorado.edu:8080/vivo/individual/n61105148" }
+      } ,
+      {
+        "skill": { "type": "literal" , "value": "Video Streaming" } ,
+        "skilllevel": { "type": "literal" , "value": "Video Streaming advanced" } ,
+        "skillleveluri": { "type": "uri" , "value": "http://lemr-dev.lasp.colorado.edu:8080/vivo/individual/n813078861" }
+      } ,
+      {
+        "skill": { "type": "literal" , "value": "Video Streaming" } ,
+        "skilllevel": { "type": "literal" , "value": "Video Streaming guru" } ,
+        "skillleveluri": { "type": "uri" , "value": "http://lemr-dev.lasp.colorado.edu:8080/vivo/individual/n1292232260" }
+      } ,
+      {
+        "skill": { "type": "literal" , "value": "Video recording" } ,
+        "skilllevel": { "type": "literal" , "value": "Video recording (unranked)" } ,
+        "skillleveluri": { "type": "uri" , "value": "http://lemr-dev.lasp.colorado.edu:8080/vivo/individual/n879539546" }
+      } ,
+      {
+        "skill": { "type": "literal" , "value": "Video recording" } ,
+        "skilllevel": { "type": "literal" , "value": "Video recording beginner" } ,
+        "skillleveluri": { "type": "uri" , "value": "http://lemr-dev.lasp.colorado.edu:8080/vivo/individual/n2027647867" }
+      } ,
+      {
+        "skill": { "type": "literal" , "value": "Video recording" } ,
+        "skilllevel": { "type": "literal" , "value": "Video recording intermediate" } ,
+        "skillleveluri": { "type": "uri" , "value": "http://lemr-dev.lasp.colorado.edu:8080/vivo/individual/n1657031559" }
+      } ,
+      {
+        "skill": { "type": "literal" , "value": "Video recording" } ,
+        "skilllevel": { "type": "literal" , "value": "Video recording advanced" } ,
+        "skillleveluri": { "type": "uri" , "value": "http://lemr-dev.lasp.colorado.edu:8080/vivo/individual/n952735651" }
+      } ,
+      {
+        "skill": { "type": "literal" , "value": "Video recording" } ,
+        "skilllevel": { "type": "literal" , "value": "Video recording guru" } ,
+        "skillleveluri": { "type": "uri" , "value": "http://lemr-dev.lasp.colorado.edu:8080/vivo/individual/n668932657" }
+      } ,
+      {
+        "skill": { "type": "literal" , "value": "Web Certificates" } ,
+        "skilllevel": { "type": "literal" , "value": "Web Certificates (unranked)" } ,
+        "skillleveluri": { "type": "uri" , "value": "http://lemr-dev.lasp.colorado.edu:8080/vivo/individual/n1394403846" }
+      } ,
+      {
+        "skill": { "type": "literal" , "value": "Web Certificates" } ,
+        "skilllevel": { "type": "literal" , "value": "Web Certificates beginner" } ,
+        "skillleveluri": { "type": "uri" , "value": "http://lemr-dev.lasp.colorado.edu:8080/vivo/individual/n1068955350" }
+      } ,
+      {
+        "skill": { "type": "literal" , "value": "Web Certificates" } ,
+        "skilllevel": { "type": "literal" , "value": "Web Certificates intermediate" } ,
+        "skillleveluri": { "type": "uri" , "value": "http://lemr-dev.lasp.colorado.edu:8080/vivo/individual/n1894130139" }
+      } ,
+      {
+        "skill": { "type": "literal" , "value": "Web Certificates" } ,
+        "skilllevel": { "type": "literal" , "value": "Web Certificates advanced" } ,
+        "skillleveluri": { "type": "uri" , "value": "http://lemr-dev.lasp.colorado.edu:8080/vivo/individual/n1289679300" }
+      } ,
+      {
+        "skill": { "type": "literal" , "value": "Web Certificates" } ,
+        "skilllevel": { "type": "literal" , "value": "Web Certificates guru" } ,
+        "skillleveluri": { "type": "uri" , "value": "http://lemr-dev.lasp.colorado.edu:8080/vivo/individual/n755220436" }
+      } ,
+      {
+        "skill": { "type": "literal" , "value": "Web Services" } ,
+        "skilllevel": { "type": "literal" , "value": "Web Services (unranked)" } ,
+        "skillleveluri": { "type": "uri" , "value": "http://lemr-dev.lasp.colorado.edu:8080/vivo/individual/n2123305986" }
+      } ,
+      {
+        "skill": { "type": "literal" , "value": "Web Services" } ,
+        "skilllevel": { "type": "literal" , "value": "Web Services beginner" } ,
+        "skillleveluri": { "type": "uri" , "value": "http://lemr-dev.lasp.colorado.edu:8080/vivo/individual/n1212466602" }
+      } ,
+      {
+        "skill": { "type": "literal" , "value": "Web Services" } ,
+        "skilllevel": { "type": "literal" , "value": "Web Services intermediate" } ,
+        "skillleveluri": { "type": "uri" , "value": "http://lemr-dev.lasp.colorado.edu:8080/vivo/individual/n1397400677" }
+      } ,
+      {
+        "skill": { "type": "literal" , "value": "Web Services" } ,
+        "skilllevel": { "type": "literal" , "value": "Web Services advanced" } ,
+        "skillleveluri": { "type": "uri" , "value": "http://lemr-dev.lasp.colorado.edu:8080/vivo/individual/n2039144486" }
+      } ,
+      {
+        "skill": { "type": "literal" , "value": "Web Services" } ,
+        "skilllevel": { "type": "literal" , "value": "Web Services guru" } ,
+        "skillleveluri": { "type": "uri" , "value": "http://lemr-dev.lasp.colorado.edu:8080/vivo/individual/n1630874821" }
+      } ,
+      {
+        "skill": { "type": "literal" , "value": "Whole Disk Encryption" } ,
+        "skilllevel": { "type": "literal" , "value": "Whole Disk Encryption (unranked)" } ,
+        "skillleveluri": { "type": "uri" , "value": "http://lemr-dev.lasp.colorado.edu:8080/vivo/individual/n868532910" }
+      } ,
+      {
+        "skill": { "type": "literal" , "value": "Whole Disk Encryption" } ,
+        "skilllevel": { "type": "literal" , "value": "Whole Disk Encryption beginner" } ,
+        "skillleveluri": { "type": "uri" , "value": "http://lemr-dev.lasp.colorado.edu:8080/vivo/individual/n1294021614" }
+      } ,
+      {
+        "skill": { "type": "literal" , "value": "Whole Disk Encryption" } ,
+        "skilllevel": { "type": "literal" , "value": "Whole Disk Encryption intermediate" } ,
+        "skillleveluri": { "type": "uri" , "value": "http://lemr-dev.lasp.colorado.edu:8080/vivo/individual/n1443446817" }
+      } ,
+      {
+        "skill": { "type": "literal" , "value": "Whole Disk Encryption" } ,
+        "skilllevel": { "type": "literal" , "value": "Whole Disk Encryption advanced" } ,
+        "skillleveluri": { "type": "uri" , "value": "http://lemr-dev.lasp.colorado.edu:8080/vivo/individual/n603466448" }
+      } ,
+      {
+        "skill": { "type": "literal" , "value": "Whole Disk Encryption" } ,
+        "skilllevel": { "type": "literal" , "value": "Whole Disk Encryption guru" } ,
+        "skillleveluri": { "type": "uri" , "value": "http://lemr-dev.lasp.colorado.edu:8080/vivo/individual/n827443162" }
+      } ,
+      {
+        "skill": { "type": "literal" , "value": "Windows" } ,
+        "skilllevel": { "type": "literal" , "value": "Windows (unranked)" } ,
+        "skillleveluri": { "type": "uri" , "value": "http://lemr-dev.lasp.colorado.edu:8080/vivo/individual/n737689472" }
+      } ,
+      {
+        "skill": { "type": "literal" , "value": "Windows" } ,
+        "skilllevel": { "type": "literal" , "value": "Windows beginner" } ,
+        "skillleveluri": { "type": "uri" , "value": "http://lemr-dev.lasp.colorado.edu:8080/vivo/individual/n1200655465" }
+      } ,
+      {
+        "skill": { "type": "literal" , "value": "Windows" } ,
+        "skilllevel": { "type": "literal" , "value": "Windows intermediate" } ,
+        "skillleveluri": { "type": "uri" , "value": "http://lemr-dev.lasp.colorado.edu:8080/vivo/individual/n758853803" }
+      } ,
+      {
+        "skill": { "type": "literal" , "value": "Windows" } ,
+        "skilllevel": { "type": "literal" , "value": "Windows advanced" } ,
+        "skillleveluri": { "type": "uri" , "value": "http://lemr-dev.lasp.colorado.edu:8080/vivo/individual/n817410130" }
+      } ,
+      {
+        "skill": { "type": "literal" , "value": "Windows" } ,
+        "skilllevel": { "type": "literal" , "value": "Windows guru" } ,
+        "skillleveluri": { "type": "uri" , "value": "http://lemr-dev.lasp.colorado.edu:8080/vivo/individual/n1783661094" }
+      } ,
+      {
+        "skill": { "type": "literal" , "value": "Wolfram Mathematica" } ,
+        "skilllevel": { "type": "literal" , "value": "Wolfram Mathematica (unranked)" } ,
+        "skillleveluri": { "type": "uri" , "value": "http://lemr-dev.lasp.colorado.edu:8080/vivo/individual/n2145565726" }
+      } ,
+      {
+        "skill": { "type": "literal" , "value": "Wolfram Mathematica" } ,
+        "skilllevel": { "type": "literal" , "value": "Wolfram Mathematica beginner" } ,
+        "skillleveluri": { "type": "uri" , "value": "http://lemr-dev.lasp.colorado.edu:8080/vivo/individual/n878060579" }
+      } ,
+      {
+        "skill": { "type": "literal" , "value": "Wolfram Mathematica" } ,
+        "skilllevel": { "type": "literal" , "value": "Wolfram Mathematica intermediate" } ,
+        "skillleveluri": { "type": "uri" , "value": "http://lemr-dev.lasp.colorado.edu:8080/vivo/individual/n1669652994" }
+      } ,
+      {
+        "skill": { "type": "literal" , "value": "Wolfram Mathematica" } ,
+        "skilllevel": { "type": "literal" , "value": "Wolfram Mathematica advanced" } ,
+        "skillleveluri": { "type": "uri" , "value": "http://lemr-dev.lasp.colorado.edu:8080/vivo/individual/n1483212927" }
+      } ,
+      {
+        "skill": { "type": "literal" , "value": "Wolfram Mathematica" } ,
+        "skilllevel": { "type": "literal" , "value": "Wolfram Mathematica guru" } ,
+        "skillleveluri": { "type": "uri" , "value": "http://lemr-dev.lasp.colorado.edu:8080/vivo/individual/n869849062" }
+      } ,
+      {
+        "skill": { "type": "literal" , "value": "Wordpress" } ,
+        "skilllevel": { "type": "literal" , "value": "Wordpress (unranked)" } ,
+        "skillleveluri": { "type": "uri" , "value": "http://lemr-dev.lasp.colorado.edu:8080/vivo/individual/n824675433" }
+      } ,
+      {
+        "skill": { "type": "literal" , "value": "Wordpress" } ,
+        "skilllevel": { "type": "literal" , "value": "Wordpress beginner" } ,
+        "skillleveluri": { "type": "uri" , "value": "http://lemr-dev.lasp.colorado.edu:8080/vivo/individual/n2113348855" }
+      } ,
+      {
+        "skill": { "type": "literal" , "value": "Wordpress" } ,
+        "skilllevel": { "type": "literal" , "value": "Wordpress intermediate" } ,
+        "skillleveluri": { "type": "uri" , "value": "http://lemr-dev.lasp.colorado.edu:8080/vivo/individual/n1750133670" }
+      } ,
+      {
+        "skill": { "type": "literal" , "value": "Wordpress" } ,
+        "skilllevel": { "type": "literal" , "value": "Wordpress advanced" } ,
+        "skillleveluri": { "type": "uri" , "value": "http://lemr-dev.lasp.colorado.edu:8080/vivo/individual/n246712059" }
+      } ,
+      {
+        "skill": { "type": "literal" , "value": "Wordpress" } ,
+        "skilllevel": { "type": "literal" , "value": "Wordpress guru" } ,
+        "skillleveluri": { "type": "uri" , "value": "http://lemr-dev.lasp.colorado.edu:8080/vivo/individual/n603445265" }
+      } ,
+      {
+        "skill": { "type": "literal" , "value": "XML" } ,
+        "skilllevel": { "type": "literal" , "value": "XML (unranked)" } ,
+        "skillleveluri": { "type": "uri" , "value": "http://lemr-dev.lasp.colorado.edu:8080/vivo/individual/n435809455" }
+      } ,
+      {
+        "skill": { "type": "literal" , "value": "XML" } ,
+        "skilllevel": { "type": "literal" , "value": "XML beginner" } ,
+        "skillleveluri": { "type": "uri" , "value": "http://lemr-dev.lasp.colorado.edu:8080/vivo/individual/n2010667509" }
+      } ,
+      {
+        "skill": { "type": "literal" , "value": "XML" } ,
+        "skilllevel": { "type": "literal" , "value": "XML intermediate" } ,
+        "skillleveluri": { "type": "uri" , "value": "http://lemr-dev.lasp.colorado.edu:8080/vivo/individual/n869199825" }
+      } ,
+      {
+        "skill": { "type": "literal" , "value": "XML" } ,
+        "skilllevel": { "type": "literal" , "value": "XML advanced" } ,
+        "skillleveluri": { "type": "uri" , "value": "http://lemr-dev.lasp.colorado.edu:8080/vivo/individual/n1308372421" }
+      } ,
+      {
+        "skill": { "type": "literal" , "value": "XML" } ,
+        "skilllevel": { "type": "literal" , "value": "XML guru" } ,
+        "skillleveluri": { "type": "uri" , "value": "http://lemr-dev.lasp.colorado.edu:8080/vivo/individual/n1245379038" }
+      } ,
+      {
+        "skill": { "type": "literal" , "value": "YourKit Java Profiler" } ,
+        "skilllevel": { "type": "literal" , "value": "YourKit Java Profiler (unranked)" } ,
+        "skillleveluri": { "type": "uri" , "value": "http://lemr-dev.lasp.colorado.edu:8080/vivo/individual/n952946630" }
+      } ,
+      {
+        "skill": { "type": "literal" , "value": "YourKit Java Profiler" } ,
+        "skilllevel": { "type": "literal" , "value": "YourKit Java Profiler beginner" } ,
+        "skillleveluri": { "type": "uri" , "value": "http://lemr-dev.lasp.colorado.edu:8080/vivo/individual/n2074846875" }
+      } ,
+      {
+        "skill": { "type": "literal" , "value": "YourKit Java Profiler" } ,
+        "skilllevel": { "type": "literal" , "value": "YourKit Java Profiler intermediate" } ,
+        "skillleveluri": { "type": "uri" , "value": "http://lemr-dev.lasp.colorado.edu:8080/vivo/individual/n971784415" }
+      } ,
+      {
+        "skill": { "type": "literal" , "value": "YourKit Java Profiler" } ,
+        "skilllevel": { "type": "literal" , "value": "YourKit Java Profiler advanced" } ,
+        "skillleveluri": { "type": "uri" , "value": "http://lemr-dev.lasp.colorado.edu:8080/vivo/individual/n1328280097" }
+      } ,
+      {
+        "skill": { "type": "literal" , "value": "YourKit Java Profiler" } ,
+        "skilllevel": { "type": "literal" , "value": "YourKit Java Profiler guru" } ,
+        "skillleveluri": { "type": "uri" , "value": "http://lemr-dev.lasp.colorado.edu:8080/vivo/individual/n1914368466" }
+      } ,
+      {
+        "skill": { "type": "literal" , "value": "Zemax" } ,
+        "skilllevel": { "type": "literal" , "value": "Zemax (unranked)" } ,
+        "skillleveluri": { "type": "uri" , "value": "http://lemr-dev.lasp.colorado.edu:8080/vivo/individual/n1207715421" }
+      } ,
+      {
+        "skill": { "type": "literal" , "value": "Zemax" } ,
+        "skilllevel": { "type": "literal" , "value": "Zemax beginner" } ,
+        "skillleveluri": { "type": "uri" , "value": "http://lemr-dev.lasp.colorado.edu:8080/vivo/individual/n2097908335" }
+      } ,
+      {
+        "skill": { "type": "literal" , "value": "Zemax" } ,
+        "skilllevel": { "type": "literal" , "value": "Zemax intermediate" } ,
+        "skillleveluri": { "type": "uri" , "value": "http://lemr-dev.lasp.colorado.edu:8080/vivo/individual/n619100480" }
+      } ,
+      {
+        "skill": { "type": "literal" , "value": "Zemax" } ,
+        "skilllevel": { "type": "literal" , "value": "Zemax advanced" } ,
+        "skillleveluri": { "type": "uri" , "value": "http://lemr-dev.lasp.colorado.edu:8080/vivo/individual/n1470074786" }
+      } ,
+      {
+        "skill": { "type": "literal" , "value": "Zemax" } ,
+        "skilllevel": { "type": "literal" , "value": "Zemax guru" } ,
+        "skillleveluri": { "type": "uri" , "value": "http://lemr-dev.lasp.colorado.edu:8080/vivo/individual/n1786745218" }
+      } ,
+      {
+        "skill": { "type": "literal" , "value": "ant" } ,
+        "skilllevel": { "type": "literal" , "value": "ant (unranked)" } ,
+        "skillleveluri": { "type": "uri" , "value": "http://lemr-dev.lasp.colorado.edu:8080/vivo/individual/n204347418" }
+      } ,
+      {
+        "skill": { "type": "literal" , "value": "ant" } ,
+        "skilllevel": { "type": "literal" , "value": "ant beginner" } ,
+        "skillleveluri": { "type": "uri" , "value": "http://lemr-dev.lasp.colorado.edu:8080/vivo/individual/n1177272249" }
+      } ,
+      {
+        "skill": { "type": "literal" , "value": "ant" } ,
+        "skilllevel": { "type": "literal" , "value": "ant intermediate" } ,
+        "skillleveluri": { "type": "uri" , "value": "http://lemr-dev.lasp.colorado.edu:8080/vivo/individual/n1010880164" }
+      } ,
+      {
+        "skill": { "type": "literal" , "value": "ant" } ,
+        "skilllevel": { "type": "literal" , "value": "ant advanced" } ,
+        "skillleveluri": { "type": "uri" , "value": "http://lemr-dev.lasp.colorado.edu:8080/vivo/individual/n126545019" }
+      } ,
+      {
+        "skill": { "type": "literal" , "value": "ant" } ,
+        "skilllevel": { "type": "literal" , "value": "ant guru" } ,
+        "skillleveluri": { "type": "uri" , "value": "http://lemr-dev.lasp.colorado.edu:8080/vivo/individual/n1785232066" }
+      } ,
+      {
+        "skill": { "type": "literal" , "value": "bash" } ,
+        "skilllevel": { "type": "literal" , "value": "bash (unranked)" } ,
+        "skillleveluri": { "type": "uri" , "value": "http://lemr-dev.lasp.colorado.edu:8080/vivo/individual/n506329001" }
+      } ,
+      {
+        "skill": { "type": "literal" , "value": "bash" } ,
+        "skilllevel": { "type": "literal" , "value": "bash beginner" } ,
+        "skillleveluri": { "type": "uri" , "value": "http://lemr-dev.lasp.colorado.edu:8080/vivo/individual/n784818287" }
+      } ,
+      {
+        "skill": { "type": "literal" , "value": "bash" } ,
+        "skilllevel": { "type": "literal" , "value": "bash intermediate" } ,
+        "skillleveluri": { "type": "uri" , "value": "http://lemr-dev.lasp.colorado.edu:8080/vivo/individual/n829159456" }
+      } ,
+      {
+        "skill": { "type": "literal" , "value": "bash" } ,
+        "skilllevel": { "type": "literal" , "value": "bash advanced" } ,
+        "skillleveluri": { "type": "uri" , "value": "http://lemr-dev.lasp.colorado.edu:8080/vivo/individual/n973358142" }
+      } ,
+      {
+        "skill": { "type": "literal" , "value": "bash" } ,
+        "skilllevel": { "type": "literal" , "value": "bash guru" } ,
+        "skillleveluri": { "type": "uri" , "value": "http://lemr-dev.lasp.colorado.edu:8080/vivo/individual/n1232540464" }
+      } ,
+      {
+        "skill": { "type": "literal" , "value": "eclipse" } ,
+        "skilllevel": { "type": "literal" , "value": "eclipse (unranked)" } ,
+        "skillleveluri": { "type": "uri" , "value": "http://lemr-dev:8080/vivo/individual/n1197064854" }
+      } ,
+      {
+        "skill": { "type": "literal" , "value": "eclipse" } ,
+        "skilllevel": { "type": "literal" , "value": "eclipse beginner" } ,
+        "skillleveluri": { "type": "uri" , "value": "http://lemr-dev:8080/vivo/individual/n1389061219" }
+      } ,
+      {
+        "skill": { "type": "literal" , "value": "eclipse" } ,
+        "skilllevel": { "type": "literal" , "value": "eclipse intermediate" } ,
+        "skillleveluri": { "type": "uri" , "value": "http://lemr-dev:8080/vivo/individual/n571780437" }
+      } ,
+      {
+        "skill": { "type": "literal" , "value": "eclipse" } ,
+        "skilllevel": { "type": "literal" , "value": "eclipse advanced" } ,
+        "skillleveluri": { "type": "uri" , "value": "http://lemr-dev:8080/vivo/individual/n1650889511" }
+      } ,
+      {
+        "skill": { "type": "literal" , "value": "eclipse" } ,
+        "skilllevel": { "type": "literal" , "value": "eclipse guru" } ,
+        "skillleveluri": { "type": "uri" , "value": "http://lemr-dev:8080/vivo/individual/n78006324" }
+      } ,
+      {
+        "skill": { "type": "literal" , "value": "glassfish" } ,
+        "skilllevel": { "type": "literal" , "value": "glassfish (unranked)" } ,
+        "skillleveluri": { "type": "uri" , "value": "http://lemr-dev:8080/vivo/individual/n842288463" }
+      } ,
+      {
+        "skill": { "type": "literal" , "value": "glassfish" } ,
+        "skilllevel": { "type": "literal" , "value": "glassfish beginner" } ,
+        "skillleveluri": { "type": "uri" , "value": "http://lemr-dev:8080/vivo/individual/n1790099732" }
+      } ,
+      {
+        "skill": { "type": "literal" , "value": "glassfish" } ,
+        "skilllevel": { "type": "literal" , "value": "glassfish intermediate" } ,
+        "skillleveluri": { "type": "uri" , "value": "http://lemr-dev:8080/vivo/individual/n568206001" }
+      } ,
+      {
+        "skill": { "type": "literal" , "value": "glassfish" } ,
+        "skilllevel": { "type": "literal" , "value": "glassfish advanced" } ,
+        "skillleveluri": { "type": "uri" , "value": "http://lemr-dev:8080/vivo/individual/n1253679648" }
+      } ,
+      {
+        "skill": { "type": "literal" , "value": "glassfish" } ,
+        "skilllevel": { "type": "literal" , "value": "glassfish guru" } ,
+        "skillleveluri": { "type": "uri" , "value": "http://lemr-dev:8080/vivo/individual/n1137737523" }
+      } ,
+      {
+        "skill": { "type": "literal" , "value": "iOS Development" } ,
+        "skilllevel": { "type": "literal" , "value": "iOS Development (unranked)" } ,
+        "skillleveluri": { "type": "uri" , "value": "http://lemr-dev.lasp.colorado.edu:8080/vivo/individual/n7920560" }
+      } ,
+      {
+        "skill": { "type": "literal" , "value": "iOS Development" } ,
+        "skilllevel": { "type": "literal" , "value": "iOS Development beginner" } ,
+        "skillleveluri": { "type": "uri" , "value": "http://lemr-dev.lasp.colorado.edu:8080/vivo/individual/n305358083" }
+      } ,
+      {
+        "skill": { "type": "literal" , "value": "iOS Development" } ,
+        "skilllevel": { "type": "literal" , "value": "iOS Development intermediate" } ,
+        "skillleveluri": { "type": "uri" , "value": "http://lemr-dev.lasp.colorado.edu:8080/vivo/individual/n261830615" }
+      } ,
+      {
+        "skill": { "type": "literal" , "value": "iOS Development" } ,
+        "skilllevel": { "type": "literal" , "value": "iOS Development advanced" } ,
+        "skillleveluri": { "type": "uri" , "value": "http://lemr-dev.lasp.colorado.edu:8080/vivo/individual/n1589727859" }
+      } ,
+      {
+        "skill": { "type": "literal" , "value": "iOS Development" } ,
+        "skilllevel": { "type": "literal" , "value": "iOS Development guru" } ,
+        "skillleveluri": { "type": "uri" , "value": "http://lemr-dev.lasp.colorado.edu:8080/vivo/individual/n1165635930" }
+      } ,
+      {
+        "skill": { "type": "literal" , "value": "iPad" } ,
+        "skilllevel": { "type": "literal" , "value": "iPad (unranked)" } ,
+        "skillleveluri": { "type": "uri" , "value": "http://lemr-dev:8080/vivo/individual/n153178029" }
+      } ,
+      {
+        "skill": { "type": "literal" , "value": "iPad" } ,
+        "skilllevel": { "type": "literal" , "value": "iPad beginner" } ,
+        "skillleveluri": { "type": "uri" , "value": "http://lemr-dev:8080/vivo/individual/n2095528018" }
+      } ,
+      {
+        "skill": { "type": "literal" , "value": "iPad" } ,
+        "skilllevel": { "type": "literal" , "value": "iPad intermediate" } ,
+        "skillleveluri": { "type": "uri" , "value": "http://lemr-dev:8080/vivo/individual/n553002198" }
+      } ,
+      {
+        "skill": { "type": "literal" , "value": "iPad" } ,
+        "skilllevel": { "type": "literal" , "value": "iPad advanced" } ,
+        "skillleveluri": { "type": "uri" , "value": "http://lemr-dev:8080/vivo/individual/n730932234" }
+      } ,
+      {
+        "skill": { "type": "literal" , "value": "iPad" } ,
+        "skilllevel": { "type": "literal" , "value": "iPad guru" } ,
+        "skillleveluri": { "type": "uri" , "value": "http://lemr-dev:8080/vivo/individual/n759500941" }
+      } ,
+      {
+        "skill": { "type": "literal" , "value": "ivy" } ,
+        "skilllevel": { "type": "literal" , "value": "ivy (unranked)" } ,
+        "skillleveluri": { "type": "uri" , "value": "http://lemr-dev:8080/vivo/individual/n1037387954" }
+      } ,
+      {
+        "skill": { "type": "literal" , "value": "ivy" } ,
+        "skilllevel": { "type": "literal" , "value": "ivy beginner" } ,
+        "skillleveluri": { "type": "uri" , "value": "http://lemr-dev:8080/vivo/individual/n874850065" }
+      } ,
+      {
+        "skill": { "type": "literal" , "value": "ivy" } ,
+        "skilllevel": { "type": "literal" , "value": "ivy intermediate" } ,
+        "skillleveluri": { "type": "uri" , "value": "http://lemr-dev:8080/vivo/individual/n906467472" }
+      } ,
+      {
+        "skill": { "type": "literal" , "value": "ivy" } ,
+        "skilllevel": { "type": "literal" , "value": "ivy advanced" } ,
+        "skillleveluri": { "type": "uri" , "value": "http://lemr-dev:8080/vivo/individual/n1464313383" }
+      } ,
+      {
+        "skill": { "type": "literal" , "value": "ivy" } ,
+        "skilllevel": { "type": "literal" , "value": "ivy guru" } ,
+        "skillleveluri": { "type": "uri" , "value": "http://lemr-dev:8080/vivo/individual/n1611240028" }
+      } ,
+      {
+        "skill": { "type": "literal" , "value": "jQuery" } ,
+        "skilllevel": { "type": "literal" , "value": "jQuery (unranked)" } ,
+        "skillleveluri": { "type": "uri" , "value": "http://lemr-dev.lasp.colorado.edu:8080/vivo/individual/n968141901" }
+      } ,
+      {
+        "skill": { "type": "literal" , "value": "jQuery" } ,
+        "skilllevel": { "type": "literal" , "value": "jQuery beginner" } ,
+        "skillleveluri": { "type": "uri" , "value": "http://lemr-dev.lasp.colorado.edu:8080/vivo/individual/n1776362959" }
+      } ,
+      {
+        "skill": { "type": "literal" , "value": "jQuery" } ,
+        "skilllevel": { "type": "literal" , "value": "jQuery intermediate" } ,
+        "skillleveluri": { "type": "uri" , "value": "http://lemr-dev.lasp.colorado.edu:8080/vivo/individual/n1094234384" }
+      } ,
+      {
+        "skill": { "type": "literal" , "value": "jQuery" } ,
+        "skilllevel": { "type": "literal" , "value": "jQuery advanced" } ,
+        "skillleveluri": { "type": "uri" , "value": "http://lemr-dev.lasp.colorado.edu:8080/vivo/individual/n756418575" }
+      } ,
+      {
+        "skill": { "type": "literal" , "value": "jQuery" } ,
+        "skilllevel": { "type": "literal" , "value": "jQuery guru" } ,
+        "skillleveluri": { "type": "uri" , "value": "http://lemr-dev.lasp.colorado.edu:8080/vivo/individual/n1462522559" }
+      } ,
+      {
+        "skill": { "type": "literal" , "value": "maven" } ,
+        "skilllevel": { "type": "literal" , "value": "maven (unranked)" } ,
+        "skillleveluri": { "type": "uri" , "value": "http://lemr-dev:8080/vivo/individual/n1763797562" }
+      } ,
+      {
+        "skill": { "type": "literal" , "value": "maven" } ,
+        "skilllevel": { "type": "literal" , "value": "maven beginner" } ,
+        "skillleveluri": { "type": "uri" , "value": "http://lemr-dev:8080/vivo/individual/n1024541605" }
+      } ,
+      {
+        "skill": { "type": "literal" , "value": "maven" } ,
+        "skilllevel": { "type": "literal" , "value": "maven intermediate" } ,
+        "skillleveluri": { "type": "uri" , "value": "http://lemr-dev:8080/vivo/individual/n2099773287" }
+      } ,
+      {
+        "skill": { "type": "literal" , "value": "maven" } ,
+        "skilllevel": { "type": "literal" , "value": "maven advanced" } ,
+        "skillleveluri": { "type": "uri" , "value": "http://lemr-dev:8080/vivo/individual/n201311377" }
+      } ,
+      {
+        "skill": { "type": "literal" , "value": "maven" } ,
+        "skilllevel": { "type": "literal" , "value": "maven guru" } ,
+        "skillleveluri": { "type": "uri" , "value": "http://lemr-dev:8080/vivo/individual/n1972085850" }
+      } ,
+      {
+        "skill": { "type": "literal" , "value": "netCDF" } ,
+        "skilllevel": { "type": "literal" , "value": "netCDF (unranked)" } ,
+        "skillleveluri": { "type": "uri" , "value": "http://lemr-dev.lasp.colorado.edu:8080/vivo/individual/n1621791493" }
+      } ,
+      {
+        "skill": { "type": "literal" , "value": "netCDF" } ,
+        "skilllevel": { "type": "literal" , "value": "netCDF beginner" } ,
+        "skillleveluri": { "type": "uri" , "value": "http://lemr-dev.lasp.colorado.edu:8080/vivo/individual/n2070145250" }
+      } ,
+      {
+        "skill": { "type": "literal" , "value": "netCDF" } ,
+        "skilllevel": { "type": "literal" , "value": "netCDF intermediate" } ,
+        "skillleveluri": { "type": "uri" , "value": "http://lemr-dev.lasp.colorado.edu:8080/vivo/individual/n1876937350" }
+      } ,
+      {
+        "skill": { "type": "literal" , "value": "netCDF" } ,
+        "skilllevel": { "type": "literal" , "value": "netCDF advanced" } ,
+        "skillleveluri": { "type": "uri" , "value": "http://lemr-dev.lasp.colorado.edu:8080/vivo/individual/n1273549603" }
+      } ,
+      {
+        "skill": { "type": "literal" , "value": "netCDF" } ,
+        "skilllevel": { "type": "literal" , "value": "netCDF guru" } ,
+        "skillleveluri": { "type": "uri" , "value": "http://lemr-dev.lasp.colorado.edu:8080/vivo/individual/n194562462" }
+      } ,
+      {
+        "skill": { "type": "literal" , "value": "perl" } ,
+        "skilllevel": { "type": "literal" , "value": "perl (unranked)" } ,
+        "skillleveluri": { "type": "uri" , "value": "http://lemr-dev.lasp.colorado.edu:8080/vivo/individual/n1064026058" }
+      } ,
+      {
+        "skill": { "type": "literal" , "value": "perl" } ,
+        "skilllevel": { "type": "literal" , "value": "perl beginner" } ,
+        "skillleveluri": { "type": "uri" , "value": "http://lemr-dev.lasp.colorado.edu:8080/vivo/individual/n923173688" }
+      } ,
+      {
+        "skill": { "type": "literal" , "value": "perl" } ,
+        "skilllevel": { "type": "literal" , "value": "perl intermediate" } ,
+        "skillleveluri": { "type": "uri" , "value": "http://lemr-dev.lasp.colorado.edu:8080/vivo/individual/n1266249130" }
+      } ,
+      {
+        "skill": { "type": "literal" , "value": "perl" } ,
+        "skilllevel": { "type": "literal" , "value": "perl advanced" } ,
+        "skillleveluri": { "type": "uri" , "value": "http://lemr-dev.lasp.colorado.edu:8080/vivo/individual/n1712511923" }
+      } ,
+      {
+        "skill": { "type": "literal" , "value": "perl" } ,
+        "skilllevel": { "type": "literal" , "value": "perl guru" } ,
+        "skillleveluri": { "type": "uri" , "value": "http://lemr-dev.lasp.colorado.edu:8080/vivo/individual/n744724876" }
+      } ,
+      {
+        "skill": { "type": "literal" , "value": "regular expressions" } ,
+        "skilllevel": { "type": "literal" , "value": "regular expressions (unranked)" } ,
+        "skillleveluri": { "type": "uri" , "value": "http://lemr-dev:8080/vivo/individual/n587348059" }
+      } ,
+      {
+        "skill": { "type": "literal" , "value": "regular expressions" } ,
+        "skilllevel": { "type": "literal" , "value": "regular expressions beginner" } ,
+        "skillleveluri": { "type": "uri" , "value": "http://lemr-dev:8080/vivo/individual/n306518738" }
+      } ,
+      {
+        "skill": { "type": "literal" , "value": "regular expressions" } ,
+        "skilllevel": { "type": "literal" , "value": "regular expressions intermediate" } ,
+        "skillleveluri": { "type": "uri" , "value": "http://lemr-dev:8080/vivo/individual/n2120419513" }
+      } ,
+      {
+        "skill": { "type": "literal" , "value": "regular expressions" } ,
+        "skilllevel": { "type": "literal" , "value": "regular expressions advanced" } ,
+        "skillleveluri": { "type": "uri" , "value": "http://lemr-dev:8080/vivo/individual/n1556144134" }
+      } ,
+      {
+        "skill": { "type": "literal" , "value": "regular expressions" } ,
+        "skilllevel": { "type": "literal" , "value": "regular expressions guru" } ,
+        "skillleveluri": { "type": "uri" , "value": "http://lemr-dev:8080/vivo/individual/n2034763174" }
+      } ,
+      {
+        "skill": { "type": "literal" , "value": "tcsh" } ,
+        "skilllevel": { "type": "literal" , "value": "tcsh (unranked)" } ,
+        "skillleveluri": { "type": "uri" , "value": "http://lemr-dev.lasp.colorado.edu:8080/vivo/individual/n632010458" }
+      } ,
+      {
+        "skill": { "type": "literal" , "value": "tcsh" } ,
+        "skilllevel": { "type": "literal" , "value": "tcsh beginner" } ,
+        "skillleveluri": { "type": "uri" , "value": "http://lemr-dev.lasp.colorado.edu:8080/vivo/individual/n1220194198" }
+      } ,
+      {
+        "skill": { "type": "literal" , "value": "tcsh" } ,
+        "skilllevel": { "type": "literal" , "value": "tcsh intermediate" } ,
+        "skillleveluri": { "type": "uri" , "value": "http://lemr-dev.lasp.colorado.edu:8080/vivo/individual/n396073491" }
+      } ,
+      {
+        "skill": { "type": "literal" , "value": "tcsh" } ,
+        "skilllevel": { "type": "literal" , "value": "tcsh advanced" } ,
+        "skillleveluri": { "type": "uri" , "value": "http://lemr-dev.lasp.colorado.edu:8080/vivo/individual/n352988386" }
+      } ,
+      {
+        "skill": { "type": "literal" , "value": "tcsh" } ,
+        "skilllevel": { "type": "literal" , "value": "tcsh guru" } ,
+        "skillleveluri": { "type": "uri" , "value": "http://lemr-dev.lasp.colorado.edu:8080/vivo/individual/n1001446887" }
+      } ,
+      {
+        "skill": { "type": "literal" , "value": "wInsight" } ,
+        "skilllevel": { "type": "literal" , "value": "wInsight (unranked)" } ,
+        "skillleveluri": { "type": "uri" , "value": "http://lemr-dev.lasp.colorado.edu:8080/vivo/individual/n2062117007" }
+      } ,
+      {
+        "skill": { "type": "literal" , "value": "wInsight" } ,
+        "skilllevel": { "type": "literal" , "value": "wInsight beginner" } ,
+        "skillleveluri": { "type": "uri" , "value": "http://lemr-dev.lasp.colorado.edu:8080/vivo/individual/n239194321" }
+      } ,
+      {
+        "skill": { "type": "literal" , "value": "wInsight" } ,
+        "skilllevel": { "type": "literal" , "value": "wInsight intermediate" } ,
+        "skillleveluri": { "type": "uri" , "value": "http://lemr-dev.lasp.colorado.edu:8080/vivo/individual/n862908734" }
+      } ,
+      {
+        "skill": { "type": "literal" , "value": "wInsight" } ,
+        "skilllevel": { "type": "literal" , "value": "wInsight advanced" } ,
+        "skillleveluri": { "type": "uri" , "value": "http://lemr-dev.lasp.colorado.edu:8080/vivo/individual/n358560745" }
+      } ,
+      {
+        "skill": { "type": "literal" , "value": "wInsight" } ,
+        "skilllevel": { "type": "literal" , "value": "wInsight guru" } ,
+        "skillleveluri": { "type": "uri" , "value": "http://lemr-dev.lasp.colorado.edu:8080/vivo/individual/n1173580466" }
+      }
+    ]
+  }
+}

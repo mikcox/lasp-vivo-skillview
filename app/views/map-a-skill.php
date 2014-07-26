@@ -6,7 +6,8 @@
 			<p class="error">{{error}}</p>
 			<ul id="table1" class="people">
 				<p ng-show="peoplelist">People Found: {{countPagedList(pagedPeople)}}</p>
-				<p ng-hide="peoplelist"> Loading...</p>
+				<div ng-hide="peoplelist"><br><img src="images/loading.gif"/><br>
+					Loading...</div>
 				<li class="thumbnail" ng-repeat="person in pagedPeople[currentPagePeople-1]" data-drop="true" ng-model="peoplelist" jqyoui-droppable="{multiple: true, onDrop: 'filterPeople'}" data-jqyoui-options="{accept:'.btn-draggable:not([ng-model!=addPersonList])'}"> 
 					<div class="btn btn-primary btn-draggable" data-drag="true" data-jqyoui-options="{revert: 'invalid'}" ng-model="peoplelist" jqyoui-draggable="{index: $index+(currentPagePeople-1)*15, animate: false, applyFilter: 'filterPeople'}" ng-hide="!person.person">{{person.person}}</div>
 					<button class="addButton" ng-click="addToPeople(person)" title="Add Person" style="padding:2px"><img src="images/add-button.png" height="25px" width="25px"/></button>
