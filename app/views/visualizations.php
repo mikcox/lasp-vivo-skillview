@@ -10,13 +10,13 @@
 	<button ng-click="searchQuery = query">Go</button>
 	<button ng-click="clearQueries()">Clear</button>
 	
-	<div style="float:right;">
+	<div style="float:right;" title="Raw number of people who have the skill">
 		<label style="cursor:pointer;">
 			<input type="radio" ng-model="barCountType" value="basicCount"
 			ng-change="prepareCounts(barCountType)" style="display:inline;"/>
 				Number of People
 		</label>
-		<label style="cursor:pointer;">
+		<label style="cursor:pointer;" title="Beginner: 1 point, Intermediate: 2 points, etc.">
 			<input type="radio" ng-model="barCountType" value="expertise"
 			ng-change="prepareCounts(barCountType)" style="display:inline; cursor:pointer;"/>
 				Expertise
