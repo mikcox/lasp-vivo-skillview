@@ -31,7 +31,9 @@
         	 | 
         	<a id="mapASkill" href="#/mapaskill" style="color: white;">Map New Skill</a>
         	 | 
-        	<a id="about" href="javascript:void(0)" ng-click="open()" style="color: white;">About</a></p>
+        	<a id="about" href="javascript:void(0)" ng-click="open()" style="color: white;">About</a>
+        	 | 
+        	<a id="visualizations" href="#/visualizations" style="color: white;">Visualizations</a></p>
     </div>
     
     <div ng-view></div>
@@ -61,11 +63,14 @@
 
         <!-- build:js({.tmp,app}) scripts/scripts.js -->
         <script src="scripts/app.js"></script>
+        <script src="scripts/controllers/aboutModalCtrl.js"></script>
         <script src="scripts/controllers/allSkillsCtrl.js"></script>
+        <script src="scripts/controllers/mapASkillCtrl.js"></script>
+        <script src="scripts/controllers/visualizationsCtrl.js"></script>
         <script src="scripts/filters.js"></script>
         <script src="scripts/services/factories.js"></script>
-        <script src="scripts/controllers/aboutModalCtrl.js"></script>
-        <script src="scripts/controllers/mapASkillCtrl.js"></script>
+        <script src="scripts/directives/d3directives.js"></script>
+        <script src="scripts/directives/d3module.js"></script>
         <!-- endbuild -->
 </body>
 </html>
