@@ -75,6 +75,11 @@ skillsModule.controller('visualizationsCtrl', [
 			});
 		};
 		
+		$scope.clearQueries = function() {
+			$scope.query = '';
+			$scope.searchQuery = '';
+		}
+		
 		$scope.skillsBarCollapsed = false;
 		$scope.barCountType = 'expertise';
 		$scope.allSkillsJSONLocation = 'cached_json/LASP_master_list.json';

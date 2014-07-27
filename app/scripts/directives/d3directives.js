@@ -33,6 +33,12 @@ skillsModule.directive('d3Bars', ['$window', '$timeout', 'd3Service',
             scope.render(newData);
           }, true);
  
+          /*
+	      scope.onClick = function ( item ) {
+	    	  alert('foo');
+	      };
+	      */
+          
           scope.render = function(data) {
             svg.selectAll('*').remove();
  

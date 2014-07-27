@@ -45,7 +45,9 @@
 	    <p>Skills App Version 1.0, 11/18/2013</p>
 	    <p>Created by the LEMR Development Team</p>
 	    <h3>Powered By</h3>
-	    <a href="http://lemr.lasp.colorado.edu">LEMR (The LASP Extended Metadata Repository)</a> and <a href="http://angularjs.org/"><img src="images/AngularJS-small.png"/></a>
+	    <a href="http://lemr.lasp.colorado.edu">LEMR (The LASP Extended Metadata Repository)</a>
+	    , <a href="http://angularjs.org/"><img src="images/AngularJS-small.png"/></a>
+	    , and <a href="http://d3js.org"><img src="images/d3js.svg" width="25" height="25"/></a>
 	</footer>
 
     <!-- build:js scripts/vendor.js -->
