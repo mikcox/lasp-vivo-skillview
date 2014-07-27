@@ -103,12 +103,12 @@ skillsModule.controller('mapASkillCtrl', [
 			for (var i = 0; i < $scope.addPersonList.length; i++) {
 				for (var j = 0; j < $scope.addSkillList.length; j++) {
 					levelSelected = document.getElementById($scope.addSkillList[j].skill).selectedIndex;
-					if ($scope.addSkillList[j].levels[0].skillleveluri === '0') {
+					/*if ($scope.addSkillList[j].levels[0].skillleveluri === '0') {
 						addingNewSkill = true;
 						$scope.newSkillSubmitText += $scope.addPersonList[i].uri + ',';
 						$scope.newSkillSubmitText += $scope.addSkillList[j].skill + ',';
 						$scope.newSkillSubmitText += $scope.addSkillList[j].levels[levelSelected].skillleveluri + '\n';
-					} else {
+					} else {*/
 						addingExistingSkill = true;
 						$scope.SubmitTextPublic += '{'+
 							'"Person": { "type": "literal" , "value": "'+
@@ -131,7 +131,7 @@ skillsModule.controller('mapASkillCtrl', [
 						$scope.SubmitText += $scope.addSkillList[j].skill + '\n';
 						$scope.SubmitTextPublic = $scope.SubmitText;
 						*/
-					}
+					//}
 				}
 			}
 			$scope.SubmitTextPublic = $scope.SubmitTextPublic.substring( 0, $scope.SubmitTextPublic.length-1 ) + ']';
@@ -143,6 +143,7 @@ skillsModule.controller('mapASkillCtrl', [
 			}
 			//display cute working gif even though it doesn't really know anything about anything
 			document.getElementById('submitButtonDiv').innerHTML = '<img src="images/loading.gif"/><br>Working... ';
+			/*
 			//actually post the new skill(s), using the corresponding version of the harvester if the skill doesn't already exist
 			if (addingNewSkill) {
 				ajaxSubmitNewSkillMap();
@@ -150,6 +151,8 @@ skillsModule.controller('mapASkillCtrl', [
 			if (addingExistingSkill) {
 				ajaxSubmitExistingSkillMap();
 			}
+			*/
+			ajaxSubmitExistingSkillMap();
 			
 			alert('New skill mapping added!');
 			location.reload();

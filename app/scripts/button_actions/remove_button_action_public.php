@@ -9,7 +9,6 @@ if(isset($_POST['person']))
     $skilluri = $_POST['skilluri']."";
     $string = file_get_contents( "../../cached_json/LASP_master_list.json" );
     $json = json_decode( $string );
-    $outputString = 'no match found';
     
     foreach( $json->results->bindings as $index=>$row ) {
     	if ( $row->Person->value === $person
@@ -18,8 +17,11 @@ if(isset($_POST['person']))
     		unset( $json->results->bindings[$index] );
     	}
     }
-
+	//re-index array elements
+	$json->results->bindings = array_values( $json->results->bindings );
+    //encode
     $outputString = json_encode( $json );
+    //and write to file
     file_put_contents( "../../cached_json/LASP_master_list.json", $outputString );
 }
 
