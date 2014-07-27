@@ -44,7 +44,7 @@ skillsModule.controller('allSkillsCtrl', [
 			var moveon = confirm('Delete ' + name + '\'s ' + skill + ' skill?');
 			if (moveon) {
 				ajaxSubmitDeletion(name, personuri, skilluri);
-				alert('Deleted ' + name + '\'s ' + skill + ' skill.');
+				//alert('Deleted ' + name + '\'s ' + skill + ' skill.');
 				location.reload();
 			} else {
 				return;
