@@ -82,8 +82,22 @@ skillsModule.controller('visualizationsCtrl', [
 		
 		$scope.skillsBarCollapsed = false;
 		$scope.barCountType = 'expertise';
-		$scope.allSkillsJSONLocation = 'cached_json/LASP_master_list.json';
+		$scope.allSkillsJSONFullPath = '/var/opt/lasp/skills/cached_json/LASP_master_list.json';
+		//$scope.allSkillsJSONLocation = 'cached_json/LASP_master_list.json';
 		
+		dataFactory.getCachedJSONphp( $scope.allSkillsJSONFullPath ).success(function (data) {
+            $scope.error = '';
+            if (data) {
+                data = JSON.parse(data);
+                $scope.skills = formatFactory.formatMasterList(data);
+                $scope.prepareCounts( $scope.barCountType );
+                $scope.$apply();
+            }
+        }).error(function (data, status) {
+            $scope.error = 'JSON get returned: ' + status;
+        });
+		
+		/*
 		dataFactory.getCachedJSON( $scope.allSkillsJSONLocation ).success(function ( data ) {
             $scope.error = '';
             if ( data ) {
@@ -93,6 +107,7 @@ skillsModule.controller('visualizationsCtrl', [
         }).error(function (data, status) {
             $scope.error = 'JSON get returned: ' + status;
         });
+        */
 		
 		
 	}
