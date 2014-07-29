@@ -58,7 +58,6 @@ skillsModule.controller('allSkillsCtrl', [
 			if (moveon) {
 				ajaxSubmitDeletion(name, personuri, skilluri);
 				//alert('Deleted ' + name + '\'s ' + skill + ' skill.');
-				location.reload();
 			} else {
 				return;
 			}
@@ -75,7 +74,11 @@ skillsModule.controller('allSkillsCtrl', [
 			$.ajax({
 				type: 'POST',
 				url: 'scripts/button_actions/remove_button_action_public.php',
-				data: { person: person, personuri: personuri, skilluri: skilluri }
+				data: { person: person, personuri: personuri, skilluri: skilluri },
+				success: function() {
+                    alert('Skill deleted.');
+                    location.reload();
+                }
 			});
 		}
 		//search functions

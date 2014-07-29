@@ -16,9 +16,10 @@ skillsModule.controller('mapASkillCtrl', [
 		$scope.urlBase = 'http://lasp-db-dev:3030/VIVO/query';
 		$scope.UFurlBase = 'http://sparql.vivo.ufl.edu/VIVO/query';
 		$scope.LASPpersonnelLocation = 'cached_json/LASP_personnel.json';
+		$scope.BrownPersonnelLocation = 'cached_json/Brown_personnel.json';
 		$scope.LASPskillsLocation = 'cached_json/LASP_skills.json';
 		function getPersonnel() {
-		    $scope.personQueryStr = 'PREFIX rdfs:  <http://www.w3.org/2000/01/rdf-schema#> PREFIX foaf: <http://xmlns.com/foaf/0.1/> SELECT ?person ?personuri WHERE{ ?personuri a foaf:Person . ?personuri rdfs:label ?person}';
+		    //$scope.personQueryStr = 'PREFIX rdfs:  <http://www.w3.org/2000/01/rdf-schema#> PREFIX foaf: <http://xmlns.com/foaf/0.1/> SELECT ?person ?personuri WHERE{ ?personuri a foaf:Person . ?personuri rdfs:label ?person}';
 			$scope.UFpersonQueryStr = 'PREFIX rdfs:  <http://www.w3.org/2000/01/rdf-schema#> PREFIX foaf: <http://xmlns.com/foaf/0.1/> PREFIX ufVivo: <http://vivo.ufl.edu/ontology/vivo-ufl/> SELECT ?person ?personuri WHERE{ ?personuri ufVivo:homeDept <http://vivo.ufl.edu/individual/n391868> . ?personuri a foaf:Person . ?personuri rdfs:label ?person}';
 			// Get UF's real vivo people
 		    dataFactory.getSPARQLQuery($scope.UFurlBase, $scope.UFpersonQueryStr).success(function (data) {
@@ -26,16 +27,32 @@ skillsModule.controller('mapASkillCtrl', [
 				// If we got UF's real vivo output, get LASP's cached people
 				if (data) {
 				    $scope.peoplelist = data;
+				    //Add Chris Barnes.  ;)
+                    $scope.peoplelist.results.bindings.push( {person: {value: 'Barnes, Christopher M'},
+                                                              personuri: {value:'http://vivo.ufl.edu/individual/n64866'}} );
 				    for ( var i = 0; i < $scope.peoplelist.results.bindings.length; i++ ) {
 				        $scope.peoplelist.results.bindings[i].person.value = $scope.peoplelist.results.bindings[i].person.value + " (UF)"
 				    }
+				    
+				    //then concatenate with LASP's cached people
 				    dataFactory.getCachedJSON( $scope.LASPpersonnelLocation ).success(function (data) {
 				        for ( var i = 0; i < data.results.bindings.length; i++ ) {
 	                        data.results.bindings[i].person.value = data.results.bindings[i].person.value + " (LASP)"
 	                    }
 				        $scope.peoplelist.results.bindings = $scope.peoplelist.results.bindings.concat( data.results.bindings );
-				        $scope.peoplelist = formatFactory.formatPersonnelList( $scope.peoplelist );
-	                    $scope.filterPeople();
+				        
+				        //then concatenate with Brown's cached people
+				        dataFactory.getCachedJSON( $scope.BrownPersonnelLocation ).success(function (data) {
+				            //Add Ted Lawless.  ;)
+                            data.results.bindings.push( {person: {value: 'Lawless, Ted'},
+                                                                      personuri: {value:'http://vivo.brown.edu/individual/tlawless'}} );
+				            for ( var i = 0; i < data.results.bindings.length; i++ ) {
+	                            data.results.bindings[i].person.value = data.results.bindings[i].person.value + " (Brown)"
+	                        }
+	                        $scope.peoplelist.results.bindings = $scope.peoplelist.results.bindings.concat( data.results.bindings );
+	                        $scope.peoplelist = formatFactory.formatPersonnelList( $scope.peoplelist );
+	                        $scope.filterPeople();
+	                    });
 				    });
 				}
 			}).error(function (data, status) {
@@ -153,9 +170,6 @@ skillsModule.controller('mapASkillCtrl', [
 			}
 			*/
 			ajaxSubmitExistingSkillMap();
-			
-			alert('New skill mapping added!');
-			location.reload();
 			/*
 			//wait 5 seconds and then display a success message (yes, this is a lie since the skill may or may not have actually been added by now)
 			setTimeout(function () {
@@ -185,7 +199,11 @@ skillsModule.controller('mapASkillCtrl', [
             $.ajax({
                 type: 'POST',
                 url: 'scripts/button_actions/submit_button_action_public.php',
-                data: { SubmitTextPublic: $scope.SubmitTextPublic }
+                data: { SubmitTextPublic: $scope.SubmitTextPublic },
+                success: function() {
+                    alert('New skill mapping added!');
+                    location.reload();
+                }
             });
 		}
 		//Add and Remove Button Functions
@@ -212,6 +230,8 @@ skillsModule.controller('mapASkillCtrl', [
 			$scope.filterSkills();
 		};
 		$scope.addNewSkill = function (skill) {
+		    alert('Sorry, but this feature has been disabled in the external version of the application.  (coming soon!)');
+		    /*
 			alert(skill + ' will now be shown in the skill list.  Note that it will only be added to the database when you assign it to a person.');
 			$scope.skilllist.push({
 				'skill': skill,
@@ -239,6 +259,7 @@ skillsModule.controller('mapASkillCtrl', [
 				]
 			});
 			$scope.searchSkills(skill);
+			*/
 		};
 		//search functions
 		$scope.searchPeople = function (person) {
