@@ -23,6 +23,10 @@
 		</label>
 	</div>
 	
+	<p ng-hide="barData" style="text-align:center;"> 
+		<img src="images/loading.gif"/><br>
+		Loading...
+	</p>
 	<div d3-bars bar-height="20" bar-padding="5" data="barData | filter:searchQuery" ng-if="!skillsBarCollapsed"></div>
 	
 	<br>
