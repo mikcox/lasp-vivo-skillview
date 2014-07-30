@@ -93,23 +93,53 @@ color: white;
   color: grey;
 }
 
+.people li,
+.skills li {
+	position: relative;
+}
+
+.people li > .btn,
+.skills li > .btn {
+	margin-right: 38px;
+}
+
 .addButton {
-	float: right;
-	background: transparent;
 	border: none;
-	height: 6%;
-	width: 6%;
+	border-left: 1px solid #e0e0e0;
 	padding: 0px;
+	position: absolute;
+	right: 0;
+	top: 0;
+	padding: 0 6px !important;
+	height: 100%;
+	background: #fff;
+	opacity: 0.7;
+	transition: opacity 0.2s, background 0.2s;
+}
+.addButton:hover {
+	opacity: 1;
+	background: #eee;
 }
 
 
 .removeButton {
-	float: right;
 	background: transparent;
 	border: none;
-	height: 13%;
-	width: 13%;
+	height: 20px;
+	width: 20px;
 	padding: 0px;
+}
+[ng-model=addPersonList] .removeButton,
+[ng-model=addSkillList] .removeButton {
+	position: absolute;
+	right: -22px;
+	top: 4px;
+}
+[data-title="'Skill'"] .removeButton {
+	position: absolute;
+	height: 100%;
+	top: 0;
+	left: 0;
 }
 
 .columnHeader {
@@ -137,4 +167,65 @@ background: url('../images/sort_both.png') no-repeat center right;
 
 .row_even{
 	background-color: #CCCCCC;
+}
+
+.pagination a {
+	background: white;
+	cursor: pointer;
+	transition: background 0.15s;
+}
+.pagination .active a,
+.pagination .disabled a,
+.pagination .disabled a:hover {
+	background: #e5e5e5;
+	border-color: #fff
+}
+.pagination a {
+	padding: 0 9px;
+}
+
+.pagination {
+	margin: 10px 0 10px 25px;
+}
+.pagination[boundary-links] {
+	width: auto;
+	margin-left: 0;
+}
+#table1 + div,
+#table2 + div {
+	width: 300px;
+}
+#table2 + div {
+	margin-left: -68px;
+	float: right;
+}
+#table2 + div > .pagination {
+	float: right;
+}
+
+[ng-model=addSkillList] select {
+	width: 100% !important;
+	clear: both;
+	margin-top: 5px;
+}
+
+[ng-model=addPersonList].btn,
+[ng-model=addSkillList].btn {
+	margin-bottom: 4px;
+}
+
+table.table td {
+	border-radius: 0;
+}
+table.table tr:hover td {
+	background: #eee;
+}
+
+td[data-title="'Skill'"] {
+	position: relative;
+	padding-left: 22px;
+}
+
+a, .btn, button {
+	outline: none !important;
 }
