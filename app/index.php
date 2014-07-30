@@ -15,7 +15,7 @@
     <link rel="stylesheet" href="styles/app.css">
     <!-- endbuild -->
   </head>
-  <body class="no-logo fae" ng-app="skillsModule" style="min-width:900px;">
+  <body class="no-logo fae" ng-app="skillsModule">
     <!--[if lt IE 7]>
       <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
     <![endif]-->

@@ -20,11 +20,12 @@ body {
 }
 
 html { 
-  background: url('../images/bg1.jpg') no-repeat center center fixed; 
+  background: url('../images/bg1.jpg') no-repeat center center; 
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
+  min-width: 900px;
 }
 
 svg {
