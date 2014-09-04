@@ -21,6 +21,20 @@ skillsModule.factory('dataFactory', function ($http) {
 			}
 		});
 	};
+	dataFactory.getCachedJSON = function ( location ) {
+        return $http.get( location ); 
+	};
+	
+	dataFactory.getCachedJSONphp = function( location ) {
+	    return $.ajax({                                      
+	        url: 'scripts/button_actions/get_JSON.php',   
+	        type:'POST',      
+	        dataType: 'json',  
+	        data: { filePath: location }
+	      });
+
+	};
+	
 	return dataFactory;
 });
 

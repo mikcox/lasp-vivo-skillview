@@ -1,0 +1,1157 @@
+{
+  "head": {
+    "vars": [ "person" , "personuri" ]
+  } ,
+  "results": {
+    "bindings": [
+      {
+        "person": { "type": "literal" , "value": "Hamida, Jaha A" } ,
+        "personuri": { "type": "uri" , "value": "http://vivo.ufl.edu/individual/n1417" }
+      } ,
+      {
+        "person": { "type": "literal" , "value": "Roffman, David A" } ,
+        "personuri": { "type": "uri" , "value": "http://vivo.ufl.edu/individual/n3819256456" }
+      } ,
+      {
+        "person": { "type": "literal" , "value": "Woodard, Richard P" } ,
+        "personuri": { "type": "uri" , "value": "http://vivo.ufl.edu/individual/n18464" }
+      } ,
+      {
+        "person": { "type": "literal" , "value": "Eoff,Kay M" } ,
+        "personuri": { "type": "uri" , "value": "http://vivo.ufl.edu/individual/n442" }
+      } ,
+      {
+        "person": { "type": "literal" , "value": "Adorno De Freitas, Tiago Carlos" } ,
+        "personuri": { "type": "uri" , "value": "http://vivo.ufl.edu/individual/n7042958439" }
+      } ,
+      {
+        "person": { "type": "literal" , "value": "Agarwal,Nimit" } ,
+        "personuri": { "type": "uri" , "value": "http://vivo.ufl.edu/individual/n423342897" }
+      } ,
+      {
+        "person": { "type": "literal" , "value": "Witten, Louis" } ,
+        "personuri": { "type": "uri" , "value": "http://vivo.ufl.edu/individual/n6358520037" }
+      } ,
+      {
+        "person": { "type": "literal" , "value": "Wang,Yan" } ,
+        "personuri": { "type": "uri" , "value": "http://vivo.ufl.edu/individual/n39579" }
+      } ,
+      {
+        "person": { "type": "literal" , "value": "Lin,Hsin Jung" } ,
+        "personuri": { "type": "uri" , "value": "http://vivo.ufl.edu/individual/n1498201180" }
+      } ,
+      {
+        "person": { "type": "literal" , "value": "Serafin, Alessandro" } ,
+        "personuri": { "type": "uri" , "value": "http://vivo.ufl.edu/individual/n1847737408" }
+      } ,
+      {
+        "person": { "type": "literal" , "value": "Thompson, Jonathan E" } ,
+        "personuri": { "type": "uri" , "value": "http://vivo.ufl.edu/individual/n2081978366" }
+      } ,
+      {
+        "person": { "type": "literal" , "value": "Hansen, David C" } ,
+        "personuri": { "type": "uri" , "value": "http://vivo.ufl.edu/individual/n8262158048" }
+      } ,
+      {
+        "person": { "type": "literal" , "value": "Furic, Ivan Kresimir" } ,
+        "personuri": { "type": "uri" , "value": "http://vivo.ufl.edu/individual/n317" }
+      } ,
+      {
+        "person": { "type": "literal" , "value": "Matchev, Konstantin Tzvetanov" } ,
+        "personuri": { "type": "uri" , "value": "http://vivo.ufl.edu/individual/n14000" }
+      } ,
+      {
+        "person": { "type": "literal" , "value": "Tam, Gordon N" } ,
+        "personuri": { "type": "uri" , "value": "http://vivo.ufl.edu/individual/n1906736126" }
+      } ,
+      {
+        "person": { "type": "literal" , "value": "Das, Souvik" } ,
+        "personuri": { "type": "uri" , "value": "http://vivo.ufl.edu/individual/n196090745" }
+      } ,
+      {
+        "person": { "type": "literal" , "value": "Long, Chang" } ,
+        "personuri": { "type": "uri" , "value": "http://vivo.ufl.edu/individual/n148483015" }
+      } ,
+      {
+        "person": { "type": "literal" , "value": "Meisel, Mark W" } ,
+        "personuri": { "type": "uri" , "value": "http://vivo.ufl.edu/individual/n4903" }
+      } ,
+      {
+        "person": { "type": "literal" , "value": "Hanson,Harold P" } ,
+        "personuri": { "type": "uri" , "value": "http://vivo.ufl.edu/individual/n18822" }
+      } ,
+      {
+        "person": { "type": "literal" , "value": "Trinastic, Jonathan P" } ,
+        "personuri": { "type": "uri" , "value": "http://vivo.ufl.edu/individual/n748776069" }
+      } ,
+      {
+        "person": { "type": "literal" , "xml:lang": "en-US" , "value": "Trinastic,Jonathan P" } ,
+        "personuri": { "type": "uri" , "value": "http://vivo.ufl.edu/individual/n748776069" }
+      } ,
+      {
+        "person": { "type": "literal" , "value": "Ray, Heather" } ,
+        "personuri": { "type": "uri" , "value": "http://vivo.ufl.edu/individual/n76" }
+      } ,
+      {
+        "person": { "type": "literal" , "value": "Mei, Hualin" } ,
+        "personuri": { "type": "uri" , "value": "http://vivo.ufl.edu/individual/n1051709758" }
+      } ,
+      {
+        "person": { "type": "literal" , "value": "Wu, Benjamin" } ,
+        "personuri": { "type": "uri" , "value": "http://vivo.ufl.edu/individual/n33670852" }
+      } ,
+      {
+        "person": { "type": "literal" , "value": "Hopkins, Chad W" } ,
+        "personuri": { "type": "uri" , "value": "http://vivo.ufl.edu/individual/n34030711" }
+      } ,
+      {
+        "person": { "type": "literal" , "value": "Thatcher, Evan M" } ,
+        "personuri": { "type": "uri" , "value": "http://vivo.ufl.edu/individual/n1488108928" }
+      } ,
+      {
+        "person": { "type": "literal" , "value": "Bond, Bobby T" } ,
+        "personuri": { "type": "uri" , "value": "http://vivo.ufl.edu/individual/n1930522671" }
+      } ,
+      {
+        "person": { "type": "literal" , "value": "Belyaev,Dmitry" } ,
+        "personuri": { "type": "uri" , "value": "http://vivo.ufl.edu/individual/n15285" }
+      } ,
+      {
+        "person": { "type": "literal" , "value": "Avery, Paul Ralph" } ,
+        "personuri": { "type": "uri" , "value": "http://vivo.ufl.edu/individual/n8416" }
+      } ,
+      {
+        "person": { "type": "literal" , "value": "Reitze, David H" } ,
+        "personuri": { "type": "uri" , "value": "http://vivo.ufl.edu/individual/n6548" }
+      } ,
+      {
+        "person": { "type": "literal" , "value": "Saeidi, Sima" } ,
+        "personuri": { "type": "uri" , "value": "http://vivo.ufl.edu/individual/n1048593106" }
+      } ,
+      {
+        "person": { "type": "literal" , "value": "Nichola, Kristin Marie" } ,
+        "personuri": { "type": "uri" , "value": "http://vivo.ufl.edu/individual/n21234" }
+      } ,
+      {
+        "person": { "type": "literal" , "value": "Mccarthy, Mitchell A" } ,
+        "personuri": { "type": "uri" , "value": "http://vivo.ufl.edu/individual/n9966176" }
+      } ,
+      {
+        "person": { "type": "literal" , "value": "Huan, Chao" } ,
+        "personuri": { "type": "uri" , "value": "http://vivo.ufl.edu/individual/n545" }
+      } ,
+      {
+        "person": { "type": "literal" , "value": "Rustagi, Avinash" } ,
+        "personuri": { "type": "uri" , "value": "http://vivo.ufl.edu/individual/n1868726877" }
+      } ,
+      {
+        "person": { "type": "literal" , "value": "Donelan, Darsa" } ,
+        "personuri": { "type": "uri" , "value": "http://vivo.ufl.edu/individual/n1781208868" }
+      } ,
+      {
+        "person": { "type": "literal" , "value": "Hartman, Michael T" } ,
+        "personuri": { "type": "uri" , "value": "http://vivo.ufl.edu/individual/n882076415" }
+      } ,
+      {
+        "person": { "type": "literal" , "value": "Acosta, Darin E" } ,
+        "personuri": { "type": "uri" , "value": "http://vivo.ufl.edu/individual/n30264" }
+      } ,
+      {
+        "person": { "type": "literal" , "value": "Stanton, Christopher Jay" } ,
+        "personuri": { "type": "uri" , "value": "http://vivo.ufl.edu/individual/n34816" }
+      } ,
+      {
+        "person": { "type": "literal" , "value": "Storch, Edward J" } ,
+        "personuri": { "type": "uri" , "value": "http://vivo.ufl.edu/individual/n9091640321" }
+      } ,
+      {
+        "person": { "type": "literal" , "value": "Buvaev, Sanal V" } ,
+        "personuri": { "type": "uri" , "value": "http://vivo.ufl.edu/individual/n1123695197" }
+      } ,
+      {
+        "person": { "type": "literal" , "value": "Cheney, David James" } ,
+        "personuri": { "type": "uri" , "value": "http://vivo.ufl.edu/individual/n1936542937" }
+      } ,
+      {
+        "person": { "type": "literal" , "value": "Matcheva, Katia I" } ,
+        "personuri": { "type": "uri" , "value": "http://vivo.ufl.edu/individual/n3274" }
+      } ,
+      {
+        "person": { "type": "literal" , "value": "Amin, Manish Y" } ,
+        "personuri": { "type": "uri" , "value": "http://vivo.ufl.edu/individual/n2081527078" }
+      } ,
+      {
+        "person": { "type": "literal" , "value": "Madorsky, Alexander" } ,
+        "personuri": { "type": "uri" , "value": "http://vivo.ufl.edu/individual/n12334" }
+      } ,
+      {
+        "person": { "type": "literal" , "value": "Spector, Aaron D" } ,
+        "personuri": { "type": "uri" , "value": "http://vivo.ufl.edu/individual/n1216209830" }
+      } ,
+      {
+        "person": { "type": "literal" , "value": "Martin, Rodica" } ,
+        "personuri": { "type": "uri" , "value": "http://vivo.ufl.edu/individual/n47266" }
+      } ,
+      {
+        "person": { "type": "literal" , "value": "Chowdhury, Tathagata" } ,
+        "personuri": { "type": "uri" , "value": "http://vivo.ufl.edu/individual/n1051739915" }
+      } ,
+      {
+        "person": { "type": "literal" , "value": "Maiti, Saurabh" } ,
+        "personuri": { "type": "uri" , "value": "http://vivo.ufl.edu/individual/n8237843051" }
+      } ,
+      {
+        "person": { "type": "literal" , "value": "Ballard,Stanley S" } ,
+        "personuri": { "type": "uri" , "value": "http://vivo.ufl.edu/individual/n1927199464" }
+      } ,
+      {
+        "person": { "type": "literal" , "value": "Stolterfoht, August R N" } ,
+        "personuri": { "type": "uri" , "value": "http://vivo.ufl.edu/individual/n3362" }
+      } ,
+      {
+        "person": { "type": "literal" , "xml:lang": "en-US" , "value": "Thorpe, James Ira" } ,
+        "personuri": { "type": "uri" , "value": "http://vivo.ufl.edu/individual/n111836" }
+      } ,
+      {
+        "person": { "type": "literal" , "value": "Padgett, Andrew S" } ,
+        "personuri": { "type": "uri" , "value": "http://vivo.ufl.edu/individual/n1025510089" }
+      } ,
+      {
+        "person": { "type": "literal" , "value": "Kreisel, Andreas" } ,
+        "personuri": { "type": "uri" , "value": "http://vivo.ufl.edu/individual/n1975804932" }
+      } ,
+      {
+        "person": { "type": "literal" , "value": "Latimer, Darlene L" } ,
+        "personuri": { "type": "uri" , "value": "http://vivo.ufl.edu/individual/n14525" }
+      } ,
+      {
+        "person": { "type": "literal" , "value": "Zheng, Pan" } ,
+        "personuri": { "type": "uri" , "value": "http://vivo.ufl.edu/individual/n560306858" }
+      } ,
+      {
+        "person": { "type": "literal" , "value": "Mitselmakher, Guenakh" } ,
+        "personuri": { "type": "uri" , "value": "http://vivo.ufl.edu/individual/n58904" }
+      } ,
+      {
+        "person": { "type": "literal" , "value": "Snowball, Matthew A" } ,
+        "personuri": { "type": "uri" , "value": "http://vivo.ufl.edu/individual/n1010817775" }
+      } ,
+      {
+        "person": { "type": "literal" , "value": "Ciani, Giacomo" } ,
+        "personuri": { "type": "uri" , "value": "http://vivo.ufl.edu/individual/n28229" }
+      } ,
+      {
+        "person": { "type": "literal" , "value": "Hermansen, Billie J" } ,
+        "personuri": { "type": "uri" , "value": "http://vivo.ufl.edu/individual/n30615" }
+      } ,
+      {
+        "person": { "type": "literal" , "value": "Chapurin,Roman" } ,
+        "personuri": { "type": "uri" , "value": "http://vivo.ufl.edu/individual/n13346933" }
+      } ,
+      {
+        "person": { "type": "literal" , "value": "Ihas, Gary G" } ,
+        "personuri": { "type": "uri" , "value": "http://vivo.ufl.edu/individual/n47859" }
+      } ,
+      {
+        "person": { "type": "literal" , "value": "Majewski, Allen Robert" } ,
+        "personuri": { "type": "uri" , "value": "http://vivo.ufl.edu/individual/n804619978" }
+      } ,
+      {
+        "person": { "type": "literal" , "value": "Knowles, Elisabeth S" } ,
+        "personuri": { "type": "uri" , "value": "http://vivo.ufl.edu/individual/n62109" }
+      } ,
+      {
+        "person": { "type": "literal" , "value": "Wang, Yan" } ,
+        "personuri": { "type": "uri" , "value": "http://vivo.ufl.edu/individual/n847510610" }
+      } ,
+      {
+        "person": { "type": "literal" , "value": "Sobczak, Robert" } ,
+        "personuri": { "type": "uri" , "value": "http://vivo.ufl.edu/individual/n6338659220" }
+      } ,
+      {
+        "person": { "type": "literal" , "value": "Scurlock, Bobby Joe" } ,
+        "personuri": { "type": "uri" , "value": "http://vivo.ufl.edu/individual/n2403" }
+      } ,
+      {
+        "person": { "type": "literal" , "value": "Kim, Jung Soo" } ,
+        "personuri": { "type": "uri" , "value": "http://vivo.ufl.edu/individual/n6569" }
+      } ,
+      {
+        "person": { "type": "literal" , "value": "Schlittenhardt, Timothy Paul" } ,
+        "personuri": { "type": "uri" , "value": "http://vivo.ufl.edu/individual/n1830412537" }
+      } ,
+      {
+        "person": { "type": "literal" , "value": "Balakishiyeva,Durdana" } ,
+        "personuri": { "type": "uri" , "value": "http://vivo.ufl.edu/individual/n74608" }
+      } ,
+      {
+        "person": { "type": "literal" , "value": "Muttalib, Khandker A" } ,
+        "personuri": { "type": "uri" , "value": "http://vivo.ufl.edu/individual/n98362" }
+      } ,
+      {
+        "person": { "type": "literal" , "value": "Biswas, Amlan" } ,
+        "personuri": { "type": "uri" , "value": "http://vivo.ufl.edu/individual/n9675" }
+      } ,
+      {
+        "person": { "type": "literal" , "value": "Garrett,Richard E" } ,
+        "personuri": { "type": "uri" , "value": "http://vivo.ufl.edu/individual/n1193200344" }
+      } ,
+      {
+        "person": { "type": "literal" , "value": "Rinkevicius, Aurelijus" } ,
+        "personuri": { "type": "uri" , "value": "http://vivo.ufl.edu/individual/n915264089" }
+      } ,
+      {
+        "person": { "type": "literal" , "value": "Deserio, Robert" } ,
+        "personuri": { "type": "uri" , "value": "http://vivo.ufl.edu/individual/n22781" }
+      } ,
+      {
+        "person": { "type": "literal" , "value": "Walker, James K" } ,
+        "personuri": { "type": "uri" , "value": "http://vivo.ufl.edu/individual/n1872494983" }
+      } ,
+      {
+        "person": { "type": "literal" , "value": "Jordan, Thomas Adam" } ,
+        "personuri": { "type": "uri" , "value": "http://vivo.ufl.edu/individual/n78889" }
+      } ,
+      {
+        "person": { "type": "literal" , "value": "Mitidis, Andonis" } ,
+        "personuri": { "type": "uri" , "value": "http://vivo.ufl.edu/individual/n1480555715" }
+      } ,
+      {
+        "person": { "type": "literal" , "value": "Yang, Jihee" } ,
+        "personuri": { "type": "uri" , "value": "http://vivo.ufl.edu/individual/n1126028436" }
+      } ,
+      {
+        "person": { "type": "literal" , "value": "Deng, Lili" } ,
+        "personuri": { "type": "uri" , "value": "http://vivo.ufl.edu/individual/n1397488102" }
+      } ,
+      {
+        "person": { "type": "literal" , "value": "Knudsen, Cathy E" } ,
+        "personuri": { "type": "uri" , "value": "http://vivo.ufl.edu/individual/n14399" }
+      } ,
+      {
+        "person": { "type": "literal" , "value": "He,Haoru" } ,
+        "personuri": { "type": "uri" , "value": "http://vivo.ufl.edu/individual/n1298614117" }
+      } ,
+      {
+        "person": { "type": "literal" , "value": "Banan, Guita" } ,
+        "personuri": { "type": "uri" , "value": "http://vivo.ufl.edu/individual/n1391686630" }
+      } ,
+      {
+        "person": { "type": "literal" , "value": "Wang, Changlong" } ,
+        "personuri": { "type": "uri" , "value": "http://vivo.ufl.edu/individual/n5714001723" }
+      } ,
+      {
+        "person": { "type": "literal" , "value": "Debnath, Dipsikha" } ,
+        "personuri": { "type": "uri" , "value": "http://vivo.ufl.edu/individual/n869476993" }
+      } ,
+      {
+        "person": { "type": "literal" , "value": "Ramond, Pierre" } ,
+        "personuri": { "type": "uri" , "value": "http://vivo.ufl.edu/individual/n15952" }
+      } ,
+      {
+        "person": { "type": "literal" , "value": "Collins, Clinton B" } ,
+        "personuri": { "type": "uri" , "value": "http://vivo.ufl.edu/individual/n23433" }
+      } ,
+      {
+        "person": { "type": "literal" , "value": "Hershfield, Selman Philip" } ,
+        "personuri": { "type": "uri" , "value": "http://vivo.ufl.edu/individual/n10062" }
+      } ,
+      {
+        "person": { "type": "literal" , "value": "Carver, Matthew R" } ,
+        "personuri": { "type": "uri" , "value": "http://vivo.ufl.edu/individual/n1121504087" }
+      } ,
+      {
+        "person": { "type": "literal" , "value": "Ipser,James R" } ,
+        "personuri": { "type": "uri" , "value": "http://vivo.ufl.edu/individual/n66659" }
+      } ,
+      {
+        "person": { "type": "literal" , "value": "Wu,Yuning" } ,
+        "personuri": { "type": "uri" , "value": "http://vivo.ufl.edu/individual/n1495294018" }
+      } ,
+      {
+        "person": { "type": "literal" , "value": "Pulido, Ramon M" } ,
+        "personuri": { "type": "uri" , "value": "http://vivo.ufl.edu/individual/n9906174996" }
+      } ,
+      {
+        "person": { "type": "literal" , "value": "Kim, Doojin" } ,
+        "personuri": { "type": "uri" , "value": "http://vivo.ufl.edu/individual/n3405843658" }
+      } ,
+      {
+        "person": { "type": "literal" , "value": "Todarello, Elisa Maria" } ,
+        "personuri": { "type": "uri" , "value": "http://vivo.ufl.edu/individual/n3013551376" }
+      } ,
+      {
+        "person": { "type": "literal" , "value": "Parkinson, Michael Thaddeus" } ,
+        "personuri": { "type": "uri" , "value": "http://vivo.ufl.edu/individual/n1905632346" }
+      } ,
+      {
+        "person": { "type": "literal" , "value": "Pal,Hridis K" } ,
+        "personuri": { "type": "uri" , "value": "http://vivo.ufl.edu/individual/n883643512" }
+      } ,
+      {
+        "person": { "type": "literal" , "value": "Dufty, James W" } ,
+        "personuri": { "type": "uri" , "value": "http://vivo.ufl.edu/individual/n89631" }
+      } ,
+      {
+        "person": { "type": "literal" , "value": "Andraka, Bohdan" } ,
+        "personuri": { "type": "uri" , "value": "http://vivo.ufl.edu/individual/n15236" }
+      } ,
+      {
+        "person": { "type": "literal" , "value": "Skhirtladze, Nikoloz" } ,
+        "personuri": { "type": "uri" , "value": "http://vivo.ufl.edu/individual/n74390881" }
+      } ,
+      {
+        "person": { "type": "literal" , "value": "Sabri Dashti,Danial" } ,
+        "personuri": { "type": "uri" , "value": "http://vivo.ufl.edu/individual/n43524720" }
+      } ,
+      {
+        "person": { "type": "literal" , "value": "Mueller, Christopher L" } ,
+        "personuri": { "type": "uri" , "value": "http://vivo.ufl.edu/individual/n2139215291" }
+      } ,
+      {
+        "person": { "type": "literal" , "value": "Das, Rajib K" } ,
+        "personuri": { "type": "uri" , "value": "http://vivo.ufl.edu/individual/n87184178" }
+      } ,
+      {
+        "person": { "type": "literal" , "value": "Agnese, Robert A,Jr" } ,
+        "personuri": { "type": "uri" , "value": "http://vivo.ufl.edu/individual/n1869705447" }
+      } ,
+      {
+        "person": { "type": "literal" , "value": "Chan, Hobun" } ,
+        "personuri": { "type": "uri" , "value": "http://vivo.ufl.edu/individual/n856697894" }
+      } ,
+      {
+        "person": { "type": "literal" , "value": "Abhinav, Siddhartha" } ,
+        "personuri": { "type": "uri" , "value": "http://vivo.ufl.edu/individual/n8082237701" }
+      } ,
+      {
+        "person": { "type": "literal" , "value": "Sikivie, Pierre" } ,
+        "personuri": { "type": "uri" , "value": "http://vivo.ufl.edu/individual/n45154" }
+      } ,
+      {
+        "person": { "type": "literal" , "value": "Kim,Sungsu" } ,
+        "personuri": { "type": "uri" , "value": "http://vivo.ufl.edu/individual/n17465329" }
+      } ,
+      {
+        "person": { "type": "literal" , "value": "Karasev, Valentin" } ,
+        "personuri": { "type": "uri" , "value": "http://vivo.ufl.edu/individual/n548496442" }
+      } ,
+      {
+        "person": { "type": "literal" , "value": "Qiu, Zongan" } ,
+        "personuri": { "type": "uri" , "value": "http://vivo.ufl.edu/individual/n14429" }
+      } ,
+      {
+        "person": { "type": "literal" , "value": "Wang, Yunpeng" } ,
+        "personuri": { "type": "uri" , "value": "http://vivo.ufl.edu/individual/n1471096309" }
+      } ,
+      {
+        "person": { "type": "literal" , "value": "Gartner,Joseph A" } ,
+        "personuri": { "type": "uri" , "value": "http://vivo.ufl.edu/individual/n1423798603" }
+      } ,
+      {
+        "person": { "type": "literal" , "value": "Li, Xiangguo" } ,
+        "personuri": { "type": "uri" , "value": "http://vivo.ufl.edu/individual/n983679111" }
+      } ,
+      {
+        "person": { "type": "literal" , "value": "Tiwari, Vaibhav" } ,
+        "personuri": { "type": "uri" , "value": "http://vivo.ufl.edu/individual/n1655958077" }
+      } ,
+      {
+        "person": { "type": "literal" , "value": "Vasileva, Svetlana Viktorovna" } ,
+        "personuri": { "type": "uri" , "value": "http://vivo.ufl.edu/individual/n63583" }
+      } ,
+      {
+        "person": { "type": "literal" , "value": "Folks, James Jackson" } ,
+        "personuri": { "type": "uri" , "value": "http://vivo.ufl.edu/individual/n1882912351" }
+      } ,
+      {
+        "person": { "type": "literal" , "value": "Zhao, Nan" } ,
+        "personuri": { "type": "uri" , "value": "http://vivo.ufl.edu/individual/n254375409" }
+      } ,
+      {
+        "person": { "type": "literal" , "value": "Liu, Bo" } ,
+        "personuri": { "type": "uri" , "value": "http://vivo.ufl.edu/individual/n7787332" }
+      } ,
+      {
+        "person": { "type": "literal" , "value": "Nanda Kumar, Deepak Manoj" } ,
+        "personuri": { "type": "uri" , "value": "http://vivo.ufl.edu/individual/n653743011" }
+      } ,
+      {
+        "person": { "type": "literal" , "value": "Tsamis,Nicholas C" } ,
+        "personuri": { "type": "uri" , "value": "http://vivo.ufl.edu/individual/n624353742" }
+      } ,
+      {
+        "person": { "type": "literal" , "value": "Sanders, Gary Donald" } ,
+        "personuri": { "type": "uri" , "value": "http://vivo.ufl.edu/individual/n10419" }
+      } ,
+      {
+        "person": { "type": "literal" , "value": "Yin, Liang" } ,
+        "personuri": { "type": "uri" , "value": "http://vivo.ufl.edu/individual/n47971" }
+      } ,
+      {
+        "person": { "type": "literal" , "value": "Xia, Jian Sheng" } ,
+        "personuri": { "type": "uri" , "value": "http://vivo.ufl.edu/individual/n5303" }
+      } ,
+      {
+        "person": { "type": "literal" , "value": "Hagen, Stephen James" } ,
+        "personuri": { "type": "uri" , "value": "http://vivo.ufl.edu/individual/n20907" }
+      } ,
+      {
+        "person": { "type": "literal" , "value": "Peprah, Marcus Kwasi A" } ,
+        "personuri": { "type": "uri" , "value": "http://vivo.ufl.edu/individual/n972778690" }
+      } ,
+      {
+        "person": { "type": "literal" , "value": "Hamlin, James Jeffrey" } ,
+        "personuri": { "type": "uri" , "value": "http://vivo.ufl.edu/individual/n1827740126" }
+      } ,
+      {
+        "person": { "type": "literal" , "value": "Kim, Bockjoo" } ,
+        "personuri": { "type": "uri" , "value": "http://vivo.ufl.edu/individual/n1983" }
+      } ,
+      {
+        "person": { "type": "literal" , "value": "Dutta,Sandipan" } ,
+        "personuri": { "type": "uri" , "value": "http://vivo.ufl.edu/individual/n625233472" }
+      } ,
+      {
+        "person": { "type": "literal" , "value": "Hou, Jie" } ,
+        "personuri": { "type": "uri" , "value": "http://vivo.ufl.edu/individual/n2616331394" }
+      } ,
+      {
+        "person": { "type": "literal" , "value": "Yan, Luyi" } ,
+        "personuri": { "type": "uri" , "value": "http://vivo.ufl.edu/individual/n475941416" }
+      } ,
+      {
+        "person": { "type": "literal" , "value": "Gainer, James Samuel" } ,
+        "personuri": { "type": "uri" , "value": "http://vivo.ufl.edu/individual/n1844117464" }
+      } ,
+      {
+        "person": { "type": "literal" , "value": "Ekdahl, Daniel D" } ,
+        "personuri": { "type": "uri" , "value": "http://vivo.ufl.edu/individual/n1780832274" }
+      } ,
+      {
+        "person": { "type": "literal" , "value": "Rinzler, Andrew Gabriel" } ,
+        "personuri": { "type": "uri" , "value": "http://vivo.ufl.edu/individual/n15983" }
+      } ,
+      {
+        "person": { "type": "literal" , "value": "Perez, Michael J" } ,
+        "personuri": { "type": "uri" , "value": "http://vivo.ufl.edu/individual/n1221143489" }
+      } ,
+      {
+        "person": { "type": "literal" , "value": "Hebard, Arthur F" } ,
+        "personuri": { "type": "uri" , "value": "http://vivo.ufl.edu/individual/n14743" }
+      } ,
+      {
+        "person": { "type": "literal" , "value": "Rimal, Dipak" } ,
+        "personuri": { "type": "uri" , "value": "http://vivo.ufl.edu/individual/n1438965224" }
+      } ,
+      {
+        "person": { "type": "literal" , "value": "Levchenko,Petr" } ,
+        "personuri": { "type": "uri" , "value": "http://vivo.ufl.edu/individual/n29125" }
+      } ,
+      {
+        "person": { "type": "literal" , "value": "Will, Clifford Martin" } ,
+        "personuri": { "type": "uri" , "value": "http://vivo.ufl.edu/individual/n857365521" }
+      } ,
+      {
+        "person": { "type": "literal" , "value": "Tang, Yibing" } ,
+        "personuri": { "type": "uri" , "value": "http://vivo.ufl.edu/individual/n1535927017" }
+      } ,
+      {
+        "person": { "type": "literal" , "value": "Yang,Qiaoli" } ,
+        "personuri": { "type": "uri" , "value": "http://vivo.ufl.edu/individual/n1406081787" }
+      } ,
+      {
+        "person": { "type": "literal" , "value": "Sommerfield, Charles Michael" } ,
+        "personuri": { "type": "uri" , "value": "http://vivo.ufl.edu/individual/n31817" }
+      } ,
+      {
+        "person": { "type": "literal" , "value": "Billman, Chris R" } ,
+        "personuri": { "type": "uri" , "value": "http://vivo.ufl.edu/individual/n884128516" }
+      } ,
+      {
+        "person": { "type": "literal" , "value": "Kopietz, Peter" } ,
+        "personuri": { "type": "uri" , "value": "http://vivo.ufl.edu/individual/n5228096113" }
+      } ,
+      {
+        "person": { "type": "literal" , "value": "Sanjuan Munoz,Jose" } ,
+        "personuri": { "type": "uri" , "value": "http://vivo.ufl.edu/individual/n23714" }
+      } ,
+      {
+        "person": { "type": "literal" , "value": "Sperka, David M" } ,
+        "personuri": { "type": "uri" , "value": "http://vivo.ufl.edu/individual/n6540945068" }
+      } ,
+      {
+        "person": { "type": "literal" , "value": "Gal,Tamas" } ,
+        "personuri": { "type": "uri" , "value": "http://vivo.ufl.edu/individual/n1797555918" }
+      } ,
+      {
+        "person": { "type": "literal" , "value": "Necula, Valentin" } ,
+        "personuri": { "type": "uri" , "value": "http://vivo.ufl.edu/individual/n27350" }
+      } ,
+      {
+        "person": { "type": "literal" , "value": "Williams, Luke" } ,
+        "personuri": { "type": "uri" , "value": "http://vivo.ufl.edu/individual/n1248435154" }
+      } ,
+      {
+        "person": { "type": "literal" , "value": "Drukier, Casper" } ,
+        "personuri": { "type": "uri" , "value": "http://vivo.ufl.edu/individual/n2676257370" }
+      } ,
+      {
+        "person": { "type": "literal" , "value": "Lishawa, Adam R" } ,
+        "personuri": { "type": "uri" , "value": "http://vivo.ufl.edu/individual/n15934" }
+      } ,
+      {
+        "person": { "type": "literal" , "value": "Maslov, Dmitrii" } ,
+        "personuri": { "type": "uri" , "value": "http://vivo.ufl.edu/individual/n4454" }
+      } ,
+      {
+        "person": { "type": "literal" , "value": "Jackson, Daniel E" } ,
+        "personuri": { "type": "uri" , "value": "http://vivo.ufl.edu/individual/n5733081581" }
+      } ,
+      {
+        "person": { "type": "literal" , "value": "Mueller, Guido" } ,
+        "personuri": { "type": "uri" , "value": "http://vivo.ufl.edu/individual/n15341" }
+      } ,
+      {
+        "person": { "type": "literal" , "value": "Low, Jia Fu" } ,
+        "personuri": { "type": "uri" , "value": "http://vivo.ufl.edu/individual/n547184664" }
+      } ,
+      {
+        "person": { "type": "literal" , "value": "Mora, Pedro J" } ,
+        "personuri": { "type": "uri" , "value": "http://vivo.ufl.edu/individual/n2088038576" }
+      } ,
+      {
+        "person": { "type": "literal" , "value": "Drozdetski,Alexei Alexandrovic" } ,
+        "personuri": { "type": "uri" , "value": "http://vivo.ufl.edu/individual/n17858" }
+      } ,
+      {
+        "person": { "type": "literal" , "value": "Goetz, Ryan Michael" } ,
+        "personuri": { "type": "uri" , "value": "http://vivo.ufl.edu/individual/n1212998032" }
+      } ,
+      {
+        "person": { "type": "literal" , "value": "Colson, Marcia S" } ,
+        "personuri": { "type": "uri" , "value": "http://vivo.ufl.edu/individual/n1880649507" }
+      } ,
+      {
+        "person": { "type": "literal" , "value": "Ma, Peisen" } ,
+        "personuri": { "type": "uri" , "value": "http://vivo.ufl.edu/individual/n1667000933" }
+      } ,
+      {
+        "person": { "type": "literal" , "value": "Hirschfeld, Peter J" } ,
+        "personuri": { "type": "uri" , "value": "http://vivo.ufl.edu/individual/n17479" }
+      } ,
+      {
+        "person": { "type": "literal" , "value": "Rueckriegel, Andreas" } ,
+        "personuri": { "type": "uri" , "value": "http://vivo.ufl.edu/individual/n5769447592" }
+      } ,
+      {
+        "person": { "type": "literal" , "value": "Saha, Dipta" } ,
+        "personuri": { "type": "uri" , "value": "http://vivo.ufl.edu/individual/n715287734" }
+      } ,
+      {
+        "person": { "type": "literal" , "value": "Ashrafi,Ali" } ,
+        "personuri": { "type": "uri" , "value": "http://vivo.ufl.edu/individual/n45310423" }
+      } ,
+      {
+        "person": { "type": "literal" , "value": "Lange, Philipp" } ,
+        "personuri": { "type": "uri" , "value": "http://vivo.ufl.edu/individual/n6756020979" }
+      } ,
+      {
+        "person": { "type": "literal" , "value": "Lee, Yoonseok" } ,
+        "personuri": { "type": "uri" , "value": "http://vivo.ufl.edu/individual/n37297" }
+      } ,
+      {
+        "person": { "type": "literal" , "value": "Choubey, Peayush K" } ,
+        "personuri": { "type": "uri" , "value": "http://vivo.ufl.edu/individual/n1983743994" }
+      } ,
+      {
+        "person": { "type": "literal" , "value": "Son, Minjun" } ,
+        "personuri": { "type": "uri" , "value": "http://vivo.ufl.edu/individual/n955851194" }
+      } ,
+      {
+        "person": { "type": "literal" , "value": "Obukhov, Sergei" } ,
+        "personuri": { "type": "uri" , "value": "http://vivo.ufl.edu/individual/n6264" }
+      } ,
+      {
+        "person": { "type": "literal" , "value": "Chilton, Andrew David" } ,
+        "personuri": { "type": "uri" , "value": "http://vivo.ufl.edu/individual/n1499658129" }
+      } ,
+      {
+        "person": { "type": "literal" , "value": "Zhang, Long" } ,
+        "personuri": { "type": "uri" , "value": "http://vivo.ufl.edu/individual/n890175165" }
+      } ,
+      {
+        "person": { "type": "literal" , "value": "Hamersma,Robert A" } ,
+        "personuri": { "type": "uri" , "value": "http://vivo.ufl.edu/individual/n13905" }
+      } ,
+      {
+        "person": { "type": "literal" , "value": "Rojas Fernandez,Francisco Javier" } ,
+        "personuri": { "type": "uri" , "value": "http://vivo.ufl.edu/individual/n767775164" }
+      } ,
+      {
+        "person": { "type": "literal" , "value": "Reeg, Christopher R" } ,
+        "personuri": { "type": "uri" , "value": "http://vivo.ufl.edu/individual/n1151607112" }
+      } ,
+      {
+        "person": { "type": "literal" , "value": "Jin, Haoming" } ,
+        "personuri": { "type": "uri" , "value": "http://vivo.ufl.edu/individual/n2027900264" }
+      } ,
+      {
+        "person": { "type": "literal" , "value": "Miller,Kevin H" } ,
+        "personuri": { "type": "uri" , "value": "http://vivo.ufl.edu/individual/n1402383727" }
+      } ,
+      {
+        "person": { "type": "literal" , "value": "Lang, Ryan" } ,
+        "personuri": { "type": "uri" , "value": "http://vivo.ufl.edu/individual/n1238193790" }
+      } ,
+      {
+        "person": { "type": "literal" , "value": "Wagner, Christopher E" } ,
+        "personuri": { "type": "uri" , "value": "http://vivo.ufl.edu/individual/n570414281" }
+      } ,
+      {
+        "person": { "type": "literal" , "value": "Chen, Hector" } ,
+        "personuri": { "type": "uri" , "value": "http://vivo.ufl.edu/individual/n4860533523" }
+      } ,
+      {
+        "person": { "type": "literal" , "value": "Watson, Brian C" } ,
+        "personuri": { "type": "uri" , "value": "http://vivo.ufl.edu/individual/n15168" }
+      } ,
+      {
+        "person": { "type": "literal" , "value": "Scanlon,Christine F" } ,
+        "personuri": { "type": "uri" , "value": "http://vivo.ufl.edu/individual/n91482" }
+      } ,
+      {
+        "person": { "type": "literal" , "value": "Hugon, Justin L" } ,
+        "personuri": { "type": "uri" , "value": "http://vivo.ufl.edu/individual/n547873500" }
+      } ,
+      {
+        "person": { "type": "literal" , "value": "Steinke,Michael D" } ,
+        "personuri": { "type": "uri" , "value": "http://vivo.ufl.edu/individual/n1921010360" }
+      } ,
+      {
+        "person": { "type": "literal" , "value": "Amariutei, Daniel Valentin" } ,
+        "personuri": { "type": "uri" , "value": "http://vivo.ufl.edu/individual/n53568803" }
+      } ,
+      {
+        "person": { "type": "literal" , "value": "Dasbiswas,Kinjal" } ,
+        "personuri": { "type": "uri" , "value": "http://vivo.ufl.edu/individual/n1493788265" }
+      } ,
+      {
+        "person": { "type": "literal" , "value": "Masuhara, Naoto" } ,
+        "personuri": { "type": "uri" , "value": "http://vivo.ufl.edu/individual/n1637541005" }
+      } ,
+      {
+        "person": { "type": "literal" , "value": "Hochman, Steven H" } ,
+        "personuri": { "type": "uri" , "value": "http://vivo.ufl.edu/individual/n301453618" }
+      } ,
+      {
+        "person": { "type": "literal" , "value": "Papathanasiou,Georgios" } ,
+        "personuri": { "type": "uri" , "value": "http://vivo.ufl.edu/individual/n613040562" }
+      } ,
+      {
+        "person": { "type": "literal" , "value": "Berlijn,Tom" } ,
+        "personuri": { "type": "uri" , "value": "http://vivo.ufl.edu/individual/n1563812990" }
+      } ,
+      {
+        "person": { "type": "literal" , "value": "Bourilkov, Dimitri Todorov" } ,
+        "personuri": { "type": "uri" , "value": "http://vivo.ufl.edu/individual/n377" }
+      } ,
+      {
+        "person": { "type": "literal" , "value": "Malphurs, William E" } ,
+        "personuri": { "type": "uri" , "value": "http://vivo.ufl.edu/individual/n8406048344" }
+      } ,
+      {
+        "person": { "type": "literal" , "value": "Thorn, Charles B, Iii" } ,
+        "personuri": { "type": "uri" , "value": "http://vivo.ufl.edu/individual/n1620" }
+      } ,
+      {
+        "person": { "type": "literal" , "value": "Berke, Kara" } ,
+        "personuri": { "type": "uri" , "value": "http://vivo.ufl.edu/individual/n1847979392" }
+      } ,
+      {
+        "person": { "type": "literal" , "value": "Feldbaum, David M" } ,
+        "personuri": { "type": "uri" , "value": "http://vivo.ufl.edu/individual/n48577" }
+      } ,
+      {
+        "person": { "type": "literal" , "value": "Cheng, Tongguang" } ,
+        "personuri": { "type": "uri" , "value": "http://vivo.ufl.edu/individual/n1783240009" }
+      } ,
+      {
+        "person": { "type": "literal" , "value": "Liu,Junjie" } ,
+        "personuri": { "type": "uri" , "value": "http://vivo.ufl.edu/individual/n1018862536" }
+      } ,
+      {
+        "person": { "type": "literal" , "value": "Graham, John Terence" } ,
+        "personuri": { "type": "uri" , "value": "http://vivo.ufl.edu/individual/n6731535914" }
+      } ,
+      {
+        "person": { "type": "literal" , "value": "Timmerwilke,John M" } ,
+        "personuri": { "type": "uri" , "value": "http://vivo.ufl.edu/individual/n1484793231" }
+      } ,
+      {
+        "person": { "type": "literal" , "value": "Stewart, Gregory R" } ,
+        "personuri": { "type": "uri" , "value": "http://vivo.ufl.edu/individual/n64181" }
+      } ,
+      {
+        "person": { "type": "literal" , "value": "Vanleer, John M" } ,
+        "personuri": { "type": "uri" , "value": "http://vivo.ufl.edu/individual/n3929705350" }
+      } ,
+      {
+        "person": { "type": "literal" , "value": "Carnes, Andrew M" } ,
+        "personuri": { "type": "uri" , "value": "http://vivo.ufl.edu/individual/n490518654" }
+      } ,
+      {
+        "person": { "type": "literal" , "value": "Zyuzin, Vladimir Alexandrovich" } ,
+        "personuri": { "type": "uri" , "value": "http://vivo.ufl.edu/individual/n6258215581" }
+      } ,
+      {
+        "person": { "type": "literal" , "value": "Eichholz, Johannes" } ,
+        "personuri": { "type": "uri" , "value": "http://vivo.ufl.edu/individual/n1843635512" }
+      } ,
+      {
+        "person": { "type": "literal" , "value": "Fisher, Matt I" } ,
+        "personuri": { "type": "uri" , "value": "http://vivo.ufl.edu/individual/n591461923" }
+      } ,
+      {
+        "person": { "type": "literal" , "value": "Hamdan, Rashid M" } ,
+        "personuri": { "type": "uri" , "value": "http://vivo.ufl.edu/individual/n6559233908" }
+      } ,
+      {
+        "person": { "type": "literal" , "value": "Kile, Jennifer Erin" } ,
+        "personuri": { "type": "uri" , "value": "http://vivo.ufl.edu/individual/n6884138987" }
+      } ,
+      {
+        "person": { "type": "literal" , "value": "Mirshamsi, Sahar" } ,
+        "personuri": { "type": "uri" , "value": "http://vivo.ufl.edu/individual/n875010223" }
+      } ,
+      {
+        "person": { "type": "literal" , "value": "Marakov, Alexander" } ,
+        "personuri": { "type": "uri" , "value": "http://vivo.ufl.edu/individual/n1116368057" }
+      } ,
+      {
+        "person": { "type": "literal" , "value": "Schafer, Mickey S" } ,
+        "personuri": { "type": "uri" , "value": "http://vivo.ufl.edu/individual/n132857" }
+      } ,
+      {
+        "person": { "type": "literal" , "value": "Jiang, Wenguang" } ,
+        "personuri": { "type": "uri" , "value": "http://vivo.ufl.edu/individual/n4428978994" }
+      } ,
+      {
+        "person": { "type": "literal" , "value": "Avedo,Frank F" } ,
+        "personuri": { "type": "uri" , "value": "http://vivo.ufl.edu/individual/n1287752328" }
+      } ,
+      {
+        "person": { "type": "literal" , "value": "Lovins,Victoria M" } ,
+        "personuri": { "type": "uri" , "value": "http://vivo.ufl.edu/individual/n1770104701" }
+      } ,
+      {
+        "person": { "type": "literal" , "value": "Hart, Susan Kay" } ,
+        "personuri": { "type": "uri" , "value": "http://vivo.ufl.edu/individual/n8486" }
+      } ,
+      {
+        "person": { "type": "literal" , "value": "Ghosh,Siddhartha" } ,
+        "personuri": { "type": "uri" , "value": "http://vivo.ufl.edu/individual/n1627612673" }
+      } ,
+      {
+        "person": { "type": "literal" , "value": "Kasper,Emily Danielle" } ,
+        "personuri": { "type": "uri" , "value": "http://vivo.ufl.edu/individual/n1758632288" }
+      } ,
+      {
+        "person": { "type": "literal" , "value": "Rank, Douglas W" } ,
+        "personuri": { "type": "uri" , "value": "http://vivo.ufl.edu/individual/n277372606" }
+      } ,
+      {
+        "person": { "type": "literal" , "value": "Fulda, Paul" } ,
+        "personuri": { "type": "uri" , "value": "http://vivo.ufl.edu/individual/n1073063403" }
+      } ,
+      {
+        "person": { "type": "literal" , "value": "Cheng, Hai Ping" } ,
+        "personuri": { "type": "uri" , "value": "http://vivo.ufl.edu/individual/n41539" }
+      } ,
+      {
+        "person": { "type": "literal" , "value": "Ackley, Kendall Danielle" } ,
+        "personuri": { "type": "uri" , "value": "http://vivo.ufl.edu/individual/n1483213609" }
+      } ,
+      {
+        "person": { "type": "literal" , "value": "Cheng,Mengxing" } ,
+        "personuri": { "type": "uri" , "value": "http://vivo.ufl.edu/individual/n3465522" }
+      } ,
+      {
+        "person": { "type": "literal" , "value": "Banik, Nilanjan" } ,
+        "personuri": { "type": "uri" , "value": "http://vivo.ufl.edu/individual/n1162179776" }
+      } ,
+      {
+        "person": { "type": "literal" , "value": "Takano, Yasumasa" } ,
+        "personuri": { "type": "uri" , "value": "http://vivo.ufl.edu/individual/n15595" }
+      } ,
+      {
+        "person": { "type": "literal" , "value": "Korytov, Andrey" } ,
+        "personuri": { "type": "uri" , "value": "http://vivo.ufl.edu/individual/n5638" }
+      } ,
+      {
+        "person": { "type": "literal" , "value": "Detweiler, Steven L" } ,
+        "personuri": { "type": "uri" , "value": "http://vivo.ufl.edu/individual/n25420" }
+      } ,
+      {
+        "person": { "type": "literal" , "value": "Leonard,Katie E" } ,
+        "personuri": { "type": "uri" , "value": "http://vivo.ufl.edu/individual/n418010195" }
+      } ,
+      {
+        "person": { "type": "literal" , "value": "Mocko, Johnny F" } ,
+        "personuri": { "type": "uri" , "value": "http://vivo.ufl.edu/individual/n2164368284" }
+      } ,
+      {
+        "person": { "type": "literal" , "value": "Hembree, Robert H,Ii" } ,
+        "personuri": { "type": "uri" , "value": "http://vivo.ufl.edu/individual/n885375228" }
+      } ,
+      {
+        "person": { "type": "literal" , "value": "Klimenko, Serguei Grigorievich" } ,
+        "personuri": { "type": "uri" , "value": "http://vivo.ufl.edu/individual/n15976" }
+      } ,
+      {
+        "person": { "type": "literal" , "value": "Sun, Songge" } ,
+        "personuri": { "type": "uri" , "value": "http://vivo.ufl.edu/individual/n1153591338" }
+      } ,
+      {
+        "person": { "type": "literal" , "value": "Barquist, Colin S" } ,
+        "personuri": { "type": "uri" , "value": "http://vivo.ufl.edu/individual/n9228279763" }
+      } ,
+      {
+        "person": { "type": "literal" , "value": "Chen, Xiao" } ,
+        "personuri": { "type": "uri" , "value": "http://vivo.ufl.edu/individual/n1570800579" }
+      } ,
+      {
+        "person": { "type": "literal" , "value": "Curry, David A" } ,
+        "personuri": { "type": "uri" , "value": "http://vivo.ufl.edu/individual/n236806662" }
+      } ,
+      {
+        "person": { "type": "literal" , "value": "Tanner, David B" } ,
+        "personuri": { "type": "uri" , "value": "http://vivo.ufl.edu/individual/n31646" }
+      } ,
+      {
+        "person": { "type": "literal" , "value": "Runge, Keith A" } ,
+        "personuri": { "type": "uri" , "value": "http://vivo.ufl.edu/individual/n14814" }
+      } ,
+      {
+        "person": { "type": "literal" , "value": "Wong, Arturo" } ,
+        "personuri": { "type": "uri" , "value": "http://vivo.ufl.edu/individual/n584193122" }
+      } ,
+      {
+        "person": { "type": "literal" , "value": "Labbe, Gregory J" } ,
+        "personuri": { "type": "uri" , "value": "http://vivo.ufl.edu/individual/n4891127012" }
+      } ,
+      {
+        "person": { "type": "literal" , "value": "Shen, Yu" } ,
+        "personuri": { "type": "uri" , "value": "http://vivo.ufl.edu/individual/n1905628040" }
+      } ,
+      {
+        "person": { "type": "literal" , "value": "Kwak, In Hae" } ,
+        "personuri": { "type": "uri" , "value": "http://vivo.ufl.edu/individual/n769655169" }
+      } ,
+      {
+        "person": { "type": "literal" , "value": "Whiting, Bernard F" } ,
+        "personuri": { "type": "uri" , "value": "http://vivo.ufl.edu/individual/n129428" }
+      } ,
+      {
+        "person": { "type": "literal" , "value": "Gonzalez, Miguel Angel" } ,
+        "personuri": { "type": "uri" , "value": "http://vivo.ufl.edu/individual/n302002760" }
+      } ,
+      {
+        "person": { "type": "literal" , "value": "Cho, Won Sang" } ,
+        "personuri": { "type": "uri" , "value": "http://vivo.ufl.edu/individual/n1410241909" }
+      } ,
+      {
+        "person": { "type": "literal" , "value": "Wang, Jing" } ,
+        "personuri": { "type": "uri" , "value": "http://vivo.ufl.edu/individual/n5774085756" }
+      } ,
+      {
+        "person": { "type": "literal" , "value": "Fry, James N" } ,
+        "personuri": { "type": "uri" , "value": "http://vivo.ufl.edu/individual/n5507" }
+      } ,
+      {
+        "person": { "type": "literal" , "value": "Brown, George E" } ,
+        "personuri": { "type": "uri" , "value": "http://vivo.ufl.edu/individual/n6992813996" }
+      } ,
+      {
+        "person": { "type": "literal" , "value": "Stern, Ian Phillip" } ,
+        "personuri": { "type": "uri" , "value": "http://vivo.ufl.edu/individual/n148756715" }
+      } ,
+      {
+        "person": { "type": "literal" , "value": "Gleason, Joseph Robert" } ,
+        "personuri": { "type": "uri" , "value": "http://vivo.ufl.edu/individual/n1153824000" }
+      } ,
+      {
+        "person": { "type": "literal" , "value": "Wang,Po-hsiang" } ,
+        "personuri": { "type": "uri" , "value": "http://vivo.ufl.edu/individual/n624999212" }
+      } ,
+      {
+        "person": { "type": "literal" , "value": "Anand, Naween" } ,
+        "personuri": { "type": "uri" , "value": "http://vivo.ufl.edu/individual/n1514406349" }
+      } ,
+      {
+        "person": { "type": "literal" , "value": "Chu, Iek Heng" } ,
+        "personuri": { "type": "uri" , "value": "http://vivo.ufl.edu/individual/n1633941691" }
+      } ,
+      {
+        "person": { "type": "literal" , "value": "Pucher, Ilaria" } ,
+        "personuri": { "type": "uri" , "value": "http://vivo.ufl.edu/individual/n1403197602" }
+      } ,
+      {
+        "person": { "type": "literal" , "value": "Quintero, Pedro Alejandro" } ,
+        "personuri": { "type": "uri" , "value": "http://vivo.ufl.edu/individual/n1858586503" }
+      } ,
+      {
+        "person": { "type": "literal" , "value": "Lemaitre, Max G" } ,
+        "personuri": { "type": "uri" , "value": "http://vivo.ufl.edu/individual/n2670533187" }
+      } ,
+      {
+        "person": { "type": "literal" , "value": "Martin,Catalin" } ,
+        "personuri": { "type": "uri" , "value": "http://vivo.ufl.edu/individual/n1988" }
+      } ,
+      {
+        "person": { "type": "literal" , "value": "Grange, J." } ,
+        "personuri": { "type": "uri" , "value": "http://vivo.ufl.edu/individual/n574092026" }
+      } ,
+      {
+        "person": { "type": "literal" , "value": "Grange,Joseph M" } ,
+        "personuri": { "type": "uri" , "value": "http://vivo.ufl.edu/individual/n574092026" }
+      } ,
+      {
+        "person": { "type": "literal" , "value": "Saab, Tarek" } ,
+        "personuri": { "type": "uri" , "value": "http://vivo.ufl.edu/individual/n10225" }
+      } ,
+      {
+        "person": { "type": "literal" , "value": "Nartowt, Bradley Joseph" } ,
+        "personuri": { "type": "uri" , "value": "http://vivo.ufl.edu/individual/n1640065930" }
+      } ,
+      {
+        "person": { "type": "literal" , "value": "Field, Richard D" } ,
+        "personuri": { "type": "uri" , "value": "http://vivo.ufl.edu/individual/n5190" }
+      } ,
+      {
+        "person": { "type": "literal" , "value": "Kumar, Pradeep" } ,
+        "personuri": { "type": "uri" , "value": "http://vivo.ufl.edu/individual/n26561" }
+      } ,
+      {
+        "person": { "type": "literal" , "value": "Yelton, John M" } ,
+        "personuri": { "type": "uri" , "value": "http://vivo.ufl.edu/individual/n5669" }
+      } ,
+      {
+        "person": { "type": "literal" , "value": "Parks, Charles T" } ,
+        "personuri": { "type": "uri" , "value": "http://vivo.ufl.edu/individual/n3085" }
+      } ,
+      {
+        "person": { "type": "literal" , "value": "Uzakbaiuly, Berik" } ,
+        "personuri": { "type": "uri" , "value": "http://vivo.ufl.edu/individual/n512231246" }
+      } ,
+      {
+        "person": { "type": "literal" , "value": "Nasrollahi, Zahra" } ,
+        "personuri": { "type": "uri" , "value": "http://vivo.ufl.edu/individual/n2656162542" }
+      } ,
+      {
+        "person": { "type": "literal" , "value": "Zhang, Jue" } ,
+        "personuri": { "type": "uri" , "value": "http://vivo.ufl.edu/individual/n732636420" }
+      } ,
+      {
+        "person": { "type": "literal" , "value": "Heintze, Matthew" } ,
+        "personuri": { "type": "uri" , "value": "http://vivo.ufl.edu/individual/n170792725" }
+      } ,
+      {
+        "person": { "type": "literal" , "value": "Ingersent, Kevin" } ,
+        "personuri": { "type": "uri" , "value": "http://vivo.ufl.edu/individual/n127519" }
+      } ,
+      {
+        "person": { "type": "literal" , "value": "Prokofiev,Oleg" } ,
+        "personuri": { "type": "uri" , "value": "http://vivo.ufl.edu/individual/n23112" }
+      } ,
+      {
+        "person": { "type": "literal" , "value": "Link, Marc D" } ,
+        "personuri": { "type": "uri" , "value": "http://vivo.ufl.edu/individual/n885532296" }
+      } ,
+      {
+        "person": { "type": "literal" , "value": "Mousseau, J." } ,
+        "personuri": { "type": "uri" , "value": "http://vivo.ufl.edu/individual/n1361365869" }
+      } ,
+      {
+        "person": { "type": "literal" , "value": "Mousseau, Joel A" } ,
+        "personuri": { "type": "uri" , "value": "http://vivo.ufl.edu/individual/n1361365869" }
+      } ,
+      {
+        "person": { "type": "literal" , "value": "Broyles,Arthur A" } ,
+        "personuri": { "type": "uri" , "value": "http://vivo.ufl.edu/individual/n838453872" }
+      } ,
+      {
+        "person": { "type": "literal" , "value": "Welliver, Bradford Charles Jr" } ,
+        "personuri": { "type": "uri" , "value": "http://vivo.ufl.edu/individual/n418857450" }
+      } ,
+      {
+        "person": { "type": "literal" , "value": "Trickey, Samuel B" } ,
+        "personuri": { "type": "uri" , "value": "http://vivo.ufl.edu/individual/n35502" }
+      } ,
+      {
+        "person": { "type": "literal" , "value": "Sjostrom,Travis E" } ,
+        "personuri": { "type": "uri" , "value": "http://vivo.ufl.edu/individual/n61971271" }
+      } ,
+      {
+        "person": { "type": "literal" , "value": "Gilbert,Stephen M" } ,
+        "personuri": { "type": "uri" , "value": "http://vivo.ufl.edu/individual/n371395426" }
+      } ,
+      {
+        "person": { "type": "literal" , "value": "Aoyama, Chris P" } ,
+        "personuri": { "type": "uri" , "value": "http://vivo.ufl.edu/individual/n335954500" }
+      } ,
+      {
+        "person": { "type": "literal" , "value": "Herfurth, Tim" } ,
+        "personuri": { "type": "uri" , "value": "http://vivo.ufl.edu/individual/n6463649608" }
+      } ,
+      {
+        "person": { "type": "literal" , "value": "Chakraborty, Debajit" } ,
+        "personuri": { "type": "uri" , "value": "http://vivo.ufl.edu/individual/n672549908" }
+      } ,
+      {
+        "person": { "type": "literal" , "value": "Konigsberg, Jacobo" } ,
+        "personuri": { "type": "uri" , "value": "http://vivo.ufl.edu/individual/n2025" }
+      } ,
+      {
+        "person": { "type": "literal" , "value": "Axson, William P" } ,
+        "personuri": { "type": "uri" , "value": "http://vivo.ufl.edu/individual/n2414714182" }
+      } ,
+      {
+        "person": { "type": "literal" , "value": "Barashko, Victor Alekseevich" } ,
+        "personuri": { "type": "uri" , "value": "http://vivo.ufl.edu/individual/n47645" }
+      } ,
+      {
+        "person": { "type": "literal" , "value": "Muniz, Lana D" } ,
+        "personuri": { "type": "uri" , "value": "http://vivo.ufl.edu/individual/n1197286182" }
+      } ,
+      {
+        "person": { "type": "literal" , "value": "Sankar, Shannon R" } ,
+        "personuri": { "type": "uri" , "value": "http://vivo.ufl.edu/individual/n8419804041" }
+      } ,
+      {
+        "person": { "type": "literal" , "value": "Marlin, Pamela E" } ,
+        "personuri": { "type": "uri" , "value": "http://vivo.ufl.edu/individual/n15227" }
+      } ,
+      {
+        "person": { "type": "literal" , "value": "Sherstnev,Alexander" } ,
+        "personuri": { "type": "uri" , "value": "http://vivo.ufl.edu/individual/n569" }
+      } ,
+      {
+        "person": { "type": "literal" , "value": "Horton, Melvin J" } ,
+        "personuri": { "type": "uri" , "value": "http://vivo.ufl.edu/individual/n60146" }
+      } ,
+      {
+        "person": { "type": "literal" , "value": "Grant, Daniel M" } ,
+        "personuri": { "type": "uri" , "value": "http://vivo.ufl.edu/individual/n1158095232" }
+      } ,
+      {
+        "person": { "type": "literal" , "value": "Brinzari, Tatiana Vladimir" } ,
+        "personuri": { "type": "uri" , "value": "http://vivo.ufl.edu/individual/n1033379001" }
+      } ,
+      {
+        "person": { "type": "literal" , "value": "Sullivan, Neil S" } ,
+        "personuri": { "type": "uri" , "value": "http://vivo.ufl.edu/individual/n17612" }
+      }
+    ]
+  }
+}

@@ -1,0 +1,205 @@
+{
+  "head": {
+    "vars": [ "person" , "personuri" ]
+  } ,
+  "results": {
+    "bindings": [
+      {
+        "person": { "type": "literal" , "value": "Levin, Frank" } ,
+        "personuri": { "type": "uri" , "value": "http://vivo.brown.edu/individual/flevin" }
+      } ,
+      {
+        "person": { "type": "literal" , "value": "Heintz, Ulrich" } ,
+        "personuri": { "type": "uri" , "value": "http://vivo.brown.edu/individual/uheintz" }
+      } ,
+      {
+        "person": { "type": "literal" , "value": "Landsberg, Greg" } ,
+        "personuri": { "type": "uri" , "value": "http://vivo.brown.edu/individual/glandsbe" }
+      } ,
+      {
+        "person": { "type": "literal" , "value": "Nurmikko, Arto" } ,
+        "personuri": { "type": "uri" , "value": "http://vivo.brown.edu/individual/anurmikk" }
+      } ,
+      {
+        "person": { "type": "literal" , "value": "Lowe, David" } ,
+        "personuri": { "type": "uri" , "value": "http://vivo.brown.edu/individual/dlowe" }
+      } ,
+      {
+        "person": { "type": "literal" , "value": "Lanou Jr, Robert" } ,
+        "personuri": { "type": "uri" , "value": "http://vivo.brown.edu/individual/rlanoujr" }
+      } ,
+      {
+        "person": { "type": "literal" , "value": "Fiorucci, Simon" } ,
+        "personuri": { "type": "uri" , "value": "http://vivo.brown.edu/individual/sfiorucc" }
+      } ,
+      {
+        "person": { "type": "literal" , "value": "Enss, Christian" } ,
+        "personuri": { "type": "uri" , "value": "http://vivo.brown.edu/individual/censs" }
+      } ,
+      {
+        "person": { "type": "literal" , "value": "Westervelt, Peter" } ,
+        "personuri": { "type": "uri" , "value": "http://vivo.brown.edu/individual/pwesterv" }
+      } ,
+      {
+        "person": { "type": "literal" , "value": "Targan, David" } ,
+        "personuri": { "type": "uri" , "value": "http://vivo.brown.edu/individual/dtargan" }
+      } ,
+      {
+        "person": { "type": "literal" , "value": "Guralnik, Gerald" } ,
+        "personuri": { "type": "uri" , "value": "http://vivo.brown.edu/individual/gguralni" }
+      } ,
+      {
+        "person": { "type": "literal" , "value": "Powers, Thomas" } ,
+        "personuri": { "type": "uri" , "value": "http://vivo.brown.edu/individual/tpowers" }
+      } ,
+      {
+        "person": { "type": "literal" , "value": "Oldenbourg, Rudolf" } ,
+        "personuri": { "type": "uri" , "value": "http://vivo.brown.edu/individual/roldenbo" }
+      } ,
+      {
+        "person": { "type": "literal" , "value": "Pelcovits, Robert" } ,
+        "personuri": { "type": "uri" , "value": "http://vivo.brown.edu/individual/rpelcovi" }
+      } ,
+      {
+        "person": { "type": "literal" , "value": "Ying, See-Chen" } ,
+        "personuri": { "type": "uri" , "value": "http://vivo.brown.edu/individual/sying" }
+      } ,
+      {
+        "person": { "type": "literal" , "value": "Tan, Chung-I" } ,
+        "personuri": { "type": "uri" , "value": "http://vivo.brown.edu/individual/chtan" }
+      } ,
+      {
+        "person": { "type": "literal" , "value": "Korotkov, Andrei" } ,
+        "personuri": { "type": "uri" , "value": "http://vivo.brown.edu/individual/akorotko" }
+      } ,
+      {
+        "person": { "type": "literal" , "value": "Tang, Jay" } ,
+        "personuri": { "type": "uri" , "value": "http://vivo.brown.edu/individual/jxtang" }
+      } ,
+      {
+        "person": { "type": "literal" , "value": "Cutts, David" } ,
+        "personuri": { "type": "uri" , "value": "http://vivo.brown.edu/individual/dcutts" }
+      } ,
+      {
+        "person": { "type": "literal" , "value": "Gaitskell, Richard" } ,
+        "personuri": { "type": "uri" , "value": "http://vivo.brown.edu/individual/rgaitske" }
+      } ,
+      {
+        "person": { "type": "literal" , "value": "Elbaum, Charles" } ,
+        "personuri": { "type": "uri" , "value": "http://vivo.brown.edu/individual/celbaum" }
+      } ,
+      {
+        "person": { "type": "literal" , "value": "Ling, Xinsheng" } ,
+        "personuri": { "type": "uri" , "value": "http://vivo.brown.edu/individual/xling" }
+      } ,
+      {
+        "person": { "type": "literal" , "value": "Xu, Jingming" } ,
+        "personuri": { "type": "uri" , "value": "http://vivo.brown.edu/individual/jxu1" }
+      } ,
+      {
+        "person": { "type": "literal" , "value": "Fried, Herbert" } ,
+        "personuri": { "type": "uri" , "value": "http://vivo.brown.edu/individual/hfried" }
+      } ,
+      {
+        "person": { "type": "literal" , "value": "Jackson, Francine" } ,
+        "personuri": { "type": "uri" , "value": "http://vivo.brown.edu/individual/frjackso" }
+      } ,
+      {
+        "person": { "type": "literal" , "value": "Maris, Humphrey" } ,
+        "personuri": { "type": "uri" , "value": "http://vivo.brown.edu/individual/hmaris" }
+      } ,
+      {
+        "person": { "type": "literal" , "value": "Feldman, Dmitri" } ,
+        "personuri": { "type": "uri" , "value": "http://vivo.brown.edu/individual/dfeldman" }
+      } ,
+      {
+        "person": { "type": "literal" , "value": "Marston, John" } ,
+        "personuri": { "type": "uri" , "value": "http://vivo.brown.edu/individual/jmarston" }
+      } ,
+      {
+        "person": { "type": "literal" , "value": "Volovich, Anastasia" } ,
+        "personuri": { "type": "uri" , "value": "http://vivo.brown.edu/individual/avolovic" }
+      } ,
+      {
+        "person": { "type": "literal" , "value": "Zia, Rashid" } ,
+        "personuri": { "type": "uri" , "value": "http://vivo.brown.edu/individual/rzia" }
+      } ,
+      {
+        "person": { "type": "literal" , "value": "Xiao, Gang" } ,
+        "personuri": { "type": "uri" , "value": "http://vivo.brown.edu/individual/gxiao" }
+      } ,
+      {
+        "person": { "type": "literal" , "value": "Narain, Meenakshi" } ,
+        "personuri": { "type": "uri" , "value": "http://vivo.brown.edu/individual/mnarain" }
+      } ,
+      {
+        "person": { "type": "literal" , "value": "Stein, Derek" } ,
+        "personuri": { "type": "uri" , "value": "http://vivo.brown.edu/individual/ds1" }
+      } ,
+      {
+        "person": { "type": "literal" , "value": "Kosterlitz, J Michael" } ,
+        "personuri": { "type": "uri" , "value": "http://vivo.brown.edu/individual/jkosterl" }
+      } ,
+      {
+        "person": { "type": "literal" , "value": "Koushiappas, Savvas" } ,
+        "personuri": { "type": "uri" , "value": "http://vivo.brown.edu/individual/skoushia" }
+      } ,
+      {
+        "person": { "type": "literal" , "value": "Seidel, George" } ,
+        "personuri": { "type": "uri" , "value": "http://vivo.brown.edu/individual/gseidel" }
+      } ,
+      {
+        "person": { "type": "literal" , "value": "Tucker, Gregory" } ,
+        "personuri": { "type": "uri" , "value": "http://vivo.brown.edu/individual/gtucker" }
+      } ,
+      {
+        "person": { "type": "literal" , "value": "Antonelli, George" } ,
+        "personuri": { "type": "uri" , "value": "http://vivo.brown.edu/individual/gaantone" }
+      } ,
+      {
+        "person": { "type": "literal" , "value": "Weiner, Jerome" } ,
+        "personuri": { "type": "uri" , "value": "http://vivo.brown.edu/individual/jweiner" }
+      } ,
+      {
+        "person": { "type": "literal" , "value": "Glicksman, Maurice" } ,
+        "personuri": { "type": "uri" , "value": "http://vivo.brown.edu/individual/mglicksm" }
+      } ,
+      {
+        "person": { "type": "literal" , "value": "Spradlin, Marcus" } ,
+        "personuri": { "type": "uri" , "value": "http://vivo.brown.edu/individual/mspradli" }
+      } ,
+      {
+        "person": { "type": "literal" , "value": "Zaslavsky, Alexander" } ,
+        "personuri": { "type": "uri" , "value": "http://vivo.brown.edu/individual/azaslavs" }
+      } ,
+      {
+        "person": { "type": "literal" , "value": "Adetunji, Oludurotimi" } ,
+        "personuri": { "type": "uri" , "value": "http://vivo.brown.edu/individual/oadetunj" }
+      } ,
+      {
+        "person": { "type": "literal" , "value": "Cooper, Leon" } ,
+        "personuri": { "type": "uri" , "value": "http://vivo.brown.edu/individual/lcooper" }
+      } ,
+      {
+        "person": { "type": "literal" , "value": "Mitrovic, Vesna" } ,
+        "personuri": { "type": "uri" , "value": "http://vivo.brown.edu/individual/vmitrovi" }
+      } ,
+      {
+        "person": { "type": "literal" , "value": "Jevicki, Antal" } ,
+        "personuri": { "type": "uri" , "value": "http://vivo.brown.edu/individual/anjevick" }
+      } ,
+      {
+        "person": { "type": "literal" , "value": "Valles Jr, James" } ,
+        "personuri": { "type": "uri" , "value": "http://vivo.brown.edu/individual/jvallesj" }
+      } ,
+      {
+        "person": { "type": "literal" , "value": "Dell'Antonio, Ian" } ,
+        "personuri": { "type": "uri" , "value": "http://vivo.brown.edu/individual/idellant" }
+      } ,
+      {
+        "person": { "type": "literal" , "value": "Speer, Thomas" } ,
+        "personuri": { "type": "uri" , "value": "http://vivo.brown.edu/individual/tspeer" }
+      }
+    ]
+  }
+}

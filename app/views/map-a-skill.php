@@ -6,7 +6,8 @@
 			<p class="error">{{error}}</p>
 			<ul id="table1" class="people">
 				<p ng-show="peoplelist">People Found: {{countPagedList(pagedPeople)}}</p>
-				<p ng-hide="peoplelist"> Loading...</p>
+				<div ng-hide="peoplelist"><br><img src="images/loading.gif"/><br>
+					Loading...</div>
 				<li class="thumbnail" ng-repeat="person in pagedPeople[currentPagePeople-1]" data-drop="true" ng-model="peoplelist" jqyoui-droppable="{multiple: true, onDrop: 'filterPeople'}" data-jqyoui-options="{accept:'.btn-draggable:not([ng-model!=addPersonList])'}"> 
 					<div class="btn btn-primary btn-draggable" data-drag="true" data-jqyoui-options="{revert: 'invalid'}" ng-model="peoplelist" jqyoui-draggable="{index: $index+(currentPagePeople-1)*15, animate: false, applyFilter: 'filterPeople'}" ng-hide="!person.person">{{person.person}}</div>
 					<button class="addButton" ng-click="addToPeople(person)" title="Add Person" style="padding:2px"><img src="images/add-button.png" height="25px" width="25px"/></button>
@@ -16,7 +17,7 @@
 				<pagination total-items="countPagedList(pagedPeople)" page="currentPagePeople" items-per-page="itemsPerPage" max-size="maxPages" rotate="false"
 										class="pagination-small" previous-text="&lsaquo;" next-text="&rsaquo;" first-text="&laquo;" last-text="&raquo;"></pagination>
 				<p>Results Per Page:</p>
-				<div style="width: 106px" class="btn-group" ng-click="filterPeople();filterSkills()">
+				<div class="btn-group" ng-click="filterPeople();filterSkills()">
 					<button id="btn-resize-15" type="button" class="btn btn-success" ng-model="itemsPerPage" btn-radio=15>15</button>
 					<button id="btn-resize-25" type="button" class="btn btn-success" ng-model="itemsPerPage" btn-radio=25>25</button>
 					<button id="btn-resize-50" type="button" class="btn btn-success" ng-model="itemsPerPage" btn-radio=50>50</button>

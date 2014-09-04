@@ -53,7 +53,7 @@
 				<div ng-hide="!skills" class="center">
 					<pagination boundary-links="true" total-items="countPagedList(pagedResults)" page="currentPageResults" items-per-page="itemsPerPage" max-size="maxPages" rotate="false"
 												class="pagination-small" previous-text="&lsaquo;" next-text="&rsaquo;" first-text="&laquo;" last-text="&raquo;"></pagination>
-					<div style="width: 106px" class="btn-group" ng-click="filterResults()">
+					<div class="btn-group" ng-click="filterResults()">
 						<button id="btn-resize-15" type="button" class="btn btn-success" ng-model="itemsPerPage" btn-radio=15>15</button>
 						<button id="btn-resize-25" type="button" class="btn btn-success" ng-model="itemsPerPage" btn-radio=25>25</button>
 						<button id="btn-resize-50" type="button" class="btn btn-success" ng-model="itemsPerPage" btn-radio=50>50</button>

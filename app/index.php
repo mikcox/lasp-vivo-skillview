@@ -31,6 +31,8 @@
         	 | 
         	<a id="mapASkill" href="#/mapaskill" style="color: white;">Map New Skill</a>
         	 | 
+        	<a id="visualizations" href="#/visualizations" style="color: white;">Visualizations</a>
+                 | 
         	<a id="about" href="javascript:void(0)" ng-click="open()" style="color: white;">About</a></p>
     </div>
     
@@ -40,10 +42,13 @@
 	    <p> <a href="mailto:michael.cox@lasp.colorado.edu?subject=LEMR Skills App Bug&body=I found a bug with the LEMR Skills app and wanted to tell you!  Details:">Report A Bug</a>
 	    	 | 
 	    	<a href="mailto:michael.cox@lasp.colorado.edu?subject=LEMR Skills App Suggestion&body=I want to suggest a way to improve the LEMR skills app!  Details:">Suggestions</a></p>
-	    <p>Skills App Version 1.0, 11/18/2013</p>
+	    <p>Skills App Version 1.1, 7/30/2014</p>
 	    <p>Created by the LEMR Development Team</p>
 	    <h3>Powered By</h3>
-	    <a href="http://lemr.lasp.colorado.edu">LEMR (The LASP Extended Metadata Repository)</a> and <a href="http://angularjs.org/"><img src="images/AngularJS-small.png"/></a>
+	    <!--<a href="http://lemr.lasp.colorado.edu">LEMR (The LASP Extended Metadata Repository)</a>-->
+	    LEMR (The LASP Extended Metadata Repository)
+	    , <a href="http://angularjs.org/"><img src="images/AngularJS-small.png"/></a>
+	    , and <a href="http://d3js.org"><img src="images/d3js.svg" width="25" height="25"/></a>
 	</footer>
 
     <!-- build:js scripts/vendor.js -->
@@ -61,11 +66,14 @@
 
         <!-- build:js({.tmp,app}) scripts/scripts.js -->
         <script src="scripts/app.js"></script>
-        <script src="scripts/controllers/allSkillsCtrl.js"></script>
-        <script src="scripts/filters.js"></script>
-        <script src="scripts/factories.js"></script>
         <script src="scripts/controllers/aboutModalCtrl.js"></script>
+        <script src="scripts/controllers/allSkillsCtrl.js"></script>
         <script src="scripts/controllers/mapASkillCtrl.js"></script>
+        <script src="scripts/controllers/visualizationsCtrl.js"></script>
+        <script src="scripts/filters.js"></script>
+        <script src="scripts/services/factories.js"></script>
+        <script src="scripts/directives/d3directives.js"></script>
+        <script src="scripts/directives/d3module.js"></script>
         <!-- endbuild -->
 </body>
 </html>
